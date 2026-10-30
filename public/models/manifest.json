@@ -1,0 +1,47 @@
+{
+  "source": "BodyParts3D 4.0, DBCLS",
+  "source_url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/partof_BP3D_4.0_obj_99.zip",
+  "license_url": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html",
+  "retrieved": "2026-10-30",
+  "models": [
+    {
+      "file": "femur.obj",
+      "source_file": "FJ3365.obj",
+      "concept_id": "FMA24474",
+      "name": "Right femur",
+      "vertices": 1574,
+      "triangles": 3102,
+      "bytes": 192118,
+      "sha256": "02fffe2e1b0f8e038d8b7b48e47cbc4925a749446240e676e910bff34d5348de",
+      "modifications": [
+        "Extracted from official archive and renamed; geometry unchanged"
+      ]
+    },
+    {
+      "file": "humerus.obj",
+      "source_file": "FJ3368.obj",
+      "concept_id": "FMA23130",
+      "name": "Right humerus",
+      "vertices": 2233,
+      "triangles": 3784,
+      "bytes": 256568,
+      "sha256": "159fbdeb854044e7b0ebd0d48cfe332afb44a691d09b89ff644a851826d08268",
+      "modifications": [
+        "Extracted from official archive and renamed; geometry unchanged"
+      ]
+    },
+    {
+      "file": "scapula.obj",
+      "source_file": "FJ3384.obj",
+      "concept_id": "FMA13395",
+      "name": "Right scapula",
+      "vertices": 13118,
+      "triangles": 26172,
+      "bytes": 1743772,
+      "sha256": "cb68b2e01a22989f20e602d5036a3f1fb28448fe647f599b9bbd61edfbff2320",
+      "modifications": [
+        "Extracted from official archive and renamed; geometry unchanged"
+      ]
+    }
+  ]
+}

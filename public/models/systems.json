@@ -1,0 +1,7024 @@
+{
+  "skeleton": {
+    "label": "Skeletal system",
+    "file": "/models/skeleton.glb",
+    "description": "238 named skeletal parts in their anatomical positions, including bone specimens, intervertebral discs and costal cartilages. This source collection does not contain every adult bone.",
+    "parts": [
+      {
+        "id": "FJ3152",
+        "name": "Right hip bone",
+        "sourceId": "FMA16586",
+        "kind": "bone",
+        "vertices": 1282,
+        "triangles": 2374,
+        "sourceBounds": {
+          "min": [
+            -144.872,
+            -139.019,
+            752.153
+          ],
+          "max": [
+            -2.7903,
+            -1.11878,
+            957.869
+          ]
+        },
+        "sourceFile": "FJ3152.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "708e42cba3d1817230c98410c80742875d56bb5b3e688a566f62509c7a63e424"
+      },
+      {
+        "id": "FJ3153",
+        "name": "Xiphoid process",
+        "sourceId": "FMA7488",
+        "kind": "bone",
+        "vertices": 495,
+        "triangles": 922,
+        "sourceBounds": {
+          "min": [
+            -10.3378,
+            -213.353,
+            1164.02
+          ],
+          "max": [
+            10.6039,
+            -198.509,
+            1184.5
+          ]
+        },
+        "sourceFile": "FJ3153.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "d17057ed1dad252a6fa6a3e8d92bc13310cebe0b584df147af0cc4a646f98f3e"
+      },
+      {
+        "id": "FJ3154",
+        "name": "Tenth thoracic vertebra",
+        "sourceId": "FMA10037",
+        "kind": "bone",
+        "vertices": 1584,
+        "triangles": 2790,
+        "sourceBounds": {
+          "min": [
+            -33.6568,
+            -84.0578,
+            1099.77
+          ],
+          "max": [
+            32.2452,
+            -7.8225,
+            1157.13
+          ]
+        },
+        "sourceFile": "FJ3154.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "55fd0b1ec25bc207c5a58cb2aa3d5f2880df6593719ec803c83ac898d3bda358"
+      },
+      {
+        "id": "FJ3155",
+        "name": "Eleventh thoracic vertebra",
+        "sourceId": "FMA10059",
+        "kind": "bone",
+        "vertices": 1593,
+        "triangles": 2674,
+        "sourceBounds": {
+          "min": [
+            -26.761,
+            -92.5324,
+            1075.72
+          ],
+          "max": [
+            25.5593,
+            -13.0089,
+            1129.27
+          ]
+        },
+        "sourceFile": "FJ3155.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "7ce892808f37a9c96c74f298334be195cb50bfdbe64bcfa62072141ed38df0a2"
+      },
+      {
+        "id": "FJ3156",
+        "name": "Twelfth thoracic vertebra",
+        "sourceId": "FMA10081",
+        "kind": "bone",
+        "vertices": 1593,
+        "triangles": 2772,
+        "sourceBounds": {
+          "min": [
+            -22.3864,
+            -101.385,
+            1049.96
+          ],
+          "max": [
+            21.0548,
+            -22.5609,
+            1101.59
+          ]
+        },
+        "sourceFile": "FJ3156.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "d78f0563a0c0b5be89284a6d73434998a05dc9dbddb471b49e398c9ef96f07ae"
+      },
+      {
+        "id": "FJ3157",
+        "name": "First lumbar vertebra",
+        "sourceId": "FMA13072",
+        "kind": "bone",
+        "vertices": 1682,
+        "triangles": 2972,
+        "sourceBounds": {
+          "min": [
+            -35.7798,
+            -109.48,
+            1015.2
+          ],
+          "max": [
+            34.4614,
+            -29.2224,
+            1071.98
+          ]
+        },
+        "sourceFile": "FJ3157.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "2e252a2558f0f64430efa35d79a4fe8677b6cbb0ab6e93afda94b8d4239479fd"
+      },
+      {
+        "id": "FJ3158",
+        "name": "First thoracic vertebra",
+        "sourceId": "FMA9165",
+        "kind": "bone",
+        "vertices": 1078,
+        "triangles": 1700,
+        "sourceBounds": {
+          "min": [
+            -37.383,
+            -86.8719,
+            1347.22
+          ],
+          "max": [
+            35.9162,
+            -17.0867,
+            1376.9
+          ]
+        },
+        "sourceFile": "FJ3158.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "57a9cd9f62fc902f2d10f32c83237bba5bee4a24ae323a2b2405d9df68fd585b"
+      },
+      {
+        "id": "FJ3159",
+        "name": "Second lumbar vertebra",
+        "sourceId": "FMA13073",
+        "kind": "bone",
+        "vertices": 1875,
+        "triangles": 3214,
+        "sourceBounds": {
+          "min": [
+            -40.3509,
+            -114.72,
+            992.316
+          ],
+          "max": [
+            39.0608,
+            -34.3488,
+            1039.76
+          ]
+        },
+        "sourceFile": "FJ3159.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "1e63e0abb22ccf6255f1fb910699b2bade07cace17ffc12b43bb185228dd3696"
+      },
+      {
+        "id": "FJ3160",
+        "name": "Second thoracic vertebra",
+        "sourceId": "FMA9187",
+        "kind": "bone",
+        "vertices": 1161,
+        "triangles": 1938,
+        "sourceBounds": {
+          "min": [
+            -35.9221,
+            -82.6758,
+            1326.59
+          ],
+          "max": [
+            34.5784,
+            -12.1205,
+            1360.36
+          ]
+        },
+        "sourceFile": "FJ3160.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "f04ca280dc74fdc79afb14e5da1515a1e77762960bb38fab869be0e617348eac"
+      },
+      {
+        "id": "FJ3161",
+        "name": "Third cervical vertebra",
+        "sourceId": "FMA12521",
+        "kind": "bone",
+        "vertices": 1323,
+        "triangles": 2030,
+        "sourceBounds": {
+          "min": [
+            -29.8428,
+            -87.8132,
+            1417.0
+          ],
+          "max": [
+            28.5393,
+            -38.1331,
+            1445.74
+          ]
+        },
+        "sourceFile": "FJ3161.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "7717781b7cb53eaa24eff097e6da5f8dfd1e58a3f23aa169ec05c58eb93de2dc"
+      },
+      {
+        "id": "FJ3162",
+        "name": "Third lumbar vertebra",
+        "sourceId": "FMA13074",
+        "kind": "bone",
+        "vertices": 1849,
+        "triangles": 3272,
+        "sourceBounds": {
+          "min": [
+            -40.2029,
+            -115.353,
+            967.693
+          ],
+          "max": [
+            38.841,
+            -29.514,
+            1009.73
+          ]
+        },
+        "sourceFile": "FJ3162.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "07fdac1c69d14c68241176f055da667eec8c2976c3a579df235d90e66fca91b0"
+      },
+      {
+        "id": "FJ3163",
+        "name": "Third thoracic vertebra",
+        "sourceId": "FMA9209",
+        "kind": "bone",
+        "vertices": 1175,
+        "triangles": 2038,
+        "sourceBounds": {
+          "min": [
+            -32.9661,
+            -76.7363,
+            1302.23
+          ],
+          "max": [
+            31.8409,
+            -1.36011,
+            1341.85
+          ]
+        },
+        "sourceFile": "FJ3163.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "968ed4928160fd54c444aa8c4a2c318fa56368c55c715afcdeaa48445382d3f6"
+      },
+      {
+        "id": "FJ3164",
+        "name": "Fourth cervical vertebra",
+        "sourceId": "FMA12522",
+        "kind": "bone",
+        "vertices": 1469,
+        "triangles": 2410,
+        "sourceBounds": {
+          "min": [
+            -27.7534,
+            -89.1081,
+            1404.6
+          ],
+          "max": [
+            26.3775,
+            -40.6936,
+            1432.14
+          ]
+        },
+        "sourceFile": "FJ3164.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "ac0dc9fe871acf68fc8fffa41666f4d7fae35626055e18c104135db80bbd8a65"
+      },
+      {
+        "id": "FJ3165",
+        "name": "Fourth lumbar vertebra",
+        "sourceId": "FMA13075",
+        "kind": "bone",
+        "vertices": 1968,
+        "triangles": 3512,
+        "sourceBounds": {
+          "min": [
+            -42.7661,
+            -110.405,
+            938.664
+          ],
+          "max": [
+            41.4154,
+            -26.1562,
+            983.402
+          ]
+        },
+        "sourceFile": "FJ3165.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "e30bc2a914a50d097dc5824cacbe54be10fc68c9f43cd9ef023519bc146cab61"
+      },
+      {
+        "id": "FJ3166",
+        "name": "Fourth thoracic vertebra",
+        "sourceId": "FMA9248",
+        "kind": "bone",
+        "vertices": 1210,
+        "triangles": 2066,
+        "sourceBounds": {
+          "min": [
+            -35.4617,
+            -69.6049,
+            1277.74
+          ],
+          "max": [
+            34.282,
+            -0.197896,
+            1321.41
+          ]
+        },
+        "sourceFile": "FJ3166.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "cd744d75a90dc4d2b38f3b25928656ae2f9b873ea3113d01f91a102290eda5bd"
+      },
+      {
+        "id": "FJ3167",
+        "name": "Fifth cervical vertebra",
+        "sourceId": "FMA12523",
+        "kind": "bone",
+        "vertices": 1539,
+        "triangles": 2196,
+        "sourceBounds": {
+          "min": [
+            -29.6978,
+            -90.7726,
+            1393.77
+          ],
+          "max": [
+            28.3332,
+            -36.0825,
+            1417.99
+          ]
+        },
+        "sourceFile": "FJ3167.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "15c66e24dcef4af7b1e4c7e948d3048c87b2d772a2f182f814ae7df8059af3f5"
+      },
+      {
+        "id": "FJ3168",
+        "name": "Fifth lumbar vertebra",
+        "sourceId": "FMA13076",
+        "kind": "bone",
+        "vertices": 2115,
+        "triangles": 3892,
+        "sourceBounds": {
+          "min": [
+            -51.0007,
+            -99.0765,
+            904.595
+          ],
+          "max": [
+            49.5736,
+            -18.245,
+            954.833
+          ]
+        },
+        "sourceFile": "FJ3168.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "884ef6993f9578f86a6441ca7016f647f22778a9ab850189e1863d5f4112001d"
+      },
+      {
+        "id": "FJ3169",
+        "name": "Fifth thoracic vertebra",
+        "sourceId": "FMA9922",
+        "kind": "bone",
+        "vertices": 1321,
+        "triangles": 2280,
+        "sourceBounds": {
+          "min": [
+            -36.1515,
+            -66.009,
+            1239.77
+          ],
+          "max": [
+            34.8897,
+            0.0185499,
+            1297.27
+          ]
+        },
+        "sourceFile": "FJ3169.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "7eb98fe2886168196d8a7ee37d1c7a6e7decbc1c09cdf2d4295c13ed7ba3df0c"
+      },
+      {
+        "id": "FJ3170",
+        "name": "Sixth cervical vertebra",
+        "sourceId": "FMA12524",
+        "kind": "bone",
+        "vertices": 1498,
+        "triangles": 2374,
+        "sourceBounds": {
+          "min": [
+            -31.2652,
+            -91.671,
+            1381.59
+          ],
+          "max": [
+            29.9477,
+            -29.1794,
+            1404.74
+          ]
+        },
+        "sourceFile": "FJ3170.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "e9cda58b8a69602513d067ee47468c3984c223cdc501975468379b65149c7d19"
+      },
+      {
+        "id": "FJ3171",
+        "name": "Sixth thoracic vertebra",
+        "sourceId": "FMA9945",
+        "kind": "bone",
+        "vertices": 1353,
+        "triangles": 2248,
+        "sourceBounds": {
+          "min": [
+            -36.4227,
+            -65.2209,
+            1209.38
+          ],
+          "max": [
+            35.0339,
+            -1.19243,
+            1269.08
+          ]
+        },
+        "sourceFile": "FJ3171.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "7c9c326269edd09bdf02aca90333c61debe4f39c777fbef887751826a54adb9e"
+      },
+      {
+        "id": "FJ3172",
+        "name": "Seventh cervical vertebra",
+        "sourceId": "FMA12525",
+        "kind": "bone",
+        "vertices": 1324,
+        "triangles": 1820,
+        "sourceBounds": {
+          "min": [
+            -33.2293,
+            -90.0319,
+            1364.71
+          ],
+          "max": [
+            31.9316,
+            -21.2664,
+            1391.84
+          ]
+        },
+        "sourceFile": "FJ3172.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "7454480761dbf6c98c04f1a59788aeba1dcdecde7a673553ec19b2da172c2916"
+      },
+      {
+        "id": "FJ3173",
+        "name": "Seventh thoracic vertebra",
+        "sourceId": "FMA9968",
+        "kind": "bone",
+        "vertices": 1478,
+        "triangles": 2574,
+        "sourceBounds": {
+          "min": [
+            -37.2263,
+            -66.9792,
+            1179.3
+          ],
+          "max": [
+            36.3206,
+            -0.671493,
+            1241.8
+          ]
+        },
+        "sourceFile": "FJ3173.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "1bcf85e649234f976236f81077019ae66971c69c0943992a7ec0072939d42245"
+      },
+      {
+        "id": "FJ3174",
+        "name": "Eighth thoracic vertebra",
+        "sourceId": "FMA9991",
+        "kind": "bone",
+        "vertices": 1392,
+        "triangles": 2424,
+        "sourceBounds": {
+          "min": [
+            -33.6594,
+            -72.0276,
+            1153.75
+          ],
+          "max": [
+            32.1527,
+            -0.931796,
+            1213.05
+          ]
+        },
+        "sourceFile": "FJ3174.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "f5928470229deb2c7579804b883ffeaae611127dac1454caed3b3df93fe8dad6"
+      },
+      {
+        "id": "FJ3175",
+        "name": "Ninth thoracic vertebra",
+        "sourceId": "FMA10014",
+        "kind": "bone",
+        "vertices": 1443,
+        "triangles": 2586,
+        "sourceBounds": {
+          "min": [
+            -34.3948,
+            -77.6529,
+            1126.63
+          ],
+          "max": [
+            32.998,
+            -6.15606,
+            1184.84
+          ]
+        },
+        "sourceFile": "FJ3175.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "f1ce32fedb9f84ac37b800b2a182f6701f972fbd8cc01be7732ab3ca3864603e"
+      },
+      {
+        "id": "FJ3176",
+        "name": "Atlas",
+        "sourceId": "FMA12519",
+        "kind": "bone",
+        "vertices": 1433,
+        "triangles": 2094,
+        "sourceBounds": {
+          "min": [
+            -41.3646,
+            -87.6442,
+            1462.21
+          ],
+          "max": [
+            40.2307,
+            -40.5958,
+            1481.43
+          ]
+        },
+        "sourceFile": "FJ3176.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "594ac8b2b09280022e2b73142f873fd4d622ba7a1bca590c3fdcb0231e4fb461"
+      },
+      {
+        "id": "FJ3177",
+        "name": "Axis",
+        "sourceId": "FMA12520",
+        "kind": "bone",
+        "vertices": 1540,
+        "triangles": 2288,
+        "sourceBounds": {
+          "min": [
+            -25.9616,
+            -86.5391,
+            1433.17
+          ],
+          "max": [
+            24.5742,
+            -36.6709,
+            1478.35
+          ]
+        },
+        "sourceFile": "FJ3177.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "d76f052f56dda3dc6f4d453c33f062ff56207ff3aea90f9678b5d295f0c916f1"
+      },
+      {
+        "id": "FJ3178",
+        "name": "Body of sternum",
+        "sourceId": "FMA7487",
+        "kind": "bone",
+        "vertices": 3691,
+        "triangles": 4646,
+        "sourceBounds": {
+          "min": [
+            -23.6149,
+            -213.832,
+            1179.65
+          ],
+          "max": [
+            23.9556,
+            -165.166,
+            1289.64
+          ]
+        },
+        "sourceFile": "FJ3178.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "32a06946d8eadbe1a847a373abe7499381c0182c72b7c94e3e2a0c3ba7c867e3"
+      },
+      {
+        "id": "FJ3179",
+        "name": "Distal phalanx of left second toe",
+        "sourceId": "FMA32653",
+        "kind": "bone",
+        "vertices": 169,
+        "triangles": 240,
+        "sourceBounds": {
+          "min": [
+            132.153,
+            -234.017,
+            -70.2268
+          ],
+          "max": [
+            143.397,
+            -220.864,
+            -63.0226
+          ]
+        },
+        "sourceFile": "FJ3179.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "aa2903a8f53a7fe7383a9f27dc4920f411a4d8f181afaf7412799dd87e589aac"
+      },
+      {
+        "id": "FJ3180",
+        "name": "Distal phalanx of left third toe",
+        "sourceId": "FMA32655",
+        "kind": "bone",
+        "vertices": 188,
+        "triangles": 336,
+        "sourceBounds": {
+          "min": [
+            145.842,
+            -223.651,
+            -70.2613
+          ],
+          "max": [
+            154.841,
+            -212.314,
+            -64.3681
+          ]
+        },
+        "sourceFile": "FJ3180.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "f0887b9a26088762fbd89b1dc34a033ce8d59c2f41a8bf239e822e99c042a8c2"
+      },
+      {
+        "id": "FJ3181",
+        "name": "Distal phalanx of left fourth toe",
+        "sourceId": "FMA32657",
+        "kind": "bone",
+        "vertices": 146,
+        "triangles": 226,
+        "sourceBounds": {
+          "min": [
+            155.212,
+            -206.553,
+            -70.3093
+          ],
+          "max": [
+            164.075,
+            -195.431,
+            -63.4546
+          ]
+        },
+        "sourceFile": "FJ3181.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "eea79d87f0a3b799e705dc7e6cfcba699aa46f1ba4ebc78f27392b069e6849dc"
+      },
+      {
+        "id": "FJ3182",
+        "name": "Distal phalanx of left big toe",
+        "sourceId": "FMA32651",
+        "kind": "bone",
+        "vertices": 256,
+        "triangles": 378,
+        "sourceBounds": {
+          "min": [
+            102.504,
+            -235.919,
+            -70.0065
+          ],
+          "max": [
+            125.056,
+            -210.725,
+            -59.0411
+          ]
+        },
+        "sourceFile": "FJ3182.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "dad7cb9b6e4eb0619d725a2e2697997a2e8b869ed5d67965c91746b2e6faaa88"
+      },
+      {
+        "id": "FJ3183",
+        "name": "Distal phalanx of left index finger",
+        "sourceId": "FMA23953",
+        "kind": "bone",
+        "vertices": 204,
+        "triangles": 328,
+        "sourceBounds": {
+          "min": [
+            301.261,
+            -186.711,
+            661.851
+          ],
+          "max": [
+            311.254,
+            -169.614,
+            675.567
+          ]
+        },
+        "sourceFile": "FJ3183.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "4b21956aa21986a4e709fe73291d0a21a74b202375ce6623dfc7ef6b26ebf9b8"
+      },
+      {
+        "id": "FJ3184",
+        "name": "Distal phalanx of left little finger",
+        "sourceId": "FMA23959",
+        "kind": "bone",
+        "vertices": 154,
+        "triangles": 198,
+        "sourceBounds": {
+          "min": [
+            218.894,
+            -182.284,
+            676.628
+          ],
+          "max": [
+            227.155,
+            -168.42,
+            689.309
+          ]
+        },
+        "sourceFile": "FJ3184.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "11479ce0bbe0c20515066d4b98dd11c35f7f23580f10e2a388ccb816a8dad20e"
+      },
+      {
+        "id": "FJ3185",
+        "name": "Distal phalanx of left little toe",
+        "sourceId": "FMA32659",
+        "kind": "bone",
+        "vertices": 160,
+        "triangles": 220,
+        "sourceBounds": {
+          "min": [
+            161.261,
+            -186.545,
+            -70.4799
+          ],
+          "max": [
+            169.358,
+            -176.16,
+            -65.129
+          ]
+        },
+        "sourceFile": "FJ3185.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "4e4c610814cfdf5cb49d890f5ba5b6c0049bda34d031a439c9b3812d161936fa"
+      },
+      {
+        "id": "FJ3186",
+        "name": "Distal phalanx of left middle finger",
+        "sourceId": "FMA23955",
+        "kind": "bone",
+        "vertices": 173,
+        "triangles": 266,
+        "sourceBounds": {
+          "min": [
+            271.361,
+            -195.089,
+            653.367
+          ],
+          "max": [
+            280.854,
+            -178.084,
+            666.371
+          ]
+        },
+        "sourceFile": "FJ3186.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "c5dcbe81e721420508a2cb40228e45471925d4b507f0c738a7446a2ee835cd7c"
+      },
+      {
+        "id": "FJ3187",
+        "name": "Distal phalanx of left ring finger",
+        "sourceId": "FMA23957",
+        "kind": "bone",
+        "vertices": 140,
+        "triangles": 196,
+        "sourceBounds": {
+          "min": [
+            245.3,
+            -194.36,
+            664.812
+          ],
+          "max": [
+            253.646,
+            -178.756,
+            673.899
+          ]
+        },
+        "sourceFile": "FJ3187.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "49dd966dbef49394d802a781a5ee80b98eec168352d190e6a57ba35ff4ca3bd6"
+      },
+      {
+        "id": "FJ3188",
+        "name": "Distal phalanx of left thumb",
+        "sourceId": "FMA23951",
+        "kind": "bone",
+        "vertices": 189,
+        "triangles": 270,
+        "sourceBounds": {
+          "min": [
+            310.838,
+            -173.273,
+            719.243
+          ],
+          "max": [
+            323.935,
+            -157.241,
+            742.231
+          ]
+        },
+        "sourceFile": "FJ3188.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "6a0cae057769e3f67a86304be10f7f4b6cafc631092c764a82aef7e7ee9d2119"
+      },
+      {
+        "id": "FJ3189",
+        "name": "Distal phalanx of right second toe",
+        "sourceId": "FMA32652",
+        "kind": "bone",
+        "vertices": 170,
+        "triangles": 200,
+        "sourceBounds": {
+          "min": [
+            -143.346,
+            -234.096,
+            -70.2885
+          ],
+          "max": [
+            -132.348,
+            -221.012,
+            -63.0534
+          ]
+        },
+        "sourceFile": "FJ3189.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "e9375bc30ba9c2aa2c69cbe3f7e1b1f581d0d1a674c41d31f6b9c27a8f174715"
+      },
+      {
+        "id": "FJ3190",
+        "name": "Distal phalanx of right third toe",
+        "sourceId": "FMA32654",
+        "kind": "bone",
+        "vertices": 162,
+        "triangles": 260,
+        "sourceBounds": {
+          "min": [
+            -154.825,
+            -223.666,
+            -70.1976
+          ],
+          "max": [
+            -145.891,
+            -212.259,
+            -64.3866
+          ]
+        },
+        "sourceFile": "FJ3190.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "153722e3a39bc9f4cf3444cefd9336e5adb6b2236c6d6b8c2d1ba4a54c8754af"
+      },
+      {
+        "id": "FJ3191",
+        "name": "Distal phalanx of right fourth toe",
+        "sourceId": "FMA32656",
+        "kind": "bone",
+        "vertices": 144,
+        "triangles": 244,
+        "sourceBounds": {
+          "min": [
+            -164.127,
+            -206.535,
+            -70.3923
+          ],
+          "max": [
+            -155.335,
+            -195.368,
+            -63.396
+          ]
+        },
+        "sourceFile": "FJ3191.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "35ca50bcad4f559dcc6a0885abb9fe3c06965925791ff5567a38301623d46beb"
+      },
+      {
+        "id": "FJ3192",
+        "name": "Distal phalanx of right big toe",
+        "sourceId": "FMA32650",
+        "kind": "bone",
+        "vertices": 289,
+        "triangles": 440,
+        "sourceBounds": {
+          "min": [
+            -125.119,
+            -236.044,
+            -69.8979
+          ],
+          "max": [
+            -102.398,
+            -210.782,
+            -59.0054
+          ]
+        },
+        "sourceFile": "FJ3192.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "ecb7a162be315a96591180a3b997efffa827d06849e8c85cfea72fe0d57e9ab8"
+      },
+      {
+        "id": "FJ3193",
+        "name": "Distal phalanx of right index finger",
+        "sourceId": "FMA24460",
+        "kind": "bone",
+        "vertices": 188,
+        "triangles": 210,
+        "sourceBounds": {
+          "min": [
+            -311.368,
+            -186.73,
+            661.846
+          ],
+          "max": [
+            -301.425,
+            -169.647,
+            675.689
+          ]
+        },
+        "sourceFile": "FJ3193.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "22fb13bf483f413a93306da7e3805569ec78cf91222920a23e31d1f8f8be8ca7"
+      },
+      {
+        "id": "FJ3194",
+        "name": "Distal phalanx of right little finger",
+        "sourceId": "FMA24463",
+        "kind": "bone",
+        "vertices": 140,
+        "triangles": 188,
+        "sourceBounds": {
+          "min": [
+            -227.203,
+            -181.873,
+            676.749
+          ],
+          "max": [
+            -218.895,
+            -168.171,
+            689.277
+          ]
+        },
+        "sourceFile": "FJ3194.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "1a77bb45ca5da49a3f46f0773d8f544f8171fa7650da31040fc15524d541eac0"
+      },
+      {
+        "id": "FJ3195",
+        "name": "Distal phalanx of right little toe",
+        "sourceId": "FMA32658",
+        "kind": "bone",
+        "vertices": 178,
+        "triangles": 210,
+        "sourceBounds": {
+          "min": [
+            -169.327,
+            -186.579,
+            -70.3538
+          ],
+          "max": [
+            -161.169,
+            -176.2,
+            -65.1419
+          ]
+        },
+        "sourceFile": "FJ3195.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "5402b29f019e8c13be850809be79cd262eab0276094322203e46a103145276ff"
+      },
+      {
+        "id": "FJ3196",
+        "name": "Distal phalanx of right middle finger",
+        "sourceId": "FMA24461",
+        "kind": "bone",
+        "vertices": 143,
+        "triangles": 174,
+        "sourceBounds": {
+          "min": [
+            -280.912,
+            -195.428,
+            653.067
+          ],
+          "max": [
+            -271.365,
+            -178.205,
+            666.531
+          ]
+        },
+        "sourceFile": "FJ3196.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "9aa0ed0579e703009b4f5e16c7a650d5127a9fcf6f91b6e20e5b8317b7e7651e"
+      },
+      {
+        "id": "FJ3197",
+        "name": "Distal phalanx of right ring finger",
+        "sourceId": "FMA24462",
+        "kind": "bone",
+        "vertices": 114,
+        "triangles": 112,
+        "sourceBounds": {
+          "min": [
+            -253.614,
+            -194.38,
+            664.869
+          ],
+          "max": [
+            -245.281,
+            -178.717,
+            674.008
+          ]
+        },
+        "sourceFile": "FJ3197.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "a8e025b484c28f564f12d7e98b32dad1196050a957f879b639aac2cadc5a300d"
+      },
+      {
+        "id": "FJ3198",
+        "name": "Distal phalanx of right thumb",
+        "sourceId": "FMA24459",
+        "kind": "bone",
+        "vertices": 187,
+        "triangles": 240,
+        "sourceBounds": {
+          "min": [
+            -323.914,
+            -173.358,
+            719.139
+          ],
+          "max": [
+            -310.263,
+            -157.135,
+            742.166
+          ]
+        },
+        "sourceFile": "FJ3198.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "b95a645681d4548ad0d6bf4d79645f5c2e3b7c044c834ed8d52315c9e3a14f4e"
+      },
+      {
+        "id": "FJ3199",
+        "name": "Ethmoid",
+        "sourceId": "FMA52740",
+        "kind": "bone",
+        "vertices": 12484,
+        "triangles": 22276,
+        "sourceBounds": {
+          "min": [
+            -21.5099,
+            -167.2,
+            1497.28
+          ],
+          "max": [
+            20.2014,
+            -119.816,
+            1532.34
+          ]
+        },
+        "sourceFile": "FJ3199.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "6c0fceb9f44fe469d4db0e41594e8c5ed28a576950de7c43df488628d81105ea"
+      },
+      {
+        "id": "FJ3200",
+        "name": "Frontal bone",
+        "sourceId": "FMA52734",
+        "kind": "bone",
+        "vertices": 8472,
+        "triangles": 14510,
+        "sourceBounds": {
+          "min": [
+            -63.3025,
+            -177.385,
+            1520.89
+          ],
+          "max": [
+            61.9921,
+            -106.639,
+            1629.94
+          ]
+        },
+        "sourceFile": "FJ3200.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "9a01d88bd564b462ecadd6ad5bb3bb2274105baa3d211e0f444210d3f499ed64"
+      },
+      {
+        "id": "FJ3201",
+        "name": "Hyoid bone",
+        "sourceId": "FMA52749",
+        "kind": "bone",
+        "vertices": 687,
+        "triangles": 1196,
+        "sourceBounds": {
+          "min": [
+            -19.5242,
+            -129.0,
+            1422.37
+          ],
+          "max": [
+            18.2825,
+            -94.4187,
+            1440.86
+          ]
+        },
+        "sourceFile": "FJ3201.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "27e9e3f1146ff10c489c683b89f78c60c187eed578f52ec1bfdd1694d0684b44"
+      },
+      {
+        "id": "FJ3202",
+        "name": "Intervertebral disk of axis",
+        "sourceId": "FMA25058",
+        "kind": "disc",
+        "vertices": 1941,
+        "triangles": 3712,
+        "sourceBounds": {
+          "min": [
+            -13.4404,
+            -87.2534,
+            1441.45
+          ],
+          "max": [
+            11.684,
+            -69.2213,
+            1450.94
+          ]
+        },
+        "sourceFile": "FJ3202.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "54353b0c78da72312837053808c9b7fbece5ea843132b974642447400c05eb17"
+      },
+      {
+        "id": "FJ3203",
+        "name": "Intervertebral disk of fourth thoracic vertebra",
+        "sourceId": "FMA13501",
+        "kind": "disc",
+        "vertices": 1164,
+        "triangles": 1560,
+        "sourceBounds": {
+          "min": [
+            -15.4939,
+            -66.7359,
+            1278.03
+          ],
+          "max": [
+            14.2347,
+            -37.6833,
+            1291.33
+          ]
+        },
+        "sourceFile": "FJ3203.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "e4d18b10b53cf1dce6254ed32e0cf2bde492f3fba523001f9d0099b6836c4955"
+      },
+      {
+        "id": "FJ3204",
+        "name": "Intervertebral disk of fifth thoracic vertebra",
+        "sourceId": "FMA13502",
+        "kind": "disc",
+        "vertices": 1470,
+        "triangles": 1836,
+        "sourceBounds": {
+          "min": [
+            -15.9234,
+            -65.3025,
+            1254.5
+          ],
+          "max": [
+            14.6322,
+            -33.5565,
+            1265.0
+          ]
+        },
+        "sourceFile": "FJ3204.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "aea5417173600504e344b7ff1987e73255fb8cc10a0309fad43c9749ceb53363"
+      },
+      {
+        "id": "FJ3205",
+        "name": "Intervertebral disk of sixth thoracic vertebra",
+        "sourceId": "FMA13503",
+        "kind": "disc",
+        "vertices": 2106,
+        "triangles": 2564,
+        "sourceBounds": {
+          "min": [
+            -17.6541,
+            -66.1989,
+            1227.09
+          ],
+          "max": [
+            16.3522,
+            -30.6065,
+            1239.14
+          ]
+        },
+        "sourceFile": "FJ3205.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "1419ec408f4c3084e1ee41c6272d5a93ec07e6fba49c3f99b813cc559cae2961"
+      },
+      {
+        "id": "FJ3206",
+        "name": "Intervertebral disk of seventh thoracic vertebra",
+        "sourceId": "FMA13504",
+        "kind": "disc",
+        "vertices": 2105,
+        "triangles": 2630,
+        "sourceBounds": {
+          "min": [
+            -17.619,
+            -69.4926,
+            1200.95
+          ],
+          "max": [
+            16.2887,
+            -32.8435,
+            1213.18
+          ]
+        },
+        "sourceFile": "FJ3206.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "b3ea7878a0c4dc7acda522e4de58ee9048d7197167279c9d57c816e22752ef05"
+      },
+      {
+        "id": "FJ3207",
+        "name": "Intervertebral disk of eighth thoracic vertebra",
+        "sourceId": "FMA13505",
+        "kind": "disc",
+        "vertices": 2919,
+        "triangles": 2894,
+        "sourceBounds": {
+          "min": [
+            -18.4752,
+            -74.1825,
+            1174.72
+          ],
+          "max": [
+            17.1607,
+            -38.3823,
+            1189.37
+          ]
+        },
+        "sourceFile": "FJ3207.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "6ba7cf1f72bcb78289c2043a89c0269821b7e17933b95cde1785de36f164dd88"
+      },
+      {
+        "id": "FJ3208",
+        "name": "Intervertebral disk of ninth thoracic vertebra",
+        "sourceId": "FMA13506",
+        "kind": "disc",
+        "vertices": 2876,
+        "triangles": 2940,
+        "sourceBounds": {
+          "min": [
+            -19.5791,
+            -79.6317,
+            1147.11
+          ],
+          "max": [
+            18.2622,
+            -43.5852,
+            1162.54
+          ]
+        },
+        "sourceFile": "FJ3208.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "9a674b66719c1b358420e1f4b36884d0fd4cb48c9aec4c7512edb6a6257b3943"
+      },
+      {
+        "id": "FJ3209",
+        "name": "Intervertebral disk of tenth thoracic vertebra",
+        "sourceId": "FMA13507",
+        "kind": "disc",
+        "vertices": 2963,
+        "triangles": 3102,
+        "sourceBounds": {
+          "min": [
+            -19.9665,
+            -87.7942,
+            1119.91
+          ],
+          "max": [
+            18.6696,
+            -49.6815,
+            1135.31
+          ]
+        },
+        "sourceFile": "FJ3209.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "9f0ce1156106b47bf9b1cd4e42ab0d2f6cd726774f2642e491c00b3e8f1903db"
+      },
+      {
+        "id": "FJ3210",
+        "name": "Intervertebral disk of eleventh thoracic vertebra",
+        "sourceId": "FMA13508",
+        "kind": "disc",
+        "vertices": 3353,
+        "triangles": 3336,
+        "sourceBounds": {
+          "min": [
+            -20.7728,
+            -97.0122,
+            1091.61
+          ],
+          "max": [
+            19.4286,
+            -56.9869,
+            1108.24
+          ]
+        },
+        "sourceFile": "FJ3210.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "0612b7a8bd73b5250b8cda72b0c30d7c9ceb21010dabfc683826f581b4fe6b5e"
+      },
+      {
+        "id": "FJ3211",
+        "name": "Intervertebral disk",
+        "sourceId": "FMA10446",
+        "kind": "disc",
+        "vertices": 4131,
+        "triangles": 3476,
+        "sourceBounds": {
+          "min": [
+            -21.7746,
+            -105.126,
+            1061.5
+          ],
+          "max": [
+            20.4661,
+            -65.797,
+            1078.89
+          ]
+        },
+        "sourceFile": "FJ3211.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "312819388c2857a2908b6529b463f43406f090748a464d3aa4bd00f0f3920ccd"
+      },
+      {
+        "id": "FJ3212",
+        "name": "Intervertebral disk of first lumbar vertebra",
+        "sourceId": "FMA16033",
+        "kind": "disc",
+        "vertices": 3874,
+        "triangles": 3498,
+        "sourceBounds": {
+          "min": [
+            -21.8952,
+            -112.303,
+            1032.56
+          ],
+          "max": [
+            20.5982,
+            -74.5321,
+            1048.57
+          ]
+        },
+        "sourceFile": "FJ3212.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "7713e48391f7bddcf0b38736831f3bf570d2aff4aa761ba555c4c2cc3f5e1e1f"
+      },
+      {
+        "id": "FJ3213",
+        "name": "Intervertebral disk of third cervical vertebra",
+        "sourceId": "FMA13896",
+        "kind": "disc",
+        "vertices": 608,
+        "triangles": 770,
+        "sourceBounds": {
+          "min": [
+            -11.9711,
+            -88.691,
+            1426.89
+          ],
+          "max": [
+            10.6614,
+            -72.6619,
+            1433.07
+          ]
+        },
+        "sourceFile": "FJ3213.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "588c57901bbacd9acd909e6be32cc98d5c3ded0e0aa9d6d429524e3105e0e359"
+      },
+      {
+        "id": "FJ3214",
+        "name": "Intervertebral disk of second lumbar vertebra",
+        "sourceId": "FMA16034",
+        "kind": "disc",
+        "vertices": 3518,
+        "triangles": 3406,
+        "sourceBounds": {
+          "min": [
+            -22.9699,
+            -115.991,
+            1001.12
+          ],
+          "max": [
+            21.649,
+            -78.1293,
+            1012.57
+          ]
+        },
+        "sourceFile": "FJ3214.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "6f798a68e6456c961a7b82f814cb9dd867dc005b49d9b5711b65a93cd25dde5d"
+      },
+      {
+        "id": "FJ3215",
+        "name": "Intervertebral disk of third lumbar vertebra",
+        "sourceId": "FMA16035",
+        "kind": "disc",
+        "vertices": 4151,
+        "triangles": 3454,
+        "sourceBounds": {
+          "min": [
+            -23.0097,
+            -112.853,
+            963.294
+          ],
+          "max": [
+            21.7167,
+            -74.5784,
+            980.707
+          ]
+        },
+        "sourceFile": "FJ3215.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "671fbfa846c09e3ef118964eadd7433ba7a181065dc67f303d63efef4e29569e"
+      },
+      {
+        "id": "FJ3216",
+        "name": "Intervertebral disk of fourth lumbar vertebra",
+        "sourceId": "FMA16036",
+        "kind": "disc",
+        "vertices": 3650,
+        "triangles": 3512,
+        "sourceBounds": {
+          "min": [
+            -25.2531,
+            -102.767,
+            930.628
+          ],
+          "max": [
+            23.8987,
+            -64.255,
+            953.593
+          ]
+        },
+        "sourceFile": "FJ3216.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "a83d0843c597451b0bf8be3bd0f59511e123d65555b66377b2fa4b8b4aafa837"
+      },
+      {
+        "id": "FJ3217",
+        "name": "Intervertebral disk of fifth lumbar vertebra",
+        "sourceId": "FMA16037",
+        "kind": "disc",
+        "vertices": 2582,
+        "triangles": 3498,
+        "sourceBounds": {
+          "min": [
+            -24.355,
+            -91.0785,
+            894.826
+          ],
+          "max": [
+            22.9925,
+            -53.946,
+            923.771
+          ]
+        },
+        "sourceFile": "FJ3217.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "5f534a8cc9f026b6cc46a4153804eb3b3b53023ba4d27ad36373fbdc0c623b38"
+      },
+      {
+        "id": "FJ3218",
+        "name": "Intervertebral disk of fourth cervical vertebra",
+        "sourceId": "FMA13897",
+        "kind": "disc",
+        "vertices": 676,
+        "triangles": 926,
+        "sourceBounds": {
+          "min": [
+            -13.3902,
+            -91.2835,
+            1408.71
+          ],
+          "max": [
+            12.0673,
+            -74.2152,
+            1419.33
+          ]
+        },
+        "sourceFile": "FJ3218.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "19d1fce7507311905dc3967587577b918c44ca47db1dec7a8370f6396d481592"
+      },
+      {
+        "id": "FJ3219",
+        "name": "Intervertebral disk of fifth cervical vertebra",
+        "sourceId": "FMA13898",
+        "kind": "disc",
+        "vertices": 685,
+        "triangles": 956,
+        "sourceBounds": {
+          "min": [
+            -14.8096,
+            -91.9798,
+            1392.57
+          ],
+          "max": [
+            13.479,
+            -75.5214,
+            1403.33
+          ]
+        },
+        "sourceFile": "FJ3219.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "0afd538cf25eb2668e3b3755654d4ad98f49e865a572f1c2ccf7f24db8353b77"
+      },
+      {
+        "id": "FJ3220",
+        "name": "Intervertebral disk of sixth cervical vertebra",
+        "sourceId": "FMA13899",
+        "kind": "disc",
+        "vertices": 888,
+        "triangles": 892,
+        "sourceBounds": {
+          "min": [
+            -14.826,
+            -90.3012,
+            1377.18
+          ],
+          "max": [
+            13.355,
+            -73.5229,
+            1386.75
+          ]
+        },
+        "sourceFile": "FJ3220.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "368196ece25f700fe3bd3922c7bd706631673fb64f1199134e66f7d8063d5c75"
+      },
+      {
+        "id": "FJ3221",
+        "name": "Intervertebral disk of seventh cervical vertebra",
+        "sourceId": "FMA13900",
+        "kind": "disc",
+        "vertices": 949,
+        "triangles": 1092,
+        "sourceBounds": {
+          "min": [
+            -16.3312,
+            -87.6123,
+            1360.0
+          ],
+          "max": [
+            14.939,
+            -69.7753,
+            1371.67
+          ]
+        },
+        "sourceFile": "FJ3221.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "0a1690fb85f87722081914d4cc5ec898b6fb199c273778607059d093d9bc9e4d"
+      },
+      {
+        "id": "FJ3222",
+        "name": "Intervertebral disk of first thoracic vertebra",
+        "sourceId": "FMA10458",
+        "kind": "disc",
+        "vertices": 1049,
+        "triangles": 1232,
+        "sourceBounds": {
+          "min": [
+            -17.064,
+            -83.7819,
+            1341.9
+          ],
+          "max": [
+            15.5358,
+            -63.9087,
+            1354.75
+          ]
+        },
+        "sourceFile": "FJ3222.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "c83ba588bcfaf229b5bbea5ea521d6751f6fa586997c147dd1ec5215ee9d0639"
+      },
+      {
+        "id": "FJ3223",
+        "name": "Intervertebral disk of second thoracic vertebra",
+        "sourceId": "FMA13495",
+        "kind": "disc",
+        "vertices": 1237,
+        "triangles": 1374,
+        "sourceBounds": {
+          "min": [
+            -16.6084,
+            -78.2662,
+            1320.74
+          ],
+          "max": [
+            15.3047,
+            -55.3544,
+            1335.62
+          ]
+        },
+        "sourceFile": "FJ3223.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "465db0485b4ad437a2b39f3fbe60170eed5e144c9597e294414cacaa4e0e9a16"
+      },
+      {
+        "id": "FJ3224",
+        "name": "Intervertebral disk of third thoracic vertebra",
+        "sourceId": "FMA13500",
+        "kind": "disc",
+        "vertices": 1495,
+        "triangles": 1474,
+        "sourceBounds": {
+          "min": [
+            -15.5442,
+            -71.5834,
+            1299.73
+          ],
+          "max": [
+            14.2062,
+            -45.6897,
+            1314.4
+          ]
+        },
+        "sourceFile": "FJ3224.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "20a49a6ae3e5709cc272cff12b461806ff0e93626e34ec007e0a381a7b7b97c7"
+      },
+      {
+        "id": "FJ3225",
+        "name": "Left tenth rib",
+        "sourceId": "FMA8472",
+        "kind": "bone",
+        "vertices": 3419,
+        "triangles": 6826,
+        "sourceBounds": {
+          "min": [
+            15.5623,
+            -117.715,
+            1022.96
+          ],
+          "max": [
+            122.349,
+            -11.3545,
+            1158.99
+          ]
+        },
+        "sourceFile": "FJ3225.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "daa25aba7fba3ff691d61cd239f8d49debc84ff871a351051c1d57a192b91dfd"
+      },
+      {
+        "id": "FJ3226",
+        "name": "Left eleventh rib",
+        "sourceId": "FMA8532",
+        "kind": "bone",
+        "vertices": 2435,
+        "triangles": 4866,
+        "sourceBounds": {
+          "min": [
+            16.279,
+            -96.0117,
+            1008.06
+          ],
+          "max": [
+            110.054,
+            -17.9614,
+            1121.74
+          ]
+        },
+        "sourceFile": "FJ3226.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "4bb9d52fdb2c15cb459c2bd08fd58082cdb39d15903cde675313762ea2287fc8"
+      },
+      {
+        "id": "FJ3227",
+        "name": "Left twelfth rib",
+        "sourceId": "FMA8534",
+        "kind": "bone",
+        "vertices": 1411,
+        "triangles": 2818,
+        "sourceBounds": {
+          "min": [
+            16.8903,
+            -66.0698,
+            1011.33
+          ],
+          "max": [
+            85.2211,
+            -28.0149,
+            1089.16
+          ]
+        },
+        "sourceFile": "FJ3227.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "83e04b8b6f91e4de57e7b380a2f2c7d6f0bbf284ce76710ca89aa82fb376bd4e"
+      },
+      {
+        "id": "FJ3228",
+        "name": "Left first rib",
+        "sourceId": "FMA7987",
+        "kind": "bone",
+        "vertices": 1641,
+        "triangles": 3276,
+        "sourceBounds": {
+          "min": [
+            13.8004,
+            -130.42,
+            1310.07
+          ],
+          "max": [
+            68.4546,
+            -64.417,
+            1370.48
+          ]
+        },
+        "sourceFile": "FJ3228.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "eb534d19462226e26b91234544f99abe118878a25c125f2a8839341e6769252b"
+      },
+      {
+        "id": "FJ3229",
+        "name": "Left second rib",
+        "sourceId": "FMA8012",
+        "kind": "bone",
+        "vertices": 2862,
+        "triangles": 5594,
+        "sourceBounds": {
+          "min": [
+            14.7349,
+            -167.127,
+            1273.51
+          ],
+          "max": [
+            95.661,
+            -50.6468,
+            1359.03
+          ]
+        },
+        "sourceFile": "FJ3229.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "b752f038ceba8430f3872897ce69495d7dd74ed8e19c21d3f75d0bc0b156d84f"
+      },
+      {
+        "id": "FJ3230",
+        "name": "Left third rib",
+        "sourceId": "FMA8039",
+        "kind": "bone",
+        "vertices": 3637,
+        "triangles": 7254,
+        "sourceBounds": {
+          "min": [
+            12.7243,
+            -179.257,
+            1243.84
+          ],
+          "max": [
+            107.633,
+            -36.8579,
+            1335.98
+          ]
+        },
+        "sourceFile": "FJ3230.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "8b42d241c711fe9765b1239be33fcab6b865ab4619b5d05fa98ea245b6075d5c"
+      },
+      {
+        "id": "FJ3231",
+        "name": "Left fourth rib",
+        "sourceId": "FMA8148",
+        "kind": "bone",
+        "vertices": 4445,
+        "triangles": 8850,
+        "sourceBounds": {
+          "min": [
+            12.9057,
+            -192.195,
+            1211.1
+          ],
+          "max": [
+            116.281,
+            -23.1919,
+            1315.35
+          ]
+        },
+        "sourceFile": "FJ3231.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "28b852d4813703c5654d0405168e22bf0032632d47b9667b4b16e60ed89a425b"
+      },
+      {
+        "id": "FJ3232",
+        "name": "Left fifth rib",
+        "sourceId": "FMA8093",
+        "kind": "bone",
+        "vertices": 4912,
+        "triangles": 9710,
+        "sourceBounds": {
+          "min": [
+            14.0045,
+            -197.688,
+            1172.17
+          ],
+          "max": [
+            125.768,
+            -12.7227,
+            1291.32
+          ]
+        },
+        "sourceFile": "FJ3232.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "6fa730aea273685148d3e9d3f52fe450acec4c13d6e3b1b6865e0e9532283abb"
+      },
+      {
+        "id": "FJ3233",
+        "name": "Left sixth rib",
+        "sourceId": "FMA8202",
+        "kind": "bone",
+        "vertices": 5172,
+        "triangles": 10264,
+        "sourceBounds": {
+          "min": [
+            12.7754,
+            -193.495,
+            1137.9
+          ],
+          "max": [
+            133.054,
+            -3.6444,
+            1266.83
+          ]
+        },
+        "sourceFile": "FJ3233.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "2a0f1e32b8410b6396bea7ae342a16ae1ac1b77042e70d7e98cabeb7dcf3dfb9"
+      },
+      {
+        "id": "FJ3234",
+        "name": "Left seventh rib",
+        "sourceId": "FMA8256",
+        "kind": "bone",
+        "vertices": 5054,
+        "triangles": 10032,
+        "sourceBounds": {
+          "min": [
+            12.3825,
+            -180.208,
+            1105.19
+          ],
+          "max": [
+            135.778,
+            -4.49795,
+            1240.25
+          ]
+        },
+        "sourceFile": "FJ3234.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "638a766f20b64d02095efa845b5ea316624a376acb44c7e4a6d533d4da6ef4db"
+      },
+      {
+        "id": "FJ3235",
+        "name": "Left eighth rib",
+        "sourceId": "FMA8310",
+        "kind": "bone",
+        "vertices": 4211,
+        "triangles": 8336,
+        "sourceBounds": {
+          "min": [
+            12.3704,
+            -162.675,
+            1074.65
+          ],
+          "max": [
+            131.638,
+            -4.56957,
+            1211.32
+          ]
+        },
+        "sourceFile": "FJ3235.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "81a7215ef6ed923bbad6f07208bbc0ee26ddbaae3b1423f624cae465012d9144"
+      },
+      {
+        "id": "FJ3236",
+        "name": "Left ninth rib",
+        "sourceId": "FMA8391",
+        "kind": "bone",
+        "vertices": 3805,
+        "triangles": 7576,
+        "sourceBounds": {
+          "min": [
+            14.5582,
+            -135.602,
+            1050.09
+          ],
+          "max": [
+            127.783,
+            -7.52766,
+            1185.36
+          ]
+        },
+        "sourceFile": "FJ3236.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "3dc292292b9f2bd5e226ac100d3a8db76cba8eb1d9d09533a6e5e871f023e2a8"
+      },
+      {
+        "id": "FJ3237",
+        "name": "Left clavicle",
+        "sourceId": "FMA13323",
+        "kind": "bone",
+        "vertices": 602,
+        "triangles": 1176,
+        "sourceBounds": {
+          "min": [
+            8.37873,
+            -147.078,
+            1308.53
+          ],
+          "max": [
+            143.942,
+            -54.3875,
+            1355.18
+          ]
+        },
+        "sourceFile": "FJ3237.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "ae2dc115516cd51b56047c8c0188a0b62c3fe627deed4d1b83e79e09b4b5c0d8"
+      },
+      {
+        "id": "FJ3239",
+        "name": "Left first costal cartilage",
+        "sourceId": "FMA8005",
+        "kind": "cartilage",
+        "vertices": 418,
+        "triangles": 642,
+        "sourceBounds": {
+          "min": [
+            19.4952,
+            -150.812,
+            1296.87
+          ],
+          "max": [
+            56.1953,
+            -122.324,
+            1320.25
+          ]
+        },
+        "sourceFile": "FJ3239.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "9ca5fdb0582ad2795c9316ab9bb2f89f952b5a8c8fcf92a37efa042fc5c7739c"
+      },
+      {
+        "id": "FJ3240",
+        "name": "Left first metacarpal bone",
+        "sourceId": "FMA24465",
+        "kind": "bone",
+        "vertices": 304,
+        "triangles": 578,
+        "sourceBounds": {
+          "min": [
+            272.353,
+            -153.782,
+            760.295
+          ],
+          "max": [
+            309.625,
+            -123.406,
+            797.407
+          ]
+        },
+        "sourceFile": "FJ3240.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "0c8bf4436d320036d10a7fa3747ef34f0ce4ecd01bbee373225d1588efa38c70"
+      },
+      {
+        "id": "FJ3241",
+        "name": "Left first metatarsal bone",
+        "sourceId": "FMA24508",
+        "kind": "bone",
+        "vertices": 614,
+        "triangles": 1172,
+        "sourceBounds": {
+          "min": [
+            74.837,
+            -192.241,
+            -65.3757
+          ],
+          "max": [
+            104.378,
+            -129.971,
+            -22.1406
+          ]
+        },
+        "sourceFile": "FJ3241.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "81a87d611584dc38c5da832051623450d5e798e0461f5595c53b926bce8e1205"
+      },
+      {
+        "id": "FJ3242",
+        "name": "Left second costal cartilage",
+        "sourceId": "FMA8031",
+        "kind": "cartilage",
+        "vertices": 330,
+        "triangles": 588,
+        "sourceBounds": {
+          "min": [
+            10.2025,
+            -178.245,
+            1270.17
+          ],
+          "max": [
+            48.0573,
+            -157.748,
+            1288.01
+          ]
+        },
+        "sourceFile": "FJ3242.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "c83bb88d995837a455e72707e9d5ecb0035ad60d8fd2f6f28d3710b4ef4c9d8e"
+      },
+      {
+        "id": "FJ3243",
+        "name": "Left second metacarpal bone",
+        "sourceId": "FMA24467",
+        "kind": "bone",
+        "vertices": 420,
+        "triangles": 774,
+        "sourceBounds": {
+          "min": [
+            261.841,
+            -142.433,
+            719.042
+          ],
+          "max": [
+            292.613,
+            -117.117,
+            786.869
+          ]
+        },
+        "sourceFile": "FJ3243.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "8fda448450b00ade9b520798111fce1c90a3f27832d0c5112daafb2dabf8c2e9"
+      },
+      {
+        "id": "FJ3244",
+        "name": "Left second metatarsal bone",
+        "sourceId": "FMA24510",
+        "kind": "bone",
+        "vertices": 487,
+        "triangles": 774,
+        "sourceBounds": {
+          "min": [
+            90.5894,
+            -187.371,
+            -66.1637
+          ],
+          "max": [
+            121.348,
+            -122.489,
+            -18.3069
+          ]
+        },
+        "sourceFile": "FJ3244.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "dfccfdd4e15f9c5fc2d3ff5aec2c192e655b33796b7936a091f4fbbf0e846a47"
+      },
+      {
+        "id": "FJ3245",
+        "name": "Left third costal cartilage",
+        "sourceId": "FMA8058",
+        "kind": "cartilage",
+        "vertices": 328,
+        "triangles": 604,
+        "sourceBounds": {
+          "min": [
+            13.0945,
+            -190.074,
+            1242.4
+          ],
+          "max": [
+            50.7226,
+            -171.438,
+            1259.99
+          ]
+        },
+        "sourceFile": "FJ3245.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "ac65f51684b5dbcc3ea82381edae8723cbd9c7b8680bf6149a31dbf0acd26065"
+      },
+      {
+        "id": "FJ3246",
+        "name": "Left third metacarpal bone",
+        "sourceId": "FMA24469",
+        "kind": "bone",
+        "vertices": 392,
+        "triangles": 708,
+        "sourceBounds": {
+          "min": [
+            252.36,
+            -142.813,
+            720.649
+          ],
+          "max": [
+            272.252,
+            -112.41,
+            785.025
+          ]
+        },
+        "sourceFile": "FJ3246.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "c0c426e3140f3dc2457ddeb2e83d1db6efdadb3e77ccd939a2f15cbd7e186ecd"
+      },
+      {
+        "id": "FJ3247",
+        "name": "Left third metatarsal bone",
+        "sourceId": "FMA24512",
+        "kind": "bone",
+        "vertices": 429,
+        "triangles": 742,
+        "sourceBounds": {
+          "min": [
+            98.3199,
+            -180.795,
+            -66.5048
+          ],
+          "max": [
+            133.61,
+            -118.141,
+            -23.6681
+          ]
+        },
+        "sourceFile": "FJ3247.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "ba30e72831383f90a10502c5d511ebaa1edb77ba2a345b3030d95e3483769535"
+      },
+      {
+        "id": "FJ3248",
+        "name": "Left fourth costal cartilage",
+        "sourceId": "FMA8167",
+        "kind": "cartilage",
+        "vertices": 371,
+        "triangles": 658,
+        "sourceBounds": {
+          "min": [
+            14.3017,
+            -198.577,
+            1211.08
+          ],
+          "max": [
+            59.7768,
+            -184.326,
+            1235.57
+          ]
+        },
+        "sourceFile": "FJ3248.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "3633cb39f1540513872b9477c829d562114dce8d19cba5c99073fe4e3abeb1be"
+      },
+      {
+        "id": "FJ3249",
+        "name": "Left fourth metacarpal bone",
+        "sourceId": "FMA24471",
+        "kind": "bone",
+        "vertices": 316,
+        "triangles": 528,
+        "sourceBounds": {
+          "min": [
+            241.356,
+            -141.911,
+            725.253
+          ],
+          "max": [
+            253.774,
+            -115.898,
+            785.218
+          ]
+        },
+        "sourceFile": "FJ3249.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "f6b5c38ee246def1b4c59bbb878ad52b9d06b37af4e55f634c84beb757afff5d"
+      },
+      {
+        "id": "FJ3250",
+        "name": "Left fourth metatarsal bone",
+        "sourceId": "FMA24514",
+        "kind": "bone",
+        "vertices": 437,
+        "triangles": 772,
+        "sourceBounds": {
+          "min": [
+            101.773,
+            -169.425,
+            -67.3905
+          ],
+          "max": [
+            142.638,
+            -106.966,
+            -32.0211
+          ]
+        },
+        "sourceFile": "FJ3250.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "60e27563f64f948d6de395fb136af962c07d01d83bfa6ac057a263a6f5afcec0"
+      },
+      {
+        "id": "FJ3251",
+        "name": "Left fifth costal cartilage",
+        "sourceId": "FMA8112",
+        "kind": "cartilage",
+        "vertices": 594,
+        "triangles": 1086,
+        "sourceBounds": {
+          "min": [
+            17.7153,
+            -209.038,
+            1171.61
+          ],
+          "max": [
+            82.0336,
+            -189.325,
+            1215.24
+          ]
+        },
+        "sourceFile": "FJ3251.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "86be490af572a3d8c7f41fd1ed3f4bfac19a9966737bc1275f135f160d8298be"
+      },
+      {
+        "id": "FJ3252",
+        "name": "Left fifth metacarpal bone",
+        "sourceId": "FMA24473",
+        "kind": "bone",
+        "vertices": 282,
+        "triangles": 500,
+        "sourceBounds": {
+          "min": [
+            225.27,
+            -144.42,
+            732.031
+          ],
+          "max": [
+            245.394,
+            -120.224,
+            786.759
+          ]
+        },
+        "sourceFile": "FJ3252.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "ffe5b98ae80aabd879732ae03f8c56e3f4f84ed6442bf5a00565d274f2816b50"
+      },
+      {
+        "id": "FJ3253",
+        "name": "Left fifth metatarsal bone",
+        "sourceId": "FMA24516",
+        "kind": "bone",
+        "vertices": 447,
+        "triangles": 864,
+        "sourceBounds": {
+          "min": [
+            106.437,
+            -155.086,
+            -69.814
+          ],
+          "max": [
+            152.375,
+            -89.2924,
+            -39.7727
+          ]
+        },
+        "sourceFile": "FJ3253.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "bb7bfc77f5c770e1ad0042802b74ab028bd131c631bbdbf3636bcabe522e680b"
+      },
+      {
+        "id": "FJ3254",
+        "name": "Left sixth costal cartilage",
+        "sourceId": "FMA8221",
+        "kind": "cartilage",
+        "vertices": 815,
+        "triangles": 1498,
+        "sourceBounds": {
+          "min": [
+            13.8622,
+            -212.161,
+            1137.58
+          ],
+          "max": [
+            93.0014,
+            -185.172,
+            1197.28
+          ]
+        },
+        "sourceFile": "FJ3254.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "bc9ca44f2ea1fa9800d7f0a35c4596f41df1750ba9c89910d4f64041131db2bf"
+      },
+      {
+        "id": "FJ3255",
+        "name": "Left seventh costal cartilage",
+        "sourceId": "FMA8275",
+        "kind": "cartilage",
+        "vertices": 1367,
+        "triangles": 2314,
+        "sourceBounds": {
+          "min": [
+            3.32896,
+            -213.216,
+            1102.58
+          ],
+          "max": [
+            108.457,
+            -170.904,
+            1186.41
+          ]
+        },
+        "sourceFile": "FJ3255.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "97e69ede580a6e81cc42bb54fb22d4752719b61c5fced8ccccfb18ce64996676"
+      },
+      {
+        "id": "FJ3256",
+        "name": "Left calcaneus",
+        "sourceId": "FMA24498",
+        "kind": "bone",
+        "vertices": 719,
+        "triangles": 1288,
+        "sourceBounds": {
+          "min": [
+            45.01,
+            -94.1418,
+            -68.4172
+          ],
+          "max": [
+            100.768,
+            -24.2068,
+            -19.0712
+          ]
+        },
+        "sourceFile": "FJ3256.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "f39b699100eea69a951440f617a7d2ab692a7dc1c80e5bbb064603d7ba2dd4a4"
+      },
+      {
+        "id": "FJ3257",
+        "name": "Left capitate",
+        "sourceId": "FMA24447",
+        "kind": "bone",
+        "vertices": 237,
+        "triangles": 402,
+        "sourceBounds": {
+          "min": [
+            248.61,
+            -127.351,
+            782.164
+          ],
+          "max": [
+            264.288,
+            -110.573,
+            804.588
+          ]
+        },
+        "sourceFile": "FJ3257.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "43e59c2c85a9d76c49d338c1b42b6ddff82173b8ebd76fbb2d54d86930d23508"
+      },
+      {
+        "id": "FJ3258",
+        "name": "Left cuboid bone",
+        "sourceId": "FMA24529",
+        "kind": "bone",
+        "vertices": 494,
+        "triangles": 886,
+        "sourceBounds": {
+          "min": [
+            81.965,
+            -116.685,
+            -51.5223
+          ],
+          "max": [
+            115.134,
+            -83.163,
+            -21.853
+          ]
+        },
+        "sourceFile": "FJ3258.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "f1ed3539cbb89954b3aadd8a435a174dd26d31e8de39e9480f1c9bd38b4ee3c6"
+      },
+      {
+        "id": "FJ3259",
+        "name": "Left femur",
+        "sourceId": "FMA24475",
+        "kind": "bone",
+        "vertices": 1623,
+        "triangles": 3204,
+        "sourceBounds": {
+          "min": [
+            31.9662,
+            -112.276,
+            368.056
+          ],
+          "max": [
+            150.237,
+            -49.4822,
+            834.239
+          ]
+        },
+        "sourceFile": "FJ3259.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "4b919097be4820784d199838c69b1fe10afba703f0d6680a3ecab58460fb6549"
+      },
+      {
+        "id": "FJ3260",
+        "name": "Left fibula",
+        "sourceId": "FMA24481",
+        "kind": "bone",
+        "vertices": 577,
+        "triangles": 1124,
+        "sourceBounds": {
+          "min": [
+            84.529,
+            -78.119,
+            -25.1906
+          ],
+          "max": [
+            120.108,
+            -48.534,
+            359.131
+          ]
+        },
+        "sourceFile": "FJ3260.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "34d29e9d6b2bf032147bcbe8da1e9fb65739ca2115baf577987ff1b780fabb73"
+      },
+      {
+        "id": "FJ3261",
+        "name": "Left hamate",
+        "sourceId": "FMA24449",
+        "kind": "bone",
+        "vertices": 280,
+        "triangles": 452,
+        "sourceBounds": {
+          "min": [
+            236.597,
+            -133.982,
+            781.256
+          ],
+          "max": [
+            251.57,
+            -111.322,
+            800.631
+          ]
+        },
+        "sourceFile": "FJ3261.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "bc8ce15358c4b60be971675493d38a4bc11046bbb2e93281fdb39d3a3049b375"
+      },
+      {
+        "id": "FJ3262",
+        "name": "Left humerus",
+        "sourceId": "FMA23131",
+        "kind": "bone",
+        "vertices": 2073,
+        "triangles": 3844,
+        "sourceBounds": {
+          "min": [
+            140.073,
+            -100.229,
+            1029.21
+          ],
+          "max": [
+            240.76,
+            -51.0559,
+            1336.52
+          ]
+        },
+        "sourceFile": "FJ3262.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "58b4f0f36723f27726009cdf4b77172dc694303f4e03f51b29c1663507480194"
+      },
+      {
+        "id": "FJ3263",
+        "name": "Left inferior nasal concha",
+        "sourceId": "FMA54738",
+        "kind": "bone",
+        "vertices": 482,
+        "triangles": 738,
+        "sourceBounds": {
+          "min": [
+            4.59121,
+            -169.48,
+            1482.66
+          ],
+          "max": [
+            15.9399,
+            -133.951,
+            1498.05
+          ]
+        },
+        "sourceFile": "FJ3263.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "c6477a98607e712a2bdefd4c2732ce22a990b8cd8783b7b7a6453192443961cd"
+      },
+      {
+        "id": "FJ3264",
+        "name": "Left intermediate cuneiform bone",
+        "sourceId": "FMA24524",
+        "kind": "bone",
+        "vertices": 305,
+        "triangles": 466,
+        "sourceBounds": {
+          "min": [
+            82.0136,
+            -130.33,
+            -34.4288
+          ],
+          "max": [
+            101.955,
+            -109.632,
+            -11.3104
+          ]
+        },
+        "sourceFile": "FJ3264.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "6d6675dfb04a553a305369368392e91c1a2fd49783a81f7ac35773a5407e13f1"
+      },
+      {
+        "id": "FJ3265",
+        "name": "Left lacrimal bone",
+        "sourceId": "FMA53646",
+        "kind": "bone",
+        "vertices": 366,
+        "triangles": 640,
+        "sourceBounds": {
+          "min": [
+            7.31944,
+            -164.732,
+            1497.87
+          ],
+          "max": [
+            17.9311,
+            -150.764,
+            1526.88
+          ]
+        },
+        "sourceFile": "FJ3265.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "8ad400f81a74d51e3193ab1dc92ec39df5dc1c104a6ced970d430bca3d0f9c9c"
+      },
+      {
+        "id": "FJ3267",
+        "name": "Left lateral cuneiform bone",
+        "sourceId": "FMA24526",
+        "kind": "bone",
+        "vertices": 405,
+        "triangles": 680,
+        "sourceBounds": {
+          "min": [
+            87.226,
+            -125.146,
+            -40.6271
+          ],
+          "max": [
+            112.885,
+            -100.898,
+            -14.8154
+          ]
+        },
+        "sourceFile": "FJ3267.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "1e59930bb6ff4556d250b38ae71fc1e46148b6a87c7355148bac05ea52da0b27"
+      },
+      {
+        "id": "FJ3268",
+        "name": "Left lunate",
+        "sourceId": "FMA24438",
+        "kind": "bone",
+        "vertices": 187,
+        "triangles": 314,
+        "sourceBounds": {
+          "min": [
+            236.339,
+            -127.131,
+            797.222
+          ],
+          "max": [
+            252.883,
+            -110.628,
+            809.888
+          ]
+        },
+        "sourceFile": "FJ3268.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "8be07938751172946412e4e5eedf72831d7ec7b42110884d423982e5b8406333"
+      },
+      {
+        "id": "FJ3269",
+        "name": "Left maxilla",
+        "sourceId": "FMA53650",
+        "kind": "bone",
+        "vertices": 3577,
+        "triangles": 5198,
+        "sourceBounds": {
+          "min": [
+            -3.06793,
+            -182.88,
+            1463.99
+          ],
+          "max": [
+            45.7952,
+            -126.814,
+            1533.29
+          ]
+        },
+        "sourceFile": "FJ3269.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "a56eeb3723f4b3cd1d96b113eaba8f253ed49ff76220ba48ac0d1d086b80ff60"
+      },
+      {
+        "id": "FJ3271",
+        "name": "Left medial cuneiform bone",
+        "sourceId": "FMA24522",
+        "kind": "bone",
+        "vertices": 582,
+        "triangles": 996,
+        "sourceBounds": {
+          "min": [
+            66.0426,
+            -140.519,
+            -45.1444
+          ],
+          "max": [
+            94.1094,
+            -112.061,
+            -14.1921
+          ]
+        },
+        "sourceFile": "FJ3271.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "6bd6c95a27d545d8984a2582f36f3881e04e1550ae2fb3f068d3bee80bf833b2"
+      },
+      {
+        "id": "FJ3272",
+        "name": "Left nasal bone",
+        "sourceId": "FMA53648",
+        "kind": "bone",
+        "vertices": 263,
+        "triangles": 438,
+        "sourceBounds": {
+          "min": [
+            -2.52242,
+            -189.467,
+            1501.85
+          ],
+          "max": [
+            7.19993,
+            -169.29,
+            1533.49
+          ]
+        },
+        "sourceFile": "FJ3272.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "cc03a0b61102415dfa66cc55210f65c71ca9466e6e043d350449eac71b414a24"
+      },
+      {
+        "id": "FJ3273",
+        "name": "Left palatine bone",
+        "sourceId": "FMA53656",
+        "kind": "bone",
+        "vertices": 1164,
+        "triangles": 1938,
+        "sourceBounds": {
+          "min": [
+            -1.54324,
+            -149.962,
+            1470.16
+          ],
+          "max": [
+            27.4584,
+            -103.322,
+            1513.4
+          ]
+        },
+        "sourceFile": "FJ3273.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "dacf96918a971758cbf25e3884b15e6c2b0a112a863b773332fb916431676368"
+      },
+      {
+        "id": "FJ3274",
+        "name": "Left parietal bone",
+        "sourceId": "FMA52789",
+        "kind": "bone",
+        "vertices": 8367,
+        "triangles": 13210,
+        "sourceBounds": {
+          "min": [
+            -7.86774,
+            -131.686,
+            1517.8
+          ],
+          "max": [
+            74.8565,
+            14.9522,
+            1636.27
+          ]
+        },
+        "sourceFile": "FJ3274.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "df63a28fa604ff67828d8f382c66cfa46f40306b1b4c17a8062029764047d0e3"
+      },
+      {
+        "id": "FJ3275",
+        "name": "Left patella",
+        "sourceId": "FMA24487",
+        "kind": "bone",
+        "vertices": 180,
+        "triangles": 310,
+        "sourceBounds": {
+          "min": [
+            60.5925,
+            -122.751,
+            361.497
+          ],
+          "max": [
+            102.224,
+            -100.901,
+            400.763
+          ]
+        },
+        "sourceFile": "FJ3275.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "8a0776c1efe4ed2e3fff3c14b6fdb814dab4c077f8f3cf866866e8d9312a33e3"
+      },
+      {
+        "id": "FJ3276",
+        "name": "Left pisiform",
+        "sourceId": "FMA24442",
+        "kind": "bone",
+        "vertices": 116,
+        "triangles": 210,
+        "sourceBounds": {
+          "min": [
+            231.838,
+            -137.589,
+            789.725
+          ],
+          "max": [
+            240.03,
+            -127.031,
+            801.277
+          ]
+        },
+        "sourceFile": "FJ3276.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "fde947e4adb1373a5fe74820141804efb7875a6a507ff53938c2727392d6828b"
+      },
+      {
+        "id": "FJ3277",
+        "name": "Left radius",
+        "sourceId": "FMA23465",
+        "kind": "bone",
+        "vertices": 368,
+        "triangles": 632,
+        "sourceBounds": {
+          "min": [
+            219.836,
+            -127.252,
+            806.163
+          ],
+          "max": [
+            279.143,
+            -61.4693,
+            1035.01
+          ]
+        },
+        "sourceFile": "FJ3277.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "cce317e77ca297f93c0676815e22e8a2b6cc09029b74f1678193b17a9c0d5583"
+      },
+      {
+        "id": "FJ3278",
+        "name": "Left scaphoid",
+        "sourceId": "FMA24436",
+        "kind": "bone",
+        "vertices": 176,
+        "triangles": 312,
+        "sourceBounds": {
+          "min": [
+            249.452,
+            -126.444,
+            796.22
+          ],
+          "max": [
+            272.977,
+            -111.527,
+            811.682
+          ]
+        },
+        "sourceFile": "FJ3278.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "4311e5b791fb93c11376a4643d6bee38b134614dba22e94004d9fb3de1fe2a3f"
+      },
+      {
+        "id": "FJ3279",
+        "name": "Left scapula",
+        "sourceId": "FMA13396",
+        "kind": "bone",
+        "vertices": 14068,
+        "triangles": 28106,
+        "sourceBounds": {
+          "min": [
+            57.0614,
+            -102.845,
+            1183.95
+          ],
+          "max": [
+            166.464,
+            5.0764,
+            1349.86
+          ]
+        },
+        "sourceFile": "FJ3279.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "a52cf573f15b7c7c5cf096ae3ee81d8062a955edffdf82447e745afeccd0e554"
+      },
+      {
+        "id": "FJ3280",
+        "name": "Left talus",
+        "sourceId": "FMA24483",
+        "kind": "bone",
+        "vertices": 776,
+        "triangles": 1356,
+        "sourceBounds": {
+          "min": [
+            49.6354,
+            -105.677,
+            -31.3056
+          ],
+          "max": [
+            90.1784,
+            -48.814,
+            3.09811
+          ]
+        },
+        "sourceFile": "FJ3280.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "0f9b04d6f7e7f82572e9bca7fe3e08e92e4a7917d9cc60f9a8038e4c3a7c7bb7"
+      },
+      {
+        "id": "FJ3281",
+        "name": "Left temporal bone",
+        "sourceId": "FMA52739",
+        "kind": "bone",
+        "vertices": 3013,
+        "triangles": 4936,
+        "sourceBounds": {
+          "min": [
+            11.6242,
+            -133.567,
+            1475.48
+          ],
+          "max": [
+            72.5853,
+            -35.0704,
+            1551.46
+          ]
+        },
+        "sourceFile": "FJ3281.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "47cc46f1480c54fe14a2d22361c3b93fcb964538f23d5b425ac718854cff2673"
+      },
+      {
+        "id": "FJ3282",
+        "name": "Left tibia",
+        "sourceId": "FMA24478",
+        "kind": "bone",
+        "vertices": 880,
+        "triangles": 1692,
+        "sourceBounds": {
+          "min": [
+            35.0342,
+            -114.515,
+            -6.09533
+          ],
+          "max": [
+            109.455,
+            -51.9821,
+            373.862
+          ]
+        },
+        "sourceFile": "FJ3282.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "80add76b87c7b9e1396406de48f691e5fd3dde9e5cec49a0b15c6963d78542c6"
+      },
+      {
+        "id": "FJ3283",
+        "name": "Left trapezium",
+        "sourceId": "FMA24444",
+        "kind": "bone",
+        "vertices": 226,
+        "triangles": 356,
+        "sourceBounds": {
+          "min": [
+            264.781,
+            -134.554,
+            785.747
+          ],
+          "max": [
+            281.795,
+            -117.71,
+            805.793
+          ]
+        },
+        "sourceFile": "FJ3283.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "b3126c2751ac29968622e802011d4461c528057f9fd2db950f0704acaa8763cb"
+      },
+      {
+        "id": "FJ3284",
+        "name": "Left trapezoid",
+        "sourceId": "FMA24445",
+        "kind": "bone",
+        "vertices": 279,
+        "triangles": 398,
+        "sourceBounds": {
+          "min": [
+            262.253,
+            -128.45,
+            782.722
+          ],
+          "max": [
+            273.289,
+            -113.645,
+            795.27
+          ]
+        },
+        "sourceFile": "FJ3284.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "cea6f3c52bdeb7d261f52a296e00686acf042d87ed004bf453fd39cdfb8f1379"
+      },
+      {
+        "id": "FJ3285",
+        "name": "Left triquetral",
+        "sourceId": "FMA24440",
+        "kind": "bone",
+        "vertices": 180,
+        "triangles": 304,
+        "sourceBounds": {
+          "min": [
+            231.821,
+            -129.807,
+            788.949
+          ],
+          "max": [
+            242.731,
+            -114.425,
+            802.52
+          ]
+        },
+        "sourceFile": "FJ3285.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "fe25c63027de612508d7d92ac6ea08beafe48b0f9d0c8a2a7471b5ce85882576"
+      },
+      {
+        "id": "FJ3286",
+        "name": "Left ulna",
+        "sourceId": "FMA23468",
+        "kind": "bone",
+        "vertices": 496,
+        "triangles": 824,
+        "sourceBounds": {
+          "min": [
+            196.892,
+            -123.279,
+            805.016
+          ],
+          "max": [
+            247.12,
+            -44.5523,
+            1052.47
+          ]
+        },
+        "sourceFile": "FJ3286.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "32838a464599fa017717090afe9d355c03c0afb48cd8c5aa7e6f825156b594a5"
+      },
+      {
+        "id": "FJ3287",
+        "name": "Left zygomatic bone",
+        "sourceId": "FMA52893",
+        "kind": "bone",
+        "vertices": 929,
+        "triangles": 1434,
+        "sourceBounds": {
+          "min": [
+            31.8933,
+            -161.432,
+            1480.62
+          ],
+          "max": [
+            63.2444,
+            -121.743,
+            1536.74
+          ]
+        },
+        "sourceFile": "FJ3287.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "9cfd8fd359816b5fa5ed9758f26d942c7ada0900aa7f614aff39949fdad3ddee"
+      },
+      {
+        "id": "FJ3288",
+        "name": "Left hip bone",
+        "sourceId": "FMA16587",
+        "kind": "bone",
+        "vertices": 1257,
+        "triangles": 2332,
+        "sourceBounds": {
+          "min": [
+            2.75031,
+            -139.095,
+            751.951
+          ],
+          "max": [
+            144.754,
+            -1.31494,
+            958.09
+          ]
+        },
+        "sourceFile": "FJ3288.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "981411a910d502c80e454cc95128a9812a1284202295d1ebc7ab5020a08d83aa"
+      },
+      {
+        "id": "FJ3289",
+        "name": "Mandible",
+        "sourceId": "FMA52748",
+        "kind": "bone",
+        "vertices": 2845,
+        "triangles": 5576,
+        "sourceBounds": {
+          "min": [
+            -53.8459,
+            -173.832,
+            1421.63
+          ],
+          "max": [
+            52.5541,
+            -89.8537,
+            1506.1
+          ]
+        },
+        "sourceFile": "FJ3289.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "6ae0d7fde4221302f1c74d9e9933e2e05c36efef273bb27a78326d108d140ce8"
+      },
+      {
+        "id": "FJ3290",
+        "name": "Manubrium",
+        "sourceId": "FMA7486",
+        "kind": "bone",
+        "vertices": 1446,
+        "triangles": 2546,
+        "sourceBounds": {
+          "min": [
+            -27.4497,
+            -178.588,
+            1280.27
+          ],
+          "max": [
+            27.4497,
+            -130.801,
+            1325.25
+          ]
+        },
+        "sourceFile": "FJ3290.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "b847e67db475197cc4510744fef76bafd8e75c50797ca85eb8cd56dd853d61d6"
+      },
+      {
+        "id": "FJ3291",
+        "name": "Middle phalanx of left ring finger",
+        "sourceId": "FMA23942",
+        "kind": "bone",
+        "vertices": 216,
+        "triangles": 340,
+        "sourceBounds": {
+          "min": [
+            242.782,
+            -180.547,
+            669.821
+          ],
+          "max": [
+            254.532,
+            -156.794,
+            693.684
+          ]
+        },
+        "sourceFile": "FJ3291.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "8c31a1d782b726629680cd5e0514b4988e8c0b9d388d600b5c76f0a89dcd9275"
+      },
+      {
+        "id": "FJ3292",
+        "name": "Middle phalanx of right ring finger",
+        "sourceId": "FMA24457",
+        "kind": "bone",
+        "vertices": 219,
+        "triangles": 316,
+        "sourceBounds": {
+          "min": [
+            -254.293,
+            -180.567,
+            669.704
+          ],
+          "max": [
+            -242.763,
+            -156.536,
+            693.604
+          ]
+        },
+        "sourceFile": "FJ3292.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "48586a1489d539eecb8f37520e9683c014fc32bc6666bba42ca264b35af5c7a7"
+      },
+      {
+        "id": "FJ3293",
+        "name": "Middle phalanx of left second toe",
+        "sourceId": "FMA32643",
+        "kind": "bone",
+        "vertices": 197,
+        "triangles": 324,
+        "sourceBounds": {
+          "min": [
+            125.127,
+            -224.629,
+            -67.9536
+          ],
+          "max": [
+            139.212,
+            -207.529,
+            -59.3413
+          ]
+        },
+        "sourceFile": "FJ3293.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "706e5f280c437ae9c01d08e021d82640ec3dfa50d1d2e0a2ee48eafc821ed104"
+      },
+      {
+        "id": "FJ3294",
+        "name": "Middle phalanx of left third toe",
+        "sourceId": "FMA32645",
+        "kind": "bone",
+        "vertices": 185,
+        "triangles": 294,
+        "sourceBounds": {
+          "min": [
+            138.915,
+            -215.852,
+            -68.9836
+          ],
+          "max": [
+            151.811,
+            -198.911,
+            -61.1089
+          ]
+        },
+        "sourceFile": "FJ3294.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "c7b9a13197ef69b530146cfdcfca046bcba053bcc6bc6895c63cf2fc9fd3781f"
+      },
+      {
+        "id": "FJ3295",
+        "name": "Middle phalanx of left fourth toe",
+        "sourceId": "FMA32647",
+        "kind": "bone",
+        "vertices": 183,
+        "triangles": 284,
+        "sourceBounds": {
+          "min": [
+            149.044,
+            -198.779,
+            -69.7919
+          ],
+          "max": [
+            161.39,
+            -185.433,
+            -61.9695
+          ]
+        },
+        "sourceFile": "FJ3295.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "d854f4059f59201871761d7a891f626c7ad8d74a77e7aea64f7b99c8c2b55f9b"
+      },
+      {
+        "id": "FJ3296",
+        "name": "Middle phalanx of left index finger",
+        "sourceId": "FMA23938",
+        "kind": "bone",
+        "vertices": 188,
+        "triangles": 306,
+        "sourceBounds": {
+          "min": [
+            294.389,
+            -172.057,
+            670.975
+          ],
+          "max": [
+            309.001,
+            -151.256,
+            691.453
+          ]
+        },
+        "sourceFile": "FJ3296.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "3784ab9d38876602abdda3ef45b45a11f907f5412abf458915a5ffe92cdd82ac"
+      },
+      {
+        "id": "FJ3297",
+        "name": "Middle phalanx of left little finger",
+        "sourceId": "FMA23944",
+        "kind": "bone",
+        "vertices": 192,
+        "triangles": 254,
+        "sourceBounds": {
+          "min": [
+            218.921,
+            -171.479,
+            687.466
+          ],
+          "max": [
+            230.299,
+            -154.912,
+            707.061
+          ]
+        },
+        "sourceFile": "FJ3297.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "876fc444322b51eebcc12622aefff29266c16b8dadbe9c7b97588013b2e6a120"
+      },
+      {
+        "id": "FJ3298",
+        "name": "Middle phalanx of left little toe",
+        "sourceId": "FMA230988",
+        "kind": "bone",
+        "vertices": 143,
+        "triangles": 226,
+        "sourceBounds": {
+          "min": [
+            158.1,
+            -178.954,
+            -70.0543
+          ],
+          "max": [
+            166.674,
+            -171.552,
+            -63.7796
+          ]
+        },
+        "sourceFile": "FJ3298.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "68eb411cca65a47677026461b807534ee0640dcb7355031d6ab1fef901050e81"
+      },
+      {
+        "id": "FJ3299",
+        "name": "Middle phalanx of left middle finger",
+        "sourceId": "FMA23940",
+        "kind": "bone",
+        "vertices": 229,
+        "triangles": 384,
+        "sourceBounds": {
+          "min": [
+            266.517,
+            -180.876,
+            662.409
+          ],
+          "max": [
+            280.205,
+            -157.858,
+            687.767
+          ]
+        },
+        "sourceFile": "FJ3299.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "7d67270dabfb72710d6adf29b6ccc901a459fa49d2315517a392ca62cf2e0878"
+      },
+      {
+        "id": "FJ3300",
+        "name": "Middle phalanx of right second toe",
+        "sourceId": "FMA32642",
+        "kind": "bone",
+        "vertices": 192,
+        "triangles": 264,
+        "sourceBounds": {
+          "min": [
+            -139.355,
+            -224.688,
+            -68.0103
+          ],
+          "max": [
+            -125.237,
+            -207.648,
+            -59.4039
+          ]
+        },
+        "sourceFile": "FJ3300.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "d23b2c500c208c3c3c3f482f8429b75a08d8d852f2d5529bb18aad4716bd17e9"
+      },
+      {
+        "id": "FJ3301",
+        "name": "Middle phalanx of right third toe",
+        "sourceId": "FMA32644",
+        "kind": "bone",
+        "vertices": 190,
+        "triangles": 292,
+        "sourceBounds": {
+          "min": [
+            -151.726,
+            -215.745,
+            -68.8311
+          ],
+          "max": [
+            -138.889,
+            -198.867,
+            -60.9144
+          ]
+        },
+        "sourceFile": "FJ3301.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "41a7cc5bda4605754c7db7bbc561e78fea9e59824a311d16efee7c00d9e931ae"
+      },
+      {
+        "id": "FJ3302",
+        "name": "Middle phalanx of right fourth toe",
+        "sourceId": "FMA32646",
+        "kind": "bone",
+        "vertices": 220,
+        "triangles": 350,
+        "sourceBounds": {
+          "min": [
+            -161.342,
+            -198.806,
+            -69.8888
+          ],
+          "max": [
+            -149.071,
+            -185.435,
+            -61.9355
+          ]
+        },
+        "sourceFile": "FJ3302.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "6454fbcd2ba8d7fc45c9d9d9d4b56cd9e7831143038ee4510a7bbd407984bad1"
+      },
+      {
+        "id": "FJ3303",
+        "name": "Middle phalanx of right index finger",
+        "sourceId": "FMA24455",
+        "kind": "bone",
+        "vertices": 190,
+        "triangles": 264,
+        "sourceBounds": {
+          "min": [
+            -309.0,
+            -172.083,
+            671.006
+          ],
+          "max": [
+            -294.4,
+            -151.309,
+            691.476
+          ]
+        },
+        "sourceFile": "FJ3303.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "0dce3e3ab43a1c3c8030e5bd97c40035f84e1ca272ea08e57c6523fecca7337c"
+      },
+      {
+        "id": "FJ3304",
+        "name": "Middle phalanx of right little finger",
+        "sourceId": "FMA24458",
+        "kind": "bone",
+        "vertices": 169,
+        "triangles": 208,
+        "sourceBounds": {
+          "min": [
+            -230.545,
+            -171.439,
+            687.57
+          ],
+          "max": [
+            -218.935,
+            -154.823,
+            707.155
+          ]
+        },
+        "sourceFile": "FJ3304.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "3289a2bb712569479a65872d56778a962cca787409326252fd05734cc5f9dd36"
+      },
+      {
+        "id": "FJ3305",
+        "name": "Middle phalanx of right little toe",
+        "sourceId": "FMA230986",
+        "kind": "bone",
+        "vertices": 102,
+        "triangles": 136,
+        "sourceBounds": {
+          "min": [
+            -166.69,
+            -178.818,
+            -70.0904
+          ],
+          "max": [
+            -158.08,
+            -171.45,
+            -63.7391
+          ]
+        },
+        "sourceFile": "FJ3305.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "e6a389b572fb34e9a2e483dcbec2446d1b6a94a02e4ae25079513e571e452b49"
+      },
+      {
+        "id": "FJ3306",
+        "name": "Middle phalanx of right middle finger",
+        "sourceId": "FMA24456",
+        "kind": "bone",
+        "vertices": 227,
+        "triangles": 342,
+        "sourceBounds": {
+          "min": [
+            -280.202,
+            -180.934,
+            662.457
+          ],
+          "max": [
+            -266.588,
+            -157.799,
+            687.807
+          ]
+        },
+        "sourceFile": "FJ3306.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "8795bec6ecf458cbb1a4e361113da509a49dfafdaf8ca4610cb0a90e3bdd6233"
+      },
+      {
+        "id": "FJ3307",
+        "name": "Navicular bone of left foot",
+        "sourceId": "FMA24501",
+        "kind": "bone",
+        "vertices": 459,
+        "triangles": 744,
+        "sourceBounds": {
+          "min": [
+            57.9296,
+            -121.097,
+            -30.9742
+          ],
+          "max": [
+            96.6438,
+            -94.276,
+            -6.29711
+          ]
+        },
+        "sourceFile": "FJ3307.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "f3acad5a0995ac64585b22079fed851a20af96fc09e1e781fbb8853145a5df2d"
+      },
+      {
+        "id": "FJ3308",
+        "name": "Navicular bone of right foot",
+        "sourceId": "FMA24500",
+        "kind": "bone",
+        "vertices": 455,
+        "triangles": 716,
+        "sourceBounds": {
+          "min": [
+            -96.754,
+            -120.993,
+            -30.7763
+          ],
+          "max": [
+            -58.1896,
+            -94.329,
+            -6.1558
+          ]
+        },
+        "sourceFile": "FJ3308.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "8156683b53dbe285d9c5bd939969b0ae85bc4f989f0d2bca5d7a72a28ed22518"
+      },
+      {
+        "id": "FJ3309",
+        "name": "Occipital bone",
+        "sourceId": "FMA52735",
+        "kind": "bone",
+        "vertices": 6995,
+        "triangles": 12450,
+        "sourceBounds": {
+          "min": [
+            -61.9612,
+            -100.959,
+            1477.77
+          ],
+          "max": [
+            60.7053,
+            18.001,
+            1584.51
+          ]
+        },
+        "sourceFile": "FJ3309.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "37172b4706d23d51ebb3ce3839cc59c6e4cb4931039901f395703bc7dff52761"
+      },
+      {
+        "id": "FJ3310",
+        "name": "Proximal phalanx of right big toe",
+        "sourceId": "FMA43253",
+        "kind": "bone",
+        "vertices": 281,
+        "triangles": 486,
+        "sourceBounds": {
+          "min": [
+            -117.196,
+            -219.289,
+            -68.6391
+          ],
+          "max": [
+            -86.6596,
+            -186.07,
+            -51.4087
+          ]
+        },
+        "sourceFile": "FJ3310.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "c325627d966076f87101492f298d0e71ba877ce796463fd10e4fa6697b5e42fd"
+      },
+      {
+        "id": "FJ3311",
+        "name": "Proximal phalanx of left third toe",
+        "sourceId": "FMA32637",
+        "kind": "bone",
+        "vertices": 248,
+        "triangles": 408,
+        "sourceBounds": {
+          "min": [
+            125.132,
+            -202.834,
+            -67.6983
+          ],
+          "max": [
+            145.808,
+            -174.617,
+            -55.9134
+          ]
+        },
+        "sourceFile": "FJ3311.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "deac4abe55e492efe84c7dd5bef101690ea3c6c5f4a9df552c370b8a2a324aa6"
+      },
+      {
+        "id": "FJ3312",
+        "name": "Proximal phalanx of left fourth toe",
+        "sourceId": "FMA32639",
+        "kind": "bone",
+        "vertices": 255,
+        "triangles": 438,
+        "sourceBounds": {
+          "min": [
+            134.309,
+            -188.425,
+            -69.7053
+          ],
+          "max": [
+            155.9,
+            -164.428,
+            -56.5251
+          ]
+        },
+        "sourceFile": "FJ3312.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "663bd9469b96679753e7f64c5f072c8cfe245dbb4b37b685079b4e7b890c4937"
+      },
+      {
+        "id": "FJ3313",
+        "name": "Proximal phalanx of left index finger",
+        "sourceId": "FMA71915",
+        "kind": "bone",
+        "vertices": 222,
+        "triangles": 392,
+        "sourceBounds": {
+          "min": [
+            280.814,
+            -157.057,
+            685.721
+          ],
+          "max": [
+            302.81,
+            -134.089,
+            723.356
+          ]
+        },
+        "sourceFile": "FJ3313.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "8ff94391d57f8758f86e7a8ac9a82f62c9175067ffbbadab5693221ba204ecbe"
+      },
+      {
+        "id": "FJ3314",
+        "name": "Proximal phalanx of left little finger",
+        "sourceId": "FMA66791",
+        "kind": "bone",
+        "vertices": 164,
+        "triangles": 274,
+        "sourceBounds": {
+          "min": [
+            222.227,
+            -159.461,
+            703.385
+          ],
+          "max": [
+            236.294,
+            -138.668,
+            735.79
+          ]
+        },
+        "sourceFile": "FJ3314.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "a970bf6fea2d1ad51cad704a488417aaaaacca40be6f10c9ec713f358760efb8"
+      },
+      {
+        "id": "FJ3315",
+        "name": "Proximal phalanx of left little toe",
+        "sourceId": "FMA32641",
+        "kind": "bone",
+        "vertices": 231,
+        "triangles": 396,
+        "sourceBounds": {
+          "min": [
+            142.938,
+            -174.019,
+            -69.8092
+          ],
+          "max": [
+            164.79,
+            -148.775,
+            -59.9871
+          ]
+        },
+        "sourceFile": "FJ3315.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "0bdbbd0619f4765da9fa25918a1e79db22b156eb4de1ba8574bec67369bfdd6d"
+      },
+      {
+        "id": "FJ3316",
+        "name": "Proximal phalanx of left middle finger",
+        "sourceId": "FMA71908",
+        "kind": "bone",
+        "vertices": 264,
+        "triangles": 460,
+        "sourceBounds": {
+          "min": [
+            259.201,
+            -164.096,
+            684.299
+          ],
+          "max": [
+            277.38,
+            -135.192,
+            724.966
+          ]
+        },
+        "sourceFile": "FJ3316.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "411ec81747038f797c4a2a7c33ac87cdbf49047aedc43a6487d45cc373f697a8"
+      },
+      {
+        "id": "FJ3317",
+        "name": "Proximal phalanx of left ring finger",
+        "sourceId": "FMA71916",
+        "kind": "bone",
+        "vertices": 205,
+        "triangles": 376,
+        "sourceBounds": {
+          "min": [
+            240.492,
+            -161.93,
+            690.052
+          ],
+          "max": [
+            253.886,
+            -135.709,
+            728.958
+          ]
+        },
+        "sourceFile": "FJ3317.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "851e0b459c672fef4cd2a32583991b22c30576f467eb50c5ffcb22fd13ea7de8"
+      },
+      {
+        "id": "FJ3318",
+        "name": "Proximal phalanx of left thumb",
+        "sourceId": "FMA65470",
+        "kind": "bone",
+        "vertices": 202,
+        "triangles": 346,
+        "sourceBounds": {
+          "min": [
+            298.694,
+            -164.753,
+            735.529
+          ],
+          "max": [
+            318.619,
+            -142.629,
+            767.168
+          ]
+        },
+        "sourceFile": "FJ3318.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "0f62e4d042979264f6f3d4dd0a90044b89a3ad4b66c141cebc2aa515bd3255c8"
+      },
+      {
+        "id": "FJ3319",
+        "name": "Proximal phalanx of right second toe",
+        "sourceId": "FMA32634",
+        "kind": "bone",
+        "vertices": 236,
+        "triangles": 414,
+        "sourceBounds": {
+          "min": [
+            -133.565,
+            -211.68,
+            -66.8736
+          ],
+          "max": [
+            -111.346,
+            -183.555,
+            -54.5464
+          ]
+        },
+        "sourceFile": "FJ3319.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "1d2f11bb623181a344f0b9d68b16ffb3e31946d3f5f571e92cd35f0e66c1101c"
+      },
+      {
+        "id": "FJ3320",
+        "name": "Proximal phalanx of right third toe",
+        "sourceId": "FMA32636",
+        "kind": "bone",
+        "vertices": 276,
+        "triangles": 422,
+        "sourceBounds": {
+          "min": [
+            -145.902,
+            -202.841,
+            -67.645
+          ],
+          "max": [
+            -125.076,
+            -174.436,
+            -56.2044
+          ]
+        },
+        "sourceFile": "FJ3320.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "54e8381fbba8e81960afa51c153d5e06143c85f1808e083f2bd591115fce3c02"
+      },
+      {
+        "id": "FJ3321",
+        "name": "Proximal phalanx of right fourth toe",
+        "sourceId": "FMA32638",
+        "kind": "bone",
+        "vertices": 254,
+        "triangles": 438,
+        "sourceBounds": {
+          "min": [
+            -155.93,
+            -188.428,
+            -69.741
+          ],
+          "max": [
+            -134.339,
+            -164.379,
+            -56.4986
+          ]
+        },
+        "sourceFile": "FJ3321.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "37b1195ac0a13fc425bab0d0151ada733b4d1c107a61a70ae42eeb3ee3c33dfa"
+      },
+      {
+        "id": "FJ3322",
+        "name": "Proximal phalanx of right index finger",
+        "sourceId": "FMA24451",
+        "kind": "bone",
+        "vertices": 226,
+        "triangles": 386,
+        "sourceBounds": {
+          "min": [
+            -302.765,
+            -156.758,
+            685.819
+          ],
+          "max": [
+            -280.952,
+            -134.093,
+            723.197
+          ]
+        },
+        "sourceFile": "FJ3322.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "7f260208904ef78c88790201e64b02cb9bb3e2b3e0feafa4108630d9a2d8c7a9"
+      },
+      {
+        "id": "FJ3323",
+        "name": "Proximal phalanx of right little finger",
+        "sourceId": "FMA24454",
+        "kind": "bone",
+        "vertices": 187,
+        "triangles": 314,
+        "sourceBounds": {
+          "min": [
+            -236.329,
+            -159.523,
+            703.356
+          ],
+          "max": [
+            -222.152,
+            -138.721,
+            735.956
+          ]
+        },
+        "sourceFile": "FJ3323.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "dede96cf0c9d5ccb093673a9ec2dc2ef2970578cde1438276120fdf9aff096d2"
+      },
+      {
+        "id": "FJ3324",
+        "name": "Proximal phalanx of right little toe",
+        "sourceId": "FMA32640",
+        "kind": "bone",
+        "vertices": 238,
+        "triangles": 406,
+        "sourceBounds": {
+          "min": [
+            -164.837,
+            -174.084,
+            -69.8932
+          ],
+          "max": [
+            -142.885,
+            -148.711,
+            -60.0473
+          ]
+        },
+        "sourceFile": "FJ3324.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "0f783ee739f14fd2ca5c9db076d989795880ac9e436ce15062e397e7c6586225"
+      },
+      {
+        "id": "FJ3325",
+        "name": "Proximal phalanx of right middle finger",
+        "sourceId": "FMA24452",
+        "kind": "bone",
+        "vertices": 271,
+        "triangles": 458,
+        "sourceBounds": {
+          "min": [
+            -277.414,
+            -164.201,
+            684.281
+          ],
+          "max": [
+            -259.208,
+            -135.112,
+            724.861
+          ]
+        },
+        "sourceFile": "FJ3325.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "0ed85cade9e2a4c6d0c3353cbfcd996ab65f9c908ac6a2d41b0cffada814bd0d"
+      },
+      {
+        "id": "FJ3326",
+        "name": "Proximal phalanx of right ring finger",
+        "sourceId": "FMA24453",
+        "kind": "bone",
+        "vertices": 209,
+        "triangles": 376,
+        "sourceBounds": {
+          "min": [
+            -253.824,
+            -161.977,
+            689.968
+          ],
+          "max": [
+            -240.591,
+            -135.658,
+            728.932
+          ]
+        },
+        "sourceFile": "FJ3326.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "8464ab995a48d5642198901885fafc5b101fd8982530f533f04e2be8aef26b59"
+      },
+      {
+        "id": "FJ3327",
+        "name": "Proximal phalanx of right thumb",
+        "sourceId": "FMA24450",
+        "kind": "bone",
+        "vertices": 197,
+        "triangles": 318,
+        "sourceBounds": {
+          "min": [
+            -318.809,
+            -164.883,
+            735.607
+          ],
+          "max": [
+            -298.649,
+            -142.653,
+            767.198
+          ]
+        },
+        "sourceFile": "FJ3327.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "14f0aa99ab3dbcc34f8c9460fb240bb7ba0b43c2188feaa79aa58ae8a476cae8"
+      },
+      {
+        "id": "FJ3328",
+        "name": "Proximal phalanx of left second toe",
+        "sourceId": "FMA32635",
+        "kind": "bone",
+        "vertices": 233,
+        "triangles": 380,
+        "sourceBounds": {
+          "min": [
+            111.449,
+            -211.624,
+            -66.8401
+          ],
+          "max": [
+            133.493,
+            -183.485,
+            -54.4701
+          ]
+        },
+        "sourceFile": "FJ3328.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "33964822dfcd4833af09cef2c3909d210ba13a6c96fc9f3c2d457f4f2d1805f8"
+      },
+      {
+        "id": "FJ3329",
+        "name": "Proximal phalanx of left big toe",
+        "sourceId": "FMA43254",
+        "kind": "bone",
+        "vertices": 318,
+        "triangles": 516,
+        "sourceBounds": {
+          "min": [
+            86.7033,
+            -219.271,
+            -68.4152
+          ],
+          "max": [
+            117.082,
+            -186.036,
+            -51.5522
+          ]
+        },
+        "sourceFile": "FJ3329.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "7b351faa1a13618f21c5072c00e97248334306b623c78a8eb102c62b298245c5"
+      },
+      {
+        "id": "FJ3330",
+        "name": "Right tenth rib",
+        "sourceId": "FMA8445",
+        "kind": "bone",
+        "vertices": 3415,
+        "triangles": 6820,
+        "sourceBounds": {
+          "min": [
+            -123.648,
+            -117.687,
+            1022.98
+          ],
+          "max": [
+            -16.8729,
+            -11.3593,
+            1158.98
+          ]
+        },
+        "sourceFile": "FJ3330.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "0f688dd4e0d20a8328b4763c0acc7582a9beac8fe5c7ce58586db99c6e366945"
+      },
+      {
+        "id": "FJ3331",
+        "name": "Right eleventh rib",
+        "sourceId": "FMA8531",
+        "kind": "bone",
+        "vertices": 2437,
+        "triangles": 4866,
+        "sourceBounds": {
+          "min": [
+            -111.353,
+            -96.0183,
+            1008.08
+          ],
+          "max": [
+            -17.5963,
+            -17.962,
+            1121.73
+          ]
+        },
+        "sourceFile": "FJ3331.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "761d6d8713c31d4b9f795c4875da9fc750c913907386489568fdebea15af49c3"
+      },
+      {
+        "id": "FJ3332",
+        "name": "Right twelfth rib",
+        "sourceId": "FMA8533",
+        "kind": "bone",
+        "vertices": 1412,
+        "triangles": 2818,
+        "sourceBounds": {
+          "min": [
+            -86.5332,
+            -66.0973,
+            1011.34
+          ],
+          "max": [
+            -18.2125,
+            -27.9922,
+            1089.17
+          ]
+        },
+        "sourceFile": "FJ3332.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "ece92488a9293cde2d8a8275cee8232326b377811afba888f6147d7217e04e07"
+      },
+      {
+        "id": "FJ3333",
+        "name": "Right first costal cartilage",
+        "sourceId": "FMA7875",
+        "kind": "cartilage",
+        "vertices": 436,
+        "triangles": 676,
+        "sourceBounds": {
+          "min": [
+            -56.1874,
+            -150.757,
+            1296.91
+          ],
+          "max": [
+            -19.5121,
+            -122.171,
+            1320.22
+          ]
+        },
+        "sourceFile": "FJ3333.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "616b5add6471a3fd2a7297cbebfee18a13866eb165ca0be05c5942ae16bacc10"
+      },
+      {
+        "id": "FJ3334",
+        "name": "Right first rib",
+        "sourceId": "FMA7857",
+        "kind": "bone",
+        "vertices": 1642,
+        "triangles": 3276,
+        "sourceBounds": {
+          "min": [
+            -69.7641,
+            -130.424,
+            1310.07
+          ],
+          "max": [
+            -15.1109,
+            -64.4146,
+            1370.48
+          ]
+        },
+        "sourceFile": "FJ3334.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "ecef0080744a8422b72b4f52229bd68945692cdef7d6fe2a57043b2155c49d17"
+      },
+      {
+        "id": "FJ3335",
+        "name": "Right second costal cartilage",
+        "sourceId": "FMA7886",
+        "kind": "cartilage",
+        "vertices": 383,
+        "triangles": 658,
+        "sourceBounds": {
+          "min": [
+            -48.187,
+            -178.261,
+            1270.12
+          ],
+          "max": [
+            -10.2446,
+            -157.745,
+            1288.02
+          ]
+        },
+        "sourceFile": "FJ3335.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "065a4969ea4210ce6d3f5838dc2da20f1153de478e02c7a86ced152eab82bf6a"
+      },
+      {
+        "id": "FJ3336",
+        "name": "Right second rib",
+        "sourceId": "FMA7882",
+        "kind": "bone",
+        "vertices": 2861,
+        "triangles": 5594,
+        "sourceBounds": {
+          "min": [
+            -96.9721,
+            -167.157,
+            1273.55
+          ],
+          "max": [
+            -16.0495,
+            -50.6529,
+            1359.03
+          ]
+        },
+        "sourceFile": "FJ3336.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "e9f527453bb2a48764ac7243d0b9b23e37fb2a85e92cee445972a1a770a5eaa4"
+      },
+      {
+        "id": "FJ3337",
+        "name": "Right third costal cartilage",
+        "sourceId": "FMA7913",
+        "kind": "cartilage",
+        "vertices": 386,
+        "triangles": 652,
+        "sourceBounds": {
+          "min": [
+            -50.7242,
+            -190.108,
+            1242.38
+          ],
+          "max": [
+            -13.051,
+            -171.421,
+            1259.98
+          ]
+        },
+        "sourceFile": "FJ3337.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "469513e43364a7212843011c944a9fff22b5b50496a11e739bcdafc70005d3dd"
+      },
+      {
+        "id": "FJ3338",
+        "name": "Right third rib",
+        "sourceId": "FMA7909",
+        "kind": "bone",
+        "vertices": 3634,
+        "triangles": 7254,
+        "sourceBounds": {
+          "min": [
+            -108.947,
+            -179.268,
+            1243.82
+          ],
+          "max": [
+            -14.024,
+            -36.829,
+            1335.97
+          ]
+        },
+        "sourceFile": "FJ3338.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "69dbbcfc72d592aa862621612e7ad1151ada3fa06c5ce51e24731015561ad7ac"
+      },
+      {
+        "id": "FJ3339",
+        "name": "Right fourth costal cartilage",
+        "sourceId": "FMA7976",
+        "kind": "cartilage",
+        "vertices": 391,
+        "triangles": 694,
+        "sourceBounds": {
+          "min": [
+            -59.9068,
+            -198.587,
+            1211.1
+          ],
+          "max": [
+            -14.3111,
+            -184.204,
+            1235.56
+          ]
+        },
+        "sourceFile": "FJ3339.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "fc442f6596ca1a7ce18fc2d65cb92dcc1de1951381ebd631223469b6e84923b1"
+      },
+      {
+        "id": "FJ3340",
+        "name": "Right fourth rib",
+        "sourceId": "FMA7957",
+        "kind": "bone",
+        "vertices": 4435,
+        "triangles": 8832,
+        "sourceBounds": {
+          "min": [
+            -117.593,
+            -192.192,
+            1211.1
+          ],
+          "max": [
+            -15.0119,
+            -23.1945,
+            1315.35
+          ]
+        },
+        "sourceFile": "FJ3340.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "b9bc6bbb160fd579ed246c3eb145b39f82866dc2dfeebe798f0dba5a2e352597"
+      },
+      {
+        "id": "FJ3341",
+        "name": "Right fifth costal cartilage",
+        "sourceId": "FMA8070",
+        "kind": "cartilage",
+        "vertices": 652,
+        "triangles": 1168,
+        "sourceBounds": {
+          "min": [
+            -82.1658,
+            -209.036,
+            1171.61
+          ],
+          "max": [
+            -17.6996,
+            -189.316,
+            1215.25
+          ]
+        },
+        "sourceFile": "FJ3341.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "921b821e925624302d8ab138dfa80a24bf3d9150e006b7ac27a2b5f73d15ab33"
+      },
+      {
+        "id": "FJ3342",
+        "name": "Right fifth rib",
+        "sourceId": "FMA8066",
+        "kind": "bone",
+        "vertices": 4910,
+        "triangles": 9710,
+        "sourceBounds": {
+          "min": [
+            -127.079,
+            -197.651,
+            1172.16
+          ],
+          "max": [
+            -15.3142,
+            -12.7276,
+            1291.32
+          ]
+        },
+        "sourceFile": "FJ3342.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "11d403618e4114a5edcd8f2fa4e90ef4e6427b04f4cd3962c59462694b55c443"
+      },
+      {
+        "id": "FJ3343",
+        "name": "Right sixth costal cartilage",
+        "sourceId": "FMA8194",
+        "kind": "cartilage",
+        "vertices": 971,
+        "triangles": 1546,
+        "sourceBounds": {
+          "min": [
+            -93.6974,
+            -212.187,
+            1137.56
+          ],
+          "max": [
+            -13.8655,
+            -184.749,
+            1197.25
+          ]
+        },
+        "sourceFile": "FJ3343.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "3b633ffd599c51c1f00d66442855a047b013bda569fa092ea31ece5fdc289111"
+      },
+      {
+        "id": "FJ3344",
+        "name": "Right sixth rib",
+        "sourceId": "FMA8175",
+        "kind": "bone",
+        "vertices": 5168,
+        "triangles": 10246,
+        "sourceBounds": {
+          "min": [
+            -134.349,
+            -193.505,
+            1137.91
+          ],
+          "max": [
+            -14.8373,
+            -3.64141,
+            1265.7
+          ]
+        },
+        "sourceFile": "FJ3344.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "67f1f42fea1c289adaf4929716534bad7dfdd136ca0057f05de83d6e20c8f0a8"
+      },
+      {
+        "id": "FJ3345",
+        "name": "Right seventh costal cartilage",
+        "sourceId": "FMA8248",
+        "kind": "cartilage",
+        "vertices": 1538,
+        "triangles": 2450,
+        "sourceBounds": {
+          "min": [
+            -109.909,
+            -213.208,
+            1102.56
+          ],
+          "max": [
+            49.5653,
+            -170.775,
+            1186.45
+          ]
+        },
+        "sourceFile": "FJ3345.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "a4d22796f4ffc6f9ad1b7d620c917be1638244864eca62aec60bd11033ed3041"
+      },
+      {
+        "id": "FJ3346",
+        "name": "Right seventh rib",
+        "sourceId": "FMA8229",
+        "kind": "bone",
+        "vertices": 5058,
+        "triangles": 10032,
+        "sourceBounds": {
+          "min": [
+            -137.085,
+            -180.203,
+            1105.19
+          ],
+          "max": [
+            -13.6897,
+            -4.48691,
+            1240.27
+          ]
+        },
+        "sourceFile": "FJ3346.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "91aa56e034fbe6f413c0f15b76d725a1f8efd115aa2900beda6edf43a3ab0c43"
+      },
+      {
+        "id": "FJ3347",
+        "name": "Right eighth rib",
+        "sourceId": "FMA8283",
+        "kind": "bone",
+        "vertices": 4199,
+        "triangles": 8336,
+        "sourceBounds": {
+          "min": [
+            -132.968,
+            -162.678,
+            1074.66
+          ],
+          "max": [
+            -13.6765,
+            -4.56449,
+            1211.33
+          ]
+        },
+        "sourceFile": "FJ3347.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "43a1591cf1e123ca01f64297a7ce008d679a5f5f26421cc5b69e2232da89d743"
+      },
+      {
+        "id": "FJ3348",
+        "name": "Right ninth rib",
+        "sourceId": "FMA8364",
+        "kind": "bone",
+        "vertices": 3808,
+        "triangles": 7576,
+        "sourceBounds": {
+          "min": [
+            -129.098,
+            -135.632,
+            1050.09
+          ],
+          "max": [
+            -15.8646,
+            -7.52907,
+            1185.37
+          ]
+        },
+        "sourceFile": "FJ3348.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "7d3a969b778da18eb38b1a64d92e2b90e1730fcb0d7b2bfacd125ff4826876d0"
+      },
+      {
+        "id": "FJ3349",
+        "name": "Right radius",
+        "sourceId": "FMA23464",
+        "kind": "bone",
+        "vertices": 388,
+        "triangles": 672,
+        "sourceBounds": {
+          "min": [
+            -279.535,
+            -126.908,
+            805.835
+          ],
+          "max": [
+            -219.833,
+            -61.1026,
+            1035.05
+          ]
+        },
+        "sourceFile": "FJ3349.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "be1ebc9c5285cc934c625763b3363fc3133efab9eafdf1edf0b36de3b7ee06a9"
+      },
+      {
+        "id": "FJ3350",
+        "name": "Right first metacarpal bone",
+        "sourceId": "FMA24464",
+        "kind": "bone",
+        "vertices": 307,
+        "triangles": 566,
+        "sourceBounds": {
+          "min": [
+            -309.577,
+            -153.861,
+            760.281
+          ],
+          "max": [
+            -272.236,
+            -123.627,
+            797.238
+          ]
+        },
+        "sourceFile": "FJ3350.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "73267d7a1a33294ed2856e147f3d7658c14878cd01906ec8ffb64a4b9b68318b"
+      },
+      {
+        "id": "FJ3351",
+        "name": "Right first metatarsal bone",
+        "sourceId": "FMA24507",
+        "kind": "bone",
+        "vertices": 602,
+        "triangles": 1122,
+        "sourceBounds": {
+          "min": [
+            -104.365,
+            -192.182,
+            -65.3292
+          ],
+          "max": [
+            -74.8137,
+            -129.944,
+            -22.1202
+          ]
+        },
+        "sourceFile": "FJ3351.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "36f03bdaf6be4385c83cc297b13bf6089504e5ddd12a6d6894a4e655b01cfb02"
+      },
+      {
+        "id": "FJ3352",
+        "name": "Right second metacarpal bone",
+        "sourceId": "FMA24466",
+        "kind": "bone",
+        "vertices": 418,
+        "triangles": 748,
+        "sourceBounds": {
+          "min": [
+            -292.687,
+            -142.787,
+            718.871
+          ],
+          "max": [
+            -261.82,
+            -117.057,
+            786.869
+          ]
+        },
+        "sourceFile": "FJ3352.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "3c67c77a4312c40f3ca98e1600eb930c6210ac83773efe4f594bf6ca3ca02fce"
+      },
+      {
+        "id": "FJ3353",
+        "name": "Right second metatarsal bone",
+        "sourceId": "FMA24509",
+        "kind": "bone",
+        "vertices": 515,
+        "triangles": 752,
+        "sourceBounds": {
+          "min": [
+            -121.273,
+            -187.406,
+            -66.3178
+          ],
+          "max": [
+            -90.6566,
+            -122.448,
+            -18.3247
+          ]
+        },
+        "sourceFile": "FJ3353.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "3f813ff69332df5a67dbce693af5558f4b5db2d48bf12ba39fff3e48e44e99d6"
+      },
+      {
+        "id": "FJ3354",
+        "name": "Right third metacarpal bone",
+        "sourceId": "FMA24468",
+        "kind": "bone",
+        "vertices": 404,
+        "triangles": 702,
+        "sourceBounds": {
+          "min": [
+            -272.346,
+            -142.733,
+            720.84
+          ],
+          "max": [
+            -252.486,
+            -112.326,
+            785.262
+          ]
+        },
+        "sourceFile": "FJ3354.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "ce10ec6c9f5c3428593ae8ba0a8be016df7905f39e7d3d7ca930d60da76d0d90"
+      },
+      {
+        "id": "FJ3355",
+        "name": "Right third metatarsal bone",
+        "sourceId": "FMA24511",
+        "kind": "bone",
+        "vertices": 423,
+        "triangles": 700,
+        "sourceBounds": {
+          "min": [
+            -133.596,
+            -180.857,
+            -66.3774
+          ],
+          "max": [
+            -98.3222,
+            -118.361,
+            -23.6725
+          ]
+        },
+        "sourceFile": "FJ3355.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "27fc6985c6e4b902188075caae096aaf7c8c13360d41446f6a85a5bf34003750"
+      },
+      {
+        "id": "FJ3356",
+        "name": "Right fourth metacarpal bone",
+        "sourceId": "FMA24470",
+        "kind": "bone",
+        "vertices": 340,
+        "triangles": 536,
+        "sourceBounds": {
+          "min": [
+            -253.741,
+            -141.971,
+            725.279
+          ],
+          "max": [
+            -241.426,
+            -115.917,
+            785.158
+          ]
+        },
+        "sourceFile": "FJ3356.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "beb659c0409fc079dbb9bb950c5a409cb31f0177273d231fda65af930e991f72"
+      },
+      {
+        "id": "FJ3357",
+        "name": "Right fourth metatarsal bone",
+        "sourceId": "FMA24513",
+        "kind": "bone",
+        "vertices": 397,
+        "triangles": 674,
+        "sourceBounds": {
+          "min": [
+            -142.67,
+            -169.684,
+            -67.3439
+          ],
+          "max": [
+            -101.867,
+            -106.976,
+            -31.9585
+          ]
+        },
+        "sourceFile": "FJ3357.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "ca70d269f39c11fed91263c4b4bce78cf682acff928ec656130e997e1b07a20b"
+      },
+      {
+        "id": "FJ3358",
+        "name": "Right fifth metacarpal bone",
+        "sourceId": "FMA24472",
+        "kind": "bone",
+        "vertices": 279,
+        "triangles": 506,
+        "sourceBounds": {
+          "min": [
+            -245.314,
+            -144.52,
+            732.016
+          ],
+          "max": [
+            -225.202,
+            -120.076,
+            786.919
+          ]
+        },
+        "sourceFile": "FJ3358.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "dca9d2526d8970358c4c2802e840687561cf24d4fb382b3a16f0f423b717283f"
+      },
+      {
+        "id": "FJ3359",
+        "name": "Right fifth metatarsal bone",
+        "sourceId": "FMA24515",
+        "kind": "bone",
+        "vertices": 436,
+        "triangles": 794,
+        "sourceBounds": {
+          "min": [
+            -152.331,
+            -155.078,
+            -69.8196
+          ],
+          "max": [
+            -106.458,
+            -89.3821,
+            -39.8794
+          ]
+        },
+        "sourceFile": "FJ3359.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "56164dbe40a84f339817445368bebc440d1cb9cfa8246b2d91f8084a538ea745"
+      },
+      {
+        "id": "FJ3360",
+        "name": "Right calcaneus",
+        "sourceId": "FMA24497",
+        "kind": "bone",
+        "vertices": 739,
+        "triangles": 1262,
+        "sourceBounds": {
+          "min": [
+            -100.781,
+            -94.1485,
+            -68.4907
+          ],
+          "max": [
+            -44.8758,
+            -24.0051,
+            -19.1547
+          ]
+        },
+        "sourceFile": "FJ3360.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "c278cca7a72dc6fc4eee55a348b0020522d99f72209eafe60f35ba4f7258682b"
+      },
+      {
+        "id": "FJ3361",
+        "name": "Right capitate",
+        "sourceId": "FMA24446",
+        "kind": "bone",
+        "vertices": 256,
+        "triangles": 428,
+        "sourceBounds": {
+          "min": [
+            -264.482,
+            -127.492,
+            782.191
+          ],
+          "max": [
+            -248.401,
+            -110.534,
+            804.597
+          ]
+        },
+        "sourceFile": "FJ3361.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "25066d1353fd200871374beffaaed8c6c5ef694148385f3fd33fd5b63bd017ce"
+      },
+      {
+        "id": "FJ3362",
+        "name": "Right clavicle",
+        "sourceId": "FMA13322",
+        "kind": "bone",
+        "vertices": 583,
+        "triangles": 1146,
+        "sourceBounds": {
+          "min": [
+            -145.277,
+            -146.948,
+            1308.62
+          ],
+          "max": [
+            -9.66165,
+            -54.4125,
+            1355.44
+          ]
+        },
+        "sourceFile": "FJ3362.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "1435b8f365652b215180e398b894a5bdfbf9cb13d00ccf06d07038b962e957b9"
+      },
+      {
+        "id": "FJ3364",
+        "name": "Right cuboid bone",
+        "sourceId": "FMA24528",
+        "kind": "bone",
+        "vertices": 543,
+        "triangles": 932,
+        "sourceBounds": {
+          "min": [
+            -115.085,
+            -116.768,
+            -51.1216
+          ],
+          "max": [
+            -82.3665,
+            -83.7327,
+            -22.0883
+          ]
+        },
+        "sourceFile": "FJ3364.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "92673fcdd37a297b135725f05848155705c04a4bdada1c5088cb3d5d8deef010"
+      },
+      {
+        "id": "FJ3365",
+        "name": "Right femur",
+        "sourceId": "FMA24474",
+        "kind": "bone",
+        "vertices": 1574,
+        "triangles": 3102,
+        "sourceBounds": {
+          "min": [
+            -150.134,
+            -112.192,
+            368.15
+          ],
+          "max": [
+            -31.8943,
+            -49.5302,
+            834.252
+          ]
+        },
+        "sourceFile": "FJ3365.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "02fffe2e1b0f8e038d8b7b48e47cbc4925a749446240e676e910bff34d5348de"
+      },
+      {
+        "id": "FJ3366",
+        "name": "Right fibula",
+        "sourceId": "FMA24480",
+        "kind": "bone",
+        "vertices": 593,
+        "triangles": 1142,
+        "sourceBounds": {
+          "min": [
+            -120.165,
+            -78.1688,
+            -25.2799
+          ],
+          "max": [
+            -84.3445,
+            -48.4874,
+            359.15
+          ]
+        },
+        "sourceFile": "FJ3366.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "05bf4de7604e2fd5099b3a5337d243d2d40f2b8f80daf1694b3aba394aa93942"
+      },
+      {
+        "id": "FJ3367",
+        "name": "Right hamate",
+        "sourceId": "FMA24448",
+        "kind": "bone",
+        "vertices": 335,
+        "triangles": 522,
+        "sourceBounds": {
+          "min": [
+            -251.928,
+            -133.931,
+            781.293
+          ],
+          "max": [
+            -236.6,
+            -111.406,
+            800.653
+          ]
+        },
+        "sourceFile": "FJ3367.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "0591d076d4c7a0fc5fe653f80f03801b543075b72544f46e562b21412c743d12"
+      },
+      {
+        "id": "FJ3368",
+        "name": "Right humerus",
+        "sourceId": "FMA23130",
+        "kind": "bone",
+        "vertices": 2233,
+        "triangles": 3784,
+        "sourceBounds": {
+          "min": [
+            -240.841,
+            -100.219,
+            1029.2
+          ],
+          "max": [
+            -140.09,
+            -51.0391,
+            1336.54
+          ]
+        },
+        "sourceFile": "FJ3368.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "159fbdeb854044e7b0ebd0d48cfe332afb44a691d09b89ff644a851826d08268"
+      },
+      {
+        "id": "FJ3369",
+        "name": "Right inferior nasal concha",
+        "sourceId": "FMA54737",
+        "kind": "bone",
+        "vertices": 572,
+        "triangles": 714,
+        "sourceBounds": {
+          "min": [
+            -16.5321,
+            -166.327,
+            1478.52
+          ],
+          "max": [
+            -6.68817,
+            -129.961,
+            1498.48
+          ]
+        },
+        "sourceFile": "FJ3369.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "681194f0df836eb03818110633c22976f9e4cb9e4e77bb194cec3f61cdf2a80b"
+      },
+      {
+        "id": "FJ3370",
+        "name": "Right intermediate cuneiform bone",
+        "sourceId": "FMA24523",
+        "kind": "bone",
+        "vertices": 288,
+        "triangles": 450,
+        "sourceBounds": {
+          "min": [
+            -102.007,
+            -130.534,
+            -34.4366
+          ],
+          "max": [
+            -81.8595,
+            -109.585,
+            -11.3854
+          ]
+        },
+        "sourceFile": "FJ3370.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "0f849f1f865d7f206cdef48047ccd111cb8f434f0f97b0ed28246a9ba7707679"
+      },
+      {
+        "id": "FJ3371",
+        "name": "Right lacrimal bone",
+        "sourceId": "FMA53645",
+        "kind": "bone",
+        "vertices": 401,
+        "triangles": 702,
+        "sourceBounds": {
+          "min": [
+            -18.0419,
+            -165.51,
+            1501.88
+          ],
+          "max": [
+            -7.48647,
+            -150.947,
+            1527.35
+          ]
+        },
+        "sourceFile": "FJ3371.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "d8160ed34abb66d2539e6f05eadc431bd18774e5d1def1a4cb9bc40e3e4a32c5"
+      },
+      {
+        "id": "FJ3373",
+        "name": "Right lateral cuneiform bone",
+        "sourceId": "FMA24525",
+        "kind": "bone",
+        "vertices": 395,
+        "triangles": 626,
+        "sourceBounds": {
+          "min": [
+            -112.875,
+            -125.232,
+            -40.5644
+          ],
+          "max": [
+            -87.1983,
+            -100.838,
+            -14.8562
+          ]
+        },
+        "sourceFile": "FJ3373.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "fd23e4ff9032ac103773b75b0dfba0b5502979db882c92dd7d724766672da23a"
+      },
+      {
+        "id": "FJ3374",
+        "name": "Right lunate",
+        "sourceId": "FMA24437",
+        "kind": "bone",
+        "vertices": 196,
+        "triangles": 332,
+        "sourceBounds": {
+          "min": [
+            -252.724,
+            -126.924,
+            797.461
+          ],
+          "max": [
+            -236.202,
+            -110.635,
+            809.82
+          ]
+        },
+        "sourceFile": "FJ3374.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "7b607f05b221c86aa6b3f93fc9d37d860281941ed293c4afc1affdb1ef379fc4"
+      },
+      {
+        "id": "FJ3375",
+        "name": "Right maxilla",
+        "sourceId": "FMA53649",
+        "kind": "bone",
+        "vertices": 3513,
+        "triangles": 5324,
+        "sourceBounds": {
+          "min": [
+            -47.6107,
+            -184.029,
+            1463.99
+          ],
+          "max": [
+            -0.251054,
+            -129.374,
+            1533.35
+          ]
+        },
+        "sourceFile": "FJ3375.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "a1be9480b632355859507e590be68146a591d343ad671ca85c43d7be50d8b43c"
+      },
+      {
+        "id": "FJ3377",
+        "name": "Right medial cuneiform bone",
+        "sourceId": "FMA24521",
+        "kind": "bone",
+        "vertices": 615,
+        "triangles": 952,
+        "sourceBounds": {
+          "min": [
+            -94.1276,
+            -140.507,
+            -45.2732
+          ],
+          "max": [
+            -66.0044,
+            -111.982,
+            -14.2296
+          ]
+        },
+        "sourceFile": "FJ3377.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "cf2bcfee0c5f1bb6f27589044043eb5964b1f35b9fe38624fe31b17cdd8a52aa"
+      },
+      {
+        "id": "FJ3378",
+        "name": "Right nasal bone",
+        "sourceId": "FMA53647",
+        "kind": "bone",
+        "vertices": 265,
+        "triangles": 416,
+        "sourceBounds": {
+          "min": [
+            -9.14871,
+            -190.833,
+            1501.17
+          ],
+          "max": [
+            -0.741411,
+            -169.585,
+            1533.19
+          ]
+        },
+        "sourceFile": "FJ3378.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "1acb8f803fb2cd9679eccd1634768b1bbee0714ebef7cf2de041d9332da88acf"
+      },
+      {
+        "id": "FJ3379",
+        "name": "Right palatine bone",
+        "sourceId": "FMA53655",
+        "kind": "bone",
+        "vertices": 1132,
+        "triangles": 1736,
+        "sourceBounds": {
+          "min": [
+            -28.8104,
+            -149.907,
+            1470.45
+          ],
+          "max": [
+            0.147221,
+            -103.313,
+            1513.34
+          ]
+        },
+        "sourceFile": "FJ3379.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "629876377eca1ae98eefc496121e950367c49bf215febf17cf58a7f9687845dd"
+      },
+      {
+        "id": "FJ3380",
+        "name": "Right parietal bone",
+        "sourceId": "FMA52788",
+        "kind": "bone",
+        "vertices": 8028,
+        "triangles": 13002,
+        "sourceBounds": {
+          "min": [
+            -76.1885,
+            -127.886,
+            1517.88
+          ],
+          "max": [
+            5.00244,
+            14.8314,
+            1636.27
+          ]
+        },
+        "sourceFile": "FJ3380.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "fb69a19eaa0585509f45ce1ebb5e8d91af0442629e52cfe1cfd190ca8f2f72b0"
+      },
+      {
+        "id": "FJ3381",
+        "name": "Right patella",
+        "sourceId": "FMA24486",
+        "kind": "bone",
+        "vertices": 178,
+        "triangles": 306,
+        "sourceBounds": {
+          "min": [
+            -102.288,
+            -122.727,
+            361.486
+          ],
+          "max": [
+            -60.6208,
+            -100.992,
+            400.796
+          ]
+        },
+        "sourceFile": "FJ3381.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "3f53300560b903d8fbc4165af3cdafab8d4f1d0a941ca59c7ef5169d0b838b8a"
+      },
+      {
+        "id": "FJ3382",
+        "name": "Right pisiform",
+        "sourceId": "FMA24441",
+        "kind": "bone",
+        "vertices": 110,
+        "triangles": 190,
+        "sourceBounds": {
+          "min": [
+            -240.22,
+            -137.658,
+            789.675
+          ],
+          "max": [
+            -231.956,
+            -127.249,
+            801.325
+          ]
+        },
+        "sourceFile": "FJ3382.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "c02fffdeada2334cb5cc8281cf3068043c194930f42d6253292416fbb8af50a2"
+      },
+      {
+        "id": "FJ3383",
+        "name": "Right scaphoid",
+        "sourceId": "FMA24435",
+        "kind": "bone",
+        "vertices": 195,
+        "triangles": 322,
+        "sourceBounds": {
+          "min": [
+            -273.06,
+            -126.663,
+            796.354
+          ],
+          "max": [
+            -249.332,
+            -111.574,
+            811.79
+          ]
+        },
+        "sourceFile": "FJ3383.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "1d657f0402994d7854cf5a2038ccf085cffb69ff349fcbe88b04b7d26c1491f1"
+      },
+      {
+        "id": "FJ3384",
+        "name": "Right scapula",
+        "sourceId": "FMA13395",
+        "kind": "bone",
+        "vertices": 13118,
+        "triangles": 26172,
+        "sourceBounds": {
+          "min": [
+            -166.464,
+            -102.856,
+            1183.96
+          ],
+          "max": [
+            -57.0538,
+            5.08275,
+            1349.86
+          ]
+        },
+        "sourceFile": "FJ3384.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "cb68b2e01a22989f20e602d5036a3f1fb28448fe647f599b9bbd61edfbff2320"
+      },
+      {
+        "id": "FJ3385",
+        "name": "Right talus",
+        "sourceId": "FMA24482",
+        "kind": "bone",
+        "vertices": 812,
+        "triangles": 1380,
+        "sourceBounds": {
+          "min": [
+            -90.1136,
+            -105.569,
+            -31.1561
+          ],
+          "max": [
+            -49.6273,
+            -48.754,
+            3.11093
+          ]
+        },
+        "sourceFile": "FJ3385.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "2332712fbc270403f10f8a99259493758831a6c68c9f54e59ee8d7c3d7281811"
+      },
+      {
+        "id": "FJ3386",
+        "name": "Right temporal bone",
+        "sourceId": "FMA52738",
+        "kind": "bone",
+        "vertices": 3102,
+        "triangles": 4928,
+        "sourceBounds": {
+          "min": [
+            -73.9894,
+            -133.736,
+            1475.57
+          ],
+          "max": [
+            -12.6951,
+            -35.0126,
+            1551.53
+          ]
+        },
+        "sourceFile": "FJ3386.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "cae2e4dc5211d50b06e70893eef3bdaf19564ab8ae7923260e800c3498f65f88"
+      },
+      {
+        "id": "FJ3387",
+        "name": "Right tibia",
+        "sourceId": "FMA24477",
+        "kind": "bone",
+        "vertices": 857,
+        "triangles": 1664,
+        "sourceBounds": {
+          "min": [
+            -109.353,
+            -114.835,
+            -6.03716
+          ],
+          "max": [
+            -35.216,
+            -52.0729,
+            373.92
+          ]
+        },
+        "sourceFile": "FJ3387.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "a658d28799577c26cdf8318aef799dbe90564355a28b5098d8707eee907f9c7d"
+      },
+      {
+        "id": "FJ3388",
+        "name": "Right trapezium",
+        "sourceId": "FMA24443",
+        "kind": "bone",
+        "vertices": 277,
+        "triangles": 434,
+        "sourceBounds": {
+          "min": [
+            -281.722,
+            -134.576,
+            785.805
+          ],
+          "max": [
+            -264.938,
+            -117.73,
+            805.733
+          ]
+        },
+        "sourceFile": "FJ3388.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "def87e2a86ad17a4b537abfeb0a5b83fac8117fd658cff7ee29a1f79afa59c1a"
+      },
+      {
+        "id": "FJ3389",
+        "name": "Right trapezoid",
+        "sourceId": "FMA23725",
+        "kind": "bone",
+        "vertices": 271,
+        "triangles": 360,
+        "sourceBounds": {
+          "min": [
+            -273.261,
+            -128.388,
+            782.865
+          ],
+          "max": [
+            -262.14,
+            -113.527,
+            795.311
+          ]
+        },
+        "sourceFile": "FJ3389.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "6361a214c7008b247b5ac0dd7bd80be5593bf8882a45add63c9036485d4bcee6"
+      },
+      {
+        "id": "FJ3390",
+        "name": "Right triquetral",
+        "sourceId": "FMA24439",
+        "kind": "bone",
+        "vertices": 139,
+        "triangles": 170,
+        "sourceBounds": {
+          "min": [
+            -242.766,
+            -129.736,
+            788.769
+          ],
+          "max": [
+            -232.157,
+            -114.631,
+            802.59
+          ]
+        },
+        "sourceFile": "FJ3390.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "701c3417f0a8d3df769781449e7f5a5797ed30808849aebca261a6fea3dd4ce9"
+      },
+      {
+        "id": "FJ3391",
+        "name": "Right ulna",
+        "sourceId": "FMA23467",
+        "kind": "bone",
+        "vertices": 500,
+        "triangles": 834,
+        "sourceBounds": {
+          "min": [
+            -247.179,
+            -123.494,
+            805.173
+          ],
+          "max": [
+            -196.881,
+            -44.7992,
+            1052.45
+          ]
+        },
+        "sourceFile": "FJ3391.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "c84d953caa7613d6640593003ead91449eb1aaedc74cb2b27ae103e2177d3871"
+      },
+      {
+        "id": "FJ3392",
+        "name": "Right zygomatic bone",
+        "sourceId": "FMA52892",
+        "kind": "bone",
+        "vertices": 934,
+        "triangles": 1556,
+        "sourceBounds": {
+          "min": [
+            -64.5779,
+            -161.453,
+            1480.64
+          ],
+          "max": [
+            -33.2346,
+            -121.774,
+            1536.64
+          ]
+        },
+        "sourceFile": "FJ3392.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "e2c25d922162e3a76131e40ddf0356709947fa554b46640fa1880c381bb749c7"
+      },
+      {
+        "id": "FJ3393",
+        "name": "Sacrum",
+        "sourceId": "FMA16202",
+        "kind": "bone",
+        "vertices": 5293,
+        "triangles": 9922,
+        "sourceBounds": {
+          "min": [
+            -59.5912,
+            -81.3964,
+            782.837
+          ],
+          "max": [
+            58.2029,
+            7.25375,
+            927.2
+          ]
+        },
+        "sourceFile": "FJ3393.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "fd95a0b26f450e4939858c9effb7b14e589874c9210edfdb92e8f4552dd484de"
+      },
+      {
+        "id": "FJ3394",
+        "name": "Sphenoid bone",
+        "sourceId": "FMA52736",
+        "kind": "bone",
+        "vertices": 4957,
+        "triangles": 8154,
+        "sourceBounds": {
+          "min": [
+            -56.3198,
+            -145.019,
+            1478.91
+          ],
+          "max": [
+            55.0329,
+            -90.4127,
+            1548.46
+          ]
+        },
+        "sourceFile": "FJ3394.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "9255a2f02b16d0cf87c68fbfdc7afc4709d1afef94c2e2bb1e035b7f7852aca0"
+      },
+      {
+        "id": "FJ3395",
+        "name": "Vomer",
+        "sourceId": "FMA9710",
+        "kind": "bone",
+        "vertices": 3660,
+        "triangles": 7218,
+        "sourceBounds": {
+          "min": [
+            -6.11122,
+            -165.807,
+            1474.59
+          ],
+          "max": [
+            4.81104,
+            -110.747,
+            1518.11
+          ]
+        },
+        "sourceFile": "FJ3395.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "fcbfac8ca1992059a3026b445fbf55c5b5fa5a54786ed468a6ee8259230101d4"
+      }
+    ],
+    "source": "BodyParts3D 4.0, Database Center for Life Science",
+    "sourcePage": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html",
+    "retrieved": "2026-10-30",
+    "assetSha256": "1d561cb6fbaf526e1dcbf989147dccd64abcf1497d9511afcd70a623710b827f",
+    "assetBytes": 11883288,
+    "transformations": "Indexed float32 glTF packing, no decimation or reflection; source coordinates and normals retained in GLB. At runtime rotate -90 degrees about X, centre uniformly and scale common assembly to maximum dimension 5.3. Isolation applies the same proper transform to a selected source component."
+  },
+  "muscles": {
+    "label": "Major muscles",
+    "file": "/models/muscles.glb",
+    "description": "66 named components of major skeletal muscles, preserved in their source anatomical positions. Includes bilateral muscles and separately modelled heads or regions; this is a selected collection, not every muscle.",
+    "parts": [
+      {
+        "id": "FJ1452",
+        "name": "Right external oblique",
+        "sourceId": "FMA13336",
+        "kind": "muscle",
+        "vertices": 63907,
+        "triangles": 111826,
+        "sourceBounds": {
+          "min": [
+            -140.823,
+            -218.766,
+            793.626
+          ],
+          "max": [
+            -3.44858,
+            -37.0208,
+            1211.58
+          ]
+        },
+        "sourceFile": "FJ1452.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "df371dd7c973ac9fd9efa599c09e6cb42acc65e50aef9dc0adb2d9b53ffbb068"
+      },
+      {
+        "id": "FJ1452M",
+        "name": "Left external oblique",
+        "sourceId": "FMA13337",
+        "kind": "muscle",
+        "vertices": 63893,
+        "triangles": 111826,
+        "sourceBounds": {
+          "min": [
+            3.44857,
+            -218.766,
+            793.625
+          ],
+          "max": [
+            140.823,
+            -37.0208,
+            1211.58
+          ]
+        },
+        "sourceFile": "FJ1452M.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "eadbf63bdc7004d8ace4e5ac37e8adcd88227743293734fa4da882e1109ebaee"
+      },
+      {
+        "id": "FJ1459",
+        "name": "Right serratus anterior",
+        "sourceId": "FMA13398",
+        "kind": "muscle",
+        "vertices": 28465,
+        "triangles": 49212,
+        "sourceBounds": {
+          "min": [
+            -144.392,
+            -157.592,
+            1078.16
+          ],
+          "max": [
+            -57.7297,
+            5.26406,
+            1348.38
+          ]
+        },
+        "sourceFile": "FJ1459.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "09ba278c65bb0739a6360c5ec8f94affb59177228412639cf9304a3a2bba6c48"
+      },
+      {
+        "id": "FJ1459M",
+        "name": "Left serratus anterior",
+        "sourceId": "FMA13399",
+        "kind": "muscle",
+        "vertices": 28450,
+        "triangles": 49212,
+        "sourceBounds": {
+          "min": [
+            57.7298,
+            -157.592,
+            1078.16
+          ],
+          "max": [
+            144.392,
+            5.26406,
+            1348.38
+          ]
+        },
+        "sourceFile": "FJ1459M.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "8751a17aa0c8afdaf935be77ea75916bd3eb1c82a4820a2d756472e20efd4e1a"
+      },
+      {
+        "id": "FJ1573",
+        "name": "Left sternocleidomastoid",
+        "sourceId": "FMA13409",
+        "kind": "muscle",
+        "vertices": 6210,
+        "triangles": 10224,
+        "sourceBounds": {
+          "min": [
+            0.579663,
+            -156.806,
+            1301.99
+          ],
+          "max": [
+            61.6655,
+            -37.3911,
+            1503.02
+          ]
+        },
+        "sourceFile": "FJ1573.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "2035124d82e26f8e2ba9985925a746d0fd1fd94535d6ca7eed4b622f60bf5363"
+      },
+      {
+        "id": "FJ1595",
+        "name": "Right sternocleidomastoid",
+        "sourceId": "FMA13408",
+        "kind": "muscle",
+        "vertices": 6642,
+        "triangles": 10344,
+        "sourceBounds": {
+          "min": [
+            -63.04,
+            -156.907,
+            1301.97
+          ],
+          "max": [
+            61.405,
+            -37.2539,
+            1503.19
+          ]
+        },
+        "sourceFile": "FJ1595.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "287ce88ff3321e41d83b34bb0c30f66ab273aceac9fd0a6c693af4532d0e0681"
+      },
+      {
+        "id": "FJ1418",
+        "name": "Right gluteus maximus",
+        "sourceId": "FMA22328",
+        "kind": "muscle",
+        "vertices": 2053,
+        "triangles": 2376,
+        "sourceBounds": {
+          "min": [
+            -145.401,
+            -78.0115,
+            667.745
+          ],
+          "max": [
+            1.52091,
+            19.8663,
+            932.557
+          ]
+        },
+        "sourceFile": "FJ1418.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "e576dd907b8bb9b373beda7ba9cb14cce4c958def4b782ad6563b6e2fbe71d46"
+      },
+      {
+        "id": "FJ1418M",
+        "name": "Left gluteus maximus",
+        "sourceId": "FMA22329",
+        "kind": "muscle",
+        "vertices": 2053,
+        "triangles": 2376,
+        "sourceBounds": {
+          "min": [
+            -1.52091,
+            -78.0115,
+            667.745
+          ],
+          "max": [
+            145.401,
+            19.8663,
+            932.557
+          ]
+        },
+        "sourceFile": "FJ1418M.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "abde060eaa4c4e1b3da0a865a804a2c8b7790d2994cc1fe8c133dd541c92d90e"
+      },
+      {
+        "id": "FJ1419",
+        "name": "Right gluteus medius",
+        "sourceId": "FMA22330",
+        "kind": "muscle",
+        "vertices": 2312,
+        "triangles": 3356,
+        "sourceBounds": {
+          "min": [
+            -149.736,
+            -101.998,
+            788.743
+          ],
+          "max": [
+            -59.5963,
+            -16.9342,
+            950.903
+          ]
+        },
+        "sourceFile": "FJ1419.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "e2e06899b8a61640b32086432ec4b577b2bf2db6f044d469c01bdceb38bd3831"
+      },
+      {
+        "id": "FJ1419M",
+        "name": "Left gluteus medius",
+        "sourceId": "FMA22331",
+        "kind": "muscle",
+        "vertices": 2308,
+        "triangles": 3356,
+        "sourceBounds": {
+          "min": [
+            59.5963,
+            -101.998,
+            788.743
+          ],
+          "max": [
+            149.735,
+            -16.9342,
+            950.903
+          ]
+        },
+        "sourceFile": "FJ1419M.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "37f92300b952b93099dd8dd417b154b1af7484fd28780d990ff21e0e7684af84"
+      },
+      {
+        "id": "FJ1434",
+        "name": "Right sartorius",
+        "sourceId": "FMA22354",
+        "kind": "muscle",
+        "vertices": 2630,
+        "triangles": 3444,
+        "sourceBounds": {
+          "min": [
+            -131.186,
+            -140.956,
+            274.19
+          ],
+          "max": [
+            -20.6605,
+            -83.9907,
+            901.792
+          ]
+        },
+        "sourceFile": "FJ1434.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "670d0351a8f017d4792ee7c5780557b5468a298e128cf44da9443d2712d24eb7"
+      },
+      {
+        "id": "FJ1434M",
+        "name": "Left sartorius",
+        "sourceId": "FMA22355",
+        "kind": "muscle",
+        "vertices": 2633,
+        "triangles": 3444,
+        "sourceBounds": {
+          "min": [
+            20.6605,
+            -140.956,
+            274.19
+          ],
+          "max": [
+            131.186,
+            -83.9907,
+            901.792
+          ]
+        },
+        "sourceFile": "FJ1434M.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "4c32d96cf9113542f135a32f8a709505fee10796b9b076cc16c7efe665778bc8"
+      },
+      {
+        "id": "FJ1436",
+        "name": "Right semitendinosus",
+        "sourceId": "FMA22358",
+        "kind": "muscle",
+        "vertices": 1812,
+        "triangles": 2712,
+        "sourceBounds": {
+          "min": [
+            -68.2937,
+            -98.5865,
+            283.125
+          ],
+          "max": [
+            -26.9358,
+            -24.7803,
+            763.703
+          ]
+        },
+        "sourceFile": "FJ1436.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "a9351992df5093e761784b73ca3f4a7d09d0c997e3cef2f840a45b863eb7097d"
+      },
+      {
+        "id": "FJ1436M",
+        "name": "Left semitendinosus",
+        "sourceId": "FMA22359",
+        "kind": "muscle",
+        "vertices": 1808,
+        "triangles": 2712,
+        "sourceBounds": {
+          "min": [
+            26.9357,
+            -98.5865,
+            283.125
+          ],
+          "max": [
+            68.2937,
+            -24.7803,
+            763.703
+          ]
+        },
+        "sourceFile": "FJ1436M.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "e97560023348e6d7aa6d1586862a9717b6ae6ffb72f8ceee8ecf43f3f63c567f"
+      },
+      {
+        "id": "FJ1433",
+        "name": "Right rectus femoris",
+        "sourceId": "FMA38928",
+        "kind": "muscle",
+        "vertices": 3326,
+        "triangles": 5688,
+        "sourceBounds": {
+          "min": [
+            -154.449,
+            -152.466,
+            314.708
+          ],
+          "max": [
+            -62.9145,
+            -83.8998,
+            871.104
+          ]
+        },
+        "sourceFile": "FJ1433.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "a5f75907d784dd2a44d7efa96cb31009aba2afe43465336b105561751b19f8ef"
+      },
+      {
+        "id": "FJ1433M",
+        "name": "Left rectus femoris",
+        "sourceId": "FMA38929",
+        "kind": "muscle",
+        "vertices": 3326,
+        "triangles": 5688,
+        "sourceBounds": {
+          "min": [
+            62.9145,
+            -152.466,
+            314.708
+          ],
+          "max": [
+            154.449,
+            -83.8998,
+            871.104
+          ]
+        },
+        "sourceFile": "FJ1433M.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "3871310f1c1f76ca55cfa4fe043d2e3a25488903fe695674a87c7c893cdc99ae"
+      },
+      {
+        "id": "FJ1442",
+        "name": "Right vastus lateralis",
+        "sourceId": "FMA38930",
+        "kind": "muscle",
+        "vertices": 3975,
+        "triangles": 6688,
+        "sourceBounds": {
+          "min": [
+            -159.632,
+            -137.051,
+            317.932
+          ],
+          "max": [
+            -84.0565,
+            -57.5032,
+            788.167
+          ]
+        },
+        "sourceFile": "FJ1442.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "f67be78d7d0ddc6e78c0683ce4bd5be7492e4137f8661bc54039cbf535a88880"
+      },
+      {
+        "id": "FJ1442M",
+        "name": "Left vastus lateralis",
+        "sourceId": "FMA38931",
+        "kind": "muscle",
+        "vertices": 3974,
+        "triangles": 6688,
+        "sourceBounds": {
+          "min": [
+            84.0565,
+            -137.051,
+            317.932
+          ],
+          "max": [
+            159.633,
+            -57.5032,
+            788.167
+          ]
+        },
+        "sourceFile": "FJ1442M.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "507caa464730c508c2fd2f6958f9a5660fb6ca188bc38fafb5c9b5556ac6732b"
+      },
+      {
+        "id": "FJ1443",
+        "name": "Right vastus medialis",
+        "sourceId": "FMA38932",
+        "kind": "muscle",
+        "vertices": 2773,
+        "triangles": 4552,
+        "sourceBounds": {
+          "min": [
+            -105.601,
+            -146.901,
+            340.548
+          ],
+          "max": [
+            -34.9392,
+            -89.132,
+            738.179
+          ]
+        },
+        "sourceFile": "FJ1443.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "5bdb79f52849241e20ff2280332f20efd38f1b4bda1fb1337e10a5c3e466002b"
+      },
+      {
+        "id": "FJ1443M",
+        "name": "Left vastus medialis",
+        "sourceId": "FMA38933",
+        "kind": "muscle",
+        "vertices": 2772,
+        "triangles": 4552,
+        "sourceBounds": {
+          "min": [
+            34.9393,
+            -146.901,
+            340.548
+          ],
+          "max": [
+            105.601,
+            -89.132,
+            738.179
+          ]
+        },
+        "sourceFile": "FJ1443M.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "8ca4d66734150402401722e8a82f52ada8af9d6973592e127431b742dfe46ad4"
+      },
+      {
+        "id": "FJ1435",
+        "name": "Right semimembranosus",
+        "sourceId": "FMA22448",
+        "kind": "muscle",
+        "vertices": 2588,
+        "triangles": 4612,
+        "sourceBounds": {
+          "min": [
+            -70.9992,
+            -103.495,
+            315.926
+          ],
+          "max": [
+            -13.1749,
+            -37.3297,
+            754.438
+          ]
+        },
+        "sourceFile": "FJ1435.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "1fdce0f7db538e4731207af06a293e41037c2474192f61ca2cb5b0d663b16894"
+      },
+      {
+        "id": "FJ1435M",
+        "name": "Left semimembranosus",
+        "sourceId": "FMA22449",
+        "kind": "muscle",
+        "vertices": 2588,
+        "triangles": 4612,
+        "sourceBounds": {
+          "min": [
+            13.1749,
+            -103.495,
+            315.926
+          ],
+          "max": [
+            70.9991,
+            -37.3296,
+            754.438
+          ]
+        },
+        "sourceFile": "FJ1435M.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "27c6f7bdf85a103b4247153f4ca08c846ef0037b92d5032af542496822647cad"
+      },
+      {
+        "id": "FJ1439",
+        "name": "Right tibialis anterior",
+        "sourceId": "FMA22544",
+        "kind": "muscle",
+        "vertices": 2204,
+        "triangles": 2510,
+        "sourceBounds": {
+          "min": [
+            -116.779,
+            -149.6,
+            -38.8064
+          ],
+          "max": [
+            -66.967,
+            -72.8246,
+            355.269
+          ]
+        },
+        "sourceFile": "FJ1439.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "b03d2f54644969d153d3dfe4025ee629858e72c1e5ee3b0e7d5f16f54dc505b3"
+      },
+      {
+        "id": "FJ1439M",
+        "name": "Left tibialis anterior",
+        "sourceId": "FMA22545",
+        "kind": "muscle",
+        "vertices": 2206,
+        "triangles": 2510,
+        "sourceBounds": {
+          "min": [
+            66.967,
+            -149.6,
+            -38.8064
+          ],
+          "max": [
+            116.779,
+            -72.8246,
+            355.269
+          ]
+        },
+        "sourceFile": "FJ1439M.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "948b094bcc119ddbfcfeec4cd27cf21125f27d2d3c25c5344091fbc05833e971"
+      },
+      {
+        "id": "FJ1437",
+        "name": "Right soleus",
+        "sourceId": "FMA22558",
+        "kind": "muscle",
+        "vertices": 2674,
+        "triangles": 4418,
+        "sourceBounds": {
+          "min": [
+            -115.785,
+            -91.1189,
+            32.464
+          ],
+          "max": [
+            -35.6001,
+            -32.1986,
+            358.617
+          ]
+        },
+        "sourceFile": "FJ1437.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "c9c62b720ffe375a8eddf390608684a796f1ea54880a5c34fa440404addc399e"
+      },
+      {
+        "id": "FJ1437M",
+        "name": "Left soleus",
+        "sourceId": "FMA22559",
+        "kind": "muscle",
+        "vertices": 2674,
+        "triangles": 4418,
+        "sourceBounds": {
+          "min": [
+            35.6001,
+            -91.1189,
+            32.464
+          ],
+          "max": [
+            115.785,
+            -32.1986,
+            358.617
+          ]
+        },
+        "sourceFile": "FJ1437M.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "66d10b2e0d114158a9b2aa8751b5967ca24f1231f2e2905ebde4755cab62902c"
+      },
+      {
+        "id": "FJ1554",
+        "name": "Transverse part of right trapezius",
+        "sourceId": "FMA33584",
+        "kind": "muscle",
+        "vertices": 3535,
+        "triangles": 4460,
+        "sourceBounds": {
+          "min": [
+            -163.242,
+            -69.6539,
+            1303.62
+          ],
+          "max": [
+            3.87271,
+            10.7009,
+            1382.11
+          ]
+        },
+        "sourceFile": "FJ1554.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "f7683d77a5bfe9ac6d07fdc913c46cf41db20298c087e71df73fab18192e90a4"
+      },
+      {
+        "id": "FJ1554M",
+        "name": "Transverse part of left trapezius",
+        "sourceId": "FMA33585",
+        "kind": "muscle",
+        "vertices": 3535,
+        "triangles": 4460,
+        "sourceBounds": {
+          "min": [
+            -3.87271,
+            -69.6539,
+            1303.63
+          ],
+          "max": [
+            163.242,
+            10.7009,
+            1382.11
+          ]
+        },
+        "sourceFile": "FJ1554M.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "a08a23c17d20a120eebe96a9c8db1bb86672529fb8f34868d5f7cd28f5df98d5"
+      },
+      {
+        "id": "FJ1520",
+        "name": "Ascending part of right trapezius",
+        "sourceId": "FMA33581",
+        "kind": "muscle",
+        "vertices": 7533,
+        "triangles": 10530,
+        "sourceBounds": {
+          "min": [
+            -148.586,
+            -46.9637,
+            1054.01
+          ],
+          "max": [
+            3.25436,
+            24.5467,
+            1342.97
+          ]
+        },
+        "sourceFile": "FJ1520.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "6bb3d13198991bda4d0aae27561976b9ba53b0d21d817f180098307c7b99deb1"
+      },
+      {
+        "id": "FJ1520M",
+        "name": "Ascending part of left trapezius",
+        "sourceId": "FMA33583",
+        "kind": "muscle",
+        "vertices": 7507,
+        "triangles": 10530,
+        "sourceBounds": {
+          "min": [
+            -3.25436,
+            -46.9637,
+            1054.01
+          ],
+          "max": [
+            148.586,
+            24.5466,
+            1342.97
+          ]
+        },
+        "sourceFile": "FJ1520M.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "5ca485d5bfe97fd5a9e17d76d2a77077577e13f19584f5634a8eb1bbc6d7da3d"
+      },
+      {
+        "id": "FJ1521",
+        "name": "Descending part of right trapezius",
+        "sourceId": "FMA33586",
+        "kind": "muscle",
+        "vertices": 5023,
+        "triangles": 7108,
+        "sourceBounds": {
+          "min": [
+            -130.84,
+            -100.66,
+            1340.59
+          ],
+          "max": [
+            3.48842,
+            -7.61348,
+            1506.24
+          ]
+        },
+        "sourceFile": "FJ1521.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "19bd9d1cbbb84e10826eb770068f6e271cd79dde960bca62ac71da24120fc354"
+      },
+      {
+        "id": "FJ1521M",
+        "name": "Descending part of left trapezius",
+        "sourceId": "FMA33587",
+        "kind": "muscle",
+        "vertices": 4999,
+        "triangles": 7108,
+        "sourceBounds": {
+          "min": [
+            -3.48842,
+            -100.66,
+            1340.59
+          ],
+          "max": [
+            130.84,
+            -7.61348,
+            1506.24
+          ]
+        },
+        "sourceFile": "FJ1521M.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "fe756252f820a47e9c757f67de4ca37adf44837dbe0d10c6d2e5df3a5a6a0751"
+      },
+      {
+        "id": "FJ1467",
+        "name": "Acromial part of right deltoid",
+        "sourceId": "FMA34682",
+        "kind": "muscle",
+        "vertices": 916,
+        "triangles": 1300,
+        "sourceBounds": {
+          "min": [
+            -227.228,
+            -103.338,
+            1205.09
+          ],
+          "max": [
+            -146.586,
+            -40.8371,
+            1349.22
+          ]
+        },
+        "sourceFile": "FJ1467.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "2f69f1a13c836539abca85d9b77f55f96319ad3fdd75c62f498eabe49b266bfe"
+      },
+      {
+        "id": "FJ1467M",
+        "name": "Acromial part of left deltoid",
+        "sourceId": "FMA34683",
+        "kind": "muscle",
+        "vertices": 918,
+        "triangles": 1300,
+        "sourceBounds": {
+          "min": [
+            146.586,
+            -103.337,
+            1205.09
+          ],
+          "max": [
+            227.228,
+            -40.8371,
+            1349.22
+          ]
+        },
+        "sourceFile": "FJ1467M.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "a523b5f2ab862ad6505787f4936098fbcfe3f28a3742b57aac34307fe752f8eb"
+      },
+      {
+        "id": "FJ1468",
+        "name": "Clavicular part of right deltoid",
+        "sourceId": "FMA34680",
+        "kind": "muscle",
+        "vertices": 2592,
+        "triangles": 2206,
+        "sourceBounds": {
+          "min": [
+            -203.619,
+            -121.331,
+            1203.85
+          ],
+          "max": [
+            -88.555,
+            -75.1252,
+            1355.39
+          ]
+        },
+        "sourceFile": "FJ1468.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "09eebb4a8d72c91936b0bfde7f35829a58f56103ac158f559186698458bcc616"
+      },
+      {
+        "id": "FJ1468M",
+        "name": "Clavicular part of left deltoid",
+        "sourceId": "FMA34681",
+        "kind": "muscle",
+        "vertices": 2604,
+        "triangles": 2206,
+        "sourceBounds": {
+          "min": [
+            88.555,
+            -121.331,
+            1203.85
+          ],
+          "max": [
+            203.619,
+            -75.1252,
+            1355.39
+          ]
+        },
+        "sourceFile": "FJ1468M.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "75340ac9157ea6c64baaa74c0bbfd6173114dcff0d30ea814702c288b002f104"
+      },
+      {
+        "id": "FJ1513",
+        "name": "Spinal part of right deltoid",
+        "sourceId": "FMA34684",
+        "kind": "muscle",
+        "vertices": 1665,
+        "triangles": 1900,
+        "sourceBounds": {
+          "min": [
+            -219.171,
+            -79.253,
+            1187.75
+          ],
+          "max": [
+            -82.8341,
+            -2.72512,
+            1339.84
+          ]
+        },
+        "sourceFile": "FJ1513.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "ef8308c92fd0d01d8c0d7ffd9238305eefc2f28710d7bb58f451512abdc08e99"
+      },
+      {
+        "id": "FJ1513M",
+        "name": "Spinal part of left deltoid",
+        "sourceId": "FMA34685",
+        "kind": "muscle",
+        "vertices": 1678,
+        "triangles": 1900,
+        "sourceBounds": {
+          "min": [
+            82.8341,
+            -79.253,
+            1187.75
+          ],
+          "max": [
+            219.171,
+            -2.72512,
+            1339.84
+          ]
+        },
+        "sourceFile": "FJ1513M.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "a806a9a20b68009f0071c22411b009f4baef3de118f00a37cc4a3be8cdf7ce2e"
+      },
+      {
+        "id": "FJ1446",
+        "name": "Abdominal part of right pectoralis major",
+        "sourceId": "FMA45874",
+        "kind": "muscle",
+        "vertices": 1019,
+        "triangles": 1536,
+        "sourceBounds": {
+          "min": [
+            -180.896,
+            -213.628,
+            1104.78
+          ],
+          "max": [
+            -48.0,
+            -81.7564,
+            1277.94
+          ]
+        },
+        "sourceFile": "FJ1446.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "964ab8e287e7f44f14b07d8c7694ec70eee63bc9d7b1eeb3c5dc79e80460336d"
+      },
+      {
+        "id": "FJ1446M",
+        "name": "Abdominal part of left pectoralis major",
+        "sourceId": "FMA45875",
+        "kind": "muscle",
+        "vertices": 1019,
+        "triangles": 1536,
+        "sourceBounds": {
+          "min": [
+            48.0,
+            -213.628,
+            1104.78
+          ],
+          "max": [
+            180.896,
+            -81.7564,
+            1277.94
+          ]
+        },
+        "sourceFile": "FJ1446M.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "950d6ab140639cb6633cd81edfeeef726a62b6b53d75a0ce0d0bd040e998a88b"
+      },
+      {
+        "id": "FJ1464",
+        "name": "Sternocostal part of right pectoralis major",
+        "sourceId": "FMA79979",
+        "kind": "muscle",
+        "vertices": 5480,
+        "triangles": 7114,
+        "sourceBounds": {
+          "min": [
+            -187.848,
+            -219.353,
+            1140.61
+          ],
+          "max": [
+            -4.81557,
+            -81.0,
+            1313.8
+          ]
+        },
+        "sourceFile": "FJ1464.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "bbdc0f731053d83a39689dcd5c9c7b559060de298b97bd90caee3791aeedd7bb"
+      },
+      {
+        "id": "FJ1464M",
+        "name": "Sternocostal part of left pectoralis major",
+        "sourceId": "FMA79980",
+        "kind": "muscle",
+        "vertices": 5466,
+        "triangles": 7114,
+        "sourceBounds": {
+          "min": [
+            4.81557,
+            -219.353,
+            1140.61
+          ],
+          "max": [
+            187.848,
+            -81.0,
+            1313.8
+          ]
+        },
+        "sourceFile": "FJ1464M.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "f3c9dd7ac80492a4f4269a88568a13276f66473796f651ca7c8ec5cc93e6e0f6"
+      },
+      {
+        "id": "FJ1447",
+        "name": "Clavicular part of right pectoralis major",
+        "sourceId": "FMA34690",
+        "kind": "muscle",
+        "vertices": 1492,
+        "triangles": 1846,
+        "sourceBounds": {
+          "min": [
+            -194.262,
+            -145.096,
+            1234.51
+          ],
+          "max": [
+            -26.4139,
+            -82.0,
+            1335.9
+          ]
+        },
+        "sourceFile": "FJ1447.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "e239a63adf99dfc094ece7efcd91ec7cd9ac802e9d7581141b311a7842fbbbe6"
+      },
+      {
+        "id": "FJ1447M",
+        "name": "Clavicular part of left pectoralis major",
+        "sourceId": "FMA34691",
+        "kind": "muscle",
+        "vertices": 1495,
+        "triangles": 1846,
+        "sourceBounds": {
+          "min": [
+            26.4139,
+            -145.096,
+            1234.51
+          ],
+          "max": [
+            194.262,
+            -82.0,
+            1335.9
+          ]
+        },
+        "sourceFile": "FJ1447M.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "aab8ea03eed46a79b3f765ef539df785deb333e5079c21f8c7bec14444768a18"
+      },
+      {
+        "id": "FJ1486",
+        "name": "Right brachialis",
+        "sourceId": "FMA37668",
+        "kind": "muscle",
+        "vertices": 1266,
+        "triangles": 1746,
+        "sourceBounds": {
+          "min": [
+            -235.121,
+            -86.396,
+            995.361
+          ],
+          "max": [
+            -176.385,
+            -60.5697,
+            1220.2
+          ]
+        },
+        "sourceFile": "FJ1486.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "be5f40b153fd6ce0c8c274eb4c26be8d1a29b4bbe75dd0e4a0dfe5c4d251fa03"
+      },
+      {
+        "id": "FJ1486M",
+        "name": "Left brachialis",
+        "sourceId": "FMA37669",
+        "kind": "muscle",
+        "vertices": 1256,
+        "triangles": 1746,
+        "sourceBounds": {
+          "min": [
+            176.385,
+            -86.3959,
+            995.361
+          ],
+          "max": [
+            235.121,
+            -60.5697,
+            1220.2
+          ]
+        },
+        "sourceFile": "FJ1486M.obj",
+        "sourceArchive": "partof_BP3D_4.0_obj_99.zip",
+        "sha256": "6134415500d1d04b49331687cc436fdbac41d4c8622960e1b72cb693022b1208"
+      },
+      {
+        "id": "FJ1512",
+        "name": "Short head of right biceps brachii",
+        "sourceId": "FMA37684",
+        "kind": "muscle",
+        "vertices": 1739,
+        "triangles": 1856,
+        "sourceBounds": {
+          "min": [
+            -212.39,
+            -109.101,
+            1065.22
+          ],
+          "max": [
+            -135.237,
+            -75.9581,
+            1327.76
+          ]
+        },
+        "sourceFile": "FJ1512.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "2173b7cce29f11036907b80e068e9bd6c16f22359d6e7994af9684454b99b4d5"
+      },
+      {
+        "id": "FJ1512M",
+        "name": "Short head of left biceps brachii",
+        "sourceId": "FMA37685",
+        "kind": "muscle",
+        "vertices": 1743,
+        "triangles": 1856,
+        "sourceBounds": {
+          "min": [
+            135.237,
+            -109.102,
+            1065.22
+          ],
+          "max": [
+            212.39,
+            -75.9581,
+            1327.76
+          ]
+        },
+        "sourceFile": "FJ1512M.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "6b0ed7b70973b3a2e08de4ea5ce59c05a4ddce2b90212ff734326be2726d1293"
+      },
+      {
+        "id": "FJ1478",
+        "name": "Long head of right biceps brachii",
+        "sourceId": "FMA37686",
+        "kind": "muscle",
+        "vertices": 1053,
+        "triangles": 1426,
+        "sourceBounds": {
+          "min": [
+            -229.86,
+            -109.292,
+            994.072
+          ],
+          "max": [
+            -135.268,
+            -67.8089,
+            1339.42
+          ]
+        },
+        "sourceFile": "FJ1478.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "2442d2b5ac30c5da42e72eeff83d143df51c7617001cbc6552096a504f29bc07"
+      },
+      {
+        "id": "FJ1478M",
+        "name": "Long head of left biceps brachii",
+        "sourceId": "FMA37687",
+        "kind": "muscle",
+        "vertices": 1039,
+        "triangles": 1426,
+        "sourceBounds": {
+          "min": [
+            135.268,
+            -109.293,
+            994.072
+          ],
+          "max": [
+            229.86,
+            -67.8089,
+            1339.42
+          ]
+        },
+        "sourceFile": "FJ1478M.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "10189f1d7b5220df3baef2b259ae9855ed301c1afaadfc2de25af3222c5a08fc"
+      },
+      {
+        "id": "FJ1479",
+        "name": "Long head of right triceps brachii",
+        "sourceId": "FMA37699",
+        "kind": "muscle",
+        "vertices": 1105,
+        "triangles": 1588,
+        "sourceBounds": {
+          "min": [
+            -216.462,
+            -64.1021,
+            1035.24
+          ],
+          "max": [
+            -134.691,
+            -18.7595,
+            1300.75
+          ]
+        },
+        "sourceFile": "FJ1479.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "acc48f746bd07a117357a9c49a1a9850c96b85d7c63cf90a662a45717875a315"
+      },
+      {
+        "id": "FJ1479M",
+        "name": "Long head of left triceps brachii",
+        "sourceId": "FMA37700",
+        "kind": "muscle",
+        "vertices": 1109,
+        "triangles": 1588,
+        "sourceBounds": {
+          "min": [
+            134.691,
+            -64.1021,
+            1035.24
+          ],
+          "max": [
+            216.462,
+            -18.7596,
+            1300.75
+          ]
+        },
+        "sourceFile": "FJ1479M.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "4b8315f9134a213f45c3af830270f4526e705d0a149894516d3f5fba98878f15"
+      },
+      {
+        "id": "FJ1480",
+        "name": "Medial head of right triceps brachii",
+        "sourceId": "FMA37695",
+        "kind": "muscle",
+        "vertices": 620,
+        "triangles": 832,
+        "sourceBounds": {
+          "min": [
+            -226.963,
+            -71.8799,
+            1029.35
+          ],
+          "max": [
+            -167.373,
+            -46.3172,
+            1256.04
+          ]
+        },
+        "sourceFile": "FJ1480.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "1ea653667afa5ff0bf0e01d71ac648819655241c130e8dd1778ed2f9561c34c5"
+      },
+      {
+        "id": "FJ1480M",
+        "name": "Medial head of left triceps brachii",
+        "sourceId": "FMA37696",
+        "kind": "muscle",
+        "vertices": 617,
+        "triangles": 832,
+        "sourceBounds": {
+          "min": [
+            167.374,
+            -71.8799,
+            1029.35
+          ],
+          "max": [
+            226.963,
+            -46.3172,
+            1256.04
+          ]
+        },
+        "sourceFile": "FJ1480M.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "fc35854102a057ca85a201eeff4c18f03722b1ceab52c311ce1b87abf4fa2ff8"
+      },
+      {
+        "id": "FJ1477",
+        "name": "Lateral head of right triceps brachii",
+        "sourceId": "FMA37697",
+        "kind": "muscle",
+        "vertices": 1678,
+        "triangles": 2606,
+        "sourceBounds": {
+          "min": [
+            -228.005,
+            -68.7968,
+            1035.97
+          ],
+          "max": [
+            -174.456,
+            -20.0842,
+            1292.13
+          ]
+        },
+        "sourceFile": "FJ1477.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "1d1c3b42eec0dffe696bd25cffa81784c87c15f16c9605050fdf1cb2f47698dd"
+      },
+      {
+        "id": "FJ1477M",
+        "name": "Lateral head of left triceps brachii",
+        "sourceId": "FMA37698",
+        "kind": "muscle",
+        "vertices": 1676,
+        "triangles": 2606,
+        "sourceBounds": {
+          "min": [
+            174.456,
+            -68.7968,
+            1035.97
+          ],
+          "max": [
+            228.005,
+            -20.0842,
+            1292.13
+          ]
+        },
+        "sourceFile": "FJ1477M.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "96d9859e983736f53864e53fa0579b8f6a18006067967df42e4fe7ea2d2b9e6f"
+      },
+      {
+        "id": "FJ1487",
+        "name": "Right brachioradialis",
+        "sourceId": "FMA38486",
+        "kind": "muscle",
+        "vertices": 3270,
+        "triangles": 4874,
+        "sourceBounds": {
+          "min": [
+            -280.586,
+            -122.878,
+            809.712
+          ],
+          "max": [
+            -208.159,
+            -55.8244,
+            1147.61
+          ]
+        },
+        "sourceFile": "FJ1487.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "0ff651a5417f240c6a5205bef5218336a61fe3474752cca1b483d02aae0b92ad"
+      },
+      {
+        "id": "FJ1487M",
+        "name": "Left brachioradialis",
+        "sourceId": "FMA38487",
+        "kind": "muscle",
+        "vertices": 3272,
+        "triangles": 4874,
+        "sourceBounds": {
+          "min": [
+            208.159,
+            -122.878,
+            809.712
+          ],
+          "max": [
+            280.586,
+            -55.8244,
+            1147.61
+          ]
+        },
+        "sourceFile": "FJ1487M.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "04555d88efe99e68a2b07441c4deffa4d1e7ebafb8d3f60995dd28c0ff42f147"
+      },
+      {
+        "id": "FJ1395",
+        "name": "Long head of right biceps femoris",
+        "sourceId": "FMA45888",
+        "kind": "muscle",
+        "vertices": 2838,
+        "triangles": 5110,
+        "sourceBounds": {
+          "min": [
+            -126.642,
+            -72.1878,
+            327.905
+          ],
+          "max": [
+            -48.6928,
+            -18.3096,
+            764.753
+          ]
+        },
+        "sourceFile": "FJ1395.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "0c22806bfd2a0f8745023a7d438250411f9d013f3d966c5c75335f5b57f8e142"
+      },
+      {
+        "id": "FJ1395M",
+        "name": "Long head of left biceps femoris",
+        "sourceId": "FMA45889",
+        "kind": "muscle",
+        "vertices": 2837,
+        "triangles": 5110,
+        "sourceBounds": {
+          "min": [
+            48.6927,
+            -72.1878,
+            327.905
+          ],
+          "max": [
+            126.642,
+            -18.3095,
+            764.753
+          ]
+        },
+        "sourceFile": "FJ1395M.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "f9b7a8bc5db9ff1c7a6dc25fb15cdac175c96d4a52ec9304709dff5468e8a11b"
+      },
+      {
+        "id": "FJ1444",
+        "name": "Short head of right biceps femoris",
+        "sourceId": "FMA45891",
+        "kind": "muscle",
+        "vertices": 1211,
+        "triangles": 1728,
+        "sourceBounds": {
+          "min": [
+            -117.409,
+            -87.4787,
+            328.19
+          ],
+          "max": [
+            -80.6712,
+            -50.8818,
+            646.62
+          ]
+        },
+        "sourceFile": "FJ1444.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "c071097501796cee5ff2a011b3d84c7bea4cb153241fce0f8b0a73d070bd990f"
+      },
+      {
+        "id": "FJ1444M",
+        "name": "Short head of left biceps femoris",
+        "sourceId": "FMA45892",
+        "kind": "muscle",
+        "vertices": 1215,
+        "triangles": 1728,
+        "sourceBounds": {
+          "min": [
+            80.6712,
+            -87.4787,
+            328.19
+          ],
+          "max": [
+            117.409,
+            -50.8818,
+            646.62
+          ]
+        },
+        "sourceFile": "FJ1444M.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "2794a3899545d9b66f61fb9de3459132b577939c63b527fae101d497e28b154e"
+      },
+      {
+        "id": "FJ1394",
+        "name": "Lateral head of right gastrocnemius",
+        "sourceId": "FMA45960",
+        "kind": "muscle",
+        "vertices": 1748,
+        "triangles": 3052,
+        "sourceBounds": {
+          "min": [
+            -116.992,
+            -80.6506,
+            132.801
+          ],
+          "max": [
+            -61.167,
+            -5.80911,
+            423.261
+          ]
+        },
+        "sourceFile": "FJ1394.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "621dc10e974bcc1c53a8843bf1db3a1c322c8327d279010c58533bd28952bf08"
+      },
+      {
+        "id": "FJ1394M",
+        "name": "Lateral head of left gastrocnemius",
+        "sourceId": "FMA45961",
+        "kind": "muscle",
+        "vertices": 1746,
+        "triangles": 3052,
+        "sourceBounds": {
+          "min": [
+            61.167,
+            -80.6506,
+            132.801
+          ],
+          "max": [
+            116.992,
+            -5.80911,
+            423.261
+          ]
+        },
+        "sourceFile": "FJ1394M.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "18df6c6fe718aa0d60f4a98ad9ed3dab7d95c1da0aacd641a498b97ddf31ceb6"
+      },
+      {
+        "id": "FJ1397",
+        "name": "Medial head of right gastrocnemius",
+        "sourceId": "FMA45957",
+        "kind": "muscle",
+        "vertices": 2263,
+        "triangles": 3842,
+        "sourceBounds": {
+          "min": [
+            -74.2357,
+            -92.6934,
+            122.833
+          ],
+          "max": [
+            -21.7597,
+            -13.6614,
+            432.102
+          ]
+        },
+        "sourceFile": "FJ1397.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "d7f3aa44801171baade1a59c40a8f8bda72097bec07047f93f24ebaac4546cb4"
+      },
+      {
+        "id": "FJ1397M",
+        "name": "Medial head of left gastrocnemius",
+        "sourceId": "FMA45958",
+        "kind": "muscle",
+        "vertices": 2264,
+        "triangles": 3842,
+        "sourceBounds": {
+          "min": [
+            21.7597,
+            -92.6934,
+            122.833
+          ],
+          "max": [
+            74.2358,
+            -13.6614,
+            432.102
+          ]
+        },
+        "sourceFile": "FJ1397M.obj",
+        "sourceArchive": "isa_BP3D_4.0_obj_99.zip",
+        "sha256": "43545b226adb517579273570e6bcb30943c5f22a1687aba6e11d6e1634175f05"
+      }
+    ],
+    "source": "BodyParts3D 4.0, Database Center for Life Science",
+    "sourcePage": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html",
+    "retrieved": "2026-10-30",
+    "assetSha256": "5f73fd160fb43f71749baa6be28d5e47b80e56dfbfb58295d1cb94df100a4d8d",
+    "assetBytes": 11701328,
+    "transformations": "Indexed float32 glTF packing, no decimation or reflection; source coordinates and normals retained in GLB. At runtime rotate -90 degrees about X, centre uniformly and scale common assembly to maximum dimension 5.3. Isolation applies the same proper transform to a selected source component."
+  }
+}
