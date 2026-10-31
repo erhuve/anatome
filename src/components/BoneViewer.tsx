@@ -2,11 +2,12 @@ import { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
+import { bindCameraControls, cameraControlInstructions } from '../cameraControls';
 
 type Bone = 'femur' | 'humerus' | 'scapula';
 type View = 'anterior' | 'posterior' | 'medial' | 'lateral';
 type Landmark = { id: string; name: string; source: [number, number, number] };
-type Props = { bone: Bone; view: View; labels: boolean; activeLandmark?: string; onLandmarkSelect?: (id: string) => void; onViewChange?: (view: string) => void };
+type Props = { bone: Bone; view: View; labels: boolean; activeLandmark?: string; resetToken?: number; theme?: 'light' | 'dark'; onReady?: (status: 'loading' | 'ready' | 'error') => void; onLandmarkSelect?: (id: string) => void; onViewChange?: (view: string) => void };
 
 // Hand-placed surface targets in the ORIGINAL BodyParts3D millimetre coordinates.
 // The supplied specimens are the right bones; no reflections are used.
@@ -44,18 +45,20 @@ export function fitDistance(size: { x: number; y: number; z: number }, view: Vie
   return Math.max(size.y / (2 * tangent), halfWidth / (tangent * Math.max(aspect, 0.2))) * 1.08 + halfDepth;
 }
 
-export default function BoneViewer({ bone, view, labels, activeLandmark, onLandmarkSelect, onViewChange }: Props) {
+export default function BoneViewer({ bone, view, labels, activeLandmark, resetToken = 0, theme = 'light', onReady, onLandmarkSelect, onViewChange }: Props) {
   const host = useRef<HTMLDivElement>(null);
   const markers = useRef<Record<string, HTMLButtonElement | null>>({});
   const runtime = useRef<{ camera: THREE.PerspectiveCamera; controls: OrbitControls; fit: () => void } | null>(null);
-  const state = useRef({ labels, activeLandmark, view, onViewChange });
-  state.current = { labels, activeLandmark, view, onViewChange };
+  const state = useRef({ labels, activeLandmark, view, onViewChange, onReady });
+  state.current = { labels, activeLandmark, view, onViewChange, onReady };
   const [status, setStatus] = useState<'loading' | 'ready' | 'error'>('loading');
   const [freeView, setFreeView] = useState(false);
 
   useEffect(() => {
     const element = host.current;
     if (!element) return;
+    const dark = theme === 'dark';
+    const report = (next: 'loading' | 'ready' | 'error') => { setStatus(next); state.current.onReady?.(next); };
     let disposed = false;
     let frame = 0;
     let observer: ResizeObserver | undefined;
@@ -63,17 +66,17 @@ export default function BoneViewer({ bone, view, labels, activeLandmark, onLandm
     let renderer: THREE.WebGLRenderer;
     let controls: OrbitControls | undefined;
     const resources: THREE.Object3D[] = [];
-    setStatus('loading'); setFreeView(false);
+    report('loading'); setFreeView(false);
     try { renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: 'high-performance' }); }
-    catch { setStatus('error'); return; }
+    catch { report('error'); return; }
     renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
     renderer.outputColorSpace = THREE.SRGBColorSpace;
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
-    renderer.toneMappingExposure = 1.28;
+    renderer.toneMappingExposure = dark ? 1.08 : 1.28;
     renderer.shadowMap.enabled = true;
     renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-    renderer.setClearColor(0xf0eee7, 0);
-    renderer.domElement.setAttribute('aria-label', `Interactive ${bone} specimen. Drag or use arrow keys to rotate; scroll or use plus and minus keys to zoom.`);
+    renderer.setClearColor(dark ? 0x171819 : 0xf0eee7, 0);
+    renderer.domElement.setAttribute('aria-label', `Interactive ${state.current.labels ? bone : 'anatomical'} specimen. ${cameraControlInstructions}`);
     renderer.domElement.setAttribute('role', 'img');
     renderer.domElement.style.cssText = 'display:block;width:100%;height:100%;touch-action:none';
     renderer.domElement.className = 'anatomy-canvas';
@@ -85,7 +88,6 @@ export default function BoneViewer({ bone, view, labels, activeLandmark, onLandm
     controls = new OrbitControls(camera, renderer.domElement);
     controls.enableDamping = true;
     controls.dampingFactor = 0.1;
-    controls.enablePan = false;
     controls.minDistance = 3.4; controls.maxDistance = 15;
     controls.minPolarAngle = 0.08; controls.maxPolarAngle = Math.PI - 0.08;
     const markFreeView = () => {
@@ -93,7 +95,8 @@ export default function BoneViewer({ bone, view, labels, activeLandmark, onLandm
       state.current.onViewChange?.('free');
     };
     controls.addEventListener('start', markFreeView);
-    scene.add(new THREE.HemisphereLight(0xfffaf0, 0x8f8f85, 2.3));
+    const unbindCameraControls = bindCameraControls(camera, controls, renderer.domElement, markFreeView);
+    scene.add(new THREE.HemisphereLight(0xfffaf0, dark ? 0x252629 : 0x8f8f85, dark ? 1.6 : 2.3));
     const key = new THREE.DirectionalLight(0xfff6df, 3.3);
     key.position.set(-3.5, 5, 6); key.castShadow = true;
     key.shadow.mapSize.set(1024, 1024);
@@ -103,7 +106,7 @@ export default function BoneViewer({ bone, view, labels, activeLandmark, onLandm
     key.shadow.bias = -0.0004;
     key.shadow.radius = 5;
     scene.add(key);
-    const fill = new THREE.DirectionalLight(0xffffff, 1.2); fill.position.set(4, 1, -4); scene.add(fill);
+    const fill = new THREE.DirectionalLight(dark ? 0xcbd4e3 : 0xffffff, 1.2); fill.position.set(4, 1, -4); scene.add(fill);
     const faceLight = new THREE.DirectionalLight(0xffffff, 0.65); faceLight.position.set(0, 0, 8); scene.add(faceLight);
     const fit = () => {
       // Clear residual orbit damping before applying an exact anatomical preset.
@@ -123,29 +126,6 @@ export default function BoneViewer({ bone, view, labels, activeLandmark, onLandm
       setFreeView(false);
       state.current.onViewChange?.(state.current.view);
     };
-    const onKeyDown = (event: KeyboardEvent) => {
-      const keys = ['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown', '+', '=', '-', '_'];
-      if (!keys.includes(event.key) || event.altKey || event.ctrlKey || event.metaKey) return;
-      event.preventDefault();
-      controls!.enableDamping = false;
-      controls!.update();
-      const offset = camera.position.clone().sub(controls!.target);
-      const spherical = new THREE.Spherical().setFromVector3(offset);
-      const step = event.shiftKey ? 0.25 : 0.12;
-      if (event.key === 'ArrowLeft') spherical.theta -= step;
-      if (event.key === 'ArrowRight') spherical.theta += step;
-      if (event.key === 'ArrowUp') spherical.phi -= step;
-      if (event.key === 'ArrowDown') spherical.phi += step;
-      if (event.key === '+' || event.key === '=') spherical.radius /= 1.12;
-      if (event.key === '-' || event.key === '_') spherical.radius *= 1.12;
-      spherical.phi = THREE.MathUtils.clamp(spherical.phi, controls!.minPolarAngle, controls!.maxPolarAngle);
-      spherical.radius = THREE.MathUtils.clamp(spherical.radius, controls!.minDistance, controls!.maxDistance);
-      camera.position.setFromSpherical(spherical).add(controls!.target);
-      controls!.update();
-      controls!.enableDamping = true;
-      markFreeView();
-    };
-    renderer.domElement.addEventListener('keydown', onKeyDown);
     runtime.current = { camera, controls, fit };
     const resize = () => {
       const width = Math.max(element.clientWidth, 1), height = Math.max(element.clientHeight, 1);
@@ -239,19 +219,19 @@ export default function BoneViewer({ bone, view, labels, activeLandmark, onLandm
         markerPositions[landmark.id] = worldPoint.addScaledVector(normal, 0.035);
         markerNormals[landmark.id] = normal;
       }
-      const ground = new THREE.Mesh(new THREE.PlaneGeometry(16, 16), new THREE.ShadowMaterial({ color: 0x7d7460, opacity: 0.16 }));
+      const ground = new THREE.Mesh(new THREE.PlaneGeometry(16, 16), new THREE.ShadowMaterial({ color: dark ? 0x000000 : 0x7d7460, opacity: 0.16 }));
       ground.rotation.x = -Math.PI / 2; ground.position.y = -2.72; ground.receiveShadow = true;
       scene.add(ground); resources.push(ground);
       markersDirty = true;
       fit();
-      setStatus('ready');
-    }, undefined, () => { if (!disposed) setStatus('error'); });
-    const onContextLost = (event: Event) => { event.preventDefault(); setStatus('error'); };
+      report('ready');
+    }, undefined, () => { if (!disposed) report('error'); });
+    const onContextLost = (event: Event) => { event.preventDefault(); report('error'); };
     renderer.domElement.addEventListener('webglcontextlost', onContextLost);
     return () => {
       disposed = true; cancelAnimationFrame(frame); observer?.disconnect(); controls?.dispose(); runtime.current = null;
       renderer.domElement.removeEventListener('webglcontextlost', onContextLost);
-      renderer.domElement.removeEventListener('keydown', onKeyDown);
+      unbindCameraControls();
       for (const object of resources) object.traverse(child => {
         if (child instanceof THREE.Mesh) {
           child.geometry.dispose();
@@ -260,11 +240,14 @@ export default function BoneViewer({ bone, view, labels, activeLandmark, onLandm
       });
       renderer.dispose(); renderer.domElement.remove();
     };
-  }, [bone]);
+  }, [bone, theme]);
 
-  useEffect(() => { runtime.current?.fit(); }, [view]);
+  useEffect(() => { runtime.current?.fit(); }, [view, resetToken]);
+  useEffect(() => {
+    host.current?.querySelector('canvas')?.setAttribute('aria-label', `Interactive ${labels ? bone : 'anatomical'} specimen. ${cameraControlInstructions}`);
+  }, [bone, labels]);
 
-  return <div ref={host} className="bone-viewer" style={{ position: 'absolute', inset: 0 }}>
+  return <div ref={host} className={`bone-viewer${theme === 'dark' ? ' is-dark' : ''}`} style={{ position: 'absolute', inset: 0 }}>
     <style>{`
       .anatomy-canvas{outline:none}
       .anatomy-canvas:focus-visible{outline:2px solid #435f54;outline-offset:-4px;border-radius:8px}
@@ -274,6 +257,12 @@ export default function BoneViewer({ bone, view, labels, activeLandmark, onLandm
       .anatomy-pin:hover .pin-tooltip,.anatomy-pin:focus-visible .pin-tooltip,.anatomy-pin.is-active .pin-tooltip{display:block}
       .viewer-status{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:40px;color:#68746b;font:13px/1.7 Inter,system-ui,sans-serif;background:#f0eee7}
       .free-view-note{position:absolute;bottom:82px;left:50%;transform:translateX(-50%);font:10px/1.4 Inter,system-ui,sans-serif;color:#7b8177;white-space:nowrap;pointer-events:none;letter-spacing:.04em}
+      .bone-viewer.is-dark .viewer-status{background:#171819;color:#b7bbbf}
+      .bone-viewer.is-dark .free-view-note{color:#8d939b}
+      .bone-viewer.is-dark .anatomy-canvas:focus-visible{outline-color:#83b9ef}
+      .bone-viewer.is-dark .anatomy-pin{background:#40454c;color:#e6e8ec;border-color:#858d98;box-shadow:0 0 0 4px #12141666}
+      .bone-viewer.is-dark .anatomy-pin:hover,.bone-viewer.is-dark .anatomy-pin:focus-visible,.bone-viewer.is-dark .anatomy-pin.is-active{background:#83b9ef;border-color:#cce5ff;color:#142537;box-shadow:0 0 0 5px #83b9ef26,0 0 18px #83b9ef33}
+      .bone-viewer.is-dark .pin-tooltip{background:#292d33;border-color:#424851;color:#e6e8ec;box-shadow:0 3px 12px #0004}
     `}</style>
     {landmarks[bone].map((landmark, index) => <button
       key={`${bone}-${landmark.id}`}
@@ -286,6 +275,6 @@ export default function BoneViewer({ bone, view, labels, activeLandmark, onLandm
     >{labels ? index + 1 : '?'}{labels && <span className="pin-tooltip">{landmark.name}</span>}</button>)}
     {status === 'loading' && <div className="viewer-status"><div>Preparing your specimen…<br /><span style={{ fontSize: 11, opacity: 0.7 }}>Loading the BodyParts3D anatomical mesh</span></div></div>}
     {status === 'error' && <div className="viewer-status"><div>The 3D specimen couldn’t be displayed.<br />Enable WebGL in your browser, or continue with the study notes and curriculum.</div></div>}
-    {status === 'ready' && freeView && <span className="free-view-note">FREE ROTATION · SELECT A VIEW TO REORIENT</span>}
+    {status === 'ready' && freeView && <span className="free-view-note">FREE VIEW · SELECT A VIEW TO REORIENT</span>}
   </div>;
 }

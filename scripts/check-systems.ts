@@ -3,6 +3,7 @@ import { readFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { MeshoptDecoder } from 'three/addons/libs/meshopt_decoder.module.js';
 import { systemParts, type SystemId } from '../src/systemData';
 
 type ManifestPart = { id: string; name: string; sourceId: string; vertices: number; triangles: number; sourceBounds: { min: number[]; max: number[] } };
@@ -11,7 +12,7 @@ for (const system of ['skeleton', 'muscles'] as const) {
   const bytes = await readFile(new URL(`../public/models/${system}.glb`, import.meta.url));
   assert.equal(bytes.byteLength, manifest[system].assetBytes, `${system}: packaged asset size`);
   assert.equal(createHash('sha256').update(bytes).digest('hex'), manifest[system].assetSha256, `${system}: packaged asset checksum`);
-  const gltf = await new Promise<Awaited<ReturnType<GLTFLoader['parseAsync']>>>((resolve, reject) => new GLTFLoader().parse(bytes.buffer.slice(bytes.byteOffset, bytes.byteOffset + bytes.byteLength), '', resolve, reject));
+  const gltf = await new Promise<Awaited<ReturnType<GLTFLoader['parseAsync']>>>((resolve, reject) => new GLTFLoader().setMeshoptDecoder(MeshoptDecoder).parse(bytes.buffer.slice(bytes.byteOffset, bytes.byteOffset + bytes.byteLength), '', resolve, reject));
   const nodes = gltf.scene.children;
   assert.equal(nodes.length, systemParts[system].length, `${system}: every listed part has a node`);
   assert.equal(new Set(nodes.map(n => n.userData.partId)).size, nodes.length, `${system}: unique structure IDs`);
@@ -31,6 +32,16 @@ for (const system of ['skeleton', 'muscles'] as const) {
       const positions = child.geometry.getAttribute('position'), normals = child.geometry.getAttribute('normal');
       vertexCount += positions.count; triangleCount += child.geometry.index!.count / 3;
       assert.equal(normals.count, positions.count, `${part.id}: normals retained`);
+      const a = new THREE.Vector3(), b = new THREE.Vector3(), c = new THREE.Vector3(), n = new THREE.Vector3();
+      let agreement = 0, samples = 0;
+      const indices = child.geometry.index!;
+      for (let i = 0; i < indices.count; i += Math.max(3, Math.floor(indices.count / 600) * 3)) {
+        a.fromBufferAttribute(positions, indices.getX(i)); b.fromBufferAttribute(positions, indices.getX(i + 1)); c.fromBufferAttribute(positions, indices.getX(i + 2));
+        n.fromBufferAttribute(normals, indices.getX(i));
+        const face = b.sub(a).cross(c.sub(a));
+        if (face.lengthSq() > 1e-12) { agreement += face.normalize().dot(n); samples++; }
+      }
+      assert.ok(agreement / Math.max(samples, 1) > .1, `${part.id}: surface winding and smooth normals agree`);
       for (let i = 0; i < positions.count; i++) {
         assert.ok(Number.isFinite(positions.getX(i)) && Number.isFinite(positions.getY(i)) && Number.isFinite(positions.getZ(i)), `${part.id}: finite geometry`);
       }

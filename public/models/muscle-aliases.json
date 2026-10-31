@@ -1,0 +1,530 @@
+[
+  {
+    "id": "FJ1419",
+    "legacyName": "Right gluteus medius",
+    "sourceName": "Gluteus medius muscle.r",
+    "sourceId": "FBX:1562777",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1419M",
+    "legacyName": "Left gluteus medius",
+    "sourceName": "Gluteus medius muscle.l",
+    "sourceId": "FBX:221074871",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1418M",
+    "legacyName": "Left gluteus maximus",
+    "sourceName": "Gluteus maximus muscle.l",
+    "sourceId": "FBX:457671735",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1418",
+    "legacyName": "Right gluteus maximus",
+    "sourceName": "Gluteus maximus muscle.r",
+    "sourceId": "FBX:649439011",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1439M",
+    "legacyName": "Left tibialis anterior",
+    "sourceName": "Tibialis anterior muscle.l",
+    "sourceId": "FBX:226910062",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1439",
+    "legacyName": "Right tibialis anterior",
+    "sourceName": "Tibialis anterior muscle.r",
+    "sourceId": "FBX:245217129",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1444M",
+    "legacyName": "Short head of left biceps femoris",
+    "sourceName": "Short head of biceps femoris.l",
+    "sourceId": "FBX:9921663",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1436",
+    "legacyName": "Right semitendinosus",
+    "sourceName": "Semitendinosus muscle.r",
+    "sourceId": "FBX:63886170",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1444",
+    "legacyName": "Short head of right biceps femoris",
+    "sourceName": "Short head of biceps femoris.r",
+    "sourceId": "FBX:266598907",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1435",
+    "legacyName": "Right semimembranosus",
+    "sourceName": "Semimembranosus muscle.r",
+    "sourceId": "FBX:312860247",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1395M",
+    "legacyName": "Long head of left biceps femoris",
+    "sourceName": "Long head of biceps femoris.l",
+    "sourceId": "FBX:469289102",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1436M",
+    "legacyName": "Left semitendinosus",
+    "sourceName": "Semitendinosus muscle.l",
+    "sourceId": "FBX:664096907",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1435M",
+    "legacyName": "Left semimembranosus",
+    "sourceName": "Semimembranosus muscle.l",
+    "sourceId": "FBX:786384825",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1395",
+    "legacyName": "Long head of right biceps femoris",
+    "sourceName": "Long head of biceps femoris.r",
+    "sourceId": "FBX:906368294",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1394M",
+    "legacyName": "Lateral head of left gastrocnemius",
+    "sourceName": "Lateral head of gastrocnemius.l",
+    "sourceId": "FBX:26634739",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1437M",
+    "legacyName": "Left soleus",
+    "sourceName": "Soleus muscle.l",
+    "sourceId": "FBX:123582722",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1394",
+    "legacyName": "Lateral head of right gastrocnemius",
+    "sourceName": "Lateral head of gastrocnemius.r",
+    "sourceId": "FBX:508386731",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1397M",
+    "legacyName": "Medial head of left gastrocnemius",
+    "sourceName": "Medial head of gastrocnemius.l",
+    "sourceId": "FBX:560548874",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1397",
+    "legacyName": "Medial head of right gastrocnemius",
+    "sourceName": "Medial head of gastrocnemius.r",
+    "sourceId": "FBX:783417961",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1437",
+    "legacyName": "Right soleus",
+    "sourceName": "Soleus muscle.r",
+    "sourceId": "FBX:824992498",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1443M",
+    "legacyName": "Left vastus medialis",
+    "sourceName": "Vastus medialis muscle.l",
+    "sourceId": "FBX:53341491",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1442",
+    "legacyName": "Right vastus lateralis",
+    "sourceName": "Vastus lateralis muscle.r",
+    "sourceId": "FBX:118609166",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1443",
+    "legacyName": "Right vastus medialis",
+    "sourceName": "Vastus medialis muscle.r",
+    "sourceId": "FBX:644184362",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1434",
+    "legacyName": "Right sartorius",
+    "sourceName": "Sartorius muscle.r",
+    "sourceId": "FBX:711036340",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1433",
+    "legacyName": "Right rectus femoris",
+    "sourceName": "Rectus femoris muscle.r",
+    "sourceId": "FBX:771346357",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1434M",
+    "legacyName": "Left sartorius",
+    "sourceName": "Sartorius muscle.l",
+    "sourceId": "FBX:882090550",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1433M",
+    "legacyName": "Left rectus femoris",
+    "sourceName": "Rectus femoris muscle.l",
+    "sourceId": "FBX:943998138",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1442M",
+    "legacyName": "Left vastus lateralis",
+    "sourceName": "Vastus lateralis muscle.l",
+    "sourceId": "FBX:949601061",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1554",
+    "legacyName": "Transverse part of right trapezius",
+    "sourceName": "Transverse part of trapezius muscle.r",
+    "sourceId": "FBX:52309989",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1520",
+    "legacyName": "Ascending part of right trapezius",
+    "sourceName": "Ascending part of trapezius muscle.r",
+    "sourceId": "FBX:136429461",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1520M",
+    "legacyName": "Ascending part of left trapezius",
+    "sourceName": "Ascending part of trapezius muscle.l",
+    "sourceId": "FBX:231362165",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1554M",
+    "legacyName": "Transverse part of left trapezius",
+    "sourceName": "Transverse part of trapezius muscle.l",
+    "sourceId": "FBX:445918864",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1521",
+    "legacyName": "Descending part of right trapezius",
+    "sourceName": "Descending part of trapezius muscle.r",
+    "sourceId": "FBX:535262015",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1521M",
+    "legacyName": "Descending part of left trapezius",
+    "sourceName": "Descending part of trapezius muscle.l",
+    "sourceId": "FBX:567336867",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1486",
+    "legacyName": "Right brachialis",
+    "sourceName": "Brachialis muscle.r",
+    "sourceId": "FBX:120536626",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1486M",
+    "legacyName": "Left brachialis",
+    "sourceName": "Brachialis muscle.l",
+    "sourceId": "FBX:134400971",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1512",
+    "legacyName": "Short head of right biceps brachii",
+    "sourceName": "Short head of biceps brachii.r",
+    "sourceId": "FBX:163633076",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1478",
+    "legacyName": "Long head of right biceps brachii",
+    "sourceName": "Long head of biceps brachii.r",
+    "sourceId": "FBX:290927627",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1478M",
+    "legacyName": "Long head of left biceps brachii",
+    "sourceName": "Long head of biceps brachii.l",
+    "sourceId": "FBX:690986137",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1512M",
+    "legacyName": "Short head of left biceps brachii",
+    "sourceName": "Short head of biceps brachii.l",
+    "sourceId": "FBX:733914214",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1487",
+    "legacyName": "Right brachioradialis",
+    "sourceName": "Brachioradialis muscle.r",
+    "sourceId": "FBX:666199939",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1487M",
+    "legacyName": "Left brachioradialis",
+    "sourceName": "Brachioradialis muscle.l",
+    "sourceId": "FBX:876001058",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1468",
+    "legacyName": "Clavicular part of right deltoid",
+    "sourceName": "Clavicular part of deltoid muscle.r",
+    "sourceId": "FBX:506767053",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1513M",
+    "legacyName": "Spinal part of left deltoid",
+    "sourceName": "Scapular spinal part of deltoid muscle.l",
+    "sourceId": "FBX:618863627",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1513",
+    "legacyName": "Spinal part of right deltoid",
+    "sourceName": "Scapular spinal part of deltoid muscle.r",
+    "sourceId": "FBX:806276737",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1468M",
+    "legacyName": "Clavicular part of left deltoid",
+    "sourceName": "Clavicular part of deltoid muscle.l",
+    "sourceId": "FBX:858202063",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1467",
+    "legacyName": "Acromial part of right deltoid",
+    "sourceName": "Acromial part of deltoid muscle.r",
+    "sourceId": "FBX:969083175",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1467M",
+    "legacyName": "Acromial part of left deltoid",
+    "sourceName": "Acromial part of deltoid muscle.l",
+    "sourceId": "FBX:993765431",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1480M",
+    "legacyName": "Medial head of left triceps brachii",
+    "sourceName": "Medial head of triceps brachii.l",
+    "sourceId": "FBX:127574970",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1477M",
+    "legacyName": "Lateral head of left triceps brachii",
+    "sourceName": "Lateral head of triceps brachii.l",
+    "sourceId": "FBX:405972685",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1479",
+    "legacyName": "Long head of right triceps brachii",
+    "sourceName": "Long head of triceps brachii.r",
+    "sourceId": "FBX:487589403",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1477",
+    "legacyName": "Lateral head of right triceps brachii",
+    "sourceName": "Lateral head of triceps brachii.r",
+    "sourceId": "FBX:538338170",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1479M",
+    "legacyName": "Long head of left triceps brachii",
+    "sourceName": "Long head of triceps brachii.l",
+    "sourceId": "FBX:650495920",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1480",
+    "legacyName": "Medial head of right triceps brachii",
+    "sourceName": "Medial head of triceps brachii.r",
+    "sourceId": "FBX:820488147",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1459M",
+    "legacyName": "Left serratus anterior",
+    "sourceName": "Serratus anterior muscle.l",
+    "sourceId": "FBX:241582223",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1447",
+    "legacyName": "Clavicular part of right pectoralis major",
+    "sourceName": "Clavicular head of pectoralis major muscle.r",
+    "sourceId": "FBX:55153873",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1464",
+    "legacyName": "Sternocostal part of right pectoralis major",
+    "sourceName": "Sternocostal head of pectoralis major muscle.r",
+    "sourceId": "FBX:589012392",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1446M",
+    "legacyName": "Abdominal part of left pectoralis major",
+    "sourceName": "(Abdominal part of pectoralis major muscle).l",
+    "sourceId": "FBX:617254887",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1447M",
+    "legacyName": "Clavicular part of left pectoralis major",
+    "sourceName": "Clavicular head of pectoralis major muscle.l",
+    "sourceId": "FBX:647568298",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1464M",
+    "legacyName": "Sternocostal part of left pectoralis major",
+    "sourceName": "Sternocostal head of pectoralis major muscle.l",
+    "sourceId": "FBX:697967092",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1446",
+    "legacyName": "Abdominal part of right pectoralis major",
+    "sourceName": "(Abdominal part of pectoralis major muscle).r",
+    "sourceId": "FBX:842702324",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1459",
+    "legacyName": "Right serratus anterior",
+    "sourceName": "Serratus anterior muscle.r",
+    "sourceId": "FBX:968201470",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1573",
+    "legacyName": "Left sternocleidomastoid",
+    "sourceName": "Sternocleidomastoid muscle.l",
+    "sourceId": "FBX:81386911",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1595",
+    "legacyName": "Right sternocleidomastoid",
+    "sourceName": "Sternocleidomastoid muscle.r",
+    "sourceId": "FBX:946502726",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1452M",
+    "legacyName": "Left external oblique",
+    "sourceName": "External abdominal oblique muscle.l",
+    "sourceId": "FBX:173741986",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  },
+  {
+    "id": "FJ1452",
+    "legacyName": "Right external oblique",
+    "sourceName": "External abdominal oblique muscle.r",
+    "sourceId": "FBX:891520675",
+    "source": "Z-Anatomy",
+    "reason": "Same anatomical component and side after conservative terminology normalization; heads and regional qualifiers retained."
+  }
+]

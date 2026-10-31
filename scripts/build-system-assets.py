@@ -52,3 +52,8 @@ assets={'skeleton':dict(label='Skeletal system',file='/models/skeleton.glb',desc
 (out/'systems.json').write_text(json.dumps({k:dict(**assets[k],parts=systems[k],source='BodyParts3D 4.0, Database Center for Life Science',sourcePage='https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html',license='CC BY 4.0',licenseUrl='https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html',retrieved='2026-10-30',assetSha256=hashlib.sha256((out/(k+'.glb')).read_bytes()).hexdigest(),assetBytes=(out/(k+'.glb')).stat().st_size,transformations='Indexed float32 glTF packing, no decimation or reflection; source coordinates and normals retained in GLB. At runtime rotate -90 degrees about X, centre uniformly and scale common assembly to maximum dimension 5.3. Isolation applies the same proper transform to a selected source component.') for k in systems},indent=2)+'\n')
 publicparts={k:[{p:v for p,v in x.items() if p in ['id','name','sourceId','kind']} for x in val] for k,val in systems.items()}
 (root/'src/systemData.ts').write_text("export type SystemId = 'skeleton' | 'muscles';\nexport type SystemPart = {id:string;name:string;sourceId:string;kind:'bone'|'cartilage'|'disc'|'muscle'};\nexport const systemParts:Record<SystemId,SystemPart[]> = "+json.dumps(publicparts,indent=2)+";\nexport const systemAssets:Record<SystemId,{file:string;description:string;label:string}> = "+json.dumps(assets,indent=2)+";\n")
+
+# Preserve the final coherent Z-Anatomy muscle collection when its pinned source is present.
+if (research/'MuscularSystem100.fbx').exists():
+ import subprocess
+ subprocess.run(['node',str(root/'scripts/build-z-anatomy.mjs')],cwd=root,check=True)

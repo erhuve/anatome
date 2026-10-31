@@ -1,0 +1,332 @@
+[
+  {
+    "id": "FJ1452",
+    "name": "Right external oblique",
+    "sourceId": "FMA13336"
+  },
+  {
+    "id": "FJ1452M",
+    "name": "Left external oblique",
+    "sourceId": "FMA13337"
+  },
+  {
+    "id": "FJ1459",
+    "name": "Right serratus anterior",
+    "sourceId": "FMA13398"
+  },
+  {
+    "id": "FJ1459M",
+    "name": "Left serratus anterior",
+    "sourceId": "FMA13399"
+  },
+  {
+    "id": "FJ1573",
+    "name": "Left sternocleidomastoid",
+    "sourceId": "FMA13409"
+  },
+  {
+    "id": "FJ1595",
+    "name": "Right sternocleidomastoid",
+    "sourceId": "FMA13408"
+  },
+  {
+    "id": "FJ1418",
+    "name": "Right gluteus maximus",
+    "sourceId": "FMA22328"
+  },
+  {
+    "id": "FJ1418M",
+    "name": "Left gluteus maximus",
+    "sourceId": "FMA22329"
+  },
+  {
+    "id": "FJ1419",
+    "name": "Right gluteus medius",
+    "sourceId": "FMA22330"
+  },
+  {
+    "id": "FJ1419M",
+    "name": "Left gluteus medius",
+    "sourceId": "FMA22331"
+  },
+  {
+    "id": "FJ1434",
+    "name": "Right sartorius",
+    "sourceId": "FMA22354"
+  },
+  {
+    "id": "FJ1434M",
+    "name": "Left sartorius",
+    "sourceId": "FMA22355"
+  },
+  {
+    "id": "FJ1436",
+    "name": "Right semitendinosus",
+    "sourceId": "FMA22358"
+  },
+  {
+    "id": "FJ1436M",
+    "name": "Left semitendinosus",
+    "sourceId": "FMA22359"
+  },
+  {
+    "id": "FJ1433",
+    "name": "Right rectus femoris",
+    "sourceId": "FMA38928"
+  },
+  {
+    "id": "FJ1433M",
+    "name": "Left rectus femoris",
+    "sourceId": "FMA38929"
+  },
+  {
+    "id": "FJ1442",
+    "name": "Right vastus lateralis",
+    "sourceId": "FMA38930"
+  },
+  {
+    "id": "FJ1442M",
+    "name": "Left vastus lateralis",
+    "sourceId": "FMA38931"
+  },
+  {
+    "id": "FJ1443",
+    "name": "Right vastus medialis",
+    "sourceId": "FMA38932"
+  },
+  {
+    "id": "FJ1443M",
+    "name": "Left vastus medialis",
+    "sourceId": "FMA38933"
+  },
+  {
+    "id": "FJ1435",
+    "name": "Right semimembranosus",
+    "sourceId": "FMA22448"
+  },
+  {
+    "id": "FJ1435M",
+    "name": "Left semimembranosus",
+    "sourceId": "FMA22449"
+  },
+  {
+    "id": "FJ1439",
+    "name": "Right tibialis anterior",
+    "sourceId": "FMA22544"
+  },
+  {
+    "id": "FJ1439M",
+    "name": "Left tibialis anterior",
+    "sourceId": "FMA22545"
+  },
+  {
+    "id": "FJ1437",
+    "name": "Right soleus",
+    "sourceId": "FMA22558"
+  },
+  {
+    "id": "FJ1437M",
+    "name": "Left soleus",
+    "sourceId": "FMA22559"
+  },
+  {
+    "id": "FJ1554",
+    "name": "Transverse part of right trapezius",
+    "sourceId": "FMA33584"
+  },
+  {
+    "id": "FJ1554M",
+    "name": "Transverse part of left trapezius",
+    "sourceId": "FMA33585"
+  },
+  {
+    "id": "FJ1520",
+    "name": "Ascending part of right trapezius",
+    "sourceId": "FMA33581"
+  },
+  {
+    "id": "FJ1520M",
+    "name": "Ascending part of left trapezius",
+    "sourceId": "FMA33583"
+  },
+  {
+    "id": "FJ1521",
+    "name": "Descending part of right trapezius",
+    "sourceId": "FMA33586"
+  },
+  {
+    "id": "FJ1521M",
+    "name": "Descending part of left trapezius",
+    "sourceId": "FMA33587"
+  },
+  {
+    "id": "FJ1467",
+    "name": "Acromial part of right deltoid",
+    "sourceId": "FMA34682"
+  },
+  {
+    "id": "FJ1467M",
+    "name": "Acromial part of left deltoid",
+    "sourceId": "FMA34683"
+  },
+  {
+    "id": "FJ1468",
+    "name": "Clavicular part of right deltoid",
+    "sourceId": "FMA34680"
+  },
+  {
+    "id": "FJ1468M",
+    "name": "Clavicular part of left deltoid",
+    "sourceId": "FMA34681"
+  },
+  {
+    "id": "FJ1513",
+    "name": "Spinal part of right deltoid",
+    "sourceId": "FMA34684"
+  },
+  {
+    "id": "FJ1513M",
+    "name": "Spinal part of left deltoid",
+    "sourceId": "FMA34685"
+  },
+  {
+    "id": "FJ1446",
+    "name": "Abdominal part of right pectoralis major",
+    "sourceId": "FMA45874"
+  },
+  {
+    "id": "FJ1446M",
+    "name": "Abdominal part of left pectoralis major",
+    "sourceId": "FMA45875"
+  },
+  {
+    "id": "FJ1464",
+    "name": "Sternocostal part of right pectoralis major",
+    "sourceId": "FMA79979"
+  },
+  {
+    "id": "FJ1464M",
+    "name": "Sternocostal part of left pectoralis major",
+    "sourceId": "FMA79980"
+  },
+  {
+    "id": "FJ1447",
+    "name": "Clavicular part of right pectoralis major",
+    "sourceId": "FMA34690"
+  },
+  {
+    "id": "FJ1447M",
+    "name": "Clavicular part of left pectoralis major",
+    "sourceId": "FMA34691"
+  },
+  {
+    "id": "FJ1486",
+    "name": "Right brachialis",
+    "sourceId": "FMA37668"
+  },
+  {
+    "id": "FJ1486M",
+    "name": "Left brachialis",
+    "sourceId": "FMA37669"
+  },
+  {
+    "id": "FJ1512",
+    "name": "Short head of right biceps brachii",
+    "sourceId": "FMA37684"
+  },
+  {
+    "id": "FJ1512M",
+    "name": "Short head of left biceps brachii",
+    "sourceId": "FMA37685"
+  },
+  {
+    "id": "FJ1478",
+    "name": "Long head of right biceps brachii",
+    "sourceId": "FMA37686"
+  },
+  {
+    "id": "FJ1478M",
+    "name": "Long head of left biceps brachii",
+    "sourceId": "FMA37687"
+  },
+  {
+    "id": "FJ1479",
+    "name": "Long head of right triceps brachii",
+    "sourceId": "FMA37699"
+  },
+  {
+    "id": "FJ1479M",
+    "name": "Long head of left triceps brachii",
+    "sourceId": "FMA37700"
+  },
+  {
+    "id": "FJ1480",
+    "name": "Medial head of right triceps brachii",
+    "sourceId": "FMA37695"
+  },
+  {
+    "id": "FJ1480M",
+    "name": "Medial head of left triceps brachii",
+    "sourceId": "FMA37696"
+  },
+  {
+    "id": "FJ1477",
+    "name": "Lateral head of right triceps brachii",
+    "sourceId": "FMA37697"
+  },
+  {
+    "id": "FJ1477M",
+    "name": "Lateral head of left triceps brachii",
+    "sourceId": "FMA37698"
+  },
+  {
+    "id": "FJ1487",
+    "name": "Right brachioradialis",
+    "sourceId": "FMA38486"
+  },
+  {
+    "id": "FJ1487M",
+    "name": "Left brachioradialis",
+    "sourceId": "FMA38487"
+  },
+  {
+    "id": "FJ1395",
+    "name": "Long head of right biceps femoris",
+    "sourceId": "FMA45888"
+  },
+  {
+    "id": "FJ1395M",
+    "name": "Long head of left biceps femoris",
+    "sourceId": "FMA45889"
+  },
+  {
+    "id": "FJ1444",
+    "name": "Short head of right biceps femoris",
+    "sourceId": "FMA45891"
+  },
+  {
+    "id": "FJ1444M",
+    "name": "Short head of left biceps femoris",
+    "sourceId": "FMA45892"
+  },
+  {
+    "id": "FJ1394",
+    "name": "Lateral head of right gastrocnemius",
+    "sourceId": "FMA45960"
+  },
+  {
+    "id": "FJ1394M",
+    "name": "Lateral head of left gastrocnemius",
+    "sourceId": "FMA45961"
+  },
+  {
+    "id": "FJ1397",
+    "name": "Medial head of right gastrocnemius",
+    "sourceId": "FMA45957"
+  },
+  {
+    "id": "FJ1397M",
+    "name": "Medial head of left gastrocnemius",
+    "sourceId": "FMA45958"
+  }
+]

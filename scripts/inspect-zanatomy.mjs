@@ -1,0 +1,12 @@
+import {readFile,writeFile} from 'node:fs/promises';
+import {FBXLoader} from 'three/addons/loaders/FBXLoader.js';
+import * as THREE from 'three';
+const file=new URL('../../research-assets/MuscularSystem100.fbx',import.meta.url);
+const b=await readFile(file);
+const model=new FBXLoader().parse(b.buffer.slice(b.byteOffset,b.byteOffset+b.byteLength),'');
+model.updateMatrixWorld(true);
+const all=[];
+model.traverse(o=>{if(o instanceof THREE.Mesh){o.geometry.computeBoundingBox(); const box=new THREE.Box3().setFromObject(o);all.push({name:o.name,id:o.ID,vertices:o.geometry.attributes.position.count,triangles:(o.geometry.index?.count||o.geometry.attributes.position.count)/3,bounds:{min:box.min.toArray(),max:box.max.toArray()},matrix:o.matrixWorld.toArray(),userData:o.userData})}});
+await writeFile(new URL('../../research-assets/zanatomy-muscles.json',import.meta.url),JSON.stringify(all,null,2));
+console.log('meshes',all.length,'verts',all.reduce((a,b)=>a+b.vertices,0),'triangles',all.reduce((a,b)=>a+b.triangles,0));
+for(const x of all.filter(a=>/latissimus|rectus_abdominis|masseter|temporalis|deltoid|biceps|rectus abdominis/i.test(a.name)).slice(0,25))console.log(x.name,x.bounds);

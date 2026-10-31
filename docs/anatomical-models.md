@@ -1,51 +1,56 @@
-# Accurate 3D anatomy assets for Anatome
+# Anatomical model collections
 
-## Supplied working assets
+The system atlas contains 700 named source parts. These are anatomical components and source meshes, not a claim of 700 separate muscles or a complete college course.
 
-Three real right-side anatomical meshes are installed in `site/public/models/`. These are extracted unchanged from the **official BodyParts3D 4.0** archive. BodyParts3D was constructed from a 2 mm MRI reference, with medical illustration refinements documented in the original paper: https://pmc.ncbi.nlm.nih.gov/articles/PMC2686534/.
-
-| File | BodyParts3D mesh | FMA concept | Vertices | Triangles |
+| Collection | Parts | Triangles | Download asset | Source |
 | --- | --- | --- | --- | --- |
-| femur.obj | FJ3365 | FMA24474, right femur | 1,574 | 3,102 |
-| humerus.obj | FJ3368 | FMA23130, right humerus | 2,233 | 3,784 |
-| scapula.obj | FJ3384 | FMA13395, right scapula | 13,118 | 26,172 |
+| Skeleton overview | 238 | 581,336 | 11.88 MB indexed GLB | BodyParts3D 4.0 |
+| Skeletal muscles | 462 | 1,822,754 | 21.87 MB lossless Meshopt GLB | Pinned Z-Anatomy muscle FBX |
 
-Each model's identity and side were checked against its OBJ metadata header and the official `partof_element_parts.txt` and `partof_parts_list_e.txt` ontologies. `site/public/models/manifest.json` records source, counts, hashes and modifications. `ATTRIBUTION.md` carries the human-readable source and licence notice.
+The skeletal collection contains 201 bone meshes, 23 intervertebral discs and 14 costal cartilages. The source omits the coccyx and auditory ossicles; its sternum is represented by multiple source pieces. Part counts therefore differ from textbook bone counts.
 
-Primary source download page: https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html
+The muscle collection includes bilateral muscles, separately modelled heads and regions, rotator cuff, shoulder/arm/forearm, hand and foot intrinsics, hip/adductors, thigh/calf/shin, superficial and deep back, abdominal wall, diaphragm, face and jaw, neck, pelvic floor, extraocular muscles, and skeletal muscles used for swallowing and voice. Isolated tendon structures, bursae, fascia sheets, ligaments, retinacula and annotation objects were excluded. Source groups, such as an intercostal or lumbrical group, remain named as groups.
 
-Exact archive: https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/partof_BP3D_4.0_obj_99.zip
+The muscle geometry comes from one internally coherent Z-Anatomy source pose. It includes actual latissimus dorsi, rectus abdominis, masseter, temporalis, internal oblique and transversus abdominis models absent from the original BodyParts3D subset. The skeletal atlas keeps its separate, coherent BodyParts3D pose. Geometry from these poses is not mixed into a single body.
 
-Download is 61.8 MB compressed. It is retained for expansion under `research-assets/bodyparts3d-4.0.zip`, outside the published app directory. It contains individual model meshes for many bones, muscles, organs, nerves and vessels. Official mapping files are also saved in `research-assets/`.
+The three standalone right femur, humerus and scapula specimens remain available for precise landmark study. Their hand-placed pins are viewer annotations, not segmented anatomical features. Sources and licences are detailed in [the maintained attribution record](../public/models/ATTRIBUTION.md).
 
-## Licence nuance
+## Geometry and orientation
 
-The **current official licence**, updated **2025-02-27**, explicitly grants **Creative Commons Attribution 4.0 International**, and requires this attribution:
+The runtime GLBs use X toward subject-left, Y posterior and Z superior in millimetres. Z-Anatomy's original source-world transforms are baked with the proper unit/axis conversion `(X,Y,Z) → (10X,−10Z,10Y)` from its centimetre/Y-up frame. The viewer rotates `(x,y,z) → (x,z,−y)`, then centres and uniformly scales a collection or isolated specimen. Camera framing and visibility controls preserve actual model positions.
 
-> BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International.
+No anatomical decimation, positional quantisation, pose editing or invented counterpart anatomy was applied. Identical float32 attributes are indexed and reordered; Meshopt compression preserves the resulting geometry losslessly. Reflected source authoring transforms require corrected triangle winding, with compatible outward smooth normals. These changes affect rendering orientation, not anatomical shape.
 
-Primary source: https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+Every part retains its actual source name and node/concept identity. Unknown FMA identifiers were not invented. All 66 previous muscle identifiers are retained only for matching anatomical components and sides; [the alias audit](../public/models/muscle-aliases.json) records those matches.
 
-The OBJ file headers retain the historical CC BY-SA 2.1 Japan text. These legacy headers are preserved in our unmodified geometry. We directly downloaded from the official archive governed by its current licence; we did not copy the assets from an intermediary GitHub mirror that states only the old licence. This distinction is documented in `ATTRIBUTION.md`.
+## Appearance and visibility
 
-## Viewer implementation
+Muscle context uses opaque red surfaces with directional studio lighting and restrained highlights. This lets the visible outer surfaces occlude deeper anatomy, keeping muscle contours readable rather than blending hundreds of translucent layers. Surface geometry, source normals and anatomical arrangement are retained; no invented fibre-direction texture is added.
 
-`site/src/components/BoneViewer.tsx` implements the requested React/Three.js interface, with OrbitControls, four exact anatomical camera presets, right-side source geometry, no reflection, warm ivory materials, loading/error fallback and selectable projected markers. Rendering resources are disposed on unmount and the canvas follows its container with ResizeObserver.
+The blue selected target has a separate X-ray visibility mode, controlled by the eye button. When enabled, it is drawn through surrounding muscles at its actual source position, while keeping its own surface depth and shading. The on-screen X-ray target cue identifies this study aid. Turning the control off restores normal occlusion, so a deep target may be covered by superficial muscles. Isolate remains available to inspect the target alone. The skeletal collection retains translucent context for numbered and small structures.
 
-Source geometry uses superior Z. Observed coordinates and named right-side bones establish x toward patient-left and y posterior. The viewer applies the proper rotation `(x,y,z) → (x,z,-y)`, centres each specimen and uniformly scales it. Anterior, posterior, medial and lateral cameras are `+Z`, `−Z`, `+X`, `−X`, respectively, for these right-side bones. Original geometry is not deformed.
+Materials, lighting and target visibility are presentation choices; they do not imply a change to the anatomical specimen or its coordinates.
 
-I independently rendered all three meshes into four orthographic views and inspected them: the femur's anterior patellar surface and posterior separated condyles, humeral posterior olecranon fossa and scapular posterior spine agree with the chosen orientation. The software-rasterized QA images are saved in `research-assets/selected/*.png`.
+## Reproduction and checks
 
-Landmark marker targets are manually placed in original model millimetres, snapped to actual mesh vertices and paired with source normals. Back-facing/occluded markers are hidden. They are **viewer annotations, not source segmentations**, and should receive anatomy educator review before high-stakes assessment. In quiz mode, labels and other markers are hidden; only the requested active landmark can appear with a question-mark pin.
+`npm run build` builds the app from the checked-in GLBs and does not require downloading or converting source anatomy.
 
-## Other primary sources investigated
+Source conversion utilities are retained in `scripts/build-system-assets.py` and `scripts/build-z-anatomy.mjs`. They require the original official archive and pinned FBX under the sibling `research-assets/` directory; download links and source hashes are recorded in the maintained attribution and [systems manifest](../public/models/systems.json). The encoder is a development dependency; the browser uses Three.js's bundled Meshopt decoder.
 
-Z-Anatomy's official repository is https://github.com/Z-Anatomy/Models-of-human-anatomy. It distributes an approximately 86.7 MB Blender template and credits Gauthier Kervyn, Marcin Zielinski and the BodyParts3D project. It is **CC BY-SA 4.0** and requires adaptations under that licence. Its upstream README lists additional incorporated references with some noncommercial restrictions, so inspect each specific derived structure rather than assuming every embedded model has identical permissive commercial terms. It is valuable for future anatomical refinement but needs Blender export and additional provenance review.
+Run from the project directory:
 
-Its old `Z-Anatomy/Models` repository URL currently returns 404. Some third-party model-sharing instructions are stale. Do not add it to a runtime loader.
+```sh
+node --import tsx scripts/check-systems.ts
+```
 
-The official BodyParts3D viewer's undocumented `download.cgi` endpoint returned its HTML application rather than a ZIP in my direct download attempt. The documented official archive succeeds and is the reproducible recommended source.
+This parses the actual GLBs and checks all 700 part IDs/names, source bounds, vertex/triangle counts, left/right preservation, proper rotations, surface/normal agreement, and packaged asset checksums.
 
-## Boundaries and next steps
+When the pinned original FBX is available, also run:
 
-The supplied app assets do not yet cover a complete skeleton, muscle atlas or histology slide library. The original archive can supply more bones and muscles without inventing anatomy. For expansion, use official concept-to-element relations to select all components of a named structure, preserve source-space alignment for multi-structure scenes, and record separate name/side/source/version/licence metadata. Tissue recognition should use real openly licensed microscopy, with stain and scale information; schematic tissue art should be explicitly labelled.
+```sh
+node scripts/check-z-source.mjs
+```
+
+This independently compares all 462 source nodes and 909,567 unique source vertex positions against the packaged muscle collection after the specified unit/axis conversion. It verifies that no source vertex position or anatomical pose was altered or invented.
+
+A model inventory does not establish that every course-specific fact, landmark or anatomical variant has been assessed. The course coverage catalog distinguishes available 3D specimens from reference-only requirements.

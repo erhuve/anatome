@@ -1,1844 +1,7794 @@
 export type SystemId = 'skeleton' | 'muscles';
-export type SystemPart = {id:string;name:string;sourceId:string;kind:'bone'|'cartilage'|'disc'|'muscle'};
+export type SystemPart = {id:string;name:string;sourceId:string;kind:'bone'|'cartilage'|'disc'|'muscle';source?:string;sourceName?:string;sourceUrl?:string;license?:string;licenseUrl?:string;fmaId?:string};
 export const systemParts:Record<SystemId,SystemPart[]> = {
   "skeleton": [
     {
       "id": "FJ3152",
       "name": "Right hip bone",
       "sourceId": "FMA16586",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right hip bone",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3153",
       "name": "Xiphoid process",
       "sourceId": "FMA7488",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Xiphoid process",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3154",
       "name": "Tenth thoracic vertebra",
       "sourceId": "FMA10037",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Tenth thoracic vertebra",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3155",
       "name": "Eleventh thoracic vertebra",
       "sourceId": "FMA10059",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Eleventh thoracic vertebra",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3156",
       "name": "Twelfth thoracic vertebra",
       "sourceId": "FMA10081",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Twelfth thoracic vertebra",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3157",
       "name": "First lumbar vertebra",
       "sourceId": "FMA13072",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "First lumbar vertebra",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3158",
       "name": "First thoracic vertebra",
       "sourceId": "FMA9165",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "First thoracic vertebra",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3159",
       "name": "Second lumbar vertebra",
       "sourceId": "FMA13073",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Second lumbar vertebra",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3160",
       "name": "Second thoracic vertebra",
       "sourceId": "FMA9187",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Second thoracic vertebra",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3161",
       "name": "Third cervical vertebra",
       "sourceId": "FMA12521",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Third cervical vertebra",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3162",
       "name": "Third lumbar vertebra",
       "sourceId": "FMA13074",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Third lumbar vertebra",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3163",
       "name": "Third thoracic vertebra",
       "sourceId": "FMA9209",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Third thoracic vertebra",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3164",
       "name": "Fourth cervical vertebra",
       "sourceId": "FMA12522",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Fourth cervical vertebra",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3165",
       "name": "Fourth lumbar vertebra",
       "sourceId": "FMA13075",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Fourth lumbar vertebra",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3166",
       "name": "Fourth thoracic vertebra",
       "sourceId": "FMA9248",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Fourth thoracic vertebra",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3167",
       "name": "Fifth cervical vertebra",
       "sourceId": "FMA12523",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Fifth cervical vertebra",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3168",
       "name": "Fifth lumbar vertebra",
       "sourceId": "FMA13076",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Fifth lumbar vertebra",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3169",
       "name": "Fifth thoracic vertebra",
       "sourceId": "FMA9922",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Fifth thoracic vertebra",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3170",
       "name": "Sixth cervical vertebra",
       "sourceId": "FMA12524",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Sixth cervical vertebra",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3171",
       "name": "Sixth thoracic vertebra",
       "sourceId": "FMA9945",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Sixth thoracic vertebra",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3172",
       "name": "Seventh cervical vertebra",
       "sourceId": "FMA12525",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Seventh cervical vertebra",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3173",
       "name": "Seventh thoracic vertebra",
       "sourceId": "FMA9968",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Seventh thoracic vertebra",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3174",
       "name": "Eighth thoracic vertebra",
       "sourceId": "FMA9991",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Eighth thoracic vertebra",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3175",
       "name": "Ninth thoracic vertebra",
       "sourceId": "FMA10014",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Ninth thoracic vertebra",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3176",
       "name": "Atlas",
       "sourceId": "FMA12519",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Atlas",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3177",
       "name": "Axis",
       "sourceId": "FMA12520",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Axis",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3178",
       "name": "Body of sternum",
       "sourceId": "FMA7487",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Body of sternum",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3179",
       "name": "Distal phalanx of left second toe",
       "sourceId": "FMA32653",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Distal phalanx of left second toe",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3180",
       "name": "Distal phalanx of left third toe",
       "sourceId": "FMA32655",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Distal phalanx of left third toe",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3181",
       "name": "Distal phalanx of left fourth toe",
       "sourceId": "FMA32657",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Distal phalanx of left fourth toe",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3182",
       "name": "Distal phalanx of left big toe",
       "sourceId": "FMA32651",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Distal phalanx of left big toe",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3183",
       "name": "Distal phalanx of left index finger",
       "sourceId": "FMA23953",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Distal phalanx of left index finger",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3184",
       "name": "Distal phalanx of left little finger",
       "sourceId": "FMA23959",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Distal phalanx of left little finger",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3185",
       "name": "Distal phalanx of left little toe",
       "sourceId": "FMA32659",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Distal phalanx of left little toe",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3186",
       "name": "Distal phalanx of left middle finger",
       "sourceId": "FMA23955",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Distal phalanx of left middle finger",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3187",
       "name": "Distal phalanx of left ring finger",
       "sourceId": "FMA23957",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Distal phalanx of left ring finger",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3188",
       "name": "Distal phalanx of left thumb",
       "sourceId": "FMA23951",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Distal phalanx of left thumb",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3189",
       "name": "Distal phalanx of right second toe",
       "sourceId": "FMA32652",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Distal phalanx of right second toe",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3190",
       "name": "Distal phalanx of right third toe",
       "sourceId": "FMA32654",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Distal phalanx of right third toe",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3191",
       "name": "Distal phalanx of right fourth toe",
       "sourceId": "FMA32656",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Distal phalanx of right fourth toe",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3192",
       "name": "Distal phalanx of right big toe",
       "sourceId": "FMA32650",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Distal phalanx of right big toe",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3193",
       "name": "Distal phalanx of right index finger",
       "sourceId": "FMA24460",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Distal phalanx of right index finger",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3194",
       "name": "Distal phalanx of right little finger",
       "sourceId": "FMA24463",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Distal phalanx of right little finger",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3195",
       "name": "Distal phalanx of right little toe",
       "sourceId": "FMA32658",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Distal phalanx of right little toe",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3196",
       "name": "Distal phalanx of right middle finger",
       "sourceId": "FMA24461",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Distal phalanx of right middle finger",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3197",
       "name": "Distal phalanx of right ring finger",
       "sourceId": "FMA24462",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Distal phalanx of right ring finger",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3198",
       "name": "Distal phalanx of right thumb",
       "sourceId": "FMA24459",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Distal phalanx of right thumb",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3199",
       "name": "Ethmoid",
       "sourceId": "FMA52740",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Ethmoid",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3200",
       "name": "Frontal bone",
       "sourceId": "FMA52734",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Frontal bone",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3201",
       "name": "Hyoid bone",
       "sourceId": "FMA52749",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Hyoid bone",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3202",
       "name": "Intervertebral disk of axis",
       "sourceId": "FMA25058",
-      "kind": "disc"
+      "kind": "disc",
+      "source": "BodyParts3D",
+      "sourceName": "Intervertebral disk of axis",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3203",
       "name": "Intervertebral disk of fourth thoracic vertebra",
       "sourceId": "FMA13501",
-      "kind": "disc"
+      "kind": "disc",
+      "source": "BodyParts3D",
+      "sourceName": "Intervertebral disk of fourth thoracic vertebra",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3204",
       "name": "Intervertebral disk of fifth thoracic vertebra",
       "sourceId": "FMA13502",
-      "kind": "disc"
+      "kind": "disc",
+      "source": "BodyParts3D",
+      "sourceName": "Intervertebral disk of fifth thoracic vertebra",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3205",
       "name": "Intervertebral disk of sixth thoracic vertebra",
       "sourceId": "FMA13503",
-      "kind": "disc"
+      "kind": "disc",
+      "source": "BodyParts3D",
+      "sourceName": "Intervertebral disk of sixth thoracic vertebra",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3206",
       "name": "Intervertebral disk of seventh thoracic vertebra",
       "sourceId": "FMA13504",
-      "kind": "disc"
+      "kind": "disc",
+      "source": "BodyParts3D",
+      "sourceName": "Intervertebral disk of seventh thoracic vertebra",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3207",
       "name": "Intervertebral disk of eighth thoracic vertebra",
       "sourceId": "FMA13505",
-      "kind": "disc"
+      "kind": "disc",
+      "source": "BodyParts3D",
+      "sourceName": "Intervertebral disk of eighth thoracic vertebra",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3208",
       "name": "Intervertebral disk of ninth thoracic vertebra",
       "sourceId": "FMA13506",
-      "kind": "disc"
+      "kind": "disc",
+      "source": "BodyParts3D",
+      "sourceName": "Intervertebral disk of ninth thoracic vertebra",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3209",
       "name": "Intervertebral disk of tenth thoracic vertebra",
       "sourceId": "FMA13507",
-      "kind": "disc"
+      "kind": "disc",
+      "source": "BodyParts3D",
+      "sourceName": "Intervertebral disk of tenth thoracic vertebra",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3210",
       "name": "Intervertebral disk of eleventh thoracic vertebra",
       "sourceId": "FMA13508",
-      "kind": "disc"
+      "kind": "disc",
+      "source": "BodyParts3D",
+      "sourceName": "Intervertebral disk of eleventh thoracic vertebra",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3211",
       "name": "Intervertebral disk",
       "sourceId": "FMA10446",
-      "kind": "disc"
+      "kind": "disc",
+      "source": "BodyParts3D",
+      "sourceName": "Intervertebral disk",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3212",
       "name": "Intervertebral disk of first lumbar vertebra",
       "sourceId": "FMA16033",
-      "kind": "disc"
+      "kind": "disc",
+      "source": "BodyParts3D",
+      "sourceName": "Intervertebral disk of first lumbar vertebra",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3213",
       "name": "Intervertebral disk of third cervical vertebra",
       "sourceId": "FMA13896",
-      "kind": "disc"
+      "kind": "disc",
+      "source": "BodyParts3D",
+      "sourceName": "Intervertebral disk of third cervical vertebra",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3214",
       "name": "Intervertebral disk of second lumbar vertebra",
       "sourceId": "FMA16034",
-      "kind": "disc"
+      "kind": "disc",
+      "source": "BodyParts3D",
+      "sourceName": "Intervertebral disk of second lumbar vertebra",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3215",
       "name": "Intervertebral disk of third lumbar vertebra",
       "sourceId": "FMA16035",
-      "kind": "disc"
+      "kind": "disc",
+      "source": "BodyParts3D",
+      "sourceName": "Intervertebral disk of third lumbar vertebra",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3216",
       "name": "Intervertebral disk of fourth lumbar vertebra",
       "sourceId": "FMA16036",
-      "kind": "disc"
+      "kind": "disc",
+      "source": "BodyParts3D",
+      "sourceName": "Intervertebral disk of fourth lumbar vertebra",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3217",
       "name": "Intervertebral disk of fifth lumbar vertebra",
       "sourceId": "FMA16037",
-      "kind": "disc"
+      "kind": "disc",
+      "source": "BodyParts3D",
+      "sourceName": "Intervertebral disk of fifth lumbar vertebra",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3218",
       "name": "Intervertebral disk of fourth cervical vertebra",
       "sourceId": "FMA13897",
-      "kind": "disc"
+      "kind": "disc",
+      "source": "BodyParts3D",
+      "sourceName": "Intervertebral disk of fourth cervical vertebra",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3219",
       "name": "Intervertebral disk of fifth cervical vertebra",
       "sourceId": "FMA13898",
-      "kind": "disc"
+      "kind": "disc",
+      "source": "BodyParts3D",
+      "sourceName": "Intervertebral disk of fifth cervical vertebra",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3220",
       "name": "Intervertebral disk of sixth cervical vertebra",
       "sourceId": "FMA13899",
-      "kind": "disc"
+      "kind": "disc",
+      "source": "BodyParts3D",
+      "sourceName": "Intervertebral disk of sixth cervical vertebra",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3221",
       "name": "Intervertebral disk of seventh cervical vertebra",
       "sourceId": "FMA13900",
-      "kind": "disc"
+      "kind": "disc",
+      "source": "BodyParts3D",
+      "sourceName": "Intervertebral disk of seventh cervical vertebra",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3222",
       "name": "Intervertebral disk of first thoracic vertebra",
       "sourceId": "FMA10458",
-      "kind": "disc"
+      "kind": "disc",
+      "source": "BodyParts3D",
+      "sourceName": "Intervertebral disk of first thoracic vertebra",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3223",
       "name": "Intervertebral disk of second thoracic vertebra",
       "sourceId": "FMA13495",
-      "kind": "disc"
+      "kind": "disc",
+      "source": "BodyParts3D",
+      "sourceName": "Intervertebral disk of second thoracic vertebra",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3224",
       "name": "Intervertebral disk of third thoracic vertebra",
       "sourceId": "FMA13500",
-      "kind": "disc"
+      "kind": "disc",
+      "source": "BodyParts3D",
+      "sourceName": "Intervertebral disk of third thoracic vertebra",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3225",
       "name": "Left tenth rib",
       "sourceId": "FMA8472",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left tenth rib",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3226",
       "name": "Left eleventh rib",
       "sourceId": "FMA8532",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left eleventh rib",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3227",
       "name": "Left twelfth rib",
       "sourceId": "FMA8534",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left twelfth rib",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3228",
       "name": "Left first rib",
       "sourceId": "FMA7987",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left first rib",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3229",
       "name": "Left second rib",
       "sourceId": "FMA8012",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left second rib",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3230",
       "name": "Left third rib",
       "sourceId": "FMA8039",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left third rib",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3231",
       "name": "Left fourth rib",
       "sourceId": "FMA8148",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left fourth rib",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3232",
       "name": "Left fifth rib",
       "sourceId": "FMA8093",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left fifth rib",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3233",
       "name": "Left sixth rib",
       "sourceId": "FMA8202",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left sixth rib",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3234",
       "name": "Left seventh rib",
       "sourceId": "FMA8256",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left seventh rib",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3235",
       "name": "Left eighth rib",
       "sourceId": "FMA8310",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left eighth rib",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3236",
       "name": "Left ninth rib",
       "sourceId": "FMA8391",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left ninth rib",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3237",
       "name": "Left clavicle",
       "sourceId": "FMA13323",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left clavicle",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3239",
       "name": "Left first costal cartilage",
       "sourceId": "FMA8005",
-      "kind": "cartilage"
+      "kind": "cartilage",
+      "source": "BodyParts3D",
+      "sourceName": "Left first costal cartilage",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3240",
       "name": "Left first metacarpal bone",
       "sourceId": "FMA24465",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left first metacarpal bone",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3241",
       "name": "Left first metatarsal bone",
       "sourceId": "FMA24508",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left first metatarsal bone",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3242",
       "name": "Left second costal cartilage",
       "sourceId": "FMA8031",
-      "kind": "cartilage"
+      "kind": "cartilage",
+      "source": "BodyParts3D",
+      "sourceName": "Left second costal cartilage",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3243",
       "name": "Left second metacarpal bone",
       "sourceId": "FMA24467",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left second metacarpal bone",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3244",
       "name": "Left second metatarsal bone",
       "sourceId": "FMA24510",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left second metatarsal bone",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3245",
       "name": "Left third costal cartilage",
       "sourceId": "FMA8058",
-      "kind": "cartilage"
+      "kind": "cartilage",
+      "source": "BodyParts3D",
+      "sourceName": "Left third costal cartilage",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3246",
       "name": "Left third metacarpal bone",
       "sourceId": "FMA24469",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left third metacarpal bone",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3247",
       "name": "Left third metatarsal bone",
       "sourceId": "FMA24512",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left third metatarsal bone",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3248",
       "name": "Left fourth costal cartilage",
       "sourceId": "FMA8167",
-      "kind": "cartilage"
+      "kind": "cartilage",
+      "source": "BodyParts3D",
+      "sourceName": "Left fourth costal cartilage",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3249",
       "name": "Left fourth metacarpal bone",
       "sourceId": "FMA24471",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left fourth metacarpal bone",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3250",
       "name": "Left fourth metatarsal bone",
       "sourceId": "FMA24514",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left fourth metatarsal bone",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3251",
       "name": "Left fifth costal cartilage",
       "sourceId": "FMA8112",
-      "kind": "cartilage"
+      "kind": "cartilage",
+      "source": "BodyParts3D",
+      "sourceName": "Left fifth costal cartilage",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3252",
       "name": "Left fifth metacarpal bone",
       "sourceId": "FMA24473",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left fifth metacarpal bone",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3253",
       "name": "Left fifth metatarsal bone",
       "sourceId": "FMA24516",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left fifth metatarsal bone",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3254",
       "name": "Left sixth costal cartilage",
       "sourceId": "FMA8221",
-      "kind": "cartilage"
+      "kind": "cartilage",
+      "source": "BodyParts3D",
+      "sourceName": "Left sixth costal cartilage",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3255",
       "name": "Left seventh costal cartilage",
       "sourceId": "FMA8275",
-      "kind": "cartilage"
+      "kind": "cartilage",
+      "source": "BodyParts3D",
+      "sourceName": "Left seventh costal cartilage",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3256",
       "name": "Left calcaneus",
       "sourceId": "FMA24498",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left calcaneus",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3257",
       "name": "Left capitate",
       "sourceId": "FMA24447",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left capitate",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3258",
       "name": "Left cuboid bone",
       "sourceId": "FMA24529",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left cuboid bone",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3259",
       "name": "Left femur",
       "sourceId": "FMA24475",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left femur",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3260",
       "name": "Left fibula",
       "sourceId": "FMA24481",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left fibula",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3261",
       "name": "Left hamate",
       "sourceId": "FMA24449",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left hamate",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3262",
       "name": "Left humerus",
       "sourceId": "FMA23131",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left humerus",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3263",
       "name": "Left inferior nasal concha",
       "sourceId": "FMA54738",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left inferior nasal concha",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3264",
       "name": "Left intermediate cuneiform bone",
       "sourceId": "FMA24524",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left intermediate cuneiform bone",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3265",
       "name": "Left lacrimal bone",
       "sourceId": "FMA53646",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left lacrimal bone",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3267",
       "name": "Left lateral cuneiform bone",
       "sourceId": "FMA24526",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left lateral cuneiform bone",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3268",
       "name": "Left lunate",
       "sourceId": "FMA24438",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left lunate",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3269",
       "name": "Left maxilla",
       "sourceId": "FMA53650",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left maxilla",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3271",
       "name": "Left medial cuneiform bone",
       "sourceId": "FMA24522",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left medial cuneiform bone",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3272",
       "name": "Left nasal bone",
       "sourceId": "FMA53648",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left nasal bone",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3273",
       "name": "Left palatine bone",
       "sourceId": "FMA53656",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left palatine bone",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3274",
       "name": "Left parietal bone",
       "sourceId": "FMA52789",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left parietal bone",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3275",
       "name": "Left patella",
       "sourceId": "FMA24487",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left patella",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3276",
       "name": "Left pisiform",
       "sourceId": "FMA24442",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left pisiform",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3277",
       "name": "Left radius",
       "sourceId": "FMA23465",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left radius",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3278",
       "name": "Left scaphoid",
       "sourceId": "FMA24436",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left scaphoid",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3279",
       "name": "Left scapula",
       "sourceId": "FMA13396",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left scapula",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3280",
       "name": "Left talus",
       "sourceId": "FMA24483",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left talus",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3281",
       "name": "Left temporal bone",
       "sourceId": "FMA52739",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left temporal bone",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3282",
       "name": "Left tibia",
       "sourceId": "FMA24478",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left tibia",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3283",
       "name": "Left trapezium",
       "sourceId": "FMA24444",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left trapezium",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3284",
       "name": "Left trapezoid",
       "sourceId": "FMA24445",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left trapezoid",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3285",
       "name": "Left triquetral",
       "sourceId": "FMA24440",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left triquetral",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3286",
       "name": "Left ulna",
       "sourceId": "FMA23468",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left ulna",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3287",
       "name": "Left zygomatic bone",
       "sourceId": "FMA52893",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left zygomatic bone",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3288",
       "name": "Left hip bone",
       "sourceId": "FMA16587",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Left hip bone",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3289",
       "name": "Mandible",
       "sourceId": "FMA52748",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Mandible",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3290",
       "name": "Manubrium",
       "sourceId": "FMA7486",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Manubrium",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3291",
       "name": "Middle phalanx of left ring finger",
       "sourceId": "FMA23942",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Middle phalanx of left ring finger",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3292",
       "name": "Middle phalanx of right ring finger",
       "sourceId": "FMA24457",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Middle phalanx of right ring finger",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3293",
       "name": "Middle phalanx of left second toe",
       "sourceId": "FMA32643",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Middle phalanx of left second toe",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3294",
       "name": "Middle phalanx of left third toe",
       "sourceId": "FMA32645",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Middle phalanx of left third toe",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3295",
       "name": "Middle phalanx of left fourth toe",
       "sourceId": "FMA32647",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Middle phalanx of left fourth toe",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3296",
       "name": "Middle phalanx of left index finger",
       "sourceId": "FMA23938",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Middle phalanx of left index finger",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3297",
       "name": "Middle phalanx of left little finger",
       "sourceId": "FMA23944",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Middle phalanx of left little finger",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3298",
       "name": "Middle phalanx of left little toe",
       "sourceId": "FMA230988",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Middle phalanx of left little toe",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3299",
       "name": "Middle phalanx of left middle finger",
       "sourceId": "FMA23940",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Middle phalanx of left middle finger",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3300",
       "name": "Middle phalanx of right second toe",
       "sourceId": "FMA32642",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Middle phalanx of right second toe",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3301",
       "name": "Middle phalanx of right third toe",
       "sourceId": "FMA32644",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Middle phalanx of right third toe",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3302",
       "name": "Middle phalanx of right fourth toe",
       "sourceId": "FMA32646",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Middle phalanx of right fourth toe",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3303",
       "name": "Middle phalanx of right index finger",
       "sourceId": "FMA24455",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Middle phalanx of right index finger",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3304",
       "name": "Middle phalanx of right little finger",
       "sourceId": "FMA24458",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Middle phalanx of right little finger",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3305",
       "name": "Middle phalanx of right little toe",
       "sourceId": "FMA230986",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Middle phalanx of right little toe",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3306",
       "name": "Middle phalanx of right middle finger",
       "sourceId": "FMA24456",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Middle phalanx of right middle finger",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3307",
       "name": "Navicular bone of left foot",
       "sourceId": "FMA24501",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Navicular bone of left foot",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3308",
       "name": "Navicular bone of right foot",
       "sourceId": "FMA24500",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Navicular bone of right foot",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3309",
       "name": "Occipital bone",
       "sourceId": "FMA52735",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Occipital bone",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3310",
       "name": "Proximal phalanx of right big toe",
       "sourceId": "FMA43253",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Proximal phalanx of right big toe",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3311",
       "name": "Proximal phalanx of left third toe",
       "sourceId": "FMA32637",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Proximal phalanx of left third toe",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3312",
       "name": "Proximal phalanx of left fourth toe",
       "sourceId": "FMA32639",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Proximal phalanx of left fourth toe",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3313",
       "name": "Proximal phalanx of left index finger",
       "sourceId": "FMA71915",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Proximal phalanx of left index finger",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3314",
       "name": "Proximal phalanx of left little finger",
       "sourceId": "FMA66791",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Proximal phalanx of left little finger",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3315",
       "name": "Proximal phalanx of left little toe",
       "sourceId": "FMA32641",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Proximal phalanx of left little toe",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3316",
       "name": "Proximal phalanx of left middle finger",
       "sourceId": "FMA71908",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Proximal phalanx of left middle finger",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3317",
       "name": "Proximal phalanx of left ring finger",
       "sourceId": "FMA71916",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Proximal phalanx of left ring finger",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3318",
       "name": "Proximal phalanx of left thumb",
       "sourceId": "FMA65470",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Proximal phalanx of left thumb",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3319",
       "name": "Proximal phalanx of right second toe",
       "sourceId": "FMA32634",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Proximal phalanx of right second toe",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3320",
       "name": "Proximal phalanx of right third toe",
       "sourceId": "FMA32636",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Proximal phalanx of right third toe",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3321",
       "name": "Proximal phalanx of right fourth toe",
       "sourceId": "FMA32638",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Proximal phalanx of right fourth toe",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3322",
       "name": "Proximal phalanx of right index finger",
       "sourceId": "FMA24451",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Proximal phalanx of right index finger",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3323",
       "name": "Proximal phalanx of right little finger",
       "sourceId": "FMA24454",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Proximal phalanx of right little finger",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3324",
       "name": "Proximal phalanx of right little toe",
       "sourceId": "FMA32640",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Proximal phalanx of right little toe",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3325",
       "name": "Proximal phalanx of right middle finger",
       "sourceId": "FMA24452",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Proximal phalanx of right middle finger",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3326",
       "name": "Proximal phalanx of right ring finger",
       "sourceId": "FMA24453",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Proximal phalanx of right ring finger",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3327",
       "name": "Proximal phalanx of right thumb",
       "sourceId": "FMA24450",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Proximal phalanx of right thumb",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3328",
       "name": "Proximal phalanx of left second toe",
       "sourceId": "FMA32635",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Proximal phalanx of left second toe",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3329",
       "name": "Proximal phalanx of left big toe",
       "sourceId": "FMA43254",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Proximal phalanx of left big toe",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3330",
       "name": "Right tenth rib",
       "sourceId": "FMA8445",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right tenth rib",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3331",
       "name": "Right eleventh rib",
       "sourceId": "FMA8531",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right eleventh rib",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3332",
       "name": "Right twelfth rib",
       "sourceId": "FMA8533",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right twelfth rib",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3333",
       "name": "Right first costal cartilage",
       "sourceId": "FMA7875",
-      "kind": "cartilage"
+      "kind": "cartilage",
+      "source": "BodyParts3D",
+      "sourceName": "Right first costal cartilage",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3334",
       "name": "Right first rib",
       "sourceId": "FMA7857",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right first rib",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3335",
       "name": "Right second costal cartilage",
       "sourceId": "FMA7886",
-      "kind": "cartilage"
+      "kind": "cartilage",
+      "source": "BodyParts3D",
+      "sourceName": "Right second costal cartilage",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3336",
       "name": "Right second rib",
       "sourceId": "FMA7882",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right second rib",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3337",
       "name": "Right third costal cartilage",
       "sourceId": "FMA7913",
-      "kind": "cartilage"
+      "kind": "cartilage",
+      "source": "BodyParts3D",
+      "sourceName": "Right third costal cartilage",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3338",
       "name": "Right third rib",
       "sourceId": "FMA7909",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right third rib",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3339",
       "name": "Right fourth costal cartilage",
       "sourceId": "FMA7976",
-      "kind": "cartilage"
+      "kind": "cartilage",
+      "source": "BodyParts3D",
+      "sourceName": "Right fourth costal cartilage",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3340",
       "name": "Right fourth rib",
       "sourceId": "FMA7957",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right fourth rib",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3341",
       "name": "Right fifth costal cartilage",
       "sourceId": "FMA8070",
-      "kind": "cartilage"
+      "kind": "cartilage",
+      "source": "BodyParts3D",
+      "sourceName": "Right fifth costal cartilage",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3342",
       "name": "Right fifth rib",
       "sourceId": "FMA8066",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right fifth rib",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3343",
       "name": "Right sixth costal cartilage",
       "sourceId": "FMA8194",
-      "kind": "cartilage"
+      "kind": "cartilage",
+      "source": "BodyParts3D",
+      "sourceName": "Right sixth costal cartilage",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3344",
       "name": "Right sixth rib",
       "sourceId": "FMA8175",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right sixth rib",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3345",
       "name": "Right seventh costal cartilage",
       "sourceId": "FMA8248",
-      "kind": "cartilage"
+      "kind": "cartilage",
+      "source": "BodyParts3D",
+      "sourceName": "Right seventh costal cartilage",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3346",
       "name": "Right seventh rib",
       "sourceId": "FMA8229",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right seventh rib",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3347",
       "name": "Right eighth rib",
       "sourceId": "FMA8283",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right eighth rib",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3348",
       "name": "Right ninth rib",
       "sourceId": "FMA8364",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right ninth rib",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3349",
       "name": "Right radius",
       "sourceId": "FMA23464",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right radius",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3350",
       "name": "Right first metacarpal bone",
       "sourceId": "FMA24464",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right first metacarpal bone",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3351",
       "name": "Right first metatarsal bone",
       "sourceId": "FMA24507",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right first metatarsal bone",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3352",
       "name": "Right second metacarpal bone",
       "sourceId": "FMA24466",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right second metacarpal bone",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3353",
       "name": "Right second metatarsal bone",
       "sourceId": "FMA24509",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right second metatarsal bone",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3354",
       "name": "Right third metacarpal bone",
       "sourceId": "FMA24468",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right third metacarpal bone",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3355",
       "name": "Right third metatarsal bone",
       "sourceId": "FMA24511",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right third metatarsal bone",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3356",
       "name": "Right fourth metacarpal bone",
       "sourceId": "FMA24470",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right fourth metacarpal bone",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3357",
       "name": "Right fourth metatarsal bone",
       "sourceId": "FMA24513",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right fourth metatarsal bone",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3358",
       "name": "Right fifth metacarpal bone",
       "sourceId": "FMA24472",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right fifth metacarpal bone",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3359",
       "name": "Right fifth metatarsal bone",
       "sourceId": "FMA24515",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right fifth metatarsal bone",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3360",
       "name": "Right calcaneus",
       "sourceId": "FMA24497",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right calcaneus",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3361",
       "name": "Right capitate",
       "sourceId": "FMA24446",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right capitate",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3362",
       "name": "Right clavicle",
       "sourceId": "FMA13322",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right clavicle",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3364",
       "name": "Right cuboid bone",
       "sourceId": "FMA24528",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right cuboid bone",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3365",
       "name": "Right femur",
       "sourceId": "FMA24474",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right femur",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3366",
       "name": "Right fibula",
       "sourceId": "FMA24480",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right fibula",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3367",
       "name": "Right hamate",
       "sourceId": "FMA24448",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right hamate",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3368",
       "name": "Right humerus",
       "sourceId": "FMA23130",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right humerus",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3369",
       "name": "Right inferior nasal concha",
       "sourceId": "FMA54737",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right inferior nasal concha",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3370",
       "name": "Right intermediate cuneiform bone",
       "sourceId": "FMA24523",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right intermediate cuneiform bone",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3371",
       "name": "Right lacrimal bone",
       "sourceId": "FMA53645",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right lacrimal bone",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3373",
       "name": "Right lateral cuneiform bone",
       "sourceId": "FMA24525",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right lateral cuneiform bone",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3374",
       "name": "Right lunate",
       "sourceId": "FMA24437",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right lunate",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3375",
       "name": "Right maxilla",
       "sourceId": "FMA53649",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right maxilla",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3377",
       "name": "Right medial cuneiform bone",
       "sourceId": "FMA24521",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right medial cuneiform bone",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3378",
       "name": "Right nasal bone",
       "sourceId": "FMA53647",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right nasal bone",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3379",
       "name": "Right palatine bone",
       "sourceId": "FMA53655",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right palatine bone",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3380",
       "name": "Right parietal bone",
       "sourceId": "FMA52788",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right parietal bone",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3381",
       "name": "Right patella",
       "sourceId": "FMA24486",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right patella",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3382",
       "name": "Right pisiform",
       "sourceId": "FMA24441",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right pisiform",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3383",
       "name": "Right scaphoid",
       "sourceId": "FMA24435",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right scaphoid",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3384",
       "name": "Right scapula",
       "sourceId": "FMA13395",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right scapula",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3385",
       "name": "Right talus",
       "sourceId": "FMA24482",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right talus",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3386",
       "name": "Right temporal bone",
       "sourceId": "FMA52738",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right temporal bone",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3387",
       "name": "Right tibia",
       "sourceId": "FMA24477",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right tibia",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3388",
       "name": "Right trapezium",
       "sourceId": "FMA24443",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right trapezium",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3389",
       "name": "Right trapezoid",
       "sourceId": "FMA23725",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right trapezoid",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3390",
       "name": "Right triquetral",
       "sourceId": "FMA24439",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right triquetral",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3391",
       "name": "Right ulna",
       "sourceId": "FMA23467",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right ulna",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3392",
       "name": "Right zygomatic bone",
       "sourceId": "FMA52892",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Right zygomatic bone",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3393",
       "name": "Sacrum",
       "sourceId": "FMA16202",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Sacrum",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3394",
       "name": "Sphenoid bone",
       "sourceId": "FMA52736",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Sphenoid bone",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "FJ3395",
       "name": "Vomer",
       "sourceId": "FMA9710",
-      "kind": "bone"
+      "kind": "bone",
+      "source": "BodyParts3D",
+      "sourceName": "Vomer",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     }
   ],
   "muscles": [
     {
-      "id": "FJ1452",
-      "name": "Right external oblique",
-      "sourceId": "FMA13336",
-      "kind": "muscle"
-    },
-    {
-      "id": "FJ1452M",
-      "name": "Left external oblique",
-      "sourceId": "FMA13337",
-      "kind": "muscle"
-    },
-    {
-      "id": "FJ1459",
-      "name": "Right serratus anterior",
-      "sourceId": "FMA13398",
-      "kind": "muscle"
-    },
-    {
-      "id": "FJ1459M",
-      "name": "Left serratus anterior",
-      "sourceId": "FMA13399",
-      "kind": "muscle"
-    },
-    {
-      "id": "FJ1573",
-      "name": "Left sternocleidomastoid",
-      "sourceId": "FMA13409",
-      "kind": "muscle"
-    },
-    {
-      "id": "FJ1595",
-      "name": "Right sternocleidomastoid",
-      "sourceId": "FMA13408",
-      "kind": "muscle"
-    },
-    {
-      "id": "FJ1418",
-      "name": "Right gluteus maximus",
-      "sourceId": "FMA22328",
-      "kind": "muscle"
-    },
-    {
-      "id": "FJ1418M",
-      "name": "Left gluteus maximus",
-      "sourceId": "FMA22329",
-      "kind": "muscle"
-    },
-    {
       "id": "FJ1419",
       "name": "Right gluteus medius",
-      "sourceId": "FMA22330",
-      "kind": "muscle"
+      "sourceId": "FBX:1562777",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Gluteus medius muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA22330"
+    },
+    {
+      "id": "ZA_M_188008333",
+      "name": "Left tensor fasciae latae",
+      "sourceId": "FBX:188008333",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Tensor fasciae latae.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     {
       "id": "FJ1419M",
       "name": "Left gluteus medius",
-      "sourceId": "FMA22331",
-      "kind": "muscle"
+      "sourceId": "FBX:221074871",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Gluteus medius muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA22331"
     },
     {
-      "id": "FJ1434",
-      "name": "Right sartorius",
-      "sourceId": "FMA22354",
-      "kind": "muscle"
+      "id": "FJ1418M",
+      "name": "Left gluteus maximus",
+      "sourceId": "FBX:457671735",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Gluteus maximus muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA22329"
     },
     {
-      "id": "FJ1434M",
-      "name": "Left sartorius",
-      "sourceId": "FMA22355",
-      "kind": "muscle"
+      "id": "ZA_M_481864979",
+      "name": "Left gluteus minimus",
+      "sourceId": "FBX:481864979",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Gluteus minimus muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     {
-      "id": "FJ1436",
-      "name": "Right semitendinosus",
-      "sourceId": "FMA22358",
-      "kind": "muscle"
+      "id": "ZA_M_625532537",
+      "name": "Right tensor fasciae latae",
+      "sourceId": "FBX:625532537",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Tensor fasciae latae.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     {
-      "id": "FJ1436M",
-      "name": "Left semitendinosus",
-      "sourceId": "FMA22359",
-      "kind": "muscle"
+      "id": "FJ1418",
+      "name": "Right gluteus maximus",
+      "sourceId": "FBX:649439011",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Gluteus maximus muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA22328"
     },
     {
-      "id": "FJ1433",
-      "name": "Right rectus femoris",
-      "sourceId": "FMA38928",
-      "kind": "muscle"
+      "id": "ZA_M_965185828",
+      "name": "Right gluteus minimus",
+      "sourceId": "FBX:965185828",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Gluteus minimus muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     {
-      "id": "FJ1433M",
-      "name": "Left rectus femoris",
-      "sourceId": "FMA38929",
-      "kind": "muscle"
+      "id": "ZA_M_65307038",
+      "name": "Right fibularis tertius",
+      "sourceId": "FBX:65307038",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Fibularis tertius muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     {
-      "id": "FJ1442",
-      "name": "Right vastus lateralis",
-      "sourceId": "FMA38930",
-      "kind": "muscle"
+      "id": "ZA_M_71171280",
+      "name": "Right extensor digitorum longus",
+      "sourceId": "FBX:71171280",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Extensor digitorum longus.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     {
-      "id": "FJ1442M",
-      "name": "Left vastus lateralis",
-      "sourceId": "FMA38931",
-      "kind": "muscle"
-    },
-    {
-      "id": "FJ1443",
-      "name": "Right vastus medialis",
-      "sourceId": "FMA38932",
-      "kind": "muscle"
-    },
-    {
-      "id": "FJ1443M",
-      "name": "Left vastus medialis",
-      "sourceId": "FMA38933",
-      "kind": "muscle"
-    },
-    {
-      "id": "FJ1435",
-      "name": "Right semimembranosus",
-      "sourceId": "FMA22448",
-      "kind": "muscle"
-    },
-    {
-      "id": "FJ1435M",
-      "name": "Left semimembranosus",
-      "sourceId": "FMA22449",
-      "kind": "muscle"
-    },
-    {
-      "id": "FJ1439",
-      "name": "Right tibialis anterior",
-      "sourceId": "FMA22544",
-      "kind": "muscle"
+      "id": "ZA_M_120752132",
+      "name": "Right extensor hallucis longus",
+      "sourceId": "FBX:120752132",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Extensor hallucis longus.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     {
       "id": "FJ1439M",
       "name": "Left tibialis anterior",
-      "sourceId": "FMA22545",
-      "kind": "muscle"
+      "sourceId": "FBX:226910062",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Tibialis anterior muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA22545"
     },
     {
-      "id": "FJ1437",
-      "name": "Right soleus",
-      "sourceId": "FMA22558",
-      "kind": "muscle"
+      "id": "FJ1439",
+      "name": "Right tibialis anterior",
+      "sourceId": "FBX:245217129",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Tibialis anterior muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA22544"
     },
     {
-      "id": "FJ1437M",
-      "name": "Left soleus",
-      "sourceId": "FMA22559",
-      "kind": "muscle"
+      "id": "ZA_M_542055860",
+      "name": "Left extensor digitorum longus",
+      "sourceId": "FBX:542055860",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Extensor digitorum longus.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     {
-      "id": "FJ1554",
-      "name": "Transverse part of right trapezius",
-      "sourceId": "FMA33584",
-      "kind": "muscle"
+      "id": "ZA_M_590627815",
+      "name": "Left extensor hallucis longus",
+      "sourceId": "FBX:590627815",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Extensor hallucis longus.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     {
-      "id": "FJ1554M",
-      "name": "Transverse part of left trapezius",
-      "sourceId": "FMA33585",
-      "kind": "muscle"
+      "id": "ZA_M_891301055",
+      "name": "Left fibularis tertius",
+      "sourceId": "FBX:891301055",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Fibularis tertius muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     {
-      "id": "FJ1520",
-      "name": "Ascending part of right trapezius",
-      "sourceId": "FMA33581",
-      "kind": "muscle"
+      "id": "ZA_M_7783512",
+      "name": "Left flexor digitorum brevis",
+      "sourceId": "FBX:7783512",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Flexor digitorum brevis.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     {
-      "id": "FJ1520M",
-      "name": "Ascending part of left trapezius",
-      "sourceId": "FMA33583",
-      "kind": "muscle"
+      "id": "ZA_M_31511368",
+      "name": "Right plantar interossei muscles",
+      "sourceId": "FBX:31511368",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Plantar interossei muscles.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     {
-      "id": "FJ1521",
-      "name": "Descending part of right trapezius",
-      "sourceId": "FMA33586",
-      "kind": "muscle"
+      "id": "ZA_M_273036888",
+      "name": "Left medial head of flexor hallucis brevis",
+      "sourceId": "FBX:273036888",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Medial head of flexor hallucis brevis.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     {
-      "id": "FJ1521M",
-      "name": "Descending part of left trapezius",
-      "sourceId": "FMA33587",
-      "kind": "muscle"
+      "id": "ZA_M_402550054",
+      "name": "Right medial head of flexor hallucis brevis",
+      "sourceId": "FBX:402550054",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Medial head of flexor hallucis brevis.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     {
-      "id": "FJ1467",
-      "name": "Acromial part of right deltoid",
-      "sourceId": "FMA34682",
-      "kind": "muscle"
+      "id": "ZA_M_600174712",
+      "name": "Right lateral head of flexor hallucis brevis",
+      "sourceId": "FBX:600174712",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Lateral head of flexor hallucis brevis.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     {
-      "id": "FJ1467M",
-      "name": "Acromial part of left deltoid",
-      "sourceId": "FMA34683",
-      "kind": "muscle"
+      "id": "ZA_M_767779129",
+      "name": "Left lateral head of flexor hallucis brevis",
+      "sourceId": "FBX:767779129",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Lateral head of flexor hallucis brevis.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     {
-      "id": "FJ1468",
-      "name": "Clavicular part of right deltoid",
-      "sourceId": "FMA34680",
-      "kind": "muscle"
+      "id": "ZA_M_38458573",
+      "name": "Left flexor digiti minimi of foot",
+      "sourceId": "FBX:38458573",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Flexor digiti minimi of foot.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     {
-      "id": "FJ1468M",
-      "name": "Clavicular part of left deltoid",
-      "sourceId": "FMA34681",
-      "kind": "muscle"
+      "id": "ZA_M_88110804",
+      "name": "Right flexor digiti minimi of foot",
+      "sourceId": "FBX:88110804",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Flexor digiti minimi of foot.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     {
-      "id": "FJ1513",
-      "name": "Spinal part of right deltoid",
-      "sourceId": "FMA34684",
-      "kind": "muscle"
+      "id": "ZA_M_90310087",
+      "name": "Right abductor digiti minimi of foot",
+      "sourceId": "FBX:90310087",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Abductor digiti minimi of foot.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     {
-      "id": "FJ1513M",
-      "name": "Spinal part of left deltoid",
-      "sourceId": "FMA34685",
-      "kind": "muscle"
+      "id": "ZA_M_120138617",
+      "name": "Right abductor hallucis",
+      "sourceId": "FBX:120138617",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Abductor hallucis.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     {
-      "id": "FJ1446",
-      "name": "Abdominal part of right pectoralis major",
-      "sourceId": "FMA45874",
-      "kind": "muscle"
+      "id": "ZA_M_126486897",
+      "name": "Left extensor hallucis brevis",
+      "sourceId": "FBX:126486897",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Extensor hallucis brevis.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     {
-      "id": "FJ1446M",
-      "name": "Abdominal part of left pectoralis major",
-      "sourceId": "FMA45875",
-      "kind": "muscle"
+      "id": "ZA_M_166334464",
+      "name": "Left abductor digiti minimi of foot",
+      "sourceId": "FBX:166334464",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Abductor digiti minimi of foot.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     {
-      "id": "FJ1464",
-      "name": "Sternocostal part of right pectoralis major",
-      "sourceId": "FMA79979",
-      "kind": "muscle"
+      "id": "ZA_M_190317272",
+      "name": "Left dorsal interossei muscles of foot",
+      "sourceId": "FBX:190317272",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Dorsal interossei muscles of foot.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     {
-      "id": "FJ1464M",
-      "name": "Sternocostal part of left pectoralis major",
-      "sourceId": "FMA79980",
-      "kind": "muscle"
+      "id": "ZA_M_323490698",
+      "name": "Right flexor digitorum brevis",
+      "sourceId": "FBX:323490698",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Flexor digitorum brevis.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     {
-      "id": "FJ1447",
-      "name": "Clavicular part of right pectoralis major",
-      "sourceId": "FMA34690",
-      "kind": "muscle"
+      "id": "ZA_M_310107551",
+      "name": "Left transverse head of adductor hallucis",
+      "sourceId": "FBX:310107551",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Transverse head of adductor hallucis.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     {
-      "id": "FJ1447M",
-      "name": "Clavicular part of left pectoralis major",
-      "sourceId": "FMA34691",
-      "kind": "muscle"
+      "id": "ZA_M_427011351",
+      "name": "Left oblique head of adductor hallucis",
+      "sourceId": "FBX:427011351",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Oblique head of adductor hallucis.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     {
-      "id": "FJ1486",
-      "name": "Right brachialis",
-      "sourceId": "FMA37668",
-      "kind": "muscle"
+      "id": "ZA_M_529220062",
+      "name": "Right transverse head of adductor hallucis",
+      "sourceId": "FBX:529220062",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Transverse head of adductor hallucis.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     {
-      "id": "FJ1486M",
-      "name": "Left brachialis",
-      "sourceId": "FMA37669",
-      "kind": "muscle"
+      "id": "ZA_M_889267559",
+      "name": "Right oblique head of adductor hallucis",
+      "sourceId": "FBX:889267559",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Oblique head of adductor hallucis.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     {
-      "id": "FJ1512",
-      "name": "Short head of right biceps brachii",
-      "sourceId": "FMA37684",
-      "kind": "muscle"
+      "id": "ZA_M_352636945",
+      "name": "Right dorsal interossei muscles of foot",
+      "sourceId": "FBX:352636945",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Dorsal interossei muscles of foot.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     {
-      "id": "FJ1512M",
-      "name": "Short head of left biceps brachii",
-      "sourceId": "FMA37685",
-      "kind": "muscle"
+      "id": "ZA_M_438715331",
+      "name": "Left quadratus plantae",
+      "sourceId": "FBX:438715331",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Quadratus plantae muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     {
-      "id": "FJ1478",
-      "name": "Long head of right biceps brachii",
-      "sourceId": "FMA37686",
-      "kind": "muscle"
+      "id": "ZA_M_468794132",
+      "name": "Right opponens digiti minimi of foot",
+      "sourceId": "FBX:468794132",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "(Opponens digiti minimi muscle of foot).r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     {
-      "id": "FJ1478M",
-      "name": "Long head of left biceps brachii",
-      "sourceId": "FMA37687",
-      "kind": "muscle"
+      "id": "ZA_M_537307938",
+      "name": "Left lumbrical muscles of foot",
+      "sourceId": "FBX:537307938",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Lumbrical muscles of foot.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     {
-      "id": "FJ1479",
-      "name": "Long head of right triceps brachii",
-      "sourceId": "FMA37699",
-      "kind": "muscle"
+      "id": "ZA_M_617788595",
+      "name": "Left abductor hallucis",
+      "sourceId": "FBX:617788595",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Abductor hallucis.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     {
-      "id": "FJ1479M",
-      "name": "Long head of left triceps brachii",
-      "sourceId": "FMA37700",
-      "kind": "muscle"
+      "id": "ZA_M_624724133",
+      "name": "Right extensor hallucis brevis",
+      "sourceId": "FBX:624724133",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Extensor hallucis brevis.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     {
-      "id": "FJ1480",
-      "name": "Medial head of right triceps brachii",
-      "sourceId": "FMA37695",
-      "kind": "muscle"
+      "id": "ZA_M_660006931",
+      "name": "Right extensor digitorum brevis",
+      "sourceId": "FBX:660006931",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Extensor digitorum brevis.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     {
-      "id": "FJ1480M",
-      "name": "Medial head of left triceps brachii",
-      "sourceId": "FMA37696",
-      "kind": "muscle"
+      "id": "ZA_M_710749971",
+      "name": "Left opponens digiti minimi of foot",
+      "sourceId": "FBX:710749971",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "(Opponens digiti minimi muscle of foot).l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     {
-      "id": "FJ1477",
-      "name": "Lateral head of right triceps brachii",
-      "sourceId": "FMA37697",
-      "kind": "muscle"
+      "id": "ZA_M_732116709",
+      "name": "Left plantar interossei muscles",
+      "sourceId": "FBX:732116709",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Plantar interossei muscles.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     {
-      "id": "FJ1477M",
-      "name": "Lateral head of left triceps brachii",
-      "sourceId": "FMA37698",
-      "kind": "muscle"
+      "id": "ZA_M_825861524",
+      "name": "Right lumbrical muscles of foot",
+      "sourceId": "FBX:825861524",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Lumbrical muscles of foot.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     {
-      "id": "FJ1487",
-      "name": "Right brachioradialis",
-      "sourceId": "FMA38486",
-      "kind": "muscle"
+      "id": "ZA_M_899759535",
+      "name": "Left extensor digitorum brevis",
+      "sourceId": "FBX:899759535",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Extensor digitorum brevis.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     {
-      "id": "FJ1487M",
-      "name": "Left brachioradialis",
-      "sourceId": "FMA38487",
-      "kind": "muscle"
+      "id": "ZA_M_975515398",
+      "name": "Right quadratus plantae",
+      "sourceId": "FBX:975515398",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Quadratus plantae muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     {
-      "id": "FJ1395",
-      "name": "Long head of right biceps femoris",
-      "sourceId": "FMA45888",
-      "kind": "muscle"
+      "id": "ZA_M_46522600",
+      "name": "Right adductor brevis",
+      "sourceId": "FBX:46522600",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Adductor brevis.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     {
-      "id": "FJ1395M",
-      "name": "Long head of left biceps femoris",
-      "sourceId": "FMA45889",
-      "kind": "muscle"
+      "id": "ZA_M_77443959",
+      "name": "Left adductor longus",
+      "sourceId": "FBX:77443959",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Adductor longus.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     {
-      "id": "FJ1444",
-      "name": "Short head of right biceps femoris",
-      "sourceId": "FMA45891",
-      "kind": "muscle"
+      "id": "ZA_M_137107048",
+      "name": "Left adductor brevis",
+      "sourceId": "FBX:137107048",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Adductor brevis.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_220313230",
+      "name": "Left gracilis",
+      "sourceId": "FBX:220313230",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Gracilis muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_330216915",
+      "name": "Left pectineus",
+      "sourceId": "FBX:330216915",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Pectineus muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_375268405",
+      "name": "Left adductor magnus",
+      "sourceId": "FBX:375268405",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Adductor magnus.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_374639111",
+      "name": "Left adductor minimus",
+      "sourceId": "FBX:374639111",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "(Adductor minimus).l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_530208388",
+      "name": "Right obturator externus",
+      "sourceId": "FBX:530208388",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Obturator externus.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_574285216",
+      "name": "Left obturator externus",
+      "sourceId": "FBX:574285216",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Obturator externus.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_610284590",
+      "name": "Right gracilis",
+      "sourceId": "FBX:610284590",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Gracilis muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_942819798",
+      "name": "Right adductor longus",
+      "sourceId": "FBX:942819798",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Adductor longus.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_944732284",
+      "name": "Right pectineus",
+      "sourceId": "FBX:944732284",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Pectineus muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_986487575",
+      "name": "Right adductor magnus",
+      "sourceId": "FBX:986487575",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Adductor magnus.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_281840938",
+      "name": "Right adductor minimus",
+      "sourceId": "FBX:281840938",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "(Adductor minimus).r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_58135279",
+      "name": "Left fibularis longus",
+      "sourceId": "FBX:58135279",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Fibularis longus muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_144360526",
+      "name": "Right fibularis brevis",
+      "sourceId": "FBX:144360526",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Fibularis brevis muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_235597193",
+      "name": "Right fibularis longus",
+      "sourceId": "FBX:235597193",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Fibularis longus muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_383217244",
+      "name": "Left fibularis brevis",
+      "sourceId": "FBX:383217244",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Fibularis brevis muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     {
       "id": "FJ1444M",
       "name": "Short head of left biceps femoris",
-      "sourceId": "FMA45892",
-      "kind": "muscle"
+      "sourceId": "FBX:9921663",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Short head of biceps femoris.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA45892"
     },
     {
-      "id": "FJ1394",
-      "name": "Lateral head of right gastrocnemius",
-      "sourceId": "FMA45960",
-      "kind": "muscle"
+      "id": "FJ1436",
+      "name": "Right semitendinosus",
+      "sourceId": "FBX:63886170",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Semitendinosus muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA22358"
+    },
+    {
+      "id": "FJ1444",
+      "name": "Short head of right biceps femoris",
+      "sourceId": "FBX:266598907",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Short head of biceps femoris.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA45891"
+    },
+    {
+      "id": "FJ1435",
+      "name": "Right semimembranosus",
+      "sourceId": "FBX:312860247",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Semimembranosus muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA22448"
+    },
+    {
+      "id": "FJ1395M",
+      "name": "Long head of left biceps femoris",
+      "sourceId": "FBX:469289102",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Long head of biceps femoris.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA45889"
+    },
+    {
+      "id": "FJ1436M",
+      "name": "Left semitendinosus",
+      "sourceId": "FBX:664096907",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Semitendinosus muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA22359"
+    },
+    {
+      "id": "FJ1435M",
+      "name": "Left semimembranosus",
+      "sourceId": "FBX:786384825",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Semimembranosus muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA22449"
+    },
+    {
+      "id": "FJ1395",
+      "name": "Long head of right biceps femoris",
+      "sourceId": "FBX:906368294",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Long head of biceps femoris.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA45888"
     },
     {
       "id": "FJ1394M",
       "name": "Lateral head of left gastrocnemius",
-      "sourceId": "FMA45961",
-      "kind": "muscle"
+      "sourceId": "FBX:26634739",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Lateral head of gastrocnemius.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA45961"
     },
     {
-      "id": "FJ1397",
-      "name": "Medial head of right gastrocnemius",
-      "sourceId": "FMA45957",
-      "kind": "muscle"
+      "id": "FJ1437M",
+      "name": "Left soleus",
+      "sourceId": "FBX:123582722",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Soleus muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA22559"
+    },
+    {
+      "id": "ZA_M_506382866",
+      "name": "Left plantaris",
+      "sourceId": "FBX:506382866",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Plantaris muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "FJ1394",
+      "name": "Lateral head of right gastrocnemius",
+      "sourceId": "FBX:508386731",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Lateral head of gastrocnemius.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA45960"
     },
     {
       "id": "FJ1397M",
       "name": "Medial head of left gastrocnemius",
-      "sourceId": "FMA45958",
-      "kind": "muscle"
+      "sourceId": "FBX:560548874",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Medial head of gastrocnemius.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA45958"
+    },
+    {
+      "id": "FJ1397",
+      "name": "Medial head of right gastrocnemius",
+      "sourceId": "FBX:783417961",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Medial head of gastrocnemius.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA45957"
+    },
+    {
+      "id": "FJ1437",
+      "name": "Right soleus",
+      "sourceId": "FBX:824992498",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Soleus muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA22558"
+    },
+    {
+      "id": "ZA_M_988126069",
+      "name": "Right plantaris",
+      "sourceId": "FBX:988126069",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Plantaris muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_115201106",
+      "name": "Right popliteus",
+      "sourceId": "FBX:115201106",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Popliteus muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_313839623",
+      "name": "Left popliteus",
+      "sourceId": "FBX:313839623",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Popliteus muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_498927038",
+      "name": "Right tibialis posterior",
+      "sourceId": "FBX:498927038",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Tibialis posterior muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_622768040",
+      "name": "Right flexor digitorum longus",
+      "sourceId": "FBX:622768040",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Flexor digitorum longus.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_632232163",
+      "name": "Right flexor hallucis longus",
+      "sourceId": "FBX:632232163",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Flexor hallucis longus.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_817962400",
+      "name": "Left flexor hallucis longus",
+      "sourceId": "FBX:817962400",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Flexor hallucis longus.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_917182063",
+      "name": "Left flexor digitorum longus",
+      "sourceId": "FBX:917182063",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Flexor digitorum longus.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_920250022",
+      "name": "Left tibialis posterior",
+      "sourceId": "FBX:920250022",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Tibialis posterior muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_176848128",
+      "name": "Right superior gemellus",
+      "sourceId": "FBX:176848128",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Superior gemellus muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_315870314",
+      "name": "Right inferior gemellus",
+      "sourceId": "FBX:315870314",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Inferior gemellus muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_373437200",
+      "name": "Left obturator internus",
+      "sourceId": "FBX:373437200",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Obturator internus.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_416362594",
+      "name": "Left quadratus femoris",
+      "sourceId": "FBX:416362594",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Quadratus femoris muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_464622025",
+      "name": "Left inferior gemellus",
+      "sourceId": "FBX:464622025",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Inferior gemellus muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_513223513",
+      "name": "Right obturator internus",
+      "sourceId": "FBX:513223513",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Obturator internus.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_665958576",
+      "name": "Left superior gemellus",
+      "sourceId": "FBX:665958576",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Superior gemellus muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_726753845",
+      "name": "Left piriformis",
+      "sourceId": "FBX:726753845",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Piriformis muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_867718655",
+      "name": "Right piriformis",
+      "sourceId": "FBX:867718655",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Piriformis muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_919705750",
+      "name": "Right quadratus femoris",
+      "sourceId": "FBX:919705750",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Quadratus femoris muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "FJ1443M",
+      "name": "Left vastus medialis",
+      "sourceId": "FBX:53341491",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Vastus medialis muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA38933"
+    },
+    {
+      "id": "FJ1442",
+      "name": "Right vastus lateralis",
+      "sourceId": "FBX:118609166",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Vastus lateralis muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA38930"
+    },
+    {
+      "id": "FJ1443",
+      "name": "Right vastus medialis",
+      "sourceId": "FBX:644184362",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Vastus medialis muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA38932"
+    },
+    {
+      "id": "FJ1434",
+      "name": "Right sartorius",
+      "sourceId": "FBX:711036340",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Sartorius muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA22354"
+    },
+    {
+      "id": "FJ1433",
+      "name": "Right rectus femoris",
+      "sourceId": "FBX:771346357",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Rectus femoris muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA38928"
+    },
+    {
+      "id": "ZA_M_803032127",
+      "name": "Left vastus intermedius",
+      "sourceId": "FBX:803032127",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Vastus intermedius muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "FJ1434M",
+      "name": "Left sartorius",
+      "sourceId": "FBX:882090550",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Sartorius muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA22355"
+    },
+    {
+      "id": "ZA_M_916015942",
+      "name": "Right vastus intermedius",
+      "sourceId": "FBX:916015942",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Vastus intermedius muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "FJ1433M",
+      "name": "Left rectus femoris",
+      "sourceId": "FBX:943998138",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Rectus femoris muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA38929"
+    },
+    {
+      "id": "FJ1442M",
+      "name": "Left vastus lateralis",
+      "sourceId": "FBX:949601061",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Vastus lateralis muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA38931"
+    },
+    {
+      "id": "ZA_M_127513549",
+      "name": "Right psoas major",
+      "sourceId": "FBX:127513549",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Psoas major.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_243722661",
+      "name": "Left psoas major",
+      "sourceId": "FBX:243722661",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Psoas major.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_486248492",
+      "name": "Left iliacus",
+      "sourceId": "FBX:486248492",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Iliacus muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_888473793",
+      "name": "Right iliacus",
+      "sourceId": "FBX:888473793",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Iliacus muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_271800663",
+      "name": "Right hyoglossus",
+      "sourceId": "FBX:271800663",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Hyoglossus muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_455359935",
+      "name": "Left genioglossus",
+      "sourceId": "FBX:455359935",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Genioglossus muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_702231470",
+      "name": "Right genioglossus",
+      "sourceId": "FBX:702231470",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Genioglossus muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_800802465",
+      "name": "Left hyoglossus",
+      "sourceId": "FBX:800802465",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Hyoglossus muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_793318402",
+      "name": "Right palatopharyngeus",
+      "sourceId": "FBX:793318402",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Palatopharyngeus muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_995862335",
+      "name": "Left palatopharyngeus",
+      "sourceId": "FBX:995862335",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Palatopharyngeus muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_131002877",
+      "name": "Left frontalis",
+      "sourceId": "FBX:131002877",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Frontalis muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_181104823",
+      "name": "Left occipitalis",
+      "sourceId": "FBX:181104823",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Occipitalis muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_203921301",
+      "name": "Right temporoparietalis",
+      "sourceId": "FBX:203921301",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Temporoparietalis muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_509132682",
+      "name": "Right occipitalis",
+      "sourceId": "FBX:509132682",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Occipitalis muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_517073369",
+      "name": "Right frontalis",
+      "sourceId": "FBX:517073369",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Frontalis muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_837312177",
+      "name": "Left temporoparietalis",
+      "sourceId": "FBX:837312177",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Temporoparietalis muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_23602413",
+      "name": "Right corrugator supercilii",
+      "sourceId": "FBX:23602413",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Corrugator supercilii.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_46005575",
+      "name": "Right orbital part of orbicularis oculi",
+      "sourceId": "FBX:46005575",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Orbital part of orbicularis oculi.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_63420266",
+      "name": "Left procerus",
+      "sourceId": "FBX:63420266",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Procerus muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_114442261",
+      "name": "Right palpebral part of orbicularis oculi",
+      "sourceId": "FBX:114442261",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Palpebral part of orbicularis oculi.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_121742891",
+      "name": "Right zygomaticus major",
+      "sourceId": "FBX:121742891",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Zygomaticus major muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_200305276",
+      "name": "Left palpebral part of orbicularis oculi",
+      "sourceId": "FBX:200305276",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Palpebral part of orbicularis oculi.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_247885239",
+      "name": "Left nasalis",
+      "sourceId": "FBX:247885239",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Nasalis muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_290510213",
+      "name": "Left zygomaticus major",
+      "sourceId": "FBX:290510213",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Zygomaticus major muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_381066825",
+      "name": "Right zygomaticus minor",
+      "sourceId": "FBX:381066825",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Zygomaticus minor muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_412064368",
+      "name": "Right levator labii superioris",
+      "sourceId": "FBX:412064368",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Levator labii superioris.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_415043050",
+      "name": "Left depressor anguli oris",
+      "sourceId": "FBX:415043050",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Depressor anguli oris.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_434537092",
+      "name": "Left depressor septi nasi",
+      "sourceId": "FBX:434537092",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Depressor septi nasi.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_434972166",
+      "name": "Right orbicularis oris",
+      "sourceId": "FBX:434972166",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Orbicularis oris muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_489981318",
+      "name": "Right buccinator",
+      "sourceId": "FBX:489981318",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Bucinator.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_495262934",
+      "name": "Left risorius",
+      "sourceId": "FBX:495262934",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Risorius muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_510329294",
+      "name": "Left zygomaticus minor",
+      "sourceId": "FBX:510329294",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Zygomaticus minor muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_646475330",
+      "name": "Right levator nasolabialis",
+      "sourceId": "FBX:646475330",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Levator nasolabialis.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_662526822",
+      "name": "Right mentalis",
+      "sourceId": "FBX:662526822",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Mentalis muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_667750948",
+      "name": "Left orbital part of orbicularis oculi",
+      "sourceId": "FBX:667750948",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Orbital part of orbicularis oculi.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_726335290",
+      "name": "Left corrugator supercilii",
+      "sourceId": "FBX:726335290",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Corrugator supercilii.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_763323912",
+      "name": "Right depressor anguli oris",
+      "sourceId": "FBX:763323912",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Depressor anguli oris.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_783619419",
+      "name": "Left depressor labii inferioris",
+      "sourceId": "FBX:783619419",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Depressor labii inferioris.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_796791312",
+      "name": "Left orbicularis oris",
+      "sourceId": "FBX:796791312",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Orbicularis oris muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_814845954",
+      "name": "Right depressor septi nasi",
+      "sourceId": "FBX:814845954",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Depressor septi nasi.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_826115562",
+      "name": "Left mentalis",
+      "sourceId": "FBX:826115562",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Mentalis muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_833854523",
+      "name": "Left levator anguli oris",
+      "sourceId": "FBX:833854523",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Levator anguli oris.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_843119347",
+      "name": "Left levator nasolabialis",
+      "sourceId": "FBX:843119347",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Levator nasolabialis.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_890613983",
+      "name": "Left levator labii superioris",
+      "sourceId": "FBX:890613983",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Levator labii superioris.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_897633611",
+      "name": "Right nasalis",
+      "sourceId": "FBX:897633611",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Nasalis muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_907127900",
+      "name": "Right procerus",
+      "sourceId": "FBX:907127900",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Procerus muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_926940655",
+      "name": "Right levator anguli oris",
+      "sourceId": "FBX:926940655",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Levator anguli oris.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_957288105",
+      "name": "Left buccinator",
+      "sourceId": "FBX:957288105",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Bucinator.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_977642170",
+      "name": "Right depressor labii inferioris",
+      "sourceId": "FBX:977642170",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Depressor labii inferioris.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_998988858",
+      "name": "Right risorius",
+      "sourceId": "FBX:998988858",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Risorius muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_162944253",
+      "name": "Left temporalis",
+      "sourceId": "FBX:162944253",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Temporalis muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_268652398",
+      "name": "Left superficial part of masseter",
+      "sourceId": "FBX:268652398",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Superficial part of masseter.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_312701766",
+      "name": "Right inferior head of lateral pterygoid",
+      "sourceId": "FBX:312701766",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Inferior head of lateral pterygoid muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_331223255",
+      "name": "Right deep part of masseter",
+      "sourceId": "FBX:331223255",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Deep part of masseter.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_336574972",
+      "name": "Right superior head of lateral pterygoid",
+      "sourceId": "FBX:336574972",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Superior head of lateral pterygoid muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_533962729",
+      "name": "Left deep part of masseter",
+      "sourceId": "FBX:533962729",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Deep part of masseter.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_695240571",
+      "name": "Right superficial part of masseter",
+      "sourceId": "FBX:695240571",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Superficial part of masseter.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_825659527",
+      "name": "Left superior head of lateral pterygoid",
+      "sourceId": "FBX:825659527",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Superior head of lateral pterygoid muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_826208578",
+      "name": "Left medial pterygoid",
+      "sourceId": "FBX:826208578",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Medial pterygoid muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_871676841",
+      "name": "Right medial pterygoid",
+      "sourceId": "FBX:871676841",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Medial pterygoid muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_907972935",
+      "name": "Left inferior head of lateral pterygoid",
+      "sourceId": "FBX:907972935",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Inferior head of lateral pterygoid muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_952924065",
+      "name": "Right temporalis",
+      "sourceId": "FBX:952924065",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Temporalis muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_101726543",
+      "name": "Right inferior rectus",
+      "sourceId": "FBX:101726543",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Inferior rectus muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_159234429",
+      "name": "Right levator palpebrae superioris",
+      "sourceId": "FBX:159234429",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Levator palpebrae superioris.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_229987069",
+      "name": "Right medial rectus",
+      "sourceId": "FBX:229987069",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Medial rectus muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_314842125",
+      "name": "Left inferior rectus",
+      "sourceId": "FBX:314842125",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Inferior rectus muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_333826502",
+      "name": "Left superior rectus",
+      "sourceId": "FBX:333826502",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Superior rectus muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_409257848",
+      "name": "Left superior oblique",
+      "sourceId": "FBX:409257848",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Superior oblique muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_501299842",
+      "name": "Left medial rectus",
+      "sourceId": "FBX:501299842",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Medial rectus muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_686772276",
+      "name": "Left inferior oblique",
+      "sourceId": "FBX:686772276",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Inferior oblique muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_804120105",
+      "name": "Right inferior oblique",
+      "sourceId": "FBX:804120105",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Inferior oblique muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_892995493",
+      "name": "Left levator palpebrae superioris",
+      "sourceId": "FBX:892995493",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Levator palpebrae superioris.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_895512714",
+      "name": "Right superior oblique",
+      "sourceId": "FBX:895512714",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Superior oblique muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_916854433",
+      "name": "Right lateral rectus",
+      "sourceId": "FBX:916854433",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Lateral rectus muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_976579572",
+      "name": "Right superior rectus",
+      "sourceId": "FBX:976579572",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Superior rectus muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_988656211",
+      "name": "Left lateral rectus",
+      "sourceId": "FBX:988656211",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Lateral rectus muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_61250749",
+      "name": "Right external anal sphincter",
+      "sourceId": "FBX:61250749",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "External anal sphincter.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_132298958",
+      "name": "Left external anal sphincter",
+      "sourceId": "FBX:132298958",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "External anal sphincter.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_78079918",
+      "name": "Right pubo-analis",
+      "sourceId": "FBX:78079918",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Pubo-analis muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_159798982",
+      "name": "Left pubococcygeus",
+      "sourceId": "FBX:159798982",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Pubococcygeus muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_419785171",
+      "name": "Left iliococcygeus",
+      "sourceId": "FBX:419785171",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Iliococcygeus muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_441806771",
+      "name": "Left pubo-analis",
+      "sourceId": "FBX:441806771",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Pubo-analis muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_537355208",
+      "name": "Right pubococcygeus",
+      "sourceId": "FBX:537355208",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Pubococcygeus muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_968157083",
+      "name": "Right iliococcygeus",
+      "sourceId": "FBX:968157083",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Iliococcygeus muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_493960696",
+      "name": "Left coccygeus",
+      "sourceId": "FBX:493960696",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Coccygeus muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_542697171",
+      "name": "Right coccygeus",
+      "sourceId": "FBX:542697171",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Coccygeus muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_76407795",
+      "name": "Left rectus posterior major capitis",
+      "sourceId": "FBX:76407795",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Rectus posterior major capitis muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_118649426",
+      "name": "Right obliquus superior capitis",
+      "sourceId": "FBX:118649426",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Obliquus superior capitis muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_231983401",
+      "name": "Left rectus posterior minor capitis",
+      "sourceId": "FBX:231983401",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Rectus posterior minor capitis muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_406437571",
+      "name": "Left obliquus inferior capitis",
+      "sourceId": "FBX:406437571",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Obliquus inferior capitis muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_440627230",
+      "name": "Right rectus posterior major capitis",
+      "sourceId": "FBX:440627230",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Rectus posterior major capitis muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_743982480",
+      "name": "Right rectus posterior minor capitis",
+      "sourceId": "FBX:743982480",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Rectus posterior minor capitis muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_888886461",
+      "name": "Right obliquus inferior capitis",
+      "sourceId": "FBX:888886461",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Obliquus inferior capitis muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_897381750",
+      "name": "Left obliquus superior capitis",
+      "sourceId": "FBX:897381750",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Obliquus superior capitis muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_98304661",
+      "name": "Right iliocostalis thoracis",
+      "sourceId": "FBX:98304661",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Iliocostalis thoracis muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_102426281",
+      "name": "Right iliocostalis lumborum",
+      "sourceId": "FBX:102426281",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Iliocostalis lumborum muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_112480232",
+      "name": "Left iliocostalis thoracis",
+      "sourceId": "FBX:112480232",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Iliocostalis thoracis muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_150283196",
+      "name": "Right iliocostalis colli",
+      "sourceId": "FBX:150283196",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Iliocostalis colli muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_725269361",
+      "name": "Left iliocostalis lumborum",
+      "sourceId": "FBX:725269361",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Iliocostalis lumborum muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_795494428",
+      "name": "Iliocostalis colli",
+      "sourceId": "FBX:795494428",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Iliocostalis colli muscle",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_121672055",
+      "name": "Right spinalis capitis",
+      "sourceId": "FBX:121672055",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Spinalis capitis muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_431527464",
+      "name": "Left spinalis thoracis",
+      "sourceId": "FBX:431527464",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Spinalis thoracis muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_486600975",
+      "name": "Right spinalis thoracis",
+      "sourceId": "FBX:486600975",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Spinalis thoracis muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_610823922",
+      "name": "Left spinalis colli",
+      "sourceId": "FBX:610823922",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Spinalis colli muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_766363035",
+      "name": "Right spinalis colli",
+      "sourceId": "FBX:766363035",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Spinalis colli muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_785419479",
+      "name": "Left spinalis capitis",
+      "sourceId": "FBX:785419479",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Spinalis capitis muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_203448079",
+      "name": "Right longissimus colli",
+      "sourceId": "FBX:203448079",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Longissimus colli muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_217550395",
+      "name": "Right longissimus capitis",
+      "sourceId": "FBX:217550395",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Longissimus capitis muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_346152219",
+      "name": "Left longissimus capitis",
+      "sourceId": "FBX:346152219",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Longissimus capitis muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_425011185",
+      "name": "Right longissimus thoracis",
+      "sourceId": "FBX:425011185",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Longissimus thoracis muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_484990941",
+      "name": "Left longissimus colli",
+      "sourceId": "FBX:484990941",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Longissimus colli muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_771811734",
+      "name": "Left longissimus thoracis",
+      "sourceId": "FBX:771811734",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Longissimus thoracis muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_328187069",
+      "name": "Right rotatores",
+      "sourceId": "FBX:328187069",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Rotatores.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_970255943",
+      "name": "Left rotatores",
+      "sourceId": "FBX:970255943",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Rotatores.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_48389147",
+      "name": "Right semispinalis colli",
+      "sourceId": "FBX:48389147",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Semispinalis colli muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_75706987",
+      "name": "Right semispinalis thoracis",
+      "sourceId": "FBX:75706987",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Semispinalis thoracis muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_405844393",
+      "name": "Left semispinalis thoracis",
+      "sourceId": "FBX:405844393",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Semispinalis thoracis muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_970731401",
+      "name": "Left semispinalis colli",
+      "sourceId": "FBX:970731401",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Semispinalis colli muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_583719552",
+      "name": "Right multifidus thoracis",
+      "sourceId": "FBX:583719552",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Multifidus thoracis muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_664161976",
+      "name": "Right multifidus lumborum",
+      "sourceId": "FBX:664161976",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Multifidus lumborum muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_734299209",
+      "name": "Left multifidus colli",
+      "sourceId": "FBX:734299209",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Multifidus colli muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_889284943",
+      "name": "Left multifidus lumborum",
+      "sourceId": "FBX:889284943",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Multifidus lumborum muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_926117341",
+      "name": "Left multifidus thoracis",
+      "sourceId": "FBX:926117341",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Multifidus thoracis muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_968572887",
+      "name": "Right multifidus colli",
+      "sourceId": "FBX:968572887",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Multifidus colli muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_9668625",
+      "name": "Right interspinales colli muscles",
+      "sourceId": "FBX:9668625",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Interspinales colli muscles.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_174931802",
+      "name": "Right interspinales thoracis muscles",
+      "sourceId": "FBX:174931802",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Interspinales thoracis muscles.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_187317367",
+      "name": "Left interspinales thoracis muscles",
+      "sourceId": "FBX:187317367",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Interspinales thoracis muscles.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_407595427",
+      "name": "Right interspinales lumborum muscles",
+      "sourceId": "FBX:407595427",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Interspinales lumborum muscles.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_650722884",
+      "name": "Left interspinales lumborum muscles",
+      "sourceId": "FBX:650722884",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Interspinales lumborum muscles.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_832789205",
+      "name": "Left interspinales colli muscles",
+      "sourceId": "FBX:832789205",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Interspinales colli muscles.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_179377326",
+      "name": "Right splenius capitis",
+      "sourceId": "FBX:179377326",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Splenius capitis muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_282715512",
+      "name": "Right splenius colli",
+      "sourceId": "FBX:282715512",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Splenius colli muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_358453148",
+      "name": "Left splenius colli",
+      "sourceId": "FBX:358453148",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Splenius colli muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_541710082",
+      "name": "Left splenius capitis",
+      "sourceId": "FBX:541710082",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Splenius capitis muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_52138261",
+      "name": "Left ventral parts of lateral intertransversarii lumborum muscles",
+      "sourceId": "FBX:52138261",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Ventral parts of lateral intertransversarii lumborum muscles.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_142313545",
+      "name": "Right levator scapulae",
+      "sourceId": "FBX:142313545",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Levator scapulae.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_172472462",
+      "name": "Right latissimus dorsi",
+      "sourceId": "FBX:172472462",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Latissimus dorsi muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_208168812",
+      "name": "Left levator scapulae",
+      "sourceId": "FBX:208168812",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Levator scapulae.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_214076779",
+      "name": "Right rhomboid minor",
+      "sourceId": "FBX:214076779",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Rhomboid minor muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_309857321",
+      "name": "Left serratus posterior superior",
+      "sourceId": "FBX:309857321",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Serratus posterior superior muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_457778667",
+      "name": "Left rhomboid minor",
+      "sourceId": "FBX:457778667",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Rhomboid minor muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "FJ1554",
+      "name": "Transverse part of right trapezius",
+      "sourceId": "FBX:52309989",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Transverse part of trapezius muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA33584"
+    },
+    {
+      "id": "FJ1520",
+      "name": "Ascending part of right trapezius",
+      "sourceId": "FBX:136429461",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Ascending part of trapezius muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA33581"
+    },
+    {
+      "id": "FJ1520M",
+      "name": "Ascending part of left trapezius",
+      "sourceId": "FBX:231362165",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Ascending part of trapezius muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA33583"
+    },
+    {
+      "id": "FJ1554M",
+      "name": "Transverse part of left trapezius",
+      "sourceId": "FBX:445918864",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Transverse part of trapezius muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA33585"
+    },
+    {
+      "id": "FJ1521",
+      "name": "Descending part of right trapezius",
+      "sourceId": "FBX:535262015",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Descending part of trapezius muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA33586"
+    },
+    {
+      "id": "FJ1521M",
+      "name": "Descending part of left trapezius",
+      "sourceId": "FBX:567336867",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Descending part of trapezius muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA33587"
+    },
+    {
+      "id": "ZA_M_670174335",
+      "name": "Left serratus posterior inferior",
+      "sourceId": "FBX:670174335",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Serratus posterior inferior muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_817053160",
+      "name": "Left latissimus dorsi",
+      "sourceId": "FBX:817053160",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Latissimus dorsi muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_829726023",
+      "name": "Right rhomboid major",
+      "sourceId": "FBX:829726023",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Rhomboid major muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_844541953",
+      "name": "Left dorsal parts of lateral intertransversarii lumborum muscles",
+      "sourceId": "FBX:844541953",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Dorsal parts of lateral intertransversarii lumborum muscles.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_943771781",
+      "name": "Right ventral parts of lateral intertransversarii lumborum muscles",
+      "sourceId": "FBX:943771781",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Ventral parts of lateral intertransversarii lumborum muscles.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_955662589",
+      "name": "Right dorsal parts of lateral intertransversarii lumborum muscles",
+      "sourceId": "FBX:955662589",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Dorsal parts of lateral intertransversarii lumborum muscles.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_956838160",
+      "name": "Right serratus posterior superior",
+      "sourceId": "FBX:956838160",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Serratus posterior superior muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_956874926",
+      "name": "Right serratus posterior inferior",
+      "sourceId": "FBX:956874926",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Serratus posterior inferior muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_993392113",
+      "name": "Left rhomboid major",
+      "sourceId": "FBX:993392113",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Rhomboid major muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "FJ1486",
+      "name": "Right brachialis",
+      "sourceId": "FBX:120536626",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Brachialis muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA37668"
+    },
+    {
+      "id": "FJ1486M",
+      "name": "Left brachialis",
+      "sourceId": "FBX:134400971",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Brachialis muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA37669"
+    },
+    {
+      "id": "FJ1512",
+      "name": "Short head of right biceps brachii",
+      "sourceId": "FBX:163633076",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Short head of biceps brachii.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA37684"
+    },
+    {
+      "id": "FJ1478",
+      "name": "Long head of right biceps brachii",
+      "sourceId": "FBX:290927627",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Long head of biceps brachii.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA37686"
+    },
+    {
+      "id": "FJ1478M",
+      "name": "Long head of left biceps brachii",
+      "sourceId": "FBX:690986137",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Long head of biceps brachii.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA37687"
+    },
+    {
+      "id": "FJ1512M",
+      "name": "Short head of left biceps brachii",
+      "sourceId": "FBX:733914214",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Short head of biceps brachii.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA37685"
+    },
+    {
+      "id": "ZA_M_656982723",
+      "name": "Left coracobrachialis",
+      "sourceId": "FBX:656982723",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Coracobrachialis muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_827936457",
+      "name": "Right coracobrachialis",
+      "sourceId": "FBX:827936457",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Coracobrachialis muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_130797506",
+      "name": "Left flexor digitorum profundus",
+      "sourceId": "FBX:130797506",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Flexor digitorum profundus.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_189772909",
+      "name": "Right pronator quadratus",
+      "sourceId": "FBX:189772909",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Pronator quadratus.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_400633043",
+      "name": "Right flexor digitorum profundus",
+      "sourceId": "FBX:400633043",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Flexor digitorum profundus.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_809095169",
+      "name": "Right flexor pollicis longus",
+      "sourceId": "FBX:809095169",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Flexor pollicis longus.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_810748658",
+      "name": "Left pronator quadratus",
+      "sourceId": "FBX:810748658",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Pronator quadratus.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_916369669",
+      "name": "Left flexor pollicis longus",
+      "sourceId": "FBX:916369669",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Flexor pollicis longus.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_36958809",
+      "name": "Right humeral head of flexor carpi ulnaris",
+      "sourceId": "FBX:36958809",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Humeral head of flexor carpi ulnaris.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_118551750",
+      "name": "Right humero-ulnar head of flexor digitorum superficialis",
+      "sourceId": "FBX:118551750",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Humero-ulnar head of flexor digitorum superficialis.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_134916069",
+      "name": "Left superficial head of pronator teres",
+      "sourceId": "FBX:134916069",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Superficial head of pronator teres.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_277369719",
+      "name": "Right radial head of flexor digitorum superficialis",
+      "sourceId": "FBX:277369719",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Radial head of flexor digitorum superficialis.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_323185919",
+      "name": "Left deep head of pronator teres",
+      "sourceId": "FBX:323185919",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Deep head of pronator teres.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_425487108",
+      "name": "Right palmaris longus",
+      "sourceId": "FBX:425487108",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Palmaris longus muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_476759195",
+      "name": "Left humeral head of flexor carpi ulnaris",
+      "sourceId": "FBX:476759195",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Humeral head of flexor carpi ulnaris.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_515084879",
+      "name": "Left flexor carpi radialis",
+      "sourceId": "FBX:515084879",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Flexor carpi radialis.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_603887740",
+      "name": "Left palmaris longus",
+      "sourceId": "FBX:603887740",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Palmaris longus muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_613075022",
+      "name": "Right superficial head of pronator teres",
+      "sourceId": "FBX:613075022",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Superficial head of pronator teres.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_645838197",
+      "name": "Right ulnar head of flexor carpi ulnaris",
+      "sourceId": "FBX:645838197",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Ulnar head of flexor carpi ulnaris.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_672824902",
+      "name": "Right flexor carpi radialis",
+      "sourceId": "FBX:672824902",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Flexor carpi radialis.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_702666376",
+      "name": "Left radial head of flexor digitorum superficialis",
+      "sourceId": "FBX:702666376",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Radial head of flexor digitorum superficialis.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_742840493",
+      "name": "Left ulnar head of flexor carpi ulnaris",
+      "sourceId": "FBX:742840493",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Ulnar head of flexor carpi ulnaris.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_754903007",
+      "name": "Left humero-ulnar head of flexor digitorum superficialis",
+      "sourceId": "FBX:754903007",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Humero-ulnar head of flexor digitorum superficialis.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_840440777",
+      "name": "Right deep head of pronator teres",
+      "sourceId": "FBX:840440777",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Deep head of pronator teres.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_76516835",
+      "name": "Left anconeus",
+      "sourceId": "FBX:76516835",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Anconeus muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_186032514",
+      "name": "Left extensor carpi radialis brevis",
+      "sourceId": "FBX:186032514",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Extensor carpi radialis brevis.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_227128969",
+      "name": "Left humeral head of extensor carpi ulnaris",
+      "sourceId": "FBX:227128969",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Humeral head of extensor carpi ulnaris.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_229882640",
+      "name": "Right anconeus",
+      "sourceId": "FBX:229882640",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Anconeus muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_300941212",
+      "name": "Left extensor carpi radialis longus",
+      "sourceId": "FBX:300941212",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Extensor carpi radialis longus.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_438057188",
+      "name": "Left extensor digiti minimi",
+      "sourceId": "FBX:438057188",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Extensor digiti minimi.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_468756190",
+      "name": "Right extensor digiti minimi",
+      "sourceId": "FBX:468756190",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Extensor digiti minimi.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_579432817",
+      "name": "Right extensor carpi radialis brevis",
+      "sourceId": "FBX:579432817",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Extensor carpi radialis brevis.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_644050133",
+      "name": "Left ulnar head of extensor carpi ulnaris",
+      "sourceId": "FBX:644050133",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Ulnar head of extensor carpi ulnaris.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "FJ1487",
+      "name": "Right brachioradialis",
+      "sourceId": "FBX:666199939",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Brachioradialis muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA38486"
+    },
+    {
+      "id": "ZA_M_669653987",
+      "name": "Right extensor carpi radialis longus",
+      "sourceId": "FBX:669653987",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Extensor carpi radialis longus.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_685970060",
+      "name": "Right extensor digitorum",
+      "sourceId": "FBX:685970060",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Extensor digitorum.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_792656413",
+      "name": "Left extensor digitorum",
+      "sourceId": "FBX:792656413",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Extensor digitorum.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "FJ1487M",
+      "name": "Left brachioradialis",
+      "sourceId": "FBX:876001058",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Brachioradialis muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA38487"
+    },
+    {
+      "id": "ZA_M_936196450",
+      "name": "Right ulnar head of extensor carpi ulnaris",
+      "sourceId": "FBX:936196450",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Ulnar head of extensor carpi ulnaris.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_991010553",
+      "name": "Right humeral head of extensor carpi ulnaris",
+      "sourceId": "FBX:991010553",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Humeral head of extensor carpi ulnaris.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_16666752",
+      "name": "Right extensor pollicis longus",
+      "sourceId": "FBX:16666752",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Extensor pollicis longus.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_70537146",
+      "name": "Left extensor indicis",
+      "sourceId": "FBX:70537146",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Extensor indicis.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_95762172",
+      "name": "Right extensor pollicis brevis",
+      "sourceId": "FBX:95762172",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Extensor pollicis brevis.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_119299853",
+      "name": "Right abductor pollicis longus",
+      "sourceId": "FBX:119299853",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Abductor pollicis longus.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_120834411",
+      "name": "Left abductor pollicis longus",
+      "sourceId": "FBX:120834411",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Abductor pollicis longus.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_137225793",
+      "name": "Left extensor pollicis longus",
+      "sourceId": "FBX:137225793",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Extensor pollicis longus.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_139021293",
+      "name": "Right extensor indicis",
+      "sourceId": "FBX:139021293",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Extensor indicis.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_210170064",
+      "name": "Right supinator",
+      "sourceId": "FBX:210170064",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Supinator.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_615707744",
+      "name": "Left supinator",
+      "sourceId": "FBX:615707744",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Supinator.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_863807001",
+      "name": "Left extensor pollicis brevis",
+      "sourceId": "FBX:863807001",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Extensor pollicis brevis.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_72952947",
+      "name": "Right supraspinatus",
+      "sourceId": "FBX:72952947",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Supraspinatus muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_351627082",
+      "name": "Left subscapularis",
+      "sourceId": "FBX:351627082",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Subscapularis muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_431474665",
+      "name": "Left teres minor",
+      "sourceId": "FBX:431474665",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Teres minor muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_599750783",
+      "name": "Right subscapularis",
+      "sourceId": "FBX:599750783",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Subscapularis muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_720352562",
+      "name": "Left infraspinatus",
+      "sourceId": "FBX:720352562",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Infraspinatus muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_805853519",
+      "name": "Right infraspinatus",
+      "sourceId": "FBX:805853519",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Infraspinatus muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_822740360",
+      "name": "Right teres minor",
+      "sourceId": "FBX:822740360",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Teres minor muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_898835004",
+      "name": "Left supraspinatus",
+      "sourceId": "FBX:898835004",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Supraspinatus muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "FJ1468",
+      "name": "Clavicular part of right deltoid",
+      "sourceId": "FBX:506767053",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Clavicular part of deltoid muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA34680"
+    },
+    {
+      "id": "FJ1513M",
+      "name": "Spinal part of left deltoid",
+      "sourceId": "FBX:618863627",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Scapular spinal part of deltoid muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA34685"
+    },
+    {
+      "id": "FJ1513",
+      "name": "Spinal part of right deltoid",
+      "sourceId": "FBX:806276737",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Scapular spinal part of deltoid muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA34684"
+    },
+    {
+      "id": "FJ1468M",
+      "name": "Clavicular part of left deltoid",
+      "sourceId": "FBX:858202063",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Clavicular part of deltoid muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA34681"
+    },
+    {
+      "id": "FJ1467",
+      "name": "Acromial part of right deltoid",
+      "sourceId": "FBX:969083175",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Acromial part of deltoid muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA34682"
+    },
+    {
+      "id": "FJ1467M",
+      "name": "Acromial part of left deltoid",
+      "sourceId": "FBX:993765431",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Acromial part of deltoid muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA34683"
+    },
+    {
+      "id": "ZA_M_533892148",
+      "name": "Left teres major",
+      "sourceId": "FBX:533892148",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Teres major muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_795125640",
+      "name": "Right teres major",
+      "sourceId": "FBX:795125640",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Teres major muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_15704527",
+      "name": "Left palmar interossei muscles",
+      "sourceId": "FBX:15704527",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Palmar interossei muscles.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_91031082",
+      "name": "Left abductor digiti minimi of hand",
+      "sourceId": "FBX:91031082",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Abductor digiti minimi of hand.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_125717541",
+      "name": "Left superficial head of flexor pollicis brevis",
+      "sourceId": "FBX:125717541",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Superficial head of flexor pollicis brevis.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_129597450",
+      "name": "Left flexor digiti minimi of hand",
+      "sourceId": "FBX:129597450",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Flexor digiti minimi of hand.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_208213720",
+      "name": "Right opponens pollicis",
+      "sourceId": "FBX:208213720",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Opponens pollicis muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_284427571",
+      "name": "Right lumbrical muscles of hand",
+      "sourceId": "FBX:284427571",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Lumbrical muscles of hand.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_397599056",
+      "name": "Right deep head of flexor pollicis brevis",
+      "sourceId": "FBX:397599056",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Deep head of flexor pollicis brevis.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_419899685",
+      "name": "Left oblique head of adductor pollicis",
+      "sourceId": "FBX:419899685",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Oblique head of adductor pollicis.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_451969346",
+      "name": "Right palmar interossei muscles",
+      "sourceId": "FBX:451969346",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Palmar interossei muscles.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_453234666",
+      "name": "Left lumbrical muscles of hand",
+      "sourceId": "FBX:453234666",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Lumbrical muscles of hand.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_462248653",
+      "name": "Right transverse head of adductor pollicis",
+      "sourceId": "FBX:462248653",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Transverse head of adductor pollicis.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_487845754",
+      "name": "Left opponens digiti minimi of hand",
+      "sourceId": "FBX:487845754",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Opponens digiti minimi muscle of hand.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_532775298",
+      "name": "Right abductor pollicis brevis",
+      "sourceId": "FBX:532775298",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Abductor pollicis brevis.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_582478551",
+      "name": "Right oblique head of adductor pollicis",
+      "sourceId": "FBX:582478551",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Oblique head of adductor pollicis.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_642589773",
+      "name": "Right opponens digiti minimi of hand",
+      "sourceId": "FBX:642589773",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Opponens digiti minimi muscle of hand.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_688306580",
+      "name": "Right flexor digiti minimi of hand",
+      "sourceId": "FBX:688306580",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Flexor digiti minimi of hand.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_711121981",
+      "name": "Left opponens pollicis",
+      "sourceId": "FBX:711121981",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Opponens pollicis muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_742200193",
+      "name": "Left deep head of flexor pollicis brevis",
+      "sourceId": "FBX:742200193",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Deep head of flexor pollicis brevis.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_770918531",
+      "name": "Right dorsal interossei muscles of hand",
+      "sourceId": "FBX:770918531",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Dorsal interossei muscles of hand.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_777465043",
+      "name": "Right superficial head of flexor pollicis brevis",
+      "sourceId": "FBX:777465043",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Superficial head of flexor pollicis brevis.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_815324855",
+      "name": "Left abductor pollicis brevis",
+      "sourceId": "FBX:815324855",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Abductor pollicis brevis.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_883584095",
+      "name": "Right abductor digiti minimi of hand",
+      "sourceId": "FBX:883584095",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Abductor digiti minimi of hand.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_886734839",
+      "name": "Left transverse head of adductor pollicis",
+      "sourceId": "FBX:886734839",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Transverse head of adductor pollicis.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_923257450",
+      "name": "Left dorsal interossei muscles of hand",
+      "sourceId": "FBX:923257450",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Dorsal interossei muscles of hand.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "FJ1480M",
+      "name": "Medial head of left triceps brachii",
+      "sourceId": "FBX:127574970",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Medial head of triceps brachii.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA37696"
+    },
+    {
+      "id": "FJ1477M",
+      "name": "Lateral head of left triceps brachii",
+      "sourceId": "FBX:405972685",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Lateral head of triceps brachii.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA37698"
+    },
+    {
+      "id": "FJ1479",
+      "name": "Long head of right triceps brachii",
+      "sourceId": "FBX:487589403",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Long head of triceps brachii.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA37699"
+    },
+    {
+      "id": "FJ1477",
+      "name": "Lateral head of right triceps brachii",
+      "sourceId": "FBX:538338170",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Lateral head of triceps brachii.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA37697"
+    },
+    {
+      "id": "FJ1479M",
+      "name": "Long head of left triceps brachii",
+      "sourceId": "FBX:650495920",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Long head of triceps brachii.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA37700"
+    },
+    {
+      "id": "FJ1480",
+      "name": "Medial head of right triceps brachii",
+      "sourceId": "FBX:820488147",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Medial head of triceps brachii.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA37695"
+    },
+    {
+      "id": "ZA_M_128216661",
+      "name": "Diaphragm",
+      "sourceId": "FBX:128216661",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Diaphragm",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_31868790",
+      "name": "Right subclavius",
+      "sourceId": "FBX:31868790",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Subclavius muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_157599547",
+      "name": "Left pectoralis minor",
+      "sourceId": "FBX:157599547",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Pectoralis minor muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_191083487",
+      "name": "Left external intercostal muscles",
+      "sourceId": "FBX:191083487",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "External intercostal muscles.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "FJ1459M",
+      "name": "Left serratus anterior",
+      "sourceId": "FBX:241582223",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Serratus anterior muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA13399"
+    },
+    {
+      "id": "FJ1447",
+      "name": "Clavicular part of right pectoralis major",
+      "sourceId": "FBX:55153873",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Clavicular head of pectoralis major muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA34690"
+    },
+    {
+      "id": "FJ1464",
+      "name": "Sternocostal part of right pectoralis major",
+      "sourceId": "FBX:589012392",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Sternocostal head of pectoralis major muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA79979"
+    },
+    {
+      "id": "FJ1446M",
+      "name": "Abdominal part of left pectoralis major",
+      "sourceId": "FBX:617254887",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "(Abdominal part of pectoralis major muscle).l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA45875"
+    },
+    {
+      "id": "FJ1447M",
+      "name": "Clavicular part of left pectoralis major",
+      "sourceId": "FBX:647568298",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Clavicular head of pectoralis major muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA34691"
+    },
+    {
+      "id": "FJ1464M",
+      "name": "Sternocostal part of left pectoralis major",
+      "sourceId": "FBX:697967092",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Sternocostal head of pectoralis major muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA79980"
+    },
+    {
+      "id": "FJ1446",
+      "name": "Abdominal part of right pectoralis major",
+      "sourceId": "FBX:842702324",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "(Abdominal part of pectoralis major muscle).r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA45874"
+    },
+    {
+      "id": "ZA_M_414598510",
+      "name": "Right pectoralis minor",
+      "sourceId": "FBX:414598510",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Pectoralis minor muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_424990890",
+      "name": "Left innermost intercostal muscles",
+      "sourceId": "FBX:424990890",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Innermost intercostal muscles.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_494987468",
+      "name": "Right external intercostal muscles",
+      "sourceId": "FBX:494987468",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "External intercostal muscles.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_507270473",
+      "name": "Left subclavius",
+      "sourceId": "FBX:507270473",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Subclavius muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_147174551",
+      "name": "Left levatores breves costarum",
+      "sourceId": "FBX:147174551",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Levatores breves costarum.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_297608455",
+      "name": "Right levatores longi costarum",
+      "sourceId": "FBX:297608455",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Levatores longi costarum.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_920370703",
+      "name": "Left levatores longi costarum",
+      "sourceId": "FBX:920370703",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Levatores longi costarum.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_973471263",
+      "name": "Right levatores breves costarum",
+      "sourceId": "FBX:973471263",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Levatores breves costarum.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_589508516",
+      "name": "Right internal intercostal muscles",
+      "sourceId": "FBX:589508516",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Internal intercostal muscles.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_608923463",
+      "name": "Right innermost intercostal muscles",
+      "sourceId": "FBX:608923463",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Innermost intercostal muscles.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_745105214",
+      "name": "Left transversus thoracis",
+      "sourceId": "FBX:745105214",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Transversus thoracis muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_785902951",
+      "name": "Left internal intercostal muscles",
+      "sourceId": "FBX:785902951",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Internal intercostal muscles.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_922224497",
+      "name": "Right transversus thoracis",
+      "sourceId": "FBX:922224497",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Transversus thoracis muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "FJ1459",
+      "name": "Right serratus anterior",
+      "sourceId": "FBX:968201470",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Serratus anterior muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA13398"
+    },
+    {
+      "id": "ZA_M_26345914",
+      "name": "Right rectus lateralis capitis",
+      "sourceId": "FBX:26345914",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Rectus lateralis capitis muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_48745774",
+      "name": "Left scalenus anterior",
+      "sourceId": "FBX:48745774",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Scalenus anterior muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "FJ1573",
+      "name": "Left sternocleidomastoid",
+      "sourceId": "FBX:81386911",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Sternocleidomastoid muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA13409"
+    },
+    {
+      "id": "ZA_M_89108974",
+      "name": "Left platysma",
+      "sourceId": "FBX:89108974",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Platysma.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_101539905",
+      "name": "Left longus colli",
+      "sourceId": "FBX:101539905",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Longus colli muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_232430016",
+      "name": "Left inferior pharyngeal constrictor",
+      "sourceId": "FBX:232430016",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Inferior pharyngeal constrictor.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_320834542",
+      "name": "Left middle pharyngeal constrictor",
+      "sourceId": "FBX:320834542",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Middle pharyngeal constrictor.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_477994584",
+      "name": "Left stylopharyngeus",
+      "sourceId": "FBX:477994584",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Stylopharyngeus muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_569178355",
+      "name": "Right stylopharyngeus",
+      "sourceId": "FBX:569178355",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Stylopharyngeus muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_658450072",
+      "name": "Left superior pharyngeal constrictor",
+      "sourceId": "FBX:658450072",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Superior pharyngeal constrictor.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_680606748",
+      "name": "Right superior pharyngeal constrictor",
+      "sourceId": "FBX:680606748",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Superior pharyngeal constrictor.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_847892344",
+      "name": "Right middle pharyngeal constrictor",
+      "sourceId": "FBX:847892344",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Middle pharyngeal constrictor.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_996516042",
+      "name": "Right inferior pharyngeal constrictor",
+      "sourceId": "FBX:996516042",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Inferior pharyngeal constrictor.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_129052965",
+      "name": "Left rectus lateralis capitis",
+      "sourceId": "FBX:129052965",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Rectus lateralis capitis muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_152801301",
+      "name": "Right scalenus posterior",
+      "sourceId": "FBX:152801301",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Scalenus posterior muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_166631246",
+      "name": "Right rectus anterior capitis",
+      "sourceId": "FBX:166631246",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Rectus anterior capitis muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_311961097",
+      "name": "Left rectus anterior capitis",
+      "sourceId": "FBX:311961097",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Rectus anterior capitis muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_345413374",
+      "name": "Left scalenus posterior",
+      "sourceId": "FBX:345413374",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Scalenus posterior muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_90507634",
+      "name": "Right stylohyoid",
+      "sourceId": "FBX:90507634",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Stylohyoid muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_212506950",
+      "name": "Left mylohyoid",
+      "sourceId": "FBX:212506950",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Mylohyoid muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_288640873",
+      "name": "Left anterior belly of digastric",
+      "sourceId": "FBX:288640873",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Anterior belly of digastric muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_500941360",
+      "name": "Right posterior belly of digastric",
+      "sourceId": "FBX:500941360",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Posterior belly of digastric muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_501770121",
+      "name": "Left posterior belly of digastric",
+      "sourceId": "FBX:501770121",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Posterior belly of digastric muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_661472586",
+      "name": "Right anterior belly of digastric",
+      "sourceId": "FBX:661472586",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Anterior belly of digastric muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_599583974",
+      "name": "Left stylohyoid",
+      "sourceId": "FBX:599583974",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Stylohyoid muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_615077557",
+      "name": "Right geniohyoid",
+      "sourceId": "FBX:615077557",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Geniohyoid muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_754361266",
+      "name": "Left geniohyoid",
+      "sourceId": "FBX:754361266",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Geniohyoid muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_927154232",
+      "name": "Right mylohyoid",
+      "sourceId": "FBX:927154232",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Mylohyoid muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_542597791",
+      "name": "Right longus colli",
+      "sourceId": "FBX:542597791",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Longus colli muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_602040565",
+      "name": "Left longus capitis",
+      "sourceId": "FBX:602040565",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Longus capitis muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_18300540",
+      "name": "Left sternohyoid",
+      "sourceId": "FBX:18300540",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Sternohyoid muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_374613853",
+      "name": "Left sternothyroid",
+      "sourceId": "FBX:374613853",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Sternothyroid muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_477327636",
+      "name": "Right thyrohyoid",
+      "sourceId": "FBX:477327636",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Thyrohyoid muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_491676480",
+      "name": "Left thyrohyoid",
+      "sourceId": "FBX:491676480",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Thyrohyoid muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_560701376",
+      "name": "Right sternohyoid",
+      "sourceId": "FBX:560701376",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Sternohyoid muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_583706826",
+      "name": "Right sternothyroid",
+      "sourceId": "FBX:583706826",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Sternothyroid muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_718857339",
+      "name": "Left omohyoid",
+      "sourceId": "FBX:718857339",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Omohyoid muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_990931243",
+      "name": "Right omohyoid",
+      "sourceId": "FBX:990931243",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Omohyoid muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_807974891",
+      "name": "Left scalenus medius",
+      "sourceId": "FBX:807974891",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Scalenus medius muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_838496642",
+      "name": "Right platysma",
+      "sourceId": "FBX:838496642",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Platysma.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_851877161",
+      "name": "Right longus capitis",
+      "sourceId": "FBX:851877161",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Longus capitis muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_855884842",
+      "name": "Right scalenus medius",
+      "sourceId": "FBX:855884842",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Scalenus medius muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_874226674",
+      "name": "Right scalenus anterior",
+      "sourceId": "FBX:874226674",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Scalenus anterior muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "FJ1595",
+      "name": "Right sternocleidomastoid",
+      "sourceId": "FBX:946502726",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Sternocleidomastoid muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA13408"
+    },
+    {
+      "id": "ZA_M_4486047",
+      "name": "Right external part of thyro-arytenoid",
+      "sourceId": "FBX:4486047",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "External part of thyro-arytenoid muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_58725807",
+      "name": "Right lateral crico-arytenoid",
+      "sourceId": "FBX:58725807",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Lateral crico-arytenoid muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_75023327",
+      "name": "Left oblique part of cricothyroid",
+      "sourceId": "FBX:75023327",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Oblique part of cricothyroid muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_178185298",
+      "name": "Right thyro-epiglottic part of thyro-arytenoid",
+      "sourceId": "FBX:178185298",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Thyro-epiglottic part of thyro-arytenoid muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_405896380",
+      "name": "Left ary-epiglottic part of oblique arytenoid",
+      "sourceId": "FBX:405896380",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Ary-epiglottic part of oblique arytenoid muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_408763255",
+      "name": "Right oblique part of cricothyroid",
+      "sourceId": "FBX:408763255",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Oblique part of cricothyroid muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_418890029",
+      "name": "Right ary-epiglottic part of oblique arytenoid",
+      "sourceId": "FBX:418890029",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Ary-epiglottic part of oblique arytenoid muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_434060816",
+      "name": "Left thyro-epiglottic part of thyro-arytenoid",
+      "sourceId": "FBX:434060816",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Thyro-epiglottic part of thyro-arytenoid muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_447525674",
+      "name": "Left straight part of cricothyroid",
+      "sourceId": "FBX:447525674",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Straight part of cricothyroid muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_735262507",
+      "name": "Left posterior crico-arytenoid",
+      "sourceId": "FBX:735262507",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Posterior crico-arytenoid muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_764481694",
+      "name": "Right straight part of cricothyroid",
+      "sourceId": "FBX:764481694",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Straight part of cricothyroid muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_768368623",
+      "name": "Left lateral crico-arytenoid",
+      "sourceId": "FBX:768368623",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Lateral crico-arytenoid muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_839870420",
+      "name": "Right posterior crico-arytenoid",
+      "sourceId": "FBX:839870420",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Posterior crico-arytenoid muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_930319730",
+      "name": "Left external part of thyro-arytenoid",
+      "sourceId": "FBX:930319730",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "External part of thyro-arytenoid muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_998132198",
+      "name": "Transverse arytenoid",
+      "sourceId": "FBX:998132198",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Transverse arytenoid muscle",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "FJ1452M",
+      "name": "Left external oblique",
+      "sourceId": "FBX:173741986",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "External abdominal oblique muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA13337"
+    },
+    {
+      "id": "ZA_M_179023909",
+      "name": "Right pyramidalis",
+      "sourceId": "FBX:179023909",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Pyramidalis muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_235254145",
+      "name": "Left quadratus lumborum",
+      "sourceId": "FBX:235254145",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Quadratus lumborum muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_272619451",
+      "name": "Right internal abdominal oblique",
+      "sourceId": "FBX:272619451",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Internal abdominal oblique muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_304211659",
+      "name": "Left pyramidalis",
+      "sourceId": "FBX:304211659",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Pyramidalis muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_421310032",
+      "name": "Right quadratus lumborum",
+      "sourceId": "FBX:421310032",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Quadratus lumborum muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_473516794",
+      "name": "Left rectus abdominis",
+      "sourceId": "FBX:473516794",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Rectus abdominis muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_642806399",
+      "name": "Left internal abdominal oblique",
+      "sourceId": "FBX:642806399",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Internal abdominal oblique muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_795120383",
+      "name": "Right transversus abdominis",
+      "sourceId": "FBX:795120383",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Transversus abdominis muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_811540614",
+      "name": "Right rectus abdominis",
+      "sourceId": "FBX:811540614",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Rectus abdominis muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ZA_M_881393607",
+      "name": "Left transversus abdominis",
+      "sourceId": "FBX:881393607",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "Transversus abdominis muscle.l",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "FJ1452",
+      "name": "Right external oblique",
+      "sourceId": "FBX:891520675",
+      "kind": "muscle",
+      "source": "Z-Anatomy",
+      "sourceName": "External abdominal oblique muscle.r",
+      "sourceUrl": "https://github.com/LluisV/Z-Anatomy/blob/6c7f9016bd5899ac8edafd31b9900c151df42ed6/Resources/Models/FBX/MuscularSystem100.fbx",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "fmaId": "FMA13336"
     }
   ]
 };
-export const systemAssets:Record<SystemId,{file:string;description:string;label:string}> = {
+export const systemAssets:Record<SystemId,{file:string;description:string;label:string;sourceLabel?:string;license?:string;licenseUrl?:string;provenance?:string}> = {
   "skeleton": {
     "label": "Skeletal system",
     "file": "/models/skeleton.glb",
-    "description": "238 named skeletal parts in their anatomical positions, including bone specimens, intervertebral discs and costal cartilages. This source collection does not contain every adult bone."
+    "description": "238 named skeletal parts in their anatomical positions, including bone specimens, intervertebral discs and costal cartilages. This source collection does not contain every adult bone.",
+    "sourceLabel": "BodyParts3D · Database Center for Life Science",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "provenance": "Original BodyParts3D 4.0 skeletal source coordinates and components."
   },
   "muscles": {
-    "label": "Major muscles",
+    "label": "Skeletal muscles",
     "file": "/models/muscles.glb",
-    "description": "66 named components of major skeletal muscles, preserved in their source anatomical positions. Includes bilateral muscles and separately modelled heads or regions; this is a selected collection, not every muscle."
+    "description": "462 named source components of skeletal muscles, including bilateral heads and regions, face/jaw, trunk, limbs, deep back, neck, pelvic floor and extraocular muscles. Not a claim of every anatomical variant.",
+    "sourceLabel": "Z-Anatomy · Gauthier Kervyn and contributors",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "provenance": "Coherent original Z-Anatomy muscle atlas; source-world transforms baked with proper unit/axis conversion. No anatomical decimation, deformation or mixing with another pose."
   }
 };

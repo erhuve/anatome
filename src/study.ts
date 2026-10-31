@@ -1,12 +1,26 @@
+import { getModelPass, normalizeModelPasses, type ModelPasses } from './modelPass';
+
 export type Attempt = { questionId: string; correct: boolean; category: string; at: number };
 export type SavedNote = { id: string; title: string; body: string; created: number };
-export type StudyState = { attempts: Attempt[]; notes: SavedNote[]; studied: string[]; checklist?: string[]; review: Record<string, { due: number; interval: number; streak: number }> };
-export const emptyState: StudyState = { attempts: [], notes: [], studied: [], checklist: [], review: {} };
+export type StudyState = { attempts: Attempt[]; notes: SavedNote[]; studied: string[]; checklist?: string[]; modelPasses?: ModelPasses; review: Record<string, { due: number; interval: number; streak: number }> };
+export const emptyState: StudyState = { attempts: [], notes: [], studied: [], checklist: [], modelPasses: {}, review: {} };
 const key = 'anatome-study-v1';
 export function readState(): StudyState {
   try { const value = JSON.parse(localStorage.getItem(key) || 'null');
     if (!value || !Array.isArray(value.attempts) || !Array.isArray(value.notes) || !Array.isArray(value.studied) || typeof value.review !== 'object' || !value.review) return structuredClone(emptyState);
-    return { attempts: value.attempts.filter((a: Attempt) => typeof a.questionId === 'string' && typeof a.correct === 'boolean' && Number.isFinite(a.at)), notes: value.notes.filter((n: SavedNote) => typeof n.id === 'string' && typeof n.title === 'string' && typeof n.body === 'string'), studied: value.studied.filter((s:unknown) => typeof s === 'string'), checklist: Array.isArray(value.checklist) ? value.checklist.filter((s:unknown)=>typeof s==='string') : [], review: value.review };
+    let modelPasses: ModelPasses = {};
+    if (value.modelPasses && typeof value.modelPasses === 'object' && !Array.isArray(value.modelPasses)) {
+      modelPasses = normalizeModelPasses(value.modelPasses);
+    } else if (!Object.hasOwn(value, 'modelPasses')) {
+      // Before pass tracking existed, unique answered model targets still
+      // establish first-pass coverage. Never backfill an explicit new pass.
+      const previousIds = value.attempts.map((attempt: Attempt) => attempt.questionId);
+      for (const collection of ['muscles', 'skeleton', 'landmarks'] as const) {
+        const migrated = getModelPass({ [collection]: { round: 1, coveredIds: previousIds } }, collection);
+        if (migrated.coveredIds.length) modelPasses[collection] = migrated;
+      }
+    }
+    return { attempts: value.attempts.filter((a: Attempt) => typeof a.questionId === 'string' && typeof a.correct === 'boolean' && Number.isFinite(a.at)), notes: value.notes.filter((n: SavedNote) => typeof n.id === 'string' && typeof n.title === 'string' && typeof n.body === 'string'), studied: value.studied.filter((s:unknown) => typeof s === 'string'), checklist: Array.isArray(value.checklist) ? value.checklist.filter((s:unknown)=>typeof s==='string') : [], modelPasses, review: value.review };
   } catch { return structuredClone(emptyState); }
 }
 export function writeState(state: StudyState): boolean { try { localStorage.setItem(key, JSON.stringify(state)); return true; } catch { return false; } }
