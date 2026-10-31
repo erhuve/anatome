@@ -7,15 +7,17 @@ import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import { systemAssets, systemParts, type SystemId } from '../systemData';
 import { fitDistance } from './BoneViewer';
 import { bindCameraControls, cameraControlInstructions } from '../cameraControls';
+import { CONTEXT_LAYER, DEFAULT_CONTEXT_OPACITY, normalizeContextOpacity, renderAnatomy, TARGET_LAYER } from '../anatomyRendering';
 
 type View = 'anterior' | 'posterior' | 'medial' | 'lateral';
-type Props = { system: SystemId; view: View; selectedId?: string; isolate?: boolean; resetToken?: number; theme?: 'light' | 'dark'; focusSelected?: boolean; focusContextIds?: readonly string[]; ghostOthers?: boolean; onReady?: (status: 'loading' | 'ready' | 'error') => void; onSelect?: (id: string, name: string) => void; onViewChange?: (view: string) => void };
+type Props = { system: SystemId; view: View; selectedId?: string; isolate?: boolean; resetToken?: number; theme?: 'light' | 'dark'; focusSelected?: boolean; focusContextIds?: readonly string[]; ghostOthers?: boolean; contextOpacity?: number; onReady?: (status: 'loading' | 'ready' | 'error') => void; onSelect?: (id: string, name: string) => void; onViewChange?: (view: string) => void };
 
-export default function SystemViewer({ system, view, selectedId, isolate = false, resetToken = 0, theme = 'light', focusSelected = false, focusContextIds, ghostOthers = false, onReady, onSelect, onViewChange }: Props) {
+export default function SystemViewer({ system, view, selectedId, isolate = false, resetToken = 0, theme = 'light', focusSelected = false, focusContextIds, ghostOthers = false, contextOpacity = DEFAULT_CONTEXT_OPACITY, onReady, onSelect, onViewChange }: Props) {
   const host = useRef<HTMLDivElement>(null);
-  const state = useRef({ view, selectedId, isolate, focusSelected, focusContextIds, ghostOthers, onSelect, onViewChange, onReady });
-  state.current = { view, selectedId, isolate, focusSelected, focusContextIds, ghostOthers, onSelect, onViewChange, onReady };
-  const runtime = useRef<{ fit: () => void; select: () => void } | null>(null);
+  const opacity = normalizeContextOpacity(contextOpacity);
+  const state = useRef({ view, selectedId, isolate, focusSelected, focusContextIds, ghostOthers, opacity, onSelect, onViewChange, onReady });
+  state.current = { view, selectedId, isolate, focusSelected, focusContextIds, ghostOthers, opacity, onSelect, onViewChange, onReady };
+  const runtime = useRef<{ fit: () => void; select: () => void; appearance: () => void } | null>(null);
   const [status, setStatus] = useState<'loading' | 'ready' | 'error'>('loading');
   const [free, setFree] = useState(false);
   useEffect(() => {
@@ -43,6 +45,7 @@ export default function SystemViewer({ system, view, selectedId, isolate = false
     canvas.setAttribute('aria-label', `Interactive ${systemAssets[system].label}. ${cameraControlInstructions}`);
     element.prepend(canvas);
     const scene = new THREE.Scene();
+    const contextDepth = new THREE.MeshDepthMaterial({ colorWrite: false, depthWrite: true, depthTest: true, side: THREE.FrontSide });
     const camera = new THREE.PerspectiveCamera(34, 1, .01, 150);
     scene.add(camera);
     // Broad studio reflections reveal the source contours without painted-on
@@ -74,6 +77,7 @@ export default function SystemViewer({ system, view, selectedId, isolate = false
     let model: THREE.Group | undefined;
     let partNodes: THREE.Object3D[] = [];
     let visibleMeshes: THREE.Mesh[] = [];
+    let hasTarget = false;
     const size = new THREE.Vector3(2, 5.3, 1);
     const framingSize = size.clone();
     const cameraTarget = new THREE.Vector3();
@@ -88,37 +92,45 @@ export default function SystemViewer({ system, view, selectedId, isolate = false
       controls.update(); controls.enableDamping = true;
       dirty = true; setFree(false); state.current.onViewChange?.(state.current.view);
     };
-    const select = () => {
+    const appearance = () => {
       if (!model) return;
       const chosen = partNodes.find(node => node.userData.partId === state.current.selectedId);
       const isolating = state.current.isolate && !!chosen;
+      hasTarget = !!chosen;
       visibleMeshes = [];
       for (const node of partNodes) {
         const selected = node === chosen;
         node.visible = !isolating || selected;
         node.traverse(child => {
           if (!(child instanceof THREE.Mesh)) return;
-          const material = child.material as THREE.MeshStandardMaterial;
           const kind = node.userData.kind;
-          // Opaque muscle surfaces retain a readable silhouette and hide the
-          // hundreds of deeper components. A separate target pass handles x-ray.
-          material.color.setHex(muscle ? selected ? 0x409bd5 : 0x8f3e37 : dark && selected ? 0x83b9ef : selected && !isolating ? 0xc68e59 : kind === 'disc' ? 0xa8b7b7 : kind === 'cartilage' ? 0xb6c9c5 : 0xd9cbb0);
-          if (!muscle && dark && chosen && !selected && !isolating) material.color.multiplyScalar(.68);
-          material.emissive.setHex(selected ? 0x1b5275 : 0x000000);
-          material.emissiveIntensity = selected ? muscle ? .035 : dark ? .32 : 0 : 0;
-          const ghosted = !muscle && state.current.ghostOthers && !!chosen && !selected && !isolating;
-          if (material.transparent !== ghosted) material.needsUpdate = true;
-          material.transparent = ghosted;
-          material.opacity = ghosted ? .12 : 1;
-          material.depthWrite = !ghosted;
-          material.roughness = muscle ? selected ? .48 : .57 : .8;
-          material.metalness = 0;
-          child.layers.set(0);
-          if (muscle && selected) child.layers.enable(1);
+          const faded = state.current.ghostOthers && !!chosen && !selected && !isolating;
+          for (const material of (Array.isArray(child.material) ? child.material : [child.material]) as THREE.MeshStandardMaterial[]) {
+            material.color.setHex(muscle ? selected ? 0x409bd5 : 0x8f3e37 : dark && selected ? 0x83b9ef : selected && !isolating ? 0xc68e59 : kind === 'disc' ? 0xa8b7b7 : kind === 'cartilage' ? 0xb6c9c5 : 0xd9cbb0);
+            if (!muscle && dark && chosen && !selected && !isolating) material.color.multiplyScalar(.68);
+            material.emissive.setHex(selected ? 0x1b5275 : 0x000000);
+            material.emissiveIntensity = selected ? muscle ? .035 : dark ? .32 : 0 : 0;
+            const ghosted = faded && state.current.opacity < 1;
+            if (material.transparent !== ghosted) material.needsUpdate = true;
+            material.transparent = ghosted;
+            material.opacity = faded ? state.current.opacity : 1;
+            material.depthWrite = !faded;
+            material.forceSinglePass = true;
+            material.roughness = muscle ? selected ? .48 : .57 : .8;
+            material.metalness = 0;
+          }
+          child.layers.set(selected ? TARGET_LAYER : CONTEXT_LAYER);
           child.userData.partId = node.userData.partId;
-          if (node.visible) visibleMeshes.push(child);
+          if (node.visible && (!faded || state.current.opacity > 0)) visibleMeshes.push(child);
         });
       }
+      dirty = true;
+    };
+    const select = () => {
+      if (!model) return;
+      appearance();
+      const chosen = partNodes.find(node => node.userData.partId === state.current.selectedId);
+      const isolating = state.current.isolate && !!chosen;
       // Preserve original assembly coordinates. Move/scale only the common holder.
       if (isolating || lastIsolate !== isolating || holder.scale.x === 1) {
         holder.position.set(0, 0, 0); holder.scale.setScalar(1); holder.updateMatrixWorld(true);
@@ -143,7 +155,7 @@ export default function SystemViewer({ system, view, selectedId, isolate = false
       lastIsolate = isolating;
       dirty = true;
     };
-    runtime.current = { fit, select };
+    runtime.current = { fit, select, appearance };
     const resize = () => {
       const width = Math.max(element.clientWidth, 1), height = Math.max(element.clientHeight, 1);
       renderer.setSize(width, height, false); camera.aspect = width / height; camera.updateProjectionMatrix(); dirty = true;
@@ -154,18 +166,7 @@ export default function SystemViewer({ system, view, selectedId, isolate = false
       if (disposed) return;
       controls.update();
       if (dirty || !lastPosition.equals(camera.position) || !lastQuaternion.equals(camera.quaternion)) {
-        camera.layers.set(0);
-        renderer.clear();
-        renderer.render(scene, camera);
-        if (muscle && state.current.ghostOthers && state.current.selectedId && !state.current.isolate) {
-          // Clear only scene depth, then redraw ONLY the selected source mesh.
-          // Its own depth still works: rear triangles cannot shine through it.
-          // This reveals deep targets without blending every muscle layer.
-          renderer.clearDepth();
-          camera.layers.set(1);
-          renderer.render(scene, camera);
-          camera.layers.set(0);
-        }
+        renderAnatomy(renderer, scene, camera, contextDepth, state.current.ghostOthers && hasTarget && !state.current.isolate, state.current.opacity);
         lastPosition.copy(camera.position); lastQuaternion.copy(camera.quaternion); dirty = false;
       }
       frame = requestAnimationFrame(draw);
@@ -191,6 +192,7 @@ export default function SystemViewer({ system, view, selectedId, isolate = false
       select(); fit(); report('ready');
     }, undefined, () => { if (!disposed) report('error'); });
     const raycaster = new THREE.Raycaster();
+    raycaster.layers.enable(TARGET_LAYER);
     const activePointers = new Set<number>();
     let selectionPointer: { id: number; x: number; y: number } | null = null;
     const down = (event: PointerEvent) => {
@@ -225,11 +227,12 @@ export default function SystemViewer({ system, view, selectedId, isolate = false
       canvas.removeEventListener('pointerdown', down); canvas.removeEventListener('pointermove', move); canvas.removeEventListener('pointerup', up);
       canvas.removeEventListener('pointercancel', cancel); canvas.removeEventListener('lostpointercapture', cancel); canvas.removeEventListener('webglcontextlost', lost);
       model?.traverse(child => { if (child instanceof THREE.Mesh) { child.geometry.dispose(); for (const material of Array.isArray(child.material) ? child.material : [child.material]) material.dispose(); } });
-      environment?.dispose(); renderer.dispose(); canvas.remove();
+      contextDepth.dispose(); environment?.dispose(); renderer.dispose(); canvas.remove();
     };
   }, [system, theme]);
   useEffect(() => { runtime.current?.fit(); }, [view, resetToken]);
-  useEffect(() => { runtime.current?.select(); }, [selectedId, isolate, focusSelected, focusContextIds, ghostOthers]);
+  useEffect(() => { runtime.current?.select(); }, [selectedId, isolate, focusSelected, focusContextIds]);
+  useEffect(() => { runtime.current?.appearance(); }, [ghostOthers, opacity]);
   return <div ref={host} style={{ position: 'absolute', inset: 0 }} className={`system-viewer${theme === 'dark' ? ' is-dark' : ''}`}>
     <style>{`.system-anatomy-canvas{outline:none}.system-anatomy-canvas:focus-visible{outline:2px solid #435f54;outline-offset:-4px;border-radius:8px}.system-status{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:#f0eee7;text-align:center;padding:32px;font:13px/1.7 Inter,system-ui,sans-serif;color:#647365}.system-free-note{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);font:10px/1.4 Inter,system-ui,sans-serif;letter-spacing:.04em;color:#7b8177;white-space:nowrap;pointer-events:none}.system-viewer.is-dark .system-status{background:#171819;color:#b7bbbf}.system-viewer.is-dark .system-free-note{color:#8d939b}.system-viewer.is-dark .system-anatomy-canvas:focus-visible{outline-color:#83b9ef}`}</style>
     {status === 'loading' && <div className="system-status"><div>Preparing your {system === 'muscles' ? 'muscle' : 'skeletal'} collection…<br /><span style={{ fontSize: 11, opacity: .7 }}>Loading source anatomy in its original arrangement</span></div></div>}

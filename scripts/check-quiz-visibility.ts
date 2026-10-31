@@ -1,9 +1,10 @@
 /**
  * Default-presentation integration audit for EVERY shipped quiz model part.
- * Muscle context is opaque with a selected-only, cleared-depth x-ray pass;
- * skeleton context is translucent. Isolated targets contain only the selected
- * source part. Therefore other parts do not occlude the default target pass. This checks target framing and its own
- * renderable surface, not browser compositing or anatomical proficiency.
+ * The selected target is solid, with adjustable translucent muscle/skeleton
+ * context (28% by default). A nearest-context depth prepass prevents blended
+ * deeper layers from building up; isolated targets contain only the selected part.
+ * This checks target framing and its own renderable surface, not browser alpha
+ * compositing, context occlusion at 100%, or anatomical proficiency.
  * Run: node --import tsx scripts/check-quiz-visibility.ts
  */
 import assert from 'node:assert/strict';
