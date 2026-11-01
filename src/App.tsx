@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { ArrowRight, Check, CheckCheck, ChevronDown, Crosshair, Eye, Focus, Info, Layers3, RotateCcw, Rotate3d, SkipForward, SlidersHorizontal, UserRound, X } from 'lucide-react';
+import { ArrowRight, BookOpen, Check, CheckCheck, ChevronDown, Crosshair, Eye, Focus, Layers3, RotateCcw, Rotate3d, SkipForward, SlidersHorizontal, X } from 'lucide-react';
 import BoneViewer from './components/BoneViewer';
 import SystemViewer from './components/SystemViewer';
 import { createModelSession, getPromptContextIds, modelPromptPools, type ModelCollection, type ModelPrompt } from './modelQuiz';
@@ -8,6 +8,9 @@ import { useAuth } from './useAuth';
 import { useStudyProgress } from './useStudyProgress';
 import ProgressPanel from './components/ProgressPanel';
 import StudySettings from './components/StudySettings';
+import StudyFlow from './components/StudyFlow';
+import StudioHeader from './components/StudioHeader';
+import { studyTargetsFor, workspaceUrl, type WorkspaceMode } from './studyNavigation';
 import { getModelPass, modelScopeKey, remainingModelCount } from './modelPass';
 import { readQuizSelections, selectedPromptIds, writeQuizSelections, type QuizSelections } from './quizSelection';
 import { systemAssets } from './systemData';
@@ -18,9 +21,6 @@ import { DEFAULT_CONTEXT_OPACITY } from './anatomyRendering';
 
 type Response = { id: string; selected: string | null; correct: boolean | null; typoAccepted?: boolean };
 type ModelStatus = 'loading' | 'ready' | 'error';
-const collections: { id: ModelCollection; label: string }[] = [
-  { id: 'muscles', label: 'Muscles' }, { id: 'skeleton', label: 'Bones' }, { id: 'landmarks', label: 'Landmarks' },
-];
 const initialFraming = (prompt: ModelPrompt) => prompt.presentation === 'isolate' ? 'isolate' as const : 'focus' as const;
 function initialCollection(): ModelCollection {
   const requested = new URLSearchParams(window.location.search).get('atlas');
@@ -41,6 +41,9 @@ export function QuizStudio({ auth, progress }: { auth: ReturnType<typeof useAuth
   const studyRef = useRef(study);
   studyRef.current = study;
   const [collection, setCollection] = useState<ModelCollection>(initialCollection);
+  const [workspaceMode, setWorkspaceMode] = useState<WorkspaceMode>(() => new URLSearchParams(window.location.search).get('mode') === 'study' ? 'study' : 'quiz');
+  const [studyCollection, setStudyCollection] = useState<ModelCollection>(initialCollection);
+  const [studyCursors, setStudyCursors] = useState<Partial<Record<ModelCollection, string>>>({});
   const [selections, setSelections] = useState<QuizSelections>(() => readQuizSelections(auth.user?.id ?? null));
   const [answerMode, setAnswerMode] = useState<AnswerMode>(() => readAnswerMode(auth.user?.id ?? null));
   const [modeSaved, setModeSaved] = useState(true);
@@ -66,6 +69,7 @@ export function QuizStudio({ auth, progress }: { auth: ReturnType<typeof useAuth
   const [about, setAbout] = useState(false);
   const [accountOpen, setAccountOpen] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
+  const [studyTargets, setStudyTargets] = useState<ModelPrompt[] | null>(null);
   const [selectionSaved, setSelectionSaved] = useState(true);
   const saved = progress.saved;
   useEffect(() => { if (auth.error) { setAbout(false); setSettingsOpen(false); setAccountOpen(true); } }, [auth.error]);
@@ -94,13 +98,16 @@ export function QuizStudio({ auth, progress }: { auth: ReturnType<typeof useAuth
   const passComplete = !emptySelection && remaining === 0;
   const contextIds = useMemo(() => getPromptContextIds(question), [question]);
   const asset = systemAssets[collection === 'muscles' ? 'muscles' : 'skeleton'];
+  const generalTargets = useMemo(() => studyTargetsFor(studyCollection, selections), [studyCollection, selections]);
+  const activeCollection = workspaceMode === 'study' ? studyCollection : collection;
+  const displayQuestion = workspaceMode === 'study' ? generalTargets.find(prompt => prompt.id === studyCursors[studyCollection]) ?? generalTargets[0] ?? question : question;
   const onReady = useCallback((status: ModelStatus) => setModelStatus(status), []);
   const onViewChange = useCallback((direction: string) => setFreeView(direction === 'free'), []);
 
-  useEffect(() => { if (response && !complete) nextButton.current?.focus({ preventScroll: true }); }, [response, complete]);
+  useEffect(() => { if (response && !complete && workspaceMode === 'quiz' && !studyTargets) nextButton.current?.focus({ preventScroll: true }); }, [response, complete, workspaceMode, studyTargets]);
   useEffect(() => {
-    if (answerMode === 'typed' && ready && !response && !complete && !about && !accountOpen && !settingsOpen) answerInput.current?.focus({ preventScroll: true });
-  }, [answerMode, question.id, ready, response, complete, about, accountOpen, settingsOpen]);
+    if (workspaceMode === 'quiz' && answerMode === 'typed' && ready && !response && !complete && !about && !accountOpen && !settingsOpen && !studyTargets) answerInput.current?.focus({ preventScroll: true });
+  }, [answerMode, question.id, ready, response, complete, about, accountOpen, settingsOpen, studyTargets, workspaceMode]);
   useEffect(() => {
     if (!about) return;
     const previous = document.activeElement as HTMLElement | null;
@@ -136,13 +143,28 @@ export function QuizStudio({ auth, progress }: { auth: ReturnType<typeof useAuth
   function applySelection(nextCollection: ModelCollection, preferences: QuizSelections) {
     setSelections(preferences); setSelectionSaved(writeQuizSelections(auth.user?.id ?? null, preferences));
     setSettingsOpen(false); startSet(nextCollection, undefined, preferences);
+    if (workspaceMode === 'study') setStudyCollection(nextCollection);
+  }
+  function changeWorkspace(next: WorkspaceMode) {
+    if (next === workspaceMode) return;
+    setWorkspaceMode(next); setAccountOpen(false); setSettingsOpen(false); setAbout(false);
+    if (next === 'study' && studyCollection === collection && !studyCursors[studyCollection]) setStudyCursors(value => ({ ...value, [studyCollection]: question.id }));
+    window.history.replaceState({}, '', workspaceUrl(window.location.href, next, next === 'study' ? studyCollection : collection));
+  }
+  function changeCollection(nextCollection: ModelCollection) {
+    if (workspaceMode === 'quiz') startSet(nextCollection);
+    else { setStudyCollection(nextCollection); window.history.replaceState({}, '', workspaceUrl(window.location.href, 'study', nextCollection)); }
   }
   function changeAnswerMode(mode: AnswerMode) {
     if (mode === answerMode || response || answerLock.current) return;
     setAnswerMode(mode); setTypedAnswer(''); setModeSaved(writeAnswerMode(auth.user?.id ?? null, mode));
   }
+  function studyStructures(targets: ModelPrompt[]) {
+    if (!targets.length) return;
+    setAccountOpen(false); setAbout(false); setSettingsOpen(false); setStudyTargets(targets);
+  }
   function answer(option: string | null) {
-    if (answerLock.current || complete || !ready || about || accountOpen || settingsOpen) return;
+    if (workspaceMode !== 'quiz' || answerLock.current || complete || !ready || about || accountOpen || settingsOpen || studyTargets) return;
     answerLock.current = true;
     const result = option !== null && answerMode === 'typed'
       ? matchTypedAnswer(option, question.answer, modelPromptPools[collection].map(prompt => prompt.answer))
@@ -160,7 +182,7 @@ export function QuizStudio({ auth, progress }: { auth: ReturnType<typeof useAuth
     function keyboard(event: KeyboardEvent) {
       if (event.key === 'Escape' && about) { setAbout(false); return; }
       const target = event.target as HTMLElement | null;
-      if (about || accountOpen || settingsOpen || target?.matches('input,textarea,select') || event.metaKey || event.ctrlKey || event.altKey) return;
+      if (workspaceMode !== 'quiz' || studyTargets || about || accountOpen || settingsOpen || target?.matches('input,textarea,select') || event.metaKey || event.ctrlKey || event.altKey) return;
       if (answerMode === 'choice' && !complete && !response && /^[1-4]$/.test(event.key)) { const option = question.options[Number(event.key) - 1]; if (option) { event.preventDefault(); answer(option); } }
       if (event.key === 'Enter' && response && !complete) { const focusedButton = target?.closest('button') as HTMLButtonElement | null; if (!focusedButton || focusedButton.disabled) { event.preventDefault(); advance(); } }
     }
@@ -168,12 +190,34 @@ export function QuizStudio({ auth, progress }: { auth: ReturnType<typeof useAuth
     return () => window.removeEventListener('keydown', keyboard);
   });
 
+  const overlays = <>
+    {settingsOpen && <StudySettings collection={activeCollection} selections={selections} mode={workspaceMode} onApply={applySelection} onClose={() => setSettingsOpen(false)}/>}
+    {!selectionSaved && <div className="selection-save-note" role="status">This selection is active for this tab. Browser storage is unavailable.</div>}
+    {accountOpen && <ProgressPanel auth={auth} progress={progress} onClose={() => setAccountOpen(false)} onStudy={studyStructures}/>}
+    {about && <div className="about-overlay" onClick={() => setAbout(false)}><div className="about-dialog" ref={aboutPanel} role="dialog" aria-modal="true" aria-labelledby="about-title" onClick={event => event.stopPropagation()}><button className="icon-control about-close" aria-label="Close specimen information" onClick={() => setAbout(false)}><X size={18}/></button><div className="question-kicker">ANATOME / PRACTICE</div><h2 id="about-title">The anatomy comes first.</h2><p>Identify real anatomical models, inspect their surfaces and neighbors, then check your answer. Each set has up to 10 questions. Continue through every selected target without repeats, then explicitly start a new pass. A short last set finishes the pass. Missed review is an intentional repeat and does not advance coverage. Study settings lets you select regions or individual structures; each selection keeps its own pass.</p><h3>Move around the model</h3><p>Drag to rotate and scroll to zoom. Click the model or Tab to it, then use arrow keys to pan up, down, left, and right. Shift + arrows rotates; + and − zoom. Right-drag or Shift-drag also pans. On a touchscreen, one finger rotates; two fingers pan and pinch to zoom. Reset the camera or choose an anatomical view to recenter. Focus frames the target and its neighbors. Context shows the assembly; Isolate shows only the target. Use Surroundings to fade nearby anatomy while the blue target stays solid. The eye button switches between your chosen opacity and full surface anatomy. At 0%, only the target remains visible; at 100%, surface anatomy can cover a deep target. Your opacity choice carries across questions and collections, and adjusting it keeps your current camera view.</p><h3>Sources & scope</h3><p>Muscles: Z-Anatomy, Gauthier Kervyn and contributors, CC BY-SA 4.0. The source assembly is converted without decimation or anatomical reshaping. Bones: BodyParts3D, © The Database Center for Life Science, CC BY 4.0. Blue highlights and landmark locators are study annotations. Every available source component is eligible; the atlas does not yet provide a visual quiz for every college A&P topic. Open Curriculum coverage in study settings for the inventory and remaining gaps.</p><div className="about-links"><a href="https://github.com/LluisV/Z-Anatomy" target="_blank" rel="noreferrer">Z-Anatomy source atlas<ArrowRight size={13}/></a><a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">Muscle model license<ArrowRight size={13}/></a><a href="https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html" target="_blank" rel="noreferrer">BodyParts3D provenance & license<ArrowRight size={13}/></a><a href={displayQuestion.source} target="_blank" rel="noreferrer">Anatomy reference<ArrowRight size={13}/></a></div><p className="about-storage">Guest progress stays in this browser. Sign in to save answers and selection passes to your account across devices. Quiz selection preferences are saved on this device for each account. Answered and revealed questions count as covered; skipped load failures do not. Existing notes and study data are retained.</p></div></div>}
+  </>;
+
+  const header = <StudioHeader mode={workspaceMode} onModeChange={changeWorkspace} collection={activeCollection} onCollectionChange={changeCollection}
+    onSettings={() => { setAccountOpen(false); setAbout(false); setSettingsOpen(true); }}
+    onProgress={() => { setAbout(false); setSettingsOpen(false); setAccountOpen(true); }}
+    onAbout={() => setAbout(true)} signedIn={!!auth.user} syncStatus={progress.status}
+    onNext={() => emptySelection ? setSettingsOpen(true) : passComplete ? startNextPass() : startSet()}
+    nextLabel={emptySelection ? 'Choose targets' : passComplete ? 'New pass' : 'Next set'}
+    nextTitle={emptySelection ? 'Choose targets' : passComplete ? 'Start a new pass' : 'Start the next set'}/>;
+
+  if (studyTargets) return <StudyFlow targets={studyTargets} answerMode={answerMode} onAnswer={(prompt, isCorrect) => progress.recordAnswer(prompt.id, prompt.collection, isCorrect, false)} onClose={() => { setStudyTargets(null); setReset(value => value + 1); }}/>;
+
+  if (workspaceMode === 'study') return <>
+    {generalTargets.length ? <StudyFlow key={`${studyCollection}-${modelScopeKey(studyCollection, selections[studyCollection])}`} targets={generalTargets} answerMode={answerMode}
+      header={header} general initialTargetId={studyCursors[studyCollection]} paused={accountOpen || settingsOpen || about}
+      onTargetChange={id => setStudyCursors(value => ({ ...value, [studyCollection]: id }))}
+      onAnswer={(prompt, isCorrect) => progress.recordAnswer(prompt.id, prompt.collection, isCorrect, false)} onClose={() => changeWorkspace('quiz')}/>
+      : <div className="quiz-app">{header}<main className="study-empty"><BookOpen size={30}/><h1>Choose something to study.</h1><p>This selection has no available structures. Choose a region or individual structures to explore.</p><button className="continue-button" onClick={() => setSettingsOpen(true)}>Choose study material<ArrowRight size={16}/></button></main></div>}
+    {overlays}
+  </>;
+
   return <div className="quiz-app">
-    <header className="studio-header">
-      <a className="studio-brand" href="/" aria-label="Anatome practice home"><Mark/><span>anatome</span><small>practice</small></a>
-      <nav className="collection-switch" aria-label="Choose anatomy collection">{collections.map(item => <button key={item.id} className={collection === item.id ? 'active' : ''} aria-pressed={collection === item.id} onClick={() => { if (collection !== item.id) startSet(item.id); }}>{item.label}</button>)}</nav>
-      <div className="header-actions"><button className="study-settings-button" aria-label="Study settings" title="Choose regions and structures to practice" onClick={() => { setAccountOpen(false); setAbout(false); setSettingsOpen(true); }}><SlidersHorizontal size={15}/><span>Study settings</span></button><button className="account-button" onClick={() => { setAbout(false); setSettingsOpen(false); setAccountOpen(true); }} aria-label={auth.user ? "My progress and account" : "Sign in and view progress"}><UserRound size={15}/><span>{auth.user ? 'My progress' : 'Sign in'}</span>{auth.user && <i className={'sync-dot ' + progress.status} aria-label={progress.status === 'synced' ? 'Progress synced' : 'Progress waiting to sync'}/>}</button><button className="new-set-button" aria-label={emptySelection ? 'Choose targets' : passComplete ? 'Start a new pass' : 'Start the next set'} onClick={() => emptySelection ? setSettingsOpen(true) : passComplete ? startNextPass() : startSet()}><RotateCcw size={14}/><span>{emptySelection ? 'Choose targets' : passComplete ? 'New pass' : 'Next set'}</span></button><button className="icon-control" title="Specimen sources and controls" aria-label="Specimen sources and controls" onClick={() => setAbout(true)}><Info size={17}/></button></div>
-    </header>
+    {header}
 
     <main className="studio-main">
       <section className={'specimen-stage' + (showContextOpacity ? ' has-context-opacity' : '')} aria-label="Interactive 3D quiz specimen">
@@ -200,9 +244,9 @@ export function QuizStudio({ auth, progress }: { auth: ReturnType<typeof useAuth
           <h1>{emptySelection ? 'Choose your structures.' : passComplete ? `All ${poolSize} covered.` : sessionMode === 'review' ? 'Another look helps.' : 'Keep the pass going.'}</h1>
           {responses.length > 0 && <><div className="result-score">{correct}<span> / {queue.length}</span></div><p className="result-description">structures identified correctly{skipped ? ` · ${skipped} skipped` : ''}.</p></>}
           <p className="pass-summary">{emptySelection ? 'This saved selection has no available targets. Choose a region or individual structures in study settings.' : passComplete ? `You've covered every ${customSelection ? 'selected' : 'available'} target in pass ${pass.round}. Start another pass to repeat ${customSelection ? 'this selection' : 'the collection'}.` : `${coveredCount} of ${poolSize} ${customSelection ? 'selected ' : ''}targets covered in pass ${pass.round}. ${remaining} remain before anything repeats.`}</p>
-          {misses.length > 0 && <div className="missed-structures"><span>WORTH ANOTHER LOOK</span>{misses.map(item => <div key={item.id}><RotateCcw size={12}/><span>{item.answer}</span></div>)}</div>}
+          {misses.length > 0 && <div className="missed-structures"><span>WORTH ANOTHER LOOK</span>{misses.map(item => <button className="review-target" key={item.id} onClick={() => studyStructures([item])} aria-label={`Study ${item.answer}`}><RotateCcw size={12}/><span>{item.answer}</span><ArrowRight size={13}/></button>)}</div>}
           <button className="continue-button" onClick={() => emptySelection ? setSettingsOpen(true) : passComplete ? startNextPass() : startSet()}><span>{emptySelection ? 'Open study settings' : passComplete ? `Start pass ${pass.round + 1}` : `Continue · next ${Math.min(10, remaining)}`}</span><ArrowRight size={17}/></button>
-          {misses.length > 0 && <button className="subtle-button" onClick={() => startSet(collection, misses)}>Practice missed structures ({misses.length})<RotateCcw size={13}/></button>}
+          {misses.length > 0 && <><button className="subtle-button" onClick={() => studyStructures(misses)}>Study missed structures ({misses.length})<ArrowRight size={13}/></button><button className="subtle-button" onClick={() => startSet(collection, misses)}>Practice missed structures ({misses.length})<RotateCcw size={13}/></button></>}
           <small className="saved-note">{auth.user ? progress.status === 'synced' ? 'Your progress is saved to your account.' : saved ? 'Saved on this device. Waiting to sync.' : 'Keep this tab open until your progress is synced.' : saved ? 'Pass progress is saved on this device.' : 'Browser storage is unavailable. This session is in memory.'}</small>
         </> : <>
           <div className="question-kicker"><span className="question-number">{String(index + 1).padStart(2, '0')}</span><span>{sessionMode === 'review' ? 'MISSED REVIEW' : 'IDENTIFICATION'}</span><span className="question-total">/ {String(queue.length).padStart(2, '0')}</span></div>
@@ -227,9 +271,6 @@ export function QuizStudio({ auth, progress }: { auth: ReturnType<typeof useAuth
 
     <footer className="studio-footer"><button className="specimen-credit" onClick={() => setAbout(true)}>{collection === 'muscles' ? 'Z-Anatomy' : 'BodyParts3D'} <span>·</span> {asset.license}</button><div className="session-progress"><span>{correct} correct <i/> {answered} answered</span><div className="progress-marks" aria-label={`${responses.length} of ${queue.length} completed`}>{queue.map((item, itemIndex) => { const result = responses.find(answer => answer.id === item.id); return <span key={item.id} className={result ? result.correct === true ? 'correct' : result.correct === false ? 'missed' : 'skipped' : !complete && itemIndex === index ? 'current' : ''}/>; })}</div></div><span className="pass-progress" aria-label={`Pass ${pass.round}: ${coveredCount} of ${poolSize} targets covered`}>{customSelection ? 'Selection pass' : 'Pass'} {pass.round}<span>{coveredCount} / {poolSize} covered</span></span></footer>
 
-    {settingsOpen && <StudySettings collection={collection} selections={selections} onApply={applySelection} onClose={() => setSettingsOpen(false)}/>}
-    {!selectionSaved && <div className="selection-save-note" role="status">This selection is active for this tab. Browser storage is unavailable.</div>}
-    {accountOpen && <ProgressPanel auth={auth} progress={progress} onClose={() => setAccountOpen(false)}/>}
-    {about && <div className="about-overlay" onClick={() => setAbout(false)}><div className="about-dialog" ref={aboutPanel} role="dialog" aria-modal="true" aria-labelledby="about-title" onClick={event => event.stopPropagation()}><button className="icon-control about-close" aria-label="Close specimen information" onClick={() => setAbout(false)}><X size={18}/></button><div className="question-kicker">ANATOME / PRACTICE</div><h2 id="about-title">The anatomy comes first.</h2><p>Identify real anatomical models, inspect their surfaces and neighbors, then check your answer. Each set has up to 10 questions. Continue through every selected target without repeats, then explicitly start a new pass. A short last set finishes the pass. Missed review is an intentional repeat and does not advance coverage. Study settings lets you select regions or individual structures; each selection keeps its own pass.</p><h3>Move around the model</h3><p>Drag to rotate and scroll to zoom. Click the model or Tab to it, then use arrow keys to pan up, down, left, and right. Shift + arrows rotates; + and − zoom. Right-drag or Shift-drag also pans. On a touchscreen, one finger rotates; two fingers pan and pinch to zoom. Reset the camera or choose an anatomical view to recenter. Focus frames the target and its neighbors. Context shows the assembly; Isolate shows only the target. Use Surroundings to fade nearby anatomy while the blue target stays solid. The eye button switches between your chosen opacity and full surface anatomy. At 0%, only the target remains visible; at 100%, surface anatomy can cover a deep target. Your opacity choice carries across questions and collections, and adjusting it keeps your current camera view.</p><h3>Sources & scope</h3><p>Muscles: Z-Anatomy, Gauthier Kervyn and contributors, CC BY-SA 4.0. The source assembly is converted without decimation or anatomical reshaping. Bones: BodyParts3D, © The Database Center for Life Science, CC BY 4.0. Blue highlights and landmark locators are study annotations. Every available source component is eligible; the atlas does not yet provide a visual quiz for every college A&P topic. Open Curriculum coverage in study settings for the inventory and remaining gaps.</p><div className="about-links"><a href="https://github.com/LluisV/Z-Anatomy" target="_blank" rel="noreferrer">Z-Anatomy source atlas<ArrowRight size={13}/></a><a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">Muscle model license<ArrowRight size={13}/></a><a href="https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html" target="_blank" rel="noreferrer">BodyParts3D provenance & license<ArrowRight size={13}/></a><a href={question.source} target="_blank" rel="noreferrer">Anatomy reference<ArrowRight size={13}/></a></div><p className="about-storage">Guest progress stays in this browser. Sign in to save answers and selection passes to your account across devices. Quiz selection preferences are saved on this device for each account. Answered and revealed questions count as covered; skipped load failures do not. Existing notes and study data are retained.</p></div></div>}
+    {overlays}
   </div>;
 }

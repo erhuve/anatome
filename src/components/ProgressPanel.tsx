@@ -1,7 +1,8 @@
 import { useEffect, useRef } from 'react';
-import { ArrowUpRight, Check, Cloud, LogOut, RefreshCw, X } from 'lucide-react';
-import { modelPromptPools, type ModelCollection } from '../modelQuiz';
+import { ArrowRight, ArrowUpRight, BookOpen, Check, Cloud, LogOut, RefreshCw, X } from 'lucide-react';
+import { modelPromptPools, type ModelCollection, type ModelPrompt } from '../modelQuiz';
 import { getModelPass } from '../modelPass';
+import { recentMissedTargets } from '../reviewTargets';
 import type { useAuth } from '../useAuth';
 import type { useStudyProgress } from '../useStudyProgress';
 
@@ -11,10 +12,11 @@ const collections: { id: ModelCollection; label: string }[] = [
 const prompts = Object.values(modelPromptPools).flat();
 const liveIds = new Set(prompts.map(prompt => prompt.id));
 
-export default function ProgressPanel({ auth, progress, onClose }: {
+export default function ProgressPanel({ auth, progress, onClose, onStudy }: {
   auth: ReturnType<typeof useAuth>;
   progress: ReturnType<typeof useStudyProgress>;
   onClose: () => void;
+  onStudy: (targets: ModelPrompt[]) => void;
 }) {
   const panel = useRef<HTMLDivElement>(null);
   const close = useRef(onClose);
@@ -41,8 +43,7 @@ export default function ProgressPanel({ auth, progress, onClose }: {
   const due = Object.entries(progress.study.review).filter(([id, review]) => liveIds.has(id) && review.due <= Date.now()).length;
   const accuracy = attempts.length ? Math.round(correct / attempts.length * 100) : null;
   const isEmbedded = window.self !== window.top;
-  const last = new Map(attempts.map(attempt => [attempt.questionId, attempt]));
-  const missed = [...last.values()].filter(attempt => !attempt.correct).sort((a, b) => b.at - a.at).slice(0, 5);
+  const missed = recentMissedTargets(attempts);
   const status = !auth.user
     ? progress.saved ? 'Guest practice · saved on this device' : 'Guest practice · saved in this tab only'
     : progress.status === 'synced' ? 'All progress synced'
@@ -90,7 +91,10 @@ export default function ProgressPanel({ auth, progress, onClose }: {
           <small>Pass {pass.round}<span>{pass.coveredIds.length} / {ids.size} covered</span></small>
         </div>;
       })}</div>
-      {missed.length > 0 && <div className="recent-misses"><h3>Worth another look</h3>{missed.map(attempt => <div key={attempt.questionId}><span>{prompts.find(prompt => prompt.id === attempt.questionId)?.answer}</span><small>{new Date(attempt.at).toLocaleDateString(undefined, { month: 'short', day: 'numeric' })}</small></div>)}</div>}
+      {missed.length > 0 && <section className="recent-misses" aria-labelledby="recent-misses-title">
+        <div className="recent-misses-heading"><h3 id="recent-misses-title">Worth another look</h3><button onClick={() => onStudy(missed.map(item => item.prompt))}><BookOpen size={13}/>Study all</button></div>
+        {missed.map(({ prompt, at }) => <button className="review-target" key={prompt.id} onClick={() => onStudy([prompt])} aria-label={`Study ${prompt.answer}`}><span>{prompt.answer}</span><small>{new Date(at).toLocaleDateString(undefined, { month: 'short', day: 'numeric' })}</small><ArrowRight size={14}/></button>)}
+      </section>}
       <p className="progress-footnote">Custom selections keep separate passes, shown in the quiz footer. Coverage records practice, including revealed answers. Accuracy reflects your recorded answers; it is not a mastery score.</p>
       {auth.user && <div className="account-signout">
         {progress.pending > 0 && <p>{progress.saved ? 'Pending changes stay on this device until you sign in again.' : 'Wait for your progress to sync before signing out.'}</p>}

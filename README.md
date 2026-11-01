@@ -1,6 +1,6 @@
 # Anatome
 
-A model-first anatomy quiz app. Built with React, TypeScript, Vite, and Three.js.
+A model-first anatomy study and quiz app. Built with React, TypeScript, Vite, and Three.js.
 
 This is a standalone React web application. The anatomy models and histology images are static files. Guest practice saves in browser storage; optional Supabase Google sign-in saves private account progress across devices. The app can still run without Supabase configuration for guest practice.
 
@@ -35,7 +35,11 @@ The app uses system fonts and serves its anatomy assets locally. Educational sou
 
 ## The app
 
-The main experience is a full-screen 3D quiz studio. There is no dashboard or course navigation between questions.
+The main experience is a full-screen 3D studio. Switch between **Study** and **Quiz** in the header.
+
+- **Study** keeps structure names and study notes visible. Choose Muscles, Bones, or Landmarks; use **Browse structures** to search by name, side or region, or move through the collection with Previous and Next. You can also click an available structure in the body model to study it. **Hide name & test myself** opens an optional typed or multiple-choice self-check.
+- Study settings selects material for both modes. Studying includes already-covered targets, so a completed quiz pass never blocks exploration. Browsing and reading do not record answers or pass coverage; submitted or revealed self-checks update answer history without advancing a pass.
+- Switching modes preserves the current quiz and remembers your study position in each collection for this session. Saving a material selection starts a quiz for that selection. Mode and collection remain in the URL across refreshes.
 
 - Choose Muscles, Bones, or Landmarks and start identifying immediately.
 - Study settings lets you select anatomical regions or individual targets, search by structure/side, select all available material, or save a custom selection. Every shipped source part is eligible; visibility and small size do not remove targets from the pool.
@@ -50,12 +54,13 @@ The main experience is a full-screen 3D quiz studio. There is no dashboard or co
 - Z-Anatomy supplies the 462-component muscle assembly. BodyParts3D supplies the 238-part skeletal assembly: 201 bone meshes, 23 intervertebral discs and 14 costal cartilages. Source part counts include bilateral structures and subdivisions; they are not textbook counts of whole muscles or adult bones. Each source assembly keeps its own coherent pose.
 - Detailed femur, humerus and scapula specimens support 17 landmark locators and side reasoning. Original specimen geometry and handedness are preserved.
 - Sign in / My progress opens accuracy, collection coverage, recent misses, and reviews due. Guests can explicitly add their device history to an account. Notes, checklists, and prior study records are retained during import.
+- Click any **Worth another look** structure in progress or set results to open its 3D study view. **Study all** walks through the five recent misses, including targets from different collections. Inspect the name, existing study notes and anatomy reference, then **Hide name & test myself** for a typed or multiple-choice self-check. Only submitted or revealed self-checks enter answer history; exploring does not record an answer or advance a pass. Back to practice restores the interrupted quiz. A successful self-check clears that structure from recent misses.
 - Account data is protected by database ownership rules. Immutable events and unique event IDs preserve concurrent-device answers and prevent duplicate retries. Each pending event has a separate local journal entry so concurrent browser tabs cannot erase it.
 - Pending uploads retry automatically every 30 seconds and on reconnect; this does not poll full history. Initial sign-in and explicit Refresh load account history, with focus/reconnect refreshes throttled to once a minute. See [database setup and Google OAuth configuration](docs/auth-setup.md).
 
 Study settings → Curriculum coverage opens a searchable 283-entry lab reference catalog, all model-part names, and the 14-area two-semester course map. The original 217 practical entries and their descriptions are retained, with 66 additional instructor-selected entries. The catalog distinguishes exact model links, reviewed landmark locators, photographs and reference-only material. The 40-question reference bank, five microscopy examples and source notes remain supporting project content; the primary quiz is 3D identification.
 
-Deep links: `/?atlas=muscles`, `/?atlas=skeleton`, `/?atlas=landmarks`. `/?atlas=bones` also selects the skeleton.
+Deep links: `/?atlas=muscles`, `/?atlas=skeleton`, `/?atlas=landmarks`. `/?atlas=bones` also selects the skeleton. Add `&mode=study` to open any collection directly in Study mode, for example `/?atlas=skeleton&mode=study`.
 
 ## Scope and content review
 

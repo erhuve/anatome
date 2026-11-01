@@ -11,7 +11,7 @@ import type { useAuth } from './useAuth';
 import type { useStudyProgress } from './useStudyProgress';
 import type { AnswerMode } from './answerMode';
 
-function renderSavedPass(collection: ModelCollection, coveredIds: string[], round = 1, selections: QuizSelections = {}, mode: AnswerMode | null = null) {
+function renderSavedPass(collection: ModelCollection, coveredIds: string[], round = 1, selections: QuizSelections = {}, mode: AnswerMode | null = null, workspace = 'quiz') {
   const previousWindow = Object.getOwnPropertyDescriptor(globalThis, 'window');
   const previousStorage = Object.getOwnPropertyDescriptor(globalThis, 'localStorage');
   const study = { ...structuredClone(emptyState), modelPasses: { [modelScopeKey(collection, selections[collection])]: { round, coveredIds } } };
@@ -20,7 +20,7 @@ function renderSavedPass(collection: ModelCollection, coveredIds: string[], roun
   try {
     Object.defineProperty(globalThis, 'window', {
       configurable: true,
-      value: { location: { search: `?atlas=${collection}` } },
+      value: { location: { search: `?atlas=${collection}&mode=${workspace}` } },
     });
     Object.defineProperty(globalThis, 'localStorage', {
       configurable: true,
@@ -109,4 +109,32 @@ test('refreshing an exhausted landmark pass safely retains a specimen and the sa
   assert.match(markup, /BONE LANDMARKS/);
   assert.ok(markup.includes(`Pass 3: ${all.length} of ${all.length} targets covered`));
   assert.doesNotMatch(markup, /class="answer-options"/);
+});
+
+test('study mode remains available after the whole quiz pass is exhausted', () => {
+  const pool = modelPromptPools.skeleton;
+  const markup = renderSavedPass('skeleton', pool.map(prompt => prompt.id), 2, {}, null, 'study');
+  assert.match(markup, /aria-label="Study or quiz mode"/);
+  assert.match(markup, /aria-pressed="true"[^>]*>Study/);
+  assert.match(markup, /Browse 238 structures/);
+  assert.match(markup, /STUDY THE STRUCTURE/);
+  assert.ok(markup.includes(pool[0].answer));
+  assert.doesNotMatch(markup, /PASS COMPLETE|id="typed-answer"|class="answer-options"/);
+});
+
+test('general study respects a custom selection and does not expose excluded structures', () => {
+  const chosen = modelPromptPools.muscles[6];
+  const markup = renderSavedPass('muscles', [chosen.id], 1, { muscles: [chosen.id] }, null, 'study');
+  assert.match(markup, /Browse 1 structure/);
+  assert.ok(markup.includes(chosen.answer));
+  assert.ok(!markup.includes(modelPromptPools.muscles[0].answer));
+  assert.match(markup, /Hide name &amp; test myself/);
+  assert.doesNotMatch(markup, /PASS COMPLETE/);
+});
+
+test('empty general study selection offers a picker without rendering an invalid model', () => {
+  const markup = renderSavedPass('landmarks', [], 1, { landmarks: [] }, null, 'study');
+  assert.match(markup, /Choose something to study/);
+  assert.match(markup, /Choose study material/);
+  assert.doesNotMatch(markup, /STUDY THE STRUCTURE|Interactive 3D study specimen/);
 });
