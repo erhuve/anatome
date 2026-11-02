@@ -1,0 +1,157 @@
+/* The practice task fits the visible screen; content browsing keeps its own layout. */
+.model-controls, .model-controls-content { display: contents; }
+.model-controls-toggle, .model-controls-backdrop, .model-touch-hint { display: none; }
+
+@media (max-width: 760px), (max-height: 500px) and (max-width: 1000px) {
+  html:has(.practice-screen), body:has(.practice-screen) {
+    height: 100%; overflow: hidden; overscroll-behavior: none;
+  }
+  .quiz-app.practice-screen {
+    position: fixed; top: var(--practice-top, 0px); left: 0; width: 100%;
+    height: var(--practice-height, 100dvh); min-height: 0; overflow: hidden;
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  }
+  .practice-screen .studio-header {
+    height: 86px; min-height: 86px; padding: 0 12px 34px;
+    display: flex; justify-content: space-between; gap: 6px; border-color: var(--border);
+  }
+  .practice-screen .studio-brand > span { display: none; }
+  .practice-screen .brand-mark { width: 26px; height: 26px; }
+  .practice-screen .studio-identity { gap: 8px; }
+  .practice-screen .workspace-switch { padding: 2px; }
+  .practice-screen .workspace-switch > button { padding: 5px 8px; min-height: 34px; font-size: 11px; }
+  .practice-screen .studio-header .header-actions { gap: 6px; }
+  .practice-screen .account-button { min-width: 30px; padding: 6px; }
+  .practice-screen .account-button > span, .practice-screen .new-set-button { display: none; }
+  .practice-screen .study-settings-button > span { display: none; }
+  .practice-screen .collection-switch {
+    position: absolute; top: auto; bottom: 5px; left: 12px; right: 12px; transform: none;
+    justify-content: center; padding: 0; gap: 4px; border: 0; background: transparent; backdrop-filter: none;
+  }
+  .practice-screen .collection-switch > button { flex: 1; padding: 5px 12px; font-size: 11px; line-height: 1.4; }
+  .practice-screen .study-header { height: 48px; min-height: 48px; padding: 0 12px; }
+  .practice-screen .studio-main {
+    display: flex; flex-direction: column; flex: 1; min-height: 0; gap: 0; padding: 0; overflow: hidden;
+  }
+  .practice-screen .specimen-stage {
+    flex: 1 1 0; width: 100%; height: auto; min-height: 0; max-height: none; margin: 0; overflow: hidden;
+  }
+  .practice-screen .specimen-stage .model-space { inset: 24px 0 42px; }
+  .practice-screen .stage-heading { top: 7px; left: 12px; max-width: calc(100% - 24px); }
+  .practice-screen .collection-label { font-size: 8px; letter-spacing: 1px; }
+  .practice-screen .stage-label, .practice-screen .stage-divider,
+  .practice-screen .stage-orientation, .practice-screen .interaction-hint { display: none; }
+  .model-controls { display: block; }
+  .model-controls-toggle {
+    display: flex; align-items: center; gap: 7px; position: absolute; bottom: 6px; right: 12px; z-index: 7;
+    min-height: 36px; padding: 7px 12px; border: 1px solid var(--border); border-radius: 10px;
+    background: var(--panel); color: var(--text); font-size: 11px;
+  }
+  .model-touch-hint { display: block; position: absolute; left: 12px; bottom: 18px; font-size: 10px; color: var(--muted); }
+  .model-controls-backdrop { display: block; position: absolute; inset: 0; z-index: 5; background: #10121666; }
+  .practice-screen .model-controls .stage-bottom { display: none; }
+  .practice-screen .model-controls.is-open .stage-bottom {
+    display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: space-between;
+    position: absolute; bottom: 48px; left: 12px; right: 12px; z-index: 6;
+    padding: 10px; max-height: calc(100% - 60px); overflow-y: auto;
+    border: 1px solid var(--border); border-radius: 14px; background: var(--panel); box-shadow: 0 8px 30px #0006;
+  }
+  .practice-screen .stage-bottom .view-tools { flex: 1; min-width: 0; justify-content: space-between; }
+  .practice-screen .stage-bottom .view-select { flex: 1; }
+  .practice-screen .stage-bottom .view-select > select { width: 100%; max-width: none; min-height: 36px; }
+  .practice-screen .stage-bottom .framing-switch { flex: 1 1 100%; order: 2; justify-content: space-between; }
+  .practice-screen .stage-bottom .framing-switch > button { flex: 1; min-height: 36px; justify-content: center; font-size: 11px; }
+  .practice-screen .stage-bottom .context-opacity { flex: 1 1 100%; order: 3; width: auto; min-height: 40px; margin: 0; }
+
+  .practice-screen .question-panel {
+    display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px 12px; align-content: start;
+    align-self: stretch; flex: 0 1 auto; width: 100%; min-height: 0; max-height: 64%;
+    padding: 12px 14px 10px; overflow: hidden; border-top: 1px solid var(--border); background: var(--panel);
+  }
+  .practice-screen .question-panel > * { min-width: 0; grid-column: 1 / -1; margin: 0; }
+  .practice-screen .question-panel > .question-kicker { grid-row: 1; grid-column: 2; align-self: start; gap: 4px; line-height: 1.5; }
+  .practice-screen .question-panel > .question-kicker > span:not(.question-number):not(.question-total) { display: none; }
+  .practice-screen .question-number { border: 0; padding: 0; font-size: 11px; line-height: 1.5; }
+  .practice-screen .question-total { font-size: 10px; letter-spacing: 0; }
+  .practice-screen .question-panel h1 { grid-row: 1; grid-column: 1; font-size: 20px; line-height: 1.25; letter-spacing: -.5px; max-width: none; }
+  .practice-screen .question-instruction, .practice-screen .typed-answer-form > label, .practice-screen .typed-answer-form > p {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden;
+    clip-path: inset(50%); white-space: nowrap; border: 0;
+  }
+  .practice-screen .selection-indicator, .practice-screen .question-pause, .practice-screen .panel-footnote { display: none; }
+  .practice-screen .answer-mode { margin: 0; padding: 2px; }
+  .practice-screen .answer-mode > button { min-height: 30px; padding: 4px 8px; font-size: 11px; }
+  .practice-screen .typed-answer-form { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; margin: 0; }
+  .practice-screen .typed-answer-form > input { min-height: 46px; padding: 9px 11px; font-size: 16px; line-height: 1.4; }
+  .practice-screen .check-answer-button { min-height: 46px; width: auto; padding: 9px 12px; margin: 0; gap: 6px; font-size: 12px; }
+  .practice-screen .check-answer-button .continue-key, .practice-screen .check-answer-button > svg { display: none; }
+  .practice-screen .answer-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px; margin: 0; }
+  .practice-screen .answer-option { min-height: 48px; padding: 8px; gap: 6px; font-size: 12px; line-height: 1.35; border-radius: 10px; }
+  .practice-screen .question-panel:has(.answer-options):not(.has-response) { max-height: calc(100% - 120px); }
+  .practice-screen .answer-key { display: none; width: 17px; height: 20px; font-size: 9px; flex-shrink: 0; border: 0; background: transparent; }
+  .practice-screen .reveal-button { min-height: 32px; padding: 5px 0; border: 0; font-size: 12px; }
+  .practice-screen .continue-button { min-height: 44px; padding: 10px 13px; font-size: 13px; }
+  .practice-screen .question-feedback { min-height: 0; max-height: min(22dvh, 150px); overflow-y: auto; margin: 0; padding-left: 10px; }
+  .practice-screen .feedback-heading { font-size: 13px; line-height: 1.5; }
+  .practice-screen .question-feedback p { font-size: 12px; line-height: 1.55; margin-top: 6px; }
+  .practice-screen .question-panel.has-response { grid-template-rows: auto minmax(0, 1fr) auto; }
+  .practice-screen .has-response .typed-answer-form, .practice-screen .has-response .answer-options,
+  .practice-screen .has-response .answer-mode { display: none; }
+  .practice-screen .error-actions { display: flex; gap: 10px; }
+  .practice-screen .error-actions > * { flex: 1; margin: 0; }
+  .practice-screen .studio-footer {
+    display: flex; flex: 0 0 26px; height: 26px; min-height: 26px; margin: 0; padding: 0 12px; gap: 10px; border-color: var(--border);
+  }
+  .practice-screen .studio-footer .session-progress { flex-direction: row; align-self: auto; }
+  .practice-screen .session-progress > span { display: none; }
+  .practice-screen .pass-progress { margin-left: auto; font-size: 9px; gap: 6px; }
+  .practice-screen .specimen-credit { font-size: 8px; }
+  .practice-screen .study-footer > span, .practice-screen .study-footer > .icon-control { display: none; }
+  .practice-screen .study-pagination { width: 100%; justify-content: space-between; font-size: 11px; }
+  .practice-screen .study-pagination > button { min-height: 26px; padding: 0; }
+  .practice-screen.study-flow:not(.is-recalling) .question-panel { display: flex; flex-direction: column; max-height: 52%; gap: 8px; }
+  .practice-screen .study-panel > * { flex-shrink: 0; }
+  .practice-screen .study-panel > .study-copy { flex: 1 1 auto; min-height: 0; overflow-y: auto; }
+  .practice-screen .study-panel > .question-kicker, .practice-screen .study-observation, .practice-screen .study-tags { display: none; }
+  .practice-screen .study-explanation { font-size: 13px; line-height: 1.6; }
+  .practice-screen .study-reference { margin-top: 8px; font-size: 11px; }
+  .practice-screen .browse-study-button { min-height: 32px; padding: 6px 10px; font-size: 12px; }
+  .practice-screen .study-panel > .subtle-button { padding: 5px 0; font-size: 11px; min-height: 28px; }
+  .practice-screen.is-complete .specimen-stage { display: none; }
+  .practice-screen.is-complete .studio-main { display: block; overflow-y: auto; }
+  .practice-screen.is-complete .question-panel { display: block; max-height: none; height: auto; overflow: visible; padding: 24px; }
+  .practice-screen.is-complete .question-panel > * { margin-bottom: 16px; }
+  .practice-screen.is-complete .question-kicker { display: flex; }
+  .practice-screen.is-complete .question-instruction { position: static; width: auto; height: auto; clip-path: none; white-space: normal; margin: 12px 0; }
+  .practice-screen.is-complete .subtle-button { display: flex; }
+
+  /* Make room for typing without losing the specimen or submit action. */
+  [data-practice-keyboard=true] .practice-screen .studio-header { height: 44px; min-height: 44px; padding-bottom: 0; }
+  [data-practice-keyboard=true] .practice-screen .collection-switch,
+  [data-practice-keyboard=true] .practice-screen .studio-footer,
+  [data-practice-keyboard=true] .practice-screen .answer-mode,
+  [data-practice-keyboard=true] .practice-screen .model-touch-hint { display: none; }
+  [data-practice-keyboard=true] .practice-screen .question-panel { padding: 8px 12px; gap: 6px; }
+  [data-practice-keyboard=true] .practice-screen .question-panel h1 { font-size: 17px; }
+  [data-practice-keyboard=true] .practice-screen .specimen-stage .model-space { inset: 8px 0 8px; }
+  [data-practice-keyboard=true] .practice-screen .stage-heading,
+  [data-practice-keyboard=true] .practice-screen .model-controls-toggle { display: none; }
+}
+@media (max-width: 360px) {
+  .practice-screen .workspace-switch > button { font-size: 10px; padding: 5px 6px; }
+  .practice-screen .studio-header .header-actions { gap: 4px; }
+  .practice-screen .question-panel { padding-left: 10px; padding-right: 10px; }
+  .practice-screen .question-panel h1 { font-size: 18px; }
+  .practice-screen .model-touch-hint, .practice-screen .studio-footer .session-progress { display: none; }
+  .practice-screen .check-answer-button { font-size: 11px; padding: 9px 10px; }
+}
+@media (max-height: 500px) and (min-width: 621px) and (max-width: 1000px) {
+  .practice-screen .studio-main { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .practice-screen .question-panel { max-height: 100%; align-self: stretch; border-top: 0; border-left: 1px solid var(--border); }
+  .practice-screen .studio-header { height: 48px; min-height: 48px; padding-bottom: 0; }
+  .practice-screen .collection-switch, .practice-screen .studio-footer { display: none; }
+  .practice-screen .question-panel h1 { font-size: 18px; }
+  .practice-screen .question-panel:has(.answer-options):not(.has-response) { max-height: 100%; }
+  .practice-screen .question-kicker { display: none; }
+  .practice-screen .question-feedback { max-height: 30dvh; }
+}

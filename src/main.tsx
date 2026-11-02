@@ -6,5 +6,6 @@ import { initializeAnalytics } from './analytics';
 import './style.css';
 import './memes.css';
 import './identity.css';
+import './mobile.css';
 const analytics = initializeAnalytics();
 createRoot(document.getElementById('root')!).render(<React.StrictMode>{analytics ? <PostHogProvider client={analytics}><App /></PostHogProvider> : <App />}</React.StrictMode>);

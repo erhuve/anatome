@@ -22,6 +22,8 @@ import { readAnswerMode, writeAnswerMode, type AnswerMode } from './answerMode';
 import { matchTypedAnswer } from './answerMatching';
 import { DEFAULT_CONTEXT_OPACITY } from './anatomyRendering';
 import { trackEvent, trackPageview } from './analytics';
+import { bindPracticeViewport, focusAnswerOnDesktop } from './visualViewport';
+import ModelControls from './components/ModelControls';
 
 type Response = { id: string; selected: string | null; correct: boolean | null; typoAccepted?: boolean };
 type ModelStatus = 'loading' | 'ready' | 'error';
@@ -32,6 +34,7 @@ function initialCollection(): ModelCollection {
 }
 
 export default function App() {
+  useEffect(() => bindPracticeViewport(window, document), []);
   const auth = useAuth();
   const progress = useStudyProgress(auth.user?.id ?? null, auth.ready);
   if (!auth.ready || !progress.ready) return <div className="account-loading" role="status"><BrandMark size={44}/><span>anatomeme</span><p>{auth.ready ? 'Loading your progress…' : 'Restoring your sign-in…'}</p></div>;
@@ -121,7 +124,7 @@ export function QuizStudio({ auth, progress }: { auth: ReturnType<typeof useAuth
 
   useEffect(() => { if (response && !complete && workspaceMode === 'quiz' && !studyTargets) nextButton.current?.focus({ preventScroll: true }); }, [response, complete, workspaceMode, studyTargets]);
   useEffect(() => {
-    if (workspaceMode === 'quiz' && answerMode === 'typed' && ready && !response && !complete && !about && !accountOpen && !settingsOpen && !studyTargets) answerInput.current?.focus({ preventScroll: true });
+    if (workspaceMode === 'quiz' && answerMode === 'typed' && ready && !response && !complete && !about && !accountOpen && !settingsOpen && !studyTargets) focusAnswerOnDesktop(answerInput.current);
   }, [answerMode, question.id, ready, response, complete, about, accountOpen, settingsOpen, studyTargets, workspaceMode]);
   useEffect(() => {
     if (!about) return;
@@ -182,6 +185,7 @@ export function QuizStudio({ auth, progress }: { auth: ReturnType<typeof useAuth
   function answer(option: string | null) {
     if (workspaceMode !== 'quiz' || answerLock.current || complete || !ready || about || accountOpen || settingsOpen || studyTargets) return;
     answerLock.current = true;
+    answerInput.current?.blur();
     const result = option !== null && answerMode === 'typed'
       ? matchTypedAnswer(option, question.answer, modelPromptPools[collection].map(prompt => prompt.answer))
       : { correct: option === question.answer, typoAccepted: false };
@@ -238,7 +242,7 @@ export function QuizStudio({ auth, progress }: { auth: ReturnType<typeof useAuth
     {overlays}
   </>;
 
-  return <div className="quiz-app">
+  return <div className={'quiz-app practice-screen' + (complete ? ' is-complete' : '')}>
     {header}
 
     <main className="studio-main">
@@ -248,6 +252,7 @@ export function QuizStudio({ auth, progress }: { auth: ReturnType<typeof useAuth
         <div className="model-space">
           {question.bone ? <BoneViewer key={`bone-${question.bone}-${retry}`} bone={question.bone} view={view} labels={false} activeLandmark={question.landmark} resetToken={reset} theme="dark" onReady={onReady} onViewChange={onViewChange}/> : <SystemViewer key={`${collection}-${retry}`} system={collection === 'muscles' ? 'muscles' : 'skeleton'} view={view} selectedId={question.partId} isolate={framing === 'isolate'} focusSelected={framing === 'focus'} focusContextIds={contextIds} ghostOthers={ghostOthers} contextOpacity={contextOpacity} resetToken={reset} theme="dark" onReady={onReady} onViewChange={onViewChange}/>}
         </div>
+        <ModelControls resetKey={question.id}>
         <div className={'stage-bottom' + (showContextOpacity ? ' has-opacity' : '')}>
           <div className="view-tools"><button className="icon-control" title="Reset camera" aria-label="Reset camera" onClick={() => setCamera(question.view)}><RotateCcw size={16}/></button><span className="tool-separator"/><div className="view-select"><select aria-label="Anatomical view" value={freeView ? 'free' : view} onChange={event => setCamera(event.target.value as View)}><option value="free" disabled>Free view</option><option value="anterior">Anterior</option><option value="posterior">Posterior</option><option value="medial">{question.bone ? 'Medial' : 'Left side'}</option><option value="lateral">{question.bone ? 'Lateral' : 'Right side'}</option></select><ChevronDown size={12}/></div>{!question.bone && framing !== 'isolate' && <button className={'icon-control ghost-control' + (ghostOthers ? ' active' : '')} aria-label="Fade surrounding anatomy" aria-pressed={ghostOthers} title="Toggle faded surrounding anatomy" onClick={() => setGhostOthers(value => !value)}><Eye size={15}/></button>}</div>
           {showContextOpacity && <label className="context-opacity" htmlFor="context-opacity">
@@ -257,10 +262,11 @@ export function QuizStudio({ auth, progress }: { auth: ReturnType<typeof useAuth
           </label>}
           {!question.bone && <div className="framing-switch" aria-label="Model framing">{([{ id: 'focus', label: 'Focus', icon: Crosshair }, { id: 'context', label: 'Context', icon: Layers3 }, { id: 'isolate', label: 'Isolate', icon: Focus }] as const).map(item => <button key={item.id} className={framing === item.id ? 'active' : ''} aria-pressed={framing === item.id} onClick={() => { setFraming(item.id); setReset(value => value + 1); }}><item.icon size={13}/><span>{item.label}</span></button>)}</div>}
         </div>
+        </ModelControls>
         <div className="interaction-hint">Drag to rotate <span>·</span> Scroll to zoom <span>·</span> Arrows to pan (click model)</div>
       </section>
 
-      <aside className={'question-panel' + (complete ? ' is-summary' : '')} aria-label={complete ? 'Practice set results' : 'Identification question'}>
+      <aside className={'question-panel' + (complete ? ' is-summary' : '') + (response ? ' has-response' : '')} aria-label={complete ? 'Practice set results' : 'Identification question'}>
         {complete ? <>
           <div className="question-kicker"><CheckCheck size={15}/> {emptySelection ? 'CHOOSE YOUR MATERIAL' : sessionMode === 'review' ? 'REVIEW COMPLETE' : passComplete ? 'PASS COMPLETE' : 'SET COMPLETE'}</div>
           <h1>{emptySelection ? 'Choose your structures.' : passComplete ? `All ${poolSize} covered.` : sessionMode === 'review' ? 'Another look helps.' : 'Keep the pass going.'}</h1>
@@ -279,7 +285,7 @@ export function QuizStudio({ auth, progress }: { auth: ReturnType<typeof useAuth
           {!modeSaved && <p className="answer-mode-note" role="status">Answer mode is active for this tab. Browser storage is unavailable.</p>}
           {answerMode === 'choice' ? <div className="answer-options">{question.options.map((option, optionIndex) => <button key={option} disabled={!ready || !!response} className={'answer-option' + (response ? option === question.answer ? ' is-correct' : option === response.selected ? ' is-incorrect' : ' is-muted' : '')} onClick={() => answer(option)}><span className="answer-key">{optionIndex + 1}</span><span>{option}</span>{response && option === question.answer ? <Check size={16}/> : response && option === response.selected ? <X size={15}/> : null}</button>)}</div> : <form className="typed-answer-form" onSubmit={event => { event.preventDefault(); if (typedAnswer.trim()) answer(typedAnswer.trim()); }}>
             <label htmlFor="typed-answer">Your answer</label>
-            <input id="typed-answer" ref={answerInput} type="text" value={typedAnswer} onChange={event => setTypedAnswer(event.target.value)} onKeyDown={event => { if (event.key === 'Enter' && event.nativeEvent.isComposing) event.preventDefault(); }} placeholder="Name the structure…" autoComplete="off" autoCorrect="off" autoCapitalize="none" spellCheck={false} maxLength={180} disabled={!ready || !!response} aria-describedby="typed-answer-help" className={response ? response.correct ? 'is-correct' : 'is-incorrect' : ''}/>
+            <input id="typed-answer" ref={answerInput} type="text" value={typedAnswer} onChange={event => setTypedAnswer(event.target.value)} onKeyDown={event => { if (event.key === 'Enter' && event.nativeEvent.isComposing) event.preventDefault(); }} placeholder="Name the structure…" enterKeyHint="done" autoComplete="off" autoCorrect="off" autoCapitalize="none" spellCheck={false} maxLength={180} disabled={!ready || !!response} aria-describedby="typed-answer-help" className={response ? response.correct ? 'is-correct' : 'is-incorrect' : ''}/>
             {!response && <p id="typed-answer-help">Small typos are okay. Include the side and any specific part or number.</p>}
             {response && <p id="typed-answer-help">{response.selected === null ? 'Answer revealed.' : 'Answer submitted.'}</p>}
             {!response && <button className="continue-button check-answer-button" type="submit" disabled={!ready || !typedAnswer.trim()}><span>Check answer</span><span className="continue-key">↵</span><ArrowRight size={16}/></button>}

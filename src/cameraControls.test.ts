@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { PerspectiveCamera, Spherical, Vector3 } from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { bindCameraControls, handleCameraKey } from './cameraControls';
+import { bindCameraControls, handleCameraKey, resizeCameraFraming } from './cameraControls';
 
 function setup(offset = new Vector3(0, 0, 10)) {
   const camera = new PerspectiveCamera(34, 1.7, .01, 150);
@@ -138,4 +138,18 @@ test('binding focuses only its canvas, reports handled keys, and removes both li
   canvas.dispatchEvent(new Event('pointerdown'));
   canvas.dispatchEvent(handled);
   assert.equal(focused, 1); assert.equal(changed, 1);
+});
+
+
+test('resizing a specimen pane preserves pan, orbit angle, and relative zoom', () => {
+  const { camera, controls } = setup(new Vector3(6, 5, 7));
+  const target = controls.target.clone(), offset = camera.position.clone().sub(target);
+  const quaternion = camera.quaternion.clone();
+  resizeCameraFraming(camera, controls, 10, 5);
+  sameVector(controls.target, target);
+  sameVector(camera.position.clone().sub(target), offset.clone().multiplyScalar(.5));
+  near(1 - Math.abs(camera.quaternion.dot(quaternion)), 0);
+  assert.equal(controls.enableDamping, true);
+  resizeCameraFraming(camera, controls, 5, 10);
+  sameVector(camera.position.clone().sub(target), offset);
 });

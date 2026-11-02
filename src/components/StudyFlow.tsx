@@ -11,6 +11,8 @@ import { shuffle } from '../study';
 import { studyTargetLabel } from '../studyNavigation';
 import StudyBrowser from './StudyBrowser';
 import { trackEvent } from '../analytics';
+import { focusAnswerOnDesktop } from '../visualViewport';
+import ModelControls from './ModelControls';
 
 type Result = { selected: string | null; correct: boolean; typoAccepted: boolean };
 type Props = {
@@ -67,7 +69,7 @@ export default function StudyFlow({ targets, answerMode, onAnswer, onClose, head
   useEffect(() => { heading.current?.focus({ preventScroll: true }); }, [index, phase]);
   useEffect(() => {
     if (paused || browserOpen) return;
-    if (phase === 'recall' && !result && status === 'ready' && mode === 'typed') input.current?.focus({ preventScroll: true });
+    if (phase === 'recall' && !result && status === 'ready' && mode === 'typed') focusAnswerOnDesktop(input.current);
     if (phase === 'recall' && result) next.current?.focus({ preventScroll: true });
   }, [phase, result, status, mode, paused, browserOpen]);
   useEffect(() => {
@@ -95,6 +97,7 @@ export default function StudyFlow({ targets, answerMode, onAnswer, onClose, head
   function answer(selected: string | null) {
     if (phase !== 'recall' || status !== 'ready' || result || lock.current || paused || browserOpen) return;
     lock.current = true;
+    input.current?.blur();
     const matched = selected !== null && mode === 'typed'
       ? matchTypedAnswer(selected, prompt.answer, modelPromptPools[prompt.collection].map(item => item.answer))
       : { correct: selected === prompt.answer, typoAccepted: false };
@@ -107,7 +110,7 @@ export default function StudyFlow({ targets, answerMode, onAnswer, onClose, head
     else setPhase('complete');
   }
 
-  return <div className={'quiz-app study-flow' + (general ? ' is-general-study' : '')}>
+  return <div className={'quiz-app study-flow practice-screen' + (general ? ' is-general-study' : '') + (phase === 'recall' ? ' is-recalling' : '') + (phase === 'complete' ? ' is-complete' : '')}>
     {header ?? <header className="study-header">
       <button className="study-back" onClick={onClose}><ArrowLeft size={15}/>{fromMeme ? 'Back to meme' : 'Back to practice'}</button>
       <span><BookOpen size={15}/>{fromMeme ? 'From meme to model' : 'Worth another look'}</span>
@@ -119,15 +122,17 @@ export default function StudyFlow({ targets, answerMode, onAnswer, onClose, head
         <div className="model-space">
           {prompt.bone ? <BoneViewer key={`study-${prompt.bone}-${retry}`} bone={prompt.bone} view={view} labels={false} activeLandmark={prompt.landmark} resetToken={reset} theme="dark" onReady={onReady} onViewChange={onViewChange}/> : <SystemViewer key={`study-${prompt.collection}-${retry}`} system={prompt.collection === 'muscles' ? 'muscles' : 'skeleton'} view={view} selectedId={prompt.partId} isolate={framing === 'isolate'} focusSelected={framing === 'focus'} focusContextIds={contextIds} ghostOthers={true} contextOpacity={opacity} resetToken={reset} theme="dark" onReady={onReady} onViewChange={onViewChange} onSelect={general && phase === 'study' ? id => showTarget(targets.findIndex(target => target.partId === id)) : undefined}/>}
         </div>
+        <ModelControls resetKey={prompt.id + phase}>
         <div className={'stage-bottom' + (hasOpacity ? ' has-opacity' : '')}>
           <div className="view-tools"><button className="icon-control" aria-label="Reset study camera" onClick={() => { setView(prompt.view); setFreeView(false); setReset(value => value + 1); }}><RotateCcw size={16}/></button><div className="view-select"><select aria-label="Anatomical view" value={freeView ? 'free' : view} onChange={event => { setView(event.target.value as View); setFreeView(false); setReset(value => value + 1); }}><option value="free" disabled>Free view</option><option value="anterior">Anterior</option><option value="posterior">Posterior</option><option value="medial">{prompt.bone ? 'Medial' : 'Left side'}</option><option value="lateral">{prompt.bone ? 'Lateral' : 'Right side'}</option></select><ChevronDown size={12}/></div></div>
           {hasOpacity && <label className="context-opacity" htmlFor="study-opacity"><span>Surroundings</span><input id="study-opacity" type="range" min="0" max="100" value={Math.round(opacity * 100)} onChange={event => setOpacity(Number(event.target.value) / 100)} aria-label="Surrounding anatomy opacity"/><output htmlFor="study-opacity">{Math.round(opacity * 100)}%</output></label>}
           {!prompt.bone && <div className="framing-switch" aria-label="Model framing">{([{ id: 'focus', label: 'Focus', icon: Crosshair }, { id: 'context', label: 'Context', icon: Layers3 }, { id: 'isolate', label: 'Isolate', icon: Focus }] as const).map(item => <button key={item.id} className={framing === item.id ? 'active' : ''} aria-pressed={framing === item.id} onClick={() => { setFraming(item.id); setReset(value => value + 1); }}><item.icon size={13}/><span>{item.label}</span></button>)}</div>}
         </div>
+        </ModelControls>
         <div className="interaction-hint">Drag to rotate <span>·</span> Scroll to zoom <span>·</span> Arrows to pan (click model)</div>
       </section>
 
-      <aside className="question-panel study-panel" aria-label="Structure study">
+      <aside className={'question-panel study-panel' + (result && phase === 'recall' ? ' has-response' : '')} aria-label="Structure study">
         {general && phase !== 'recall' && <button className="browse-study-button" onClick={() => setBrowserOpen(true)}><Search size={14}/><span>Browse {targets.length} {targets.length === 1 ? 'structure' : 'structures'}</span><ChevronDown size={13}/></button>}
         {phase === 'complete' ? <>
           <div className="question-kicker"><Check size={15}/>STUDY COMPLETE</div>
@@ -139,10 +144,12 @@ export default function StudyFlow({ targets, answerMode, onAnswer, onClose, head
         </> : phase === 'study' ? <>
           <div className="question-kicker"><BookOpen size={14}/>STUDY THE STRUCTURE</div>
           <h1 ref={heading} tabIndex={-1}>{studyTargetLabel(prompt)}</h1>
+          <div className="study-copy">
           <div className="study-tags"><span>{collectionLabel[prompt.collection]}</span>{prompt.region && <span>{quizRegions.find(region => region.id === prompt.region)?.label}</span>}{prompt.bone && <span>{prompt.bone}</span>}</div>
           <p className="study-explanation">{explanation}</p>
           <div className="study-observation"><span>LOOK CLOSELY</span><p>{prompt.landmark ? 'Follow the blue marker. Rotate the bone to see how this landmark relates to the surrounding surface.' : prompt.bone ? 'Rotate the specimen and compare its anatomical features. Notice which features establish its side.' : 'Follow the solid blue structure. Compare its shape and position with its neighbors, then isolate it to see its boundaries.'}</p></div>
           <a className="study-reference" href={prompt.source} target="_blank" rel="noreferrer">Read the anatomy reference<ArrowUpRight size={13}/></a>
+          </div>
           {result ? <p className="study-check-status"><Check size={13}/>Self-check recorded. You can keep exploring.</p> : <button className="continue-button" disabled={status !== 'ready'} onClick={() => { setTyped(''); setPhase('recall'); }}>Hide name & test myself<ArrowRight size={16}/></button>}
           <button className="subtle-button" onClick={advance}>{index + 1 === targets.length ? 'Finish study' : 'Next structure'}<ArrowRight size={13}/></button>
         </> : <>
@@ -150,7 +157,7 @@ export default function StudyFlow({ targets, answerMode, onAnswer, onClose, head
           <h1 ref={heading} tabIndex={-1}>{prompt.prompt}</h1>
           <p className="question-instruction">{prompt.landmark ? 'Name the landmark at the blue marker.' : prompt.bone ? 'Use the specimen’s features to determine its side.' : 'Name the solid blue structure. Rotate and inspect it before answering.'}</p>
           <div className="answer-mode" role="group" aria-label="Answer mode">{(['choice', 'typed'] as const).map(value => <button key={value} className={mode === value ? 'active' : ''} aria-pressed={mode === value} disabled={!!result} onClick={() => { setMode(value); setTyped(''); }}>{value === 'typed' ? 'Type answer' : 'Multiple choice'}</button>)}</div>
-          {mode === 'typed' ? <form className="typed-answer-form" onSubmit={event => { event.preventDefault(); if (typed.trim()) answer(typed.trim()); }}><label htmlFor="study-answer">Your answer</label><input ref={input} id="study-answer" value={typed} onChange={event => setTyped(event.target.value)} onKeyDown={event => { if (event.key === 'Enter' && event.nativeEvent.isComposing) event.preventDefault(); }} placeholder="Name the structure…" autoComplete="off" autoCorrect="off" autoCapitalize="none" spellCheck={false} maxLength={180} disabled={!!result || status !== 'ready'}/>{!result && <button type="submit" className="continue-button check-answer-button" disabled={status !== 'ready' || !typed.trim()}>Check answer<ArrowRight size={16}/></button>}</form> : <div className="answer-options">{options.map((option, optionIndex) => <button className={'answer-option' + (result ? option === prompt.answer ? ' is-correct' : option === result.selected ? ' is-incorrect' : ' is-muted' : '')} key={option} disabled={!!result || status !== 'ready'} onClick={() => answer(option)}><span className="answer-key">{optionIndex + 1}</span><span>{option}</span>{result && option === prompt.answer && <Check size={15}/>}</button>)}</div>}
+          {mode === 'typed' ? <form className="typed-answer-form" onSubmit={event => { event.preventDefault(); if (typed.trim()) answer(typed.trim()); }}><label htmlFor="study-answer">Your answer</label><input ref={input} id="study-answer" value={typed} onChange={event => setTyped(event.target.value)} onKeyDown={event => { if (event.key === 'Enter' && event.nativeEvent.isComposing) event.preventDefault(); }} placeholder="Name the structure…" enterKeyHint="done" autoComplete="off" autoCorrect="off" autoCapitalize="none" spellCheck={false} maxLength={180} disabled={!!result || status !== 'ready'}/>{!result && <button type="submit" className="continue-button check-answer-button" disabled={status !== 'ready' || !typed.trim()}>Check answer<ArrowRight size={16}/></button>}</form> : <div className="answer-options">{options.map((option, optionIndex) => <button className={'answer-option' + (result ? option === prompt.answer ? ' is-correct' : option === result.selected ? ' is-incorrect' : ' is-muted' : '')} key={option} disabled={!!result || status !== 'ready'} onClick={() => answer(option)}><span className="answer-key">{optionIndex + 1}</span><span>{option}</span>{result && option === prompt.answer && <Check size={15}/>}</button>)}</div>}
           {result ? <><div className={'question-feedback' + (result.correct ? ' correct' : ' revisit')} role="status"><div className="feedback-heading">{result.correct ? <Check size={15}/> : <RotateCcw size={14}/>}<span>{result.correct ? 'Correct. ' : ''}{prompt.answer}</span></div>{result.typoAccepted && <p>Small spelling difference accepted.</p>}<p>{explanation}</p></div><button ref={next} className="continue-button" onClick={advance}>{index + 1 === targets.length ? 'Finish study' : 'Next structure'}<ArrowRight size={16}/></button><button className="subtle-button" onClick={() => setPhase('study')}>Look at the structure again<BookOpen size={13}/></button></> : <><button className="reveal-button" disabled={status !== 'ready'} onClick={() => answer(null)}>I don’t know. Show me.<ArrowRight size={13}/></button><button className="subtle-button" onClick={() => setPhase('study')}>Back to studying<ArrowLeft size={13}/></button></>}
         </>}
         {phase !== 'complete' && status !== 'ready' && <div className="study-model-status" role="status">{status === 'error' ? <><p>The model could not be loaded.</p><button onClick={() => { setStatus('loading'); setRetry(value => value + 1); }}>Retry model<RotateCcw size={13}/></button></> : 'Preparing your specimen…'}</div>}

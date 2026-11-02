@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
-import { bindCameraControls, cameraControlInstructions } from '../cameraControls';
+import { bindCameraControls, cameraControlInstructions, resizeCameraFraming } from '../cameraControls';
 
 type Bone = 'femur' | 'humerus' | 'scapula';
 type View = 'anterior' | 'posterior' | 'medial' | 'lateral';
@@ -108,12 +108,15 @@ export default function BoneViewer({ bone, view, labels, activeLandmark, resetTo
     scene.add(key);
     const fill = new THREE.DirectionalLight(dark ? 0xcbd4e3 : 0xffffff, 1.2); fill.position.set(4, 1, -4); scene.add(fill);
     const faceLight = new THREE.DirectionalLight(0xffffff, 0.65); faceLight.position.set(0, 0, 8); scene.add(faceLight);
+    let framingAspect = 1;
+    let modelReady = false;
     const fit = () => {
       // Clear residual orbit damping before applying an exact anatomical preset.
       controls!.enableDamping = false;
       controls!.update();
       const aspect = Math.max(element.clientWidth, 1) / Math.max(element.clientHeight, 1);
       // Fit the frontmost bounding-box plane with a margin for pins and perspective.
+      framingAspect = aspect;
       const distance = fitDistance(specimenSize, state.current.view, aspect, camera.fov);
       controls!.maxDistance = Math.max(15, distance * 1.6);
       const positions: Record<View, [number, number, number]> = { anterior: [0, 0, distance], posterior: [0, 0, -distance], medial: [distance, 0, 0], lateral: [-distance, 0, 0] };
@@ -129,8 +132,12 @@ export default function BoneViewer({ bone, view, labels, activeLandmark, resetTo
     runtime.current = { camera, controls, fit };
     const resize = () => {
       const width = Math.max(element.clientWidth, 1), height = Math.max(element.clientHeight, 1);
+      const aspect = width / height;
+      if (modelReady && aspect !== framingAspect) resizeCameraFraming(camera, controls!,
+        fitDistance(specimenSize, state.current.view, framingAspect, camera.fov), fitDistance(specimenSize, state.current.view, aspect, camera.fov));
+      framingAspect = aspect;
       renderer.setSize(width, height, false);
-      camera.aspect = width / height; camera.updateProjectionMatrix();
+      camera.aspect = aspect; camera.updateProjectionMatrix();
       markersDirty = true;
     };
     observer = new ResizeObserver(resize); observer.observe(element); resize(); fit();
@@ -223,6 +230,7 @@ export default function BoneViewer({ bone, view, labels, activeLandmark, resetTo
       ground.rotation.x = -Math.PI / 2; ground.position.y = -2.72; ground.receiveShadow = true;
       scene.add(ground); resources.push(ground);
       markersDirty = true;
+      modelReady = true;
       fit();
       report('ready');
     }, undefined, () => { if (!disposed) report('error'); });

@@ -63,3 +63,18 @@ export function bindCameraControls(camera: PerspectiveCamera, controls: OrbitCon
     canvas.removeEventListener('keydown', keydown);
   };
 }
+
+/** Adapt to a resized specimen pane without resetting the user's angle, pan, or relative zoom. */
+export function resizeCameraFraming(camera: PerspectiveCamera, controls: CameraControls, previousFit: number, nextFit: number) {
+  if (!(previousFit > 0 && nextFit > 0) || !Number.isFinite(previousFit + nextFit)) return;
+  const damping = controls.enableDamping;
+  controls.enableDamping = false;
+  controls.update();
+  const offset = camera.position.clone().sub(controls.target);
+  controls.maxDistance = Math.max(controls.maxDistance, nextFit * 1.7);
+  const distance = MathUtils.clamp(offset.length() * nextFit / previousFit, controls.minDistance, controls.maxDistance);
+  offset.setLength(distance);
+  camera.position.copy(controls.target).add(offset);
+  controls.update();
+  controls.enableDamping = damping;
+}

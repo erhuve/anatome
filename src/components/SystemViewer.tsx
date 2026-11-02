@@ -6,7 +6,7 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import { systemAssets, systemParts, type SystemId } from '../systemData';
 import { fitDistance } from './BoneViewer';
-import { bindCameraControls, cameraControlInstructions } from '../cameraControls';
+import { bindCameraControls, cameraControlInstructions, resizeCameraFraming } from '../cameraControls';
 import { CONTEXT_LAYER, DEFAULT_CONTEXT_OPACITY, normalizeContextOpacity, renderAnatomy, TARGET_LAYER } from '../anatomyRendering';
 
 type View = 'anterior' | 'posterior' | 'medial' | 'lateral';
@@ -82,9 +82,11 @@ export default function SystemViewer({ system, view, selectedId, isolate = false
     const framingSize = size.clone();
     const cameraTarget = new THREE.Vector3();
     let lastIsolate = false;
+    let framingAspect = 1;
     const fit = () => {
       controls.enableDamping = false; controls.update();
-      const distance = fitDistance(framingSize, state.current.view, Math.max(element.clientWidth, 1) / Math.max(element.clientHeight, 1), camera.fov);
+      framingAspect = Math.max(element.clientWidth, 1) / Math.max(element.clientHeight, 1);
+      const distance = fitDistance(framingSize, state.current.view, framingAspect, camera.fov);
       const directions: Record<View, [number, number, number]> = { anterior: [0, 0, distance], posterior: [0, 0, -distance], medial: [distance, 0, 0], lateral: [-distance, 0, 0] };
       camera.position.set(...directions[state.current.view]).add(cameraTarget); camera.up.set(0, 1, 0);
       controls.target.copy(cameraTarget); controls.maxDistance = Math.max(15, distance * 1.7);
@@ -158,7 +160,11 @@ export default function SystemViewer({ system, view, selectedId, isolate = false
     runtime.current = { fit, select, appearance };
     const resize = () => {
       const width = Math.max(element.clientWidth, 1), height = Math.max(element.clientHeight, 1);
-      renderer.setSize(width, height, false); camera.aspect = width / height; camera.updateProjectionMatrix(); dirty = true;
+      const aspect = width / height;
+      if (model && aspect !== framingAspect) resizeCameraFraming(camera, controls,
+        fitDistance(framingSize, state.current.view, framingAspect, camera.fov), fitDistance(framingSize, state.current.view, aspect, camera.fov));
+      framingAspect = aspect;
+      renderer.setSize(width, height, false); camera.aspect = aspect; camera.updateProjectionMatrix(); dirty = true;
     };
     const observer = new ResizeObserver(resize); observer.observe(element); resize(); fit();
     const lastPosition = new THREE.Vector3(Infinity, Infinity, Infinity), lastQuaternion = new THREE.Quaternion();
