@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { Resvg } from '@resvg/resvg-js';
 
 const output = fileURLToPath(new URL('../public/', import.meta.url));
+const midnight = '#17191d';
 const ink = '#16191d', bone = '#f4efe4', blue = '#85d5f6', coral = '#ef9685', fiber = '#b76158';
 const mark = `
 <path fill="${bone}" d="M50 2 34 3 20 10 10 22 5 36 5 51 9 62 21 69 23 82 31 91 69 91 77 82 79 69 91 62 95 51 95 36 90 22 80 10 66 3Z"/>
@@ -15,27 +16,32 @@ const mark = `
 <path fill="none" stroke="${ink}" stroke-linecap="round" stroke-width="4" d="M34 79H66"/>
 <path fill="none" stroke="${ink}" stroke-linecap="round" stroke-width="3" d="M43 75V84 M57 75V84"/>`;
 
+const fontOptions = { loadSystemFonts: false, defaultFontFamily: 'Space Grotesk', fontFiles: ['Regular', 'Bold'].map(weight => fileURLToPath(new URL(`./fonts/SpaceGrotesk-${weight}.ttf`, import.meta.url))) };
+// Convert lettering to paths so exported SVGs preserve the chosen font everywhere.
+const outlined = (source, title) => new Resvg(source, { font: fontOptions }).toString().replace('<svg ', `<svg role="img" aria-label="${title}" `);
+
 const svg = (w, h, content, title = 'Anatomeme') => `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img" aria-label="${title}"><title>${title}</title>${content}</svg>\n`;
 const badge = (round = false, padding = 8) => svg(100, 100, `<rect width="100" height="100" rx="${round ? 22 : 0}" fill="${ink}"/><g transform="translate(${padding} ${padding + 2}) scale(${(100 - 2 * padding) / 100})">${mark}</g>`);
 await mkdir(`${output}brand`, { recursive: true });
 await writeFile(`${output}brand/mark.svg`, svg(100, 100, mark, 'Anatomeme skull with a blue eye and a coral muscle patch'));
 await writeFile(`${output}favicon.svg`, badge(true));
-await writeFile(`${output}brand/wordmark.svg`, svg(650, 120, `<g transform="translate(4 10)">${mark}</g><text x="126" y="83" fill="${bone}" font-family="Arial,Helvetica,sans-serif" font-size="76" font-weight="700" letter-spacing="-3">anatomeme</text>`));
+const wordmark = svg(650, 120, `<g transform="translate(4 10)">${mark}</g><text x="126" y="83" fill="${bone}" font-family="Space Grotesk" font-size="76" font-weight="700" letter-spacing="-3">anatomeme</text>`);
+await writeFile(`${output}brand/wordmark.svg`, outlined(wordmark, 'Anatomeme'));
 
-const social = svg(1200, 630, `<rect width="1200" height="630" fill="${ink}"/>
+const social = svg(1200, 630, `<rect width="1200" height="630" fill="${midnight}"/>
 <circle cx="1000" cy="215" r="165" fill="#202a32"/>
 <g transform="translate(845 105) scale(3.1)">${mark}</g>
-<g font-family="Arial,Helvetica,sans-serif">
+<g font-family="Space Grotesk">
 <text x="64" y="78" fill="${blue}" font-size="24" font-weight="700">anato.meme</text>
 <text x="64" y="290" fill="${bone}" font-size="100" letter-spacing="-4" font-weight="700">anatomeme</text>
 <text x="68" y="363" fill="${bone}" font-size="38" font-weight="500">Anatomy that sticks.</text>
 <text x="68" y="417" fill="#a0a9b7" font-size="25">Real 3D anatomy. Practice. Repeat.</text>
 <text x="68" y="563" fill="${blue}" font-size="19" letter-spacing="2">MUSCLES / BONES / LANDMARKS</text>
 </g>`, 'Anatomeme — Anatomy that sticks.');
-await writeFile(`${output}brand/og-image.svg`, social);
+await writeFile(`${output}brand/og-image.svg`, outlined(social, 'Anatomeme — Anatomy that sticks.'));
 
 function raster(source, width) {
-  return new Resvg(source, { fitTo: { mode: 'width', value: width }, font: { loadSystemFonts: true, defaultFontFamily: 'Arial' } }).render().asPng();
+  return new Resvg(source, { fitTo: { mode: 'width', value: width }, font: fontOptions }).render().asPng();
 }
 await writeFile(`${output}brand/og-image.png`, raster(social, 1200));
 await writeFile(`${output}brand/mark-512.png`, raster(svg(100, 100, mark), 512));
@@ -61,7 +67,7 @@ await writeFile(`${output}site.webmanifest`, JSON.stringify({
   id: '/', name: 'Anatomeme', short_name: 'Anatomeme',
   description: '3D anatomy practice. Anatomy that sticks.',
   start_url: '/', scope: '/', display: 'standalone',
-  background_color: ink, theme_color: ink,
+  background_color: midnight, theme_color: midnight,
   icons: [
     { src: '/brand/icon-192.png', sizes: '192x192', type: 'image/png', purpose: 'any' },
     { src: '/brand/icon-512.png', sizes: '512x512', type: 'image/png', purpose: 'any' },
