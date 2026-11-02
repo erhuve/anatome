@@ -50,13 +50,13 @@ export default function MemeLibrary({ study, paused, onAnswer, onStudyModels }: 
         <div className="question-kicker">{isCoreAnatomy(selected) ? 'ANATOMY / IDENTIFY & REMEMBER' : 'A&P / BEYOND THE ATLAS'}</div>
         <h1 tabIndex={-1} ref={heading}>{selected.lesson.title}</h1>
         <p className="meme-connection">{selected.lesson.connection}</p>
-        <div className="meme-activity" role="group" aria-label="Meme activity"><button aria-pressed={route.activity === 'study'} onClick={() => open(selected, 'study')}><BookOpen size={15}/>Study</button><button aria-pressed={route.activity === 'quiz'} onClick={() => open(selected, 'quiz')}><Sparkles size={15}/>Quiz ({selected.lesson.questions.length} questions)</button></div>
+        <div className="meme-activity" role="group" aria-label="Meme activity"><button aria-pressed={route.activity === 'study'} onClick={() => open(selected, 'study')}><BookOpen size={15}/>Study</button><button aria-pressed={route.activity === 'quiz'} onClick={() => open(selected, 'quiz')}><Sparkles size={15}/>Quiz</button></div>
         {route.activity === 'study' ? <>
           <h2 className="meme-section-label">Make it stick</h2>
           <ol className="meme-study-notes">{selected.lesson.notes.map(note => <li key={note}>{note}</li>)}</ol>
           <div className="meme-memory-hook"><span>MEMORY HOOK</span><p>{selected.lesson.hook}</p></div>
           <a className="meme-reference" href={selected.lesson.reference} target="_blank" rel="noreferrer">Read the OpenStax section<ArrowUpRight size={13}/></a>
-          <button className="continue-button" onClick={() => open(selected, 'quiz')}>Try the 3-question quiz<ArrowRight size={16}/></button>
+          <button className="continue-button" onClick={() => open(selected, 'quiz')}>Try the quiz<ArrowRight size={16}/></button>
         </> : <MemeQuiz key={selected.id} meme={selected} paused={paused} onAnswer={onAnswer} onStudy={() => open(selected, 'study')}/>}
         {models.length > 0 && <div className="meme-model-link"><div><BookOpen size={17}/><h2>Find it in the 3D atlas</h2></div><p>{models.length} linked structures. Inspect their names, shapes, and sides, then hide the name for an identification self-check.</p><button onClick={() => onStudyModels(models)}>Study & identify in 3D<ArrowRight size={15}/></button></div>}
         <SavedQuizProgress meme={selected} study={study}/>
@@ -71,7 +71,7 @@ export default function MemeLibrary({ study, paused, onAnswer, onStudyModels }: 
       <p className="meme-count" role="status">{visible.length} of {memes.length} memes{filter !== 'All' ? ` · ${filter}` : ' · muscle and bone study first'}</p>
       {visible.length ? <div className="meme-grid">{visible.map(meme => {
         const saved = memeProgress(meme, study.attempts, study.review);
-        return <article className="meme-card" key={meme.id}><button className="meme-card-image" data-open-meme={meme.id} aria-label={`Study meme: ${meme.title}`} onClick={() => open(meme)}><img src={meme.thumbnail} alt={meme.title} loading="lazy" decoding="async" width={meme.width} height={meme.height}/></button><div className="meme-card-body"><span className="meme-card-topic">{meme.lesson.topic}{saved.due > 0 && <i>Review due</i>}</span><h2>{meme.title}</h2><p>{meme.lesson.title}</p><div className="meme-card-actions"><button onClick={() => open(meme)}><BookOpen size={14}/>Study</button><button onClick={() => open(meme, 'quiz')}>Quiz ({meme.lesson.questions.length} questions)<ArrowRight size={14}/></button></div>{saved.tried > 0 && <small>{saved.correct}/{saved.total} correct on latest tries</small>}</div></article>;
+        return <article className="meme-card" key={meme.id}><button className="meme-card-image" data-open-meme={meme.id} aria-label={`Study meme: ${meme.title}`} onClick={() => open(meme)}><img src={meme.thumbnail} alt={meme.title} loading="lazy" decoding="async" width={meme.width} height={meme.height}/></button><div className="meme-card-body"><span className="meme-card-topic">{meme.lesson.topic}{saved.due > 0 && <i>Review due</i>}</span><h2>{meme.title}</h2><p>{meme.lesson.title}</p><div className="meme-card-actions"><button onClick={() => open(meme)}><BookOpen size={14}/>Study</button><button onClick={() => open(meme, 'quiz')}>Quiz<ArrowRight size={14}/></button></div>{saved.tried > 0 && <small>{saved.correct}/{saved.total} correct on latest tries</small>}</div></article>;
       })}</div> : <div className="meme-empty"><Search size={28}/><h2>{dueOnly ? 'No matching reviews due.' : 'No memes found.'}</h2><p>{dueOnly ? 'Try another topic, or browse the whole collection.' : 'Try a shorter search or choose another topic.'}</p><button className="continue-button" onClick={() => { setQuery(''); setFilter('All'); setDueOnly(false); }}>Show all memes<ArrowRight size={15}/></button></div>}
       <p className="meme-library-footnote">Each meme has its own study notes, memory hook, source link, and three original quiz questions. Anatomy lessons link to available 3D structures. Memes may simplify or exaggerate; use the linked notes for the study facts.</p>
     </div>}
@@ -118,7 +118,7 @@ function MemeQuiz({ meme, paused, onAnswer, onStudy }: { meme: Meme; paused: boo
       <div className="question-kicker"><Check size={15}/>QUIZ COMPLETE</div><h2 ref={title} tabIndex={-1}>{correct} of {questions.length} correct.</h2><p className="meme-quiz-summary">{missed.length ? 'Give the missed ideas another look, then try recalling them again.' : 'Nice recall. You can revisit the lesson or explore its 3D structures.'}</p>
       <ul className="meme-results">{questions.map(question => <li key={question.id}><span>{answers.find(answer => answer.id === question.id)?.correct ? <Check size={15}/> : <RotateCcw size={14}/>}</span><div><strong>{question.prompt}</strong><p>{question.answer}</p><small>{question.explanation}</small></div></li>)}</ul>
       {missed.length > 0 && <button className="continue-button" onClick={() => retry(missed)}>Retry missed ({missed.length})<RotateCcw size={15}/></button>}
-      <button className={missed.length ? 'subtle-button' : 'continue-button'} onClick={() => retry(meme.lesson.questions)}>Quiz all 3 again<RotateCcw size={15}/></button><button className="subtle-button" onClick={onStudy}><BookOpen size={14}/>Review study notes</button>
+      <button className={missed.length ? 'subtle-button' : 'continue-button'} onClick={() => retry(meme.lesson.questions)}>Quiz again<RotateCcw size={15}/></button><button className="subtle-button" onClick={onStudy}><BookOpen size={14}/>Review study notes</button>
     </> : <>
       <div className="question-kicker">QUICK RECALL<span>{index + 1} / {questions.length}</span></div>
       <h2 ref={title} tabIndex={-1}>{current.prompt}</h2>
