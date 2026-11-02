@@ -54,7 +54,7 @@ These are found memes and comics; source links may be reposts. Third-party image
   Original image: https://images3.memedroid.com/images/UPLOADED501/66c894446044f.jpeg
 - 25: Kidneys, but make it fancy — https://www.pinterest.com/pin/march-2018-the-comical-anatomist--813181276458915565/
   Original image: https://i.pinimg.com/originals/69/da/b3/69dab383f12a3a759f82b96d9900624d.jpg
-- 26: Cell membrane yoga — https://www.pinterest.com/pin/the-amoeba-sisters--219972763035651407/
+- 26 (retired from the app; source excluded by editorial preference): Cell membrane yoga — https://www.pinterest.com/pin/the-amoeba-sisters--219972763035651407/
   Original image: https://i.pinimg.com/originals/7d/f0/80/7df080e7db8c87f50d693f351a38dc90.png
 - 27: Active transport: classroom edition — https://9gag.com/gag/aDYBAow
   Original image: https://img-9gag-fun.9cache.com/photo/aDYBAow_460s.jpg

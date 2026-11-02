@@ -245,15 +245,6 @@ export const memeLessons: MemeLesson[] = [
     question('Which structure carries urine from a kidney to the bladder?', 'Ureter', ['Urethra', 'Renal artery', 'Adrenal vein'], 'Each ureter transports urine from the renal pelvis to the bladder.'),
     question('The adrenal gland is best described as what?', 'A separate endocrine gland superior to the kidney', ['The part of the bladder that stores urine', 'The kidney’s urine-filtering tubule', 'A valve inside the urethra'], 'The adrenal gland is anatomically adjacent to the kidney but has endocrine functions.')
   ]),
-  lesson('26', 'Cells & metabolism', 'Homeostasis and feedback', 'The cell-membrane yoga comic is about regulation, not a perfectly unchanging internal state.', [
-    'Homeostasis keeps regulated variables within workable ranges.',
-    'A receptor detects change, a control center processes it, and an effector produces a response.',
-    'Negative feedback counteracts a deviation; positive feedback amplifies a process until a terminating event.'
-  ], 'Negative feedback nudges back toward the set point.', '1-5-homeostasis', [
-    question('What does negative feedback generally do?', 'Opposes a deviation in a regulated variable', ['Amplifies every deviation indefinitely', 'Prevents all physiological changes', 'Stops all communication between cells'], 'The response counteracts the original change.'),
-    question('Which component detects a change in a regulated variable?', 'Receptor', ['Effector only', 'Articular cartilage', 'Output hormone only'], 'A receptor or sensor detects the stimulus.'),
-    question('Which is an example of negative feedback?', 'Sweating when body temperature rises', ['Oxytocin intensifying labor contractions', 'Platelet recruitment amplifying a clot', 'An action potential’s regenerative Na⁺ entry'], 'Evaporative cooling helps oppose the temperature increase.')
-  ]),
   lesson('27', 'Cells & metabolism', 'Membrane transport vocabulary', 'The classroom joke asks for a specific example instead of repeating the category.', [
     'Simple and facilitated diffusion move substances down their gradients without direct ATP use.',
     'Primary active transport directly consumes ATP; the sodium–potassium pump is an example.',

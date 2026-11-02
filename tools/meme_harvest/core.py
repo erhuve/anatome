@@ -190,8 +190,24 @@ def feed_items(body, url):
     return items
 
 
+def exclusion_reason(document, exclusions):
+    urls = [document.get(key, '') for key in ('source_url', 'image_url', 'resolved_image_url')]
+    credit = ' '.join(str(document.get(key, '')) for key in ('creator', 'caption', 'ocr', 'source_url')).lower()
+    normalized_credit = re.sub(r'[^a-z0-9]', '', credit)
+    for rule in exclusions:
+        source_match = rule.get('source_id') and document.get('source_id') == rule['source_id']
+        domain_match = any((urllib.parse.urlsplit(url).hostname or '').lower() == domain or
+            (urllib.parse.urlsplit(url).hostname or '').lower().endswith('.' + domain)
+            for url in urls for domain in rule.get('domains', []))
+        creator_match = any(re.sub(r'[^a-z0-9]', '', name.lower()) in normalized_credit
+                            for name in rule.get('creator_names', []))
+        if source_match or domain_match or creator_match:
+            return rule['reason']
+    return None
+
+
 class Store:
-    def __init__(self, state):
+    def __init__(self, state, exclusions=None):
         self.state = Path(state)
         self.state.mkdir(parents=True, exist_ok=True)
         self.db = sqlite3.connect(str(self.state / 'queue.sqlite'))
@@ -206,6 +222,16 @@ class Store:
             CREATE TABLE IF NOT EXISTS runs (
                 id INTEGER PRIMARY KEY, started_at REAL, report TEXT);
         ''')
+        self.exclusions = exclusions or []
+        # Re-apply editorial rules to restored scheduler caches and old local queues.
+        for row in self.rows():
+            reason = exclusion_reason(row, self.exclusions)
+            if reason and (row.get('excluded_reason') != reason or row['status'] != 'rejected'):
+                row['excluded_reason'] = reason
+                row['review'] = {'reviewer': 'Editorial source policy', 'note': reason, 'at': time.time()}
+                self.db.execute('UPDATE candidates SET status=?,document=?,updated_at=? WHERE id=?',
+                    ('rejected', json.dumps(row), time.time(), row['id']))
+        self.db.commit()
 
     def rows(self, status=None):
         sql = 'SELECT id,status,rank,document FROM candidates'
@@ -259,7 +285,7 @@ class Store:
         self.db.commit()
         return cid
 
-    def decide(self, cid, decision, reviewer, hook, credit, rights, note):
+    def decide(self, cid, decision, reviewer, hook, credit, rights, note, humor=''):
         if decision not in ('kept', 'rejected', 'pending'):
             raise ValueError('Invalid review decision')
         row = self.db.execute('SELECT document,status FROM candidates WHERE id=?', (cid,)).fetchone()
@@ -267,11 +293,13 @@ class Store:
             raise ValueError('Candidate does not exist')
         if row[1] == 'duplicate' and decision == 'kept':
             raise ValueError('An exact duplicate cannot be kept')
-        if decision == 'kept' and not all(str(x).strip() for x in (reviewer, hook, credit, rights)):
-            raise ValueError('Keeping requires reviewer, learning hook, credit and reuse notes')
         doc = json.loads(row[0])
+        if decision != 'rejected' and (doc.get('excluded_reason') or exclusion_reason(doc, self.exclusions)):
+            raise ValueError('This source is editorially excluded from meme discovery')
+        if decision == 'kept' and not all(str(x).strip() for x in (reviewer, hook, credit, rights, humor)):
+            raise ValueError('Keeping requires an actual joke/punchline, reviewer, learning hook, credit and reuse notes')
         doc['review'] = {'reviewer': reviewer, 'learning_hook': hook, 'credit': credit,
-                         'rights': rights, 'note': note, 'at': time.time()}
+                         'rights': rights, 'note': note, 'humor': humor, 'at': time.time()}
         self.db.execute('UPDATE candidates SET status=?,document=?,updated_at=? WHERE id=?',
                         (decision, json.dumps(doc), time.time(), cid))
         self.db.commit()

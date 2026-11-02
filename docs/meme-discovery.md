@@ -29,7 +29,7 @@ npm ci
 .venv-memes/bin/python -m tools.meme_harvest review --serve
 ```
 
-Open **http://127.0.0.1:5194/**. Search by topic or caption, inspect the full image and original source, then keep or reject a candidate. Keeping requires a reviewer, a specific learning hook, creator credit and reuse notes. These notes record what still needs checking; keeping is not publication approval or a finding that reuse rights are cleared.
+Open **http://127.0.0.1:5194/**. Search by topic or caption, inspect the full image and original source, then keep or reject a candidate. Keeping requires a description of the actual joke or punchline, a reviewer, a specific learning hook, creator credit and reuse notes. Anatomy relevance alone does not qualify an image: plain diagrams, labeled charts, lecture slides and instructional animations are excluded. These notes record what still needs checking; keeping is not publication approval or a finding that reuse rights are cleared.
 
 The state lives in `.meme-harvest/`, which Git ignores. It includes the SQLite queue, local WebP previews, conditional-request cache, the latest run report and a static `review.html`. The static page works offline for browsing; saving decisions needs the local server. The server binds only to loopback and accepts same-origin JSON decision requests.
 
@@ -42,7 +42,7 @@ Useful commands:
 .venv-memes/bin/python -m tools.meme_harvest init
 
 # Smaller run, or one source at a time.
-.venv-memes/bin/python -m tools.meme_harvest collect --max-images 10 --max-requests 40 --source amoeba-sisters
+.venv-memes/bin/python -m tools.meme_harvest collect --max-images 10 --max-requests 40 --source imgflip-anatomy
 
 # Add a source page or a specific image found while browsing.
 .venv-memes/bin/python -m tools.meme_harvest add 'https://creator.example/comic' --image 'https://creator.example/comic.png' --title 'A specific anatomy joke'
@@ -56,7 +56,7 @@ Global `--state /path/to/queue` and `--config /path/to/sources.json` precede the
 
 ## Sources and automatic runs
 
-Source configuration is in `tools/meme_harvest/sources.json`. The initial sources are Imgflip's anatomy gallery, PickleZombie RSS, Nashville PT RSS and Amoeba Sisters' public GIF page. The latter is educational cartoons, so some candidates will be diagrams or GIFs rather than punchline memes. A GIF's preview is its first frame and is labeled accordingly. Source failures are recorded and do not stop other sources. Gallery images retain their individual post link when it is available.
+Source configuration is in `tools/meme_harvest/sources.json`. The enabled sources are Imgflip's anatomy gallery, PickleZombie RSS and Nashville PT RSS. Amoeba Sisters is disabled and editorially excluded: its instructional diagrams and animations do not qualify as memes. Exclusions are enforced on source IDs, source/image domains and recognizable creator credits, including reposts. Restored queues automatically move matching candidates to Rejected; neither review controls nor export can re-approve them. A GIF's preview is its first frame and is labeled accordingly. Source failures are recorded and do not stop other sources. Gallery images retain their individual post link when it is available.
 
 `.github/workflows/meme-discovery.yml` runs daily at **11:20 UTC**, on changes to the collector, and from GitHub Actions → **Meme candidate discovery → Run workflow**. It collects at most 20 images within 80 requests, runs the collector tests, restores a cached queue, and uploads a seven-day `meme-review-queue` artifact. Gallery sources can follow up to three same-host “next” pages; Imgflip is capped at eight images per run so it does not consume the entire batch. Unzip the artifact to browse `review.html`; point `--state` at its directory to save decisions using the local server. Scheduled runs never commit candidates or deploy the app. GitHub's cache is best-effort and can be evicted, so keep your reviewed SQLite queue locally. The published app registry still protects against collecting shipped images again after cache loss.
 
@@ -80,7 +80,7 @@ The Brave connector uses the [official Web Search API](https://api-dashboard.sea
 
 The score uses **specific anatomy terms**, image dimensions and whether a source identifies itself as the original creator. Muscle/bone terms receive extra weight. The matches and flags are displayed alongside the score. It does not verify anatomy, licensing, humor, or whether a cartoon is truly a meme. There is no automatic “funny enough” threshold.
 
-Exact file hashes and known image URLs are suppressed as duplicates. Pinterest size variants and Reddit image-preview URLs normalize to stable media keys. Perceptual difference hashes identify **possible** reposts: those remain reviewable because two captions on the same meme template can be different jokes. The registry is seeded from the actual shipped app catalogue, currently 55 images. New app images enter it on the next run. Repeated collection preserves keep/reject decisions.
+Exact file hashes and known image URLs are suppressed as duplicates. Pinterest size variants and Reddit image-preview URLs normalize to stable media keys. Perceptual difference hashes identify **possible** reposts: those remain reviewable because two captions on the same meme template can be different jokes. The registry is seeded from the actual shipped app catalogue, currently 54 images. New app images enter it on the next run. Repeated collection preserves keep/reject decisions.
 
 Networking checks robots rules for ordinary pages and images, checks redirect destinations, rejects nonpublic network targets and non-web URL schemes, enforces per-host delays, request/image/response-size limits, validates decoded images, caches with ETag/Last-Modified, and defers hosts after 429/503 using Retry-After. Unavailable robots rules defer a source, while 404/410 robots files allow access. Authentication headers stay on their original host and authenticated responses are not cached.
 

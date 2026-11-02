@@ -36,7 +36,7 @@ def main():
     decide = sub.add_parser('decide', help='Save a candidate review')
     decide.add_argument('id')
     decide.add_argument('decision', choices=['kept', 'rejected', 'pending'])
-    for name in ('reviewer', 'hook', 'credit', 'rights', 'note'):
+    for name in ('reviewer', 'hook', 'credit', 'rights', 'note', 'humor'):
         decide.add_argument('--' + name, default='')
     export = sub.add_parser('export', help='Export kept candidates for lesson authoring; does not edit the app')
     export.add_argument('--output', type=Path)
@@ -50,7 +50,7 @@ def main():
             'search_key_configured': bool(os.environ.get('BRAVE_SEARCH_API_KEY')),
             'sources': [{'id': s['id'], 'enabled': s.get('enabled', True), 'kind': s['kind']} for s in config['sources']]}, indent=2))
         return
-    store = Store(args.state.resolve())
+    store = Store(args.state.resolve(), config.get('exclusions', []))
     try:
         if args.command == 'init':
             print('Seeded ' + str(store.seed(REPO)) + ' published memes.')
@@ -89,12 +89,14 @@ def main():
             else:
                 print(store.state / 'review.html')
         elif args.command == 'decide':
-            store.decide(args.id, args.decision, args.reviewer, args.hook, args.credit, args.rights, args.note)
+            store.decide(args.id, args.decision, args.reviewer, args.hook, args.credit, args.rights, args.note, args.humor)
             write_review(store)
             print('Saved review for ' + args.id)
         elif args.command == 'export':
             output = args.output or store.state / 'kept-candidates.json'
             rows = store.rows('kept')
+            if any(not row.get('review', {}).get('humor', '').strip() for row in rows):
+                raise ValueError('Re-review kept candidates and describe their actual joke before exporting')
             payload = {'schema_version': 1, 'purpose': 'Candidates for lesson authoring; not publication-ready content',
                 'exported_at': time.time(), 'candidates': rows}
             output.parent.mkdir(parents=True, exist_ok=True)

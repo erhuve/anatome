@@ -52,7 +52,7 @@ def serve(store, port):
                     raise ValueError('Invalid request size')
                 payload = json.loads(self.rfile.read(length))
                 store.decide(payload['id'], payload['decision'], payload.get('reviewer', ''),
-                    payload.get('hook', ''), payload.get('credit', ''), payload.get('rights', ''), payload.get('note', ''))
+                    payload.get('hook', ''), payload.get('credit', ''), payload.get('rights', ''), payload.get('note', ''), payload.get('humor', ''))
                 write_review(store)
                 return self.send(200, b'{"ok":true}')
             except (ValueError, KeyError, TypeError) as error:

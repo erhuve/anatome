@@ -80,7 +80,7 @@ class HarvestTests(unittest.TestCase):
             store = Store(Path(temporary))
             document = dict(source_url='https://a.test/post', image_url='https://a.test/image.png', title='biceps')
             cid = store.insert(document, sha='digest', fingerprint='0123456789abcdef')
-            store.decide(cid, 'kept', 'Reviewer', 'Elbow extension', 'Creator', 'Review reuse terms', '')
+            store.decide(cid, 'kept', 'Reviewer', 'Elbow extension', 'Creator', 'Review reuse terms', '', 'A joke about the biceps')
             store.insert(document)
             self.assertEqual(len(store.rows()), 1)
             self.assertEqual(store.rows()[0]['status'], 'kept')
@@ -91,7 +91,7 @@ class HarvestTests(unittest.TestCase):
                 store.decide(cid, 'kept', '', '', '', '', '')
             duplicate = store.insert(dict(document, image_url='https://a.test/other.png'), 'duplicate')
             with self.assertRaises(ValueError):
-                store.decide(duplicate, 'kept', 'R', 'H', 'C', 'N', '')
+                store.decide(duplicate, 'kept', 'R', 'H', 'C', 'N', '', 'A punchline')
             store.db.close()
 
     def test_static_review_escapes_script_breakout_and_does_not_fetch_remote_images(self):
@@ -112,6 +112,42 @@ class HarvestTests(unittest.TestCase):
         self.assertIn('Muscles', hits)
         self.assertTrue(flags)
 
+    def test_restored_queues_and_reposts_respect_editorial_source_exclusions(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            path = Path(temporary)
+            store = Store(path)
+            cid = store.insert(dict(source_id='amoeba-sisters', source_url='https://www.amoebasisters.com/gifs.html', image_url='https://cdn.test/a.gif'))
+            store.db.close()
+            rules = [{'source_id': 'amoeba-sisters', 'domains': ['amoebasisters.com'],
+                      'creator_names': ['Amoeba Sisters'], 'reason': 'Instructional graphics are not memes'}]
+            store = Store(path, rules)
+            self.assertEqual(store.rows()[0]['status'], 'rejected')
+            with self.assertRaises(ValueError):
+                store.decide(cid, 'pending', '', '', '', '', '')
+            class NoRequests:
+                remaining = 20
+                def get(self, *args, **kwargs):
+                    raise AssertionError('Excluded creators must not be fetched')
+            collector = Collector(store, NoRequests())
+            collector.ingest(dict(source_url='https://repost.test/a', image_url='https://cdn.test/b.png',
+                caption='By @AmoebaSisters'), {'id': 'manual'})
+            collector.page('https://www.amoebasisters.com/gifs.html', {'id': 'manual'})
+            collector.run([dict(id='amoeba-sisters', kind='page', enabled=True, url='https://www.amoebasisters.com')])
+            self.assertEqual(collector.report['excluded'], 2)
+            self.assertEqual(collector.report['sources'][0]['status'], 'excluded')
+            self.assertEqual(len(store.rows()), 1)
+            store.db.close()
+
+    def test_anatomy_relevance_without_a_joke_cannot_be_kept(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            store = Store(Path(temporary))
+            cid = store.insert(dict(source_url='https://artist.test/post', image_url='https://artist.test/chart.png', title='Labeled bone diagram'))
+            with self.assertRaisesRegex(ValueError, 'joke/punchline'):
+                store.decide(cid, 'kept', 'Reviewer', 'Bone names', 'Artist', 'Reuse notes', '')
+            store.decide(cid, 'kept', 'Reviewer', 'Bone names', 'Artist', 'Reuse notes', '', 'A skeleton deliberately misnames its own bones')
+            self.assertEqual(store.rows('kept')[0]['review']['humor'], 'A skeleton deliberately misnames its own bones')
+            store.db.close()
+
     def test_discovery_downloads_once_and_reposts_do_not_reset_reviews(self):
         with tempfile.TemporaryDirectory() as temporary:
             store = Store(Path(temporary))
@@ -128,7 +164,7 @@ class HarvestTests(unittest.TestCase):
             collector = Collector(store, client)
             collector.ingest(candidate, source)
             kept = store.rows()[0]
-            store.decide(kept['id'], 'kept', 'R', 'Learn biceps', 'Artist', 'Check reuse', '')
+            store.decide(kept['id'], 'kept', 'R', 'Learn biceps', 'Artist', 'Check reuse', '', 'An elbow-flexion joke')
             collector.ingest(candidate, source)
             collector.ingest(dict(candidate, source_url='https://repost.test/post', image_url='https://repost.test/repost.png'), source)
             self.assertEqual(collector.report['downloaded'], 2)

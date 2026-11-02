@@ -276,17 +276,6 @@ export const memeImages = [
     "originalImage": "https://i.pinimg.com/originals/69/da/b3/69dab383f12a3a759f82b96d9900624d.jpg"
   },
   {
-    "id": "26",
-    "title": "Cell membrane yoga",
-    "category": "Cells",
-    "image": "/memes/26.webp",
-    "thumbnail": "/memes/26-thumb.webp",
-    "width": 1200,
-    "height": 783,
-    "source": "https://www.pinterest.com/pin/the-amoeba-sisters--219972763035651407/",
-    "originalImage": "https://i.pinimg.com/originals/7d/f0/80/7df080e7db8c87f50d693f351a38dc90.png"
-  },
-  {
     "id": "27",
     "title": "Active transport: classroom edition",
     "category": "Cells",

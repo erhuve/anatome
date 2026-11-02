@@ -6,7 +6,7 @@ import re
 import time
 import urllib.parse
 
-from .core import Page, clean_url, feed_items, page_images, prepare_image, relevance
+from .core import Page, clean_url, exclusion_reason, feed_items, page_images, prepare_image, relevance
 from .network import FetchError, reddit_host
 
 
@@ -18,13 +18,16 @@ class Collector:
         self.source_downloads = {}
         self.visited_pages = set()
         self.report = {'started_at': time.time(), 'discovered': 0, 'downloaded': 0,
-                       'duplicates': 0, 'already_seen': 0, 'pending': 0, 'sources': [], 'errors': []}
+                       'duplicates': 0, 'already_seen': 0, 'pending': 0, 'excluded': 0, 'sources': [], 'errors': []}
 
     def ingest(self, candidate, source):
         candidate = dict(candidate)
         candidate.update(source_id=source['id'], creator=candidate.get('creator') or source.get('creator', ''),
                          rights=source.get('rights', 'Unverified'), original_creator=bool(source.get('original_creator')))
         self.report['discovered'] += 1
+        if exclusion_reason(candidate, self.store.exclusions):
+            self.report['excluded'] += 1
+            return
         if self.store.known(candidate['source_url'], candidate['image_url']):
             self.report['already_seen'] += 1
             return
@@ -51,6 +54,9 @@ class Collector:
             asset = prepare_image(data, self.store.state / 'media', cid, self.ocr)
             self.report['downloaded'] += 1
             self.source_downloads[source['id']] = self.source_downloads.get(source['id'], 0) + 1
+            if exclusion_reason(dict(candidate, ocr=asset['ocr'], resolved_image_url=final), self.store.exclusions):
+                self.report['excluded'] += 1
+                return
             # Multi-image gallery text is not used: it would incorrectly tag every image on the page.
             filename = urllib.parse.unquote(urllib.parse.urlsplit(url).path.rsplit('/', 1)[-1]).replace('-', ' ').replace('_', ' ')
             text = ' '.join((candidate.get('title', ''), candidate.get('caption', ''), filename, asset['ocr']))
@@ -71,6 +77,9 @@ class Collector:
             self.report['errors'].append({'source': source['id'], 'url': url, 'error': str(error)[:300]})
 
     def page(self, url, source, title='', pages=1):
+        if exclusion_reason(dict(source_url=url, source_id=source['id'], creator=source.get('creator', '')), self.store.exclusions):
+            self.report['excluded'] += 1
+            return
         if clean_url(url) in self.visited_pages:
             return
         self.visited_pages.add(clean_url(url))
@@ -162,6 +171,10 @@ class Collector:
 
     def run(self, sources):
         for source in sources:
+            reason = exclusion_reason(dict(source_id=source['id'], source_url=source.get('url', ''), creator=source.get('creator', '')), self.store.exclusions)
+            if reason:
+                self.report['sources'].append({'id': source['id'], 'status': 'excluded', 'detail': reason})
+                continue
             if not source.get('enabled', True):
                 self.report['sources'].append({'id': source['id'], 'status': 'disabled', 'detail': source.get('access_notes', '')})
                 continue
