@@ -380,6 +380,69 @@ export const memeLessons: MemeLesson[] = [
     question('Which landmark receives the head of the femur?', 'Acetabulum', ['Obturator foramen', 'Iliac crest', 'Ischial spine'], 'The acetabulum forms the socket of the hip joint.'),
     question('Which part of the hip bone has the large superior wing?', 'Ilium', ['Ischium', 'Pubis', 'Patella'], 'The ilium forms the broad superior portion of the hip bone.')
   ], [bones('Right hip bone', 'Left hip bone', 'Sacrum')]),
+  lesson('41', 'Muscles', 'Facial expression: CN VII in action', 'The smile answers the question: facial expression uses muscles supplied by the facial nerve.', [
+    'Zygomaticus major elevates the corners of the mouth during a smile.',
+    'Orbicularis oculi closes the eyelids; orbicularis oris closes and shapes the lips.',
+    'CN VII supplies the muscles of facial expression. Chewing muscles such as masseter mainly use the mandibular division of CN V.'
+  ], 'Oculi = eyes; oris = mouth; zygomaticus lifts the smile.', '11-3-axial-muscles-of-the-head-neck-and-back', [
+    question('Which muscle lifts the corners of the mouth when smiling?', 'Zygomaticus major', ['Masseter', 'Lateral rectus', 'Sternocleidomastoid'], 'Zygomaticus major draws the mouth corners superiorly and laterally.'),
+    question('Which muscle closes the eyelids?', 'Orbicularis oculi', ['Orbicularis oris', 'Temporalis', 'Buccinator'], 'Oculi refers to the eye; this circular muscle closes the eyelids.'),
+    question('Which cranial nerve supplies the muscles of facial expression?', 'Facial nerve (VII)', ['Trigeminal nerve (V)', 'Abducens nerve (VI)', 'Hypoglossal nerve (XII)'], 'Facial expression uses CN VII; mastication mainly uses the mandibular division of CN V.')
+  ], [muscles('Zygomaticus major', 'Orbicularis oculi', 'Orbicularis oris')]),
+  lesson('42', 'Nerves', 'Untangle the brachial plexus', 'The spaghetti joke captures the jump from a tidy diagram to a three-dimensional nerve network.', [
+    'The brachial plexus usually begins with the anterior rami of C5–T1 spinal nerves.',
+    'Trace roots → trunks → divisions → cords → branches. A plexus redistributes fibers into peripheral nerves.',
+    'Its five major terminal nerves are musculocutaneous, axillary, radial, median, and ulnar.'
+  ], 'Read The Diagram Carefully Before naming a branch.', '13-4-the-peripheral-nervous-system', [
+    question('Which spinal levels usually contribute to the brachial plexus?', 'C5–T1', ['C1–C4 only', 'T5–T12', 'L4–S4'], 'Its usual roots are the anterior rami of C5, C6, C7, C8, and T1.'),
+    question('Which sequence traces the plexus from proximal to distal?', 'Roots → trunks → divisions → cords → branches', ['Roots → cords → trunks → divisions → branches', 'Branches → roots → divisions → trunks → cords', 'Trunks → roots → cords → branches → divisions'], 'Follow the nerve network outward from spinal levels to terminal peripheral nerves.'),
+    question('Which is one of its five major terminal nerves?', 'Musculocutaneous', ['Optic', 'Femoral', 'Phrenic'], 'Musculocutaneous is a major terminal branch; the phrenic nerve mainly arises from the cervical plexus.')
+  ]),
+  lesson('43', 'Nerves', 'Small nerve, specific job: CN IV', 'The goofy dragon understates a precise job: supplying the superior oblique muscle.', [
+    'Trochlear nerve (IV) supplies superior oblique; abducens (VI) supplies lateral rectus.',
+    'Oculomotor (III) supplies the other four extraocular muscles and the upper-eyelid elevator.',
+    'Superior oblique helps intort the eye and depress it, especially when the eye is adducted. A cartoon expression is not a nerve examination.'
+  ], 'LR6 SO4, the rest 3: lateral rectus VI; superior oblique IV.', '16-3-the-cranial-nerve-exam', [
+    question('Which extraocular muscle receives CN IV?', 'Superior oblique', ['Lateral rectus', 'Medial rectus', 'Inferior oblique'], 'The trochlear nerve supplies superior oblique.'),
+    question('Which nerve supplies lateral rectus?', 'Abducens (VI)', ['Trochlear (IV)', 'Optic (II)', 'Facial (VII)'], 'Abducens supplies the muscle that abducts the eye.'),
+    question('When the eye is adducted, superior oblique is especially useful for which movement?', 'Depression', ['Eyelid closure', 'Pupil constriction', 'Jaw elevation'], 'Superior oblique helps look downward with the eye turned toward the nose; it also intorts the eye.')
+  ], [muscles('Superior oblique', 'Lateral rectus')]),
+  lesson('44', 'Nerves', 'Connect an upper-limb nerve to an action', 'The intimidating plexus becomes more manageable when each nerve is paired with a muscle you can identify.', [
+    'Musculocutaneous supplies biceps brachii, an elbow flexor and forearm supinator.',
+    'Axillary supplies deltoid, whose middle fibers abduct the arm at the shoulder.',
+    'Radial supplies triceps brachii, which extends the elbow. These are useful anchors, not complete nerve-supply lists.'
+  ], 'Biceps bends; deltoid lifts sideways; triceps straightens.', '11-5-muscles-of-the-pectoral-girdle-and-upper-limbs', [
+    question('Which muscle–action pair is correct?', 'Biceps brachii — elbow flexion', ['Triceps brachii — elbow flexion', 'Deltoid — finger flexion', 'Biceps brachii — knee extension'], 'Biceps flexes the elbow and also helps supinate the forearm.'),
+    question('Which nerve supplies the deltoid?', 'Axillary', ['Ulnar', 'Median', 'Musculocutaneous'], 'The axillary nerve supplies deltoid; its middle fibers abduct the arm.'),
+    question('Triceps brachii uses which nerve and main elbow action?', 'Radial nerve; extension', ['Median nerve; flexion', 'Axillary nerve; pronation', 'Ulnar nerve; supination'], 'Radial innervation allows triceps to straighten the elbow.')
+  ], [muscles('Biceps brachii', 'Deltoid', 'Triceps brachii')]),
+  lesson('45', 'Muscles', 'Popliteus unlocks the knee', 'The tiny muscle carrying a key is a cue for its role in starting knee flexion.', [
+    'Popliteus lies deep behind the knee and contributes to the floor of the popliteal fossa.',
+    'It helps unlock the extended knee: medially rotating the free tibia, or laterally rotating the femur when the foot is planted.',
+    'It connects the lateral femoral condyle region to the posterior proximal tibia and receives the tibial nerve.'
+  ], 'Behind the knee, popliteus turns the key.', '11-6-appendicular-muscles-of-the-pelvic-girdle-and-lower-limbs', [
+    question('Where would you look for popliteus?', 'Deep behind the knee', ['Superficial front of the thigh', 'Sole of the foot', 'Anterior forearm'], 'Popliteus lies in the posterior knee region, beneath more superficial muscles.'),
+    question('With the foot free, popliteus helps unlock the knee by rotating which way?', 'Medial rotation of the tibia', ['Lateral rotation of the tibia', 'Medial rotation of the humerus', 'Pronation of the forearm'], 'With the tibia free it rotates medially; with the foot planted the femur rotates laterally relative to the tibia.'),
+    question('Which nerve supplies popliteus?', 'Tibial nerve', ['Femoral nerve', 'Obturator nerve', 'Deep fibular nerve'], 'The tibial nerve supplies popliteus and the other posterior-compartment leg muscles.')
+  ], [muscles('Popliteus'), bones('Right femur', 'Right tibia')]),
+  lesson('46', 'Nerves', 'Vagus travels; abducens abducts', 'The Doge comparison contrasts a widely distributed mixed nerve with a very specific eye-movement nerve.', [
+    'CN X, the vagus, carries parasympathetic output to many thoracic and abdominal organs, including the heart and digestive tract.',
+    'Vagus is a mixed nerve: it also carries sensory information and motor fibers for swallowing and voice.',
+    'CN VI, the abducens, supplies lateral rectus to move the eye away from the nose. Fewer targets do not mean less importance.'
+  ], 'Vagus wanders through the viscera; abducens abducts the eye.', '15-1-divisions-of-the-autonomic-nervous-system', [
+    question('Which cranial nerve carries parasympathetic output to the heart and much of the digestive tract?', 'Vagus (X)', ['Abducens (VI)', 'Trochlear (IV)', 'Olfactory (I)'], 'The vagus carries a large share of cranial parasympathetic output to internal organs.'),
+    question('Which description of vagus is accurate?', 'It carries both sensory and motor fibers', ['It is purely sensory', 'It only moves the eyeball', 'It is a sympathetic spinal nerve'], 'CN X is mixed, combining visceral sensory, parasympathetic, and other motor functions.'),
+    question('Contraction of lateral rectus moves the eye in which direction?', 'Laterally, away from the nose', ['Medially, toward the nose', 'It closes the eyelid', 'It constricts the pupil'], 'Lateral rectus abducts the eye, which links its action to the name abducens.')
+  ], [muscles('Lateral rectus')]),
+  lesson('47', 'Bones & landmarks', 'Patella: a plate inside a tendon', 'The dinner plates are an etymology joke: patella means a little plate or shallow dish.', [
+    'The patella is a sesamoid bone embedded in the quadriceps tendon in front of the knee.',
+    'Its posterior articular surface meets the femur. It does not directly articulate with the tibia.',
+    'The patellar ligament connects its inferior apex to the tibial tuberosity, transmitting quadriceps force for knee extension.'
+  ], 'Quadriceps tendon → patella → patellar ligament → tibial tuberosity.', '8-4-bones-of-the-lower-limb', [
+    question('The patella is classified as which kind of bone?', 'Sesamoid', ['Flat cranial bone', 'Long bone', 'Vertebra'], 'A sesamoid bone develops within a tendon; the patella lies within the quadriceps tendon.'),
+    question('Which bone directly articulates with the posterior patella?', 'Femur', ['Tibia', 'Fibula', 'Talus'], 'The patellar articular surface contacts the distal femur.'),
+    question('The patellar ligament attaches distally to which landmark?', 'Tibial tuberosity', ['Head of fibula', 'Greater trochanter', 'Medial malleolus'], 'The ligament runs from the patellar apex to the anterior tibial tuberosity.')
+  ], [bones('Right patella', 'Left patella', 'Right femur', 'Right tibia')]),
 ];
 
 export function memeModelTargets(lesson: MemeLesson): ModelPrompt[] {

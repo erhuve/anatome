@@ -11,7 +11,7 @@ export const memes: Meme[] = memeImages.map(image => {
 });
 export const isCoreAnatomy = (meme: Meme) => meme.lesson.topic === 'Muscles' || meme.lesson.topic === 'Bones & landmarks';
 // Put the new structure-specific memes first, followed by the original anatomy and physiology collection.
-export const orderedMemes = [...memes].sort((a, b) => Number(isCoreAnatomy(b)) - Number(isCoreAnatomy(a)) || Number(Number(b.id) >= 29) - Number(Number(a.id) >= 29) || a.id.localeCompare(b.id));
+export const orderedMemes = [...memes].sort((a, b) => Number(isCoreAnatomy(b)) - Number(isCoreAnatomy(a)) || Number(Number(b.id) >= 41) - Number(Number(a.id) >= 41) || Number(Number(b.id) >= 29) - Number(Number(a.id) >= 29) || a.id.localeCompare(b.id));
 export const memeTopicCounts = memeTopics.map(topic => ({ topic, count: memes.filter(meme => meme.lesson.topic === topic).length }));
 export type MemeFilter = 'All' | 'Muscles & bones' | MemeTopic;
 export function findMemes(query: string, topic: MemeFilter): Meme[] {

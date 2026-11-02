@@ -85,3 +85,31 @@ These are found memes and comics; source links may be reposts. Third-party image
   Original image: https://i.chzbgr.com/full/5156659200/h81A4A892/sadly-their-humor-is-spineless
 - 40: Pelvis Presley — https://it.memedroid.com/memes/detail/2140712
   Original image: https://images7.memedroid.com/images/UPLOADED743/596e5654699d0.jpeg
+
+- 41: When the CN VII answer is written on your face — https://x.com/MikaelaStiver/status/1455986445844455425
+  Original image: https://pbs.twimg.com/media/FDSzxc8WQAcudfM.jpg
+  Credit: Mikaela Stiver
+
+- 42: Brachial plexus: expectation vs. spaghetti — https://occupationalanatomy.weebly.com/brachial-plexus.html
+  Original image: https://occupationalanatomy.weebly.com/uploads/3/8/4/2/38424915/342434235.png
+  Credit: Found on Occupational Anatomy; original meme creator unconfirmed
+
+- 43: The trochlear nerve gets the third dragon — https://www.reddit.com/r/medicalschool/comments/qrtpz4/the_trochlear_nerve_is_a_punk_and_doesnt_deserve/
+  Original image: https://i.redd.it/hf14mypwv0z71.png
+  Credit: r/medicalschool; posting account deleted
+
+- 44: I fear no man. But that plexus... — https://www.reddit.com/r/medicalschool/comments/j06ik1/you_could_say_im_a_little_nervous_for_this_test/
+  Original image: https://i.redd.it/tgk95goe0ip51.png
+  Credit: u/dylthekilla on r/medicalschool
+
+- 45: Popliteus: the knee unlocker — https://zh.cesphysiorehab.com/post/the-knee-unlocker-1
+  Original image: https://static.wixstatic.com/media/e59e31_731578047a8f48cc8638b6be398c82ed~mv2.png
+  Credit: C.E.S. Physiotherapy & Rehabilitation / @cesphysiorehab
+
+- 46: Vagus vs. abducens: very different workloads — https://www.reddit.com/r/medicalschool/comments/l7w2ts/high_yield_shitpostdoes_anybody_want_an_anatomy/
+  Original image: https://i.redd.it/7oblu2yhnae61.jpg
+  Credit: u/thebigbosshimself on r/medicalschool
+
+- 47: Patella: your little knee plate — https://physicaltherapyweb.com/news/interesting-anatomy-etymology-patella/
+  Original image: https://physicaltherapyweb.com/wp-content/uploads/2018/12/etymology-physioweb-patella-little-plate-1024x854.jpg
+  Credit: Physical Therapy Web / PhysioWeb; visual anatomy pun

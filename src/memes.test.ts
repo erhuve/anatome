@@ -11,11 +11,11 @@ import { mergeEvents, normalizeStudy, parseProgressEvent, ProgressStore, replayP
 import { workspaceUrl } from './studyNavigation';
 import MemeLibrary from './components/MemeLibrary';
 
-test('every one of the 40 memes has shipped images, a lesson, provenance, and three distinct answerable questions', () => {
-  assert.equal(memes.length, 40);
+test('every meme has shipped images, a lesson, provenance, and three distinct answerable questions', () => {
+  assert.equal(memes.length, 47);
   assert.equal(memeLessons.length, memes.length);
   assert.equal(new Set(memes.map(meme => meme.id)).size, memes.length);
-  assert.equal(memeQuestionIds.size, 120);
+  assert.equal(memeQuestionIds.size, 141);
   for (const meme of memes) {
     assert.ok(meme.width > 0 && meme.height > 0);
     for (const image of [meme.image, meme.thumbnail]) {
@@ -40,12 +40,13 @@ test('every one of the 40 memes has shipped images, a lesson, provenance, and th
   }
 });
 
-test('anatomy gets the first 20 places and every 3D link resolves all of its requested targets', () => {
-  assert.equal(memes.filter(isCoreAnatomy).length, 20);
-  assert.ok(orderedMemes.slice(0, 20).every(isCoreAnatomy));
-  assert.ok(orderedMemes.slice(20).every(meme => !isCoreAnatomy(meme)));
-  assert.equal(memeTopicCounts.reduce((n, topic) => n + topic.count, 0), 40);
-  for (const meme of memes.filter(isCoreAnatomy)) {
+test('muscles and bones come first and every 3D link resolves all of its requested targets', () => {
+  const core = memes.filter(isCoreAnatomy);
+  assert.equal(core.length, 23);
+  assert.ok(orderedMemes.slice(0, core.length).every(isCoreAnatomy));
+  assert.ok(orderedMemes.slice(core.length).every(meme => !isCoreAnatomy(meme)));
+  assert.equal(memeTopicCounts.reduce((n, topic) => n + topic.count, 0), 47);
+  for (const meme of memes.filter(meme => isCoreAnatomy(meme) || meme.lesson.models.length > 0)) {
     const targets = memeModelTargets(meme.lesson);
     assert.ok(targets.length > 0, meme.id);
     assert.equal(new Set(targets.map(p => p.id)).size, targets.length);
@@ -59,9 +60,9 @@ test('anatomy gets the first 20 places and every 3D link resolves all of its req
 });
 
 test('topic filters and search combine; searches include study facts and empty results', () => {
-  assert.equal(findMemes('', 'All').length, 40);
-  assert.equal(findMemes('', 'Muscles & bones').length, 20);
-  assert.equal(findMemes('', 'Bones & landmarks').length, 13);
+  assert.equal(findMemes('', 'All').length, 47);
+  assert.equal(findMemes('', 'Muscles & bones').length, 23);
+  assert.equal(findMemes('', 'Bones & landmarks').length, 14);
   assert.equal(findMemes('scapula', 'Nerves').length, 0);
   assert.ok(findMemes('trapezius', 'Muscles').some(meme => meme.id === '33'));
   assert.ok(findMemes('  thumb carpals ', 'Bones & landmarks').some(meme => meme.id === '36'));

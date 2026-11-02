@@ -439,5 +439,82 @@ export const memeImages = [
     "height": 442,
     "source": "https://it.memedroid.com/memes/detail/2140712",
     "originalImage": "https://images7.memedroid.com/images/UPLOADED743/596e5654699d0.jpeg"
+  },
+  {
+    "id": "41",
+    "title": "When the CN VII answer is written on your face",
+    "category": "Muscles",
+    "image": "/memes/41.webp",
+    "thumbnail": "/memes/41-thumb.webp",
+    "width": 625,
+    "height": 1039,
+    "source": "https://x.com/MikaelaStiver/status/1455986445844455425",
+    "originalImage": "https://pbs.twimg.com/media/FDSzxc8WQAcudfM.jpg"
+  },
+  {
+    "id": "42",
+    "title": "Brachial plexus: expectation vs. spaghetti",
+    "category": "Nerves",
+    "image": "/memes/42.webp",
+    "thumbnail": "/memes/42-thumb.webp",
+    "width": 840,
+    "height": 980,
+    "source": "https://occupationalanatomy.weebly.com/brachial-plexus.html",
+    "originalImage": "https://occupationalanatomy.weebly.com/uploads/3/8/4/2/38424915/342434235.png"
+  },
+  {
+    "id": "43",
+    "title": "The trochlear nerve gets the third dragon",
+    "category": "Nerves",
+    "image": "/memes/43.webp",
+    "thumbnail": "/memes/43-thumb.webp",
+    "width": 648,
+    "height": 522,
+    "source": "https://www.reddit.com/r/medicalschool/comments/qrtpz4/the_trochlear_nerve_is_a_punk_and_doesnt_deserve/",
+    "originalImage": "https://i.redd.it/hf14mypwv0z71.png"
+  },
+  {
+    "id": "44",
+    "title": "I fear no man. But that plexus...",
+    "category": "Nerves",
+    "image": "/memes/44.webp",
+    "thumbnail": "/memes/44-thumb.webp",
+    "width": 770,
+    "height": 761,
+    "source": "https://www.reddit.com/r/medicalschool/comments/j06ik1/you_could_say_im_a_little_nervous_for_this_test/",
+    "originalImage": "https://i.redd.it/tgk95goe0ip51.png"
+  },
+  {
+    "id": "45",
+    "title": "Popliteus: the knee unlocker",
+    "category": "Muscles",
+    "image": "/memes/45.webp",
+    "thumbnail": "/memes/45-thumb.webp",
+    "width": 1080,
+    "height": 1080,
+    "source": "https://zh.cesphysiorehab.com/post/the-knee-unlocker-1",
+    "originalImage": "https://static.wixstatic.com/media/e59e31_731578047a8f48cc8638b6be398c82ed~mv2.png"
+  },
+  {
+    "id": "46",
+    "title": "Vagus vs. abducens: very different workloads",
+    "category": "Nerves",
+    "image": "/memes/46.webp",
+    "thumbnail": "/memes/46-thumb.webp",
+    "width": 1024,
+    "height": 789,
+    "source": "https://www.reddit.com/r/medicalschool/comments/l7w2ts/high_yield_shitpostdoes_anybody_want_an_anatomy/",
+    "originalImage": "https://i.redd.it/7oblu2yhnae61.jpg"
+  },
+  {
+    "id": "47",
+    "title": "Patella: your little knee plate",
+    "category": "Bones",
+    "image": "/memes/47.webp",
+    "thumbnail": "/memes/47-thumb.webp",
+    "width": 1024,
+    "height": 854,
+    "source": "https://physicaltherapyweb.com/news/interesting-anatomy-etymology-patella/",
+    "originalImage": "https://physicaltherapyweb.com/wp-content/uploads/2018/12/etymology-physioweb-patella-little-plate-1024x854.jpg"
   }
 ];
