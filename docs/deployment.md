@@ -41,11 +41,14 @@ JavaScript origin. Its redirect URI remains:
 https://lyrjoqtvinsridskgsnq.supabase.co/auth/v1/callback
 ```
 
-Google's publishing status is still **Testing**. The console requires complete
-branding, including public privacy and terms URLs, before enabling production
-publishing. Draft pages and app links have been prepared locally but are awaiting
-the owner's approval before publication. Do not claim general-audience OAuth
-launch is complete until Google's status changes and is verified.
+Google's publishing status is **In production**, verified in the Google Auth
+Platform console on November 2, 2026. The app name is configured as **Anatomeme**.
+The owner-approved privacy policy and terms are published at
+https://anato.meme/privacy and https://anato.meme/terms and linked from the app.
+Google's branding settings include both public policy URLs and the homepage.
+Only basic Google sign-in/profile access is requested. Production publishing does
+not itself mean that custom consent-screen branding has passed Google's separate
+brand verification process.
 
 ## Verified on November 2, 2026
 
@@ -54,6 +57,8 @@ launch is complete until Google's status changes and is verified.
 - Muscle and skeletal models render; detailed landmark specimens load.
 - Google sign-in returns to the live domain and reads existing account history.
 - The signed-in session and account coverage survive a page refresh.
+- Privacy and terms pages load with Anatomeme branding.
+- Google Auth Platform reports **In production**.
 - `https://www.anato.meme/?atlas=landmarks` redirects to the primary domain and
   preserves the collection query.
 
