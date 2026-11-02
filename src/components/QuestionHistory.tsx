@@ -42,13 +42,13 @@ export default function QuestionHistory({ attempts, onStudy, onMeme }: {
         </select>
       </div>
       </div>
-      <p className="history-count" role="status">{history.length ? `${start + 1}–${Math.min(start + pageSize, history.length)} of ${history.length} attempts` : 'No attempts match your filters.'}<span>{attempts.length} attempts in your history</span></p>
+      <p className="history-count" role="status">{history.length ? `${start + 1}–${Math.min(start + pageSize, history.length)} of ${history.length} attempts` : 'No attempts match your filters.'}<span>Newest first</span></p>
       </div>
       <div className="history-scroll progress-list-scroll" ref={list} tabIndex={0} role="region" aria-label="Question attempt list">
       {history.length > 0 ? <ol className="history-list" start={start + 1}>{history.slice(start, start + pageSize).map(item => <li key={item.index}>
         <div className={`history-result ${item.correct ? 'is-correct' : 'is-missed'}`}>{item.correct ? <Check size={13}/> : <X size={13}/>}<span>{item.correct ? 'Correct' : 'Missed / revealed'}</span></div>
         <div className="history-question"><strong>{item.title}</strong>
-        {item.prompt && <span className="history-prompt">{item.prompt}</span>}
+        {item.prompt && (!item.model || item.model.bone && !item.model.landmark) && <span className="history-prompt">{item.prompt}</span>}
         {item.answer && <span className="history-answer">Answer: {item.answer}</span>}
         <div className="history-meta"><span>{historyCollections.find(collection => collection.id === item.collection)?.label}</span><time dateTime={new Date(item.at).toISOString()}>{new Date(item.at).toLocaleString(undefined, { month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit' })}</time></div></div>
         {item.model ? <button className="history-study" onClick={() => onStudy([item.model!])} aria-label={`Study ${item.title}`}>Study structure<ArrowRight size={13}/></button>
@@ -56,6 +56,6 @@ export default function QuestionHistory({ attempts, onStudy, onMeme }: {
       </li>)}</ol> : <button className="history-reset" onClick={() => filter(initialFilters)}>Clear filters</button>}
       </div>
       <ProgressPagination page={currentPage} total={history.length} pageSize={pageSize} onChange={changePage} label="Question history pages"/>
-    </> : <div className="progress-empty"><Search size={28}/><h2>Your history starts here.</h2><p>Your answered and revealed questions will appear here as you practice.</p></div>}
+    </> : <div className="progress-empty"><Search size={28}/><h2>No answers yet.</h2><p>Your answered and revealed questions will appear here as you practice.</p></div>}
   </section>;
 }

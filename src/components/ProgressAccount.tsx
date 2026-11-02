@@ -13,12 +13,11 @@ export default function ProgressAccount({ auth, progress }: {
         : progress.pending ? `${progress.pending} change${progress.pending === 1 ? '' : 's'} waiting to sync` : 'Your account is available on this device';
   return <div className="progress-page-scroll" tabIndex={0} role="region" aria-label="Account settings"><div className="progress-account progress-card">
       {auth.user ? <p className="account-identity">{auth.user.email ?? 'Your account'}</p> : <>
-        <p>Sign in with Google to save your answers and collection passes, then pick them up on another device.</p>
+        <p>Sign in to sync your answers and quiz passes across devices.</p>
         {auth.configured ? isEmbedded
           ? <a className="google-signin" href={window.location.href} target="_blank" rel="noreferrer">Open app to sign in<ArrowUpRight size={16}/></a>
           : <button className="google-signin" onClick={() => void auth.signIn()} disabled={auth.working}><GoogleMark/>{auth.working ? 'Opening Google…' : 'Continue with Google'}</button>
           : <p className="progress-message">Account sign-in is not available in this version. You can keep practicing as a guest.</p>}
-        <small className="account-caption">Guest practice stays available without an account.</small>
       </>}
 
       {auth.error && <p className="progress-message is-error" role="alert">{auth.error}</p>}
@@ -26,7 +25,7 @@ export default function ProgressAccount({ auth, progress }: {
       {progress.error && <div className="sync-message"><p role="status">{progress.error}</p>{auth.user && <button onClick={progress.retry} disabled={progress.status === 'syncing'}><RefreshCw size={12}/>Retry sync</button>}</div>}
 
       {auth.user && progress.canImport && <div className="import-card">
-        <h3>Already practiced here?</h3>
+        <h3>Import guest history</h3>
         <p>Add this browser’s guest history to your account. Only import it if it belongs to you.</p>
         <button onClick={progress.importGuest} disabled={!progress.ready}>Add my device history<ArrowUpRight size={13}/></button>
       </div>}

@@ -34,6 +34,7 @@ export type ModelPrompt = {
   bone?: BoneId;
   landmark?: string;
   view: View;
+  /** Structure-specific study detail; empty when no verified note is available. */
   explanation: string;
   source: string;
   region?: QuizRegionId;
@@ -122,7 +123,7 @@ function studyClue(target: Target, collection: 'muscles' | 'skeleton'): { text: 
   const exact = labInventory.flatMap(group => group.items.map(item => ({ ...item, source: group.source }))).find(item => item.name.toLowerCase() === normalized);
   const source = exact?.source ?? chapter(collection === 'muscles' ? ['pelvis-thigh', 'leg-foot'].includes(target.region) ? '11-6-appendicular-muscles-of-the-pelvic-girdle-and-lower-limbs' : target.region === 'head-neck' ? '11-3-axial-muscles-of-the-head-neck-and-back' : ['trunk', 'chest'].includes(target.region) ? '11-4-axial-muscles-of-the-abdominal-wall-and-thorax' : '11-5-muscles-of-the-pectoral-girdle-and-upper-limbs' : target.region === 'head-neck' ? '7-2-the-skull' : target.region === 'spine' ? '7-3-the-vertebral-column' : target.region === 'chest' ? '7-4-the-thoracic-cage' : ['pelvis-thigh', 'leg-foot'].includes(target.region) ? '8-4-bones-of-the-lower-limb' : '8-2-bones-of-the-upper-limb');
   const detail = exact && !(normalized === 'deltoid' && !/acromial part/i.test(target.part.name)) ? exact.detail : undefined;
-  return { text: detail ? `${target.part.name}. ${detail}` : `${target.part.name}. Compare its shape and position with neighboring structures. Anatomical left and right belong to the specimen.`, source };
+  return { text: detail ?? '', source };
 }
 function systemPool(collection: 'muscles' | 'skeleton'): ModelPrompt[] {
   const all = targets(collection);

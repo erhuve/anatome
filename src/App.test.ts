@@ -117,7 +117,7 @@ test('study mode remains available after the whole quiz pass is exhausted', () =
   assert.match(markup, /aria-label="Study or quiz mode"/);
   assert.match(markup, /aria-pressed="true"[^>]*>Study/);
   assert.match(markup, /Browse 238 structures/);
-  assert.match(markup, /STUDY THE STRUCTURE/);
+  assert.match(markup, /aria-label="Structure study"/);
   assert.ok(markup.includes(pool[0].answer));
   assert.doesNotMatch(markup, /PASS COMPLETE|id="typed-answer"|class="answer-options"/);
 });

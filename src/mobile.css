@@ -112,7 +112,7 @@
   .practice-screen.study-flow:not(.is-recalling) .question-panel { display: flex; flex-direction: column; max-height: 52%; gap: 8px; }
   .practice-screen .study-panel > * { flex-shrink: 0; }
   .practice-screen .study-panel > .study-copy { flex: 1 1 auto; min-height: 0; overflow-y: auto; }
-  .practice-screen .study-panel > .question-kicker, .practice-screen .study-observation, .practice-screen .study-tags { display: none; }
+  .practice-screen .study-panel > .question-kicker, .practice-screen .study-tags { display: none; }
   .practice-screen .study-explanation { font-size: 13px; line-height: 1.6; }
   .practice-screen .study-reference { margin-top: 8px; font-size: 11px; }
   .practice-screen .browse-study-button { min-height: 32px; padding: 6px 10px; font-size: 12px; }
@@ -145,11 +145,17 @@
   .practice-screen .model-touch-hint, .practice-screen .studio-footer .session-progress { display: none; }
   .practice-screen .check-answer-button { font-size: 11px; padding: 9px 10px; }
 }
+@media (max-width: 360px) and (max-height: 650px) {
+  /* Use the area behind the floating view button when long choices need room. */
+  .practice-screen .specimen-stage .model-space { bottom: 4px; }
+}
 @media (max-height: 500px) and (min-width: 621px) and (max-width: 1000px) {
   .practice-screen .studio-main { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
   .practice-screen .question-panel { max-height: 100%; align-self: stretch; border-top: 0; border-left: 1px solid var(--border); }
   .practice-screen .studio-header { height: 48px; min-height: 48px; padding-bottom: 0; }
   .practice-screen .collection-switch, .practice-screen .studio-footer { display: none; }
+  .practice-screen.study-flow .study-footer { display: flex; }
+  .practice-screen.study-flow:not(.is-recalling) .question-panel { max-height: 100%; }
   .practice-screen .question-panel h1 { font-size: 18px; }
   .practice-screen .question-panel:has(.answer-options):not(.has-response) { max-height: 100%; }
   .practice-screen .question-kicker { display: none; }
