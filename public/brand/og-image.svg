@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Anatomeme — Anatomy that sticks."><title>Anatomeme — Anatomy that sticks.</title><rect width="1200" height="630" fill="#16191d"/>
+<circle cx="1000" cy="215" r="165" fill="#202a32"/>
+<g transform="translate(845 105) scale(3.1)">
+<path fill="#f4efe4" d="M50 2 34 3 20 10 10 22 5 36 5 51 9 62 21 69 23 82 31 91 69 91 77 82 79 69 91 62 95 51 95 36 90 22 80 10 66 3Z"/>
+<path fill="#ef9685" d="M72 6 80 10 90 22 95 36 95 51 91 59 84 59 87 49 87 40 84 33 78 27 73 20Z"/>
+<path fill="none" stroke="#b76158" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" d="M78 14 80 22 87 29 91 39 91 49 M78 23 81 32 87 39 88 49 87 54"/>
+<ellipse fill="#85d5f6" cx="31.5" cy="45" rx="12.5" ry="13"/>
+<ellipse fill="#16191d" cx="68.5" cy="45" rx="12.5" ry="13"/>
+<path fill="#16191d" d="M50 59 44 69 56 69Z"/>
+<path fill="none" stroke="#16191d" stroke-linecap="round" stroke-width="4" d="M34 79H66"/>
+<path fill="none" stroke="#16191d" stroke-linecap="round" stroke-width="3" d="M43 75V84 M57 75V84"/></g>
+<g font-family="Arial,Helvetica,sans-serif">
+<text x="64" y="78" fill="#85d5f6" font-size="24" font-weight="700">anato.meme</text>
+<text x="64" y="290" fill="#f4efe4" font-size="100" letter-spacing="-4" font-weight="700">anatomeme</text>
+<text x="68" y="363" fill="#f4efe4" font-size="38" font-weight="500">Anatomy that sticks.</text>
+<text x="68" y="417" fill="#a0a9b7" font-size="25">Real 3D anatomy. Practice. Repeat.</text>
+<text x="68" y="563" fill="#85d5f6" font-size="19" letter-spacing="2">MUSCLES / BONES / LANDMARKS</text>
+</g></svg>

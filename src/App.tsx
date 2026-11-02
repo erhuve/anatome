@@ -10,6 +10,7 @@ import ProgressPanel from './components/ProgressPanel';
 import StudySettings from './components/StudySettings';
 import StudyFlow from './components/StudyFlow';
 import StudioHeader from './components/StudioHeader';
+import BrandMark from './components/BrandMark';
 import { studyTargetsFor, workspaceUrl, type WorkspaceMode } from './studyNavigation';
 import { getModelPass, modelScopeKey, remainingModelCount } from './modelPass';
 import { readQuizSelections, selectedPromptIds, writeQuizSelections, type QuizSelections } from './quizSelection';
@@ -26,12 +27,11 @@ function initialCollection(): ModelCollection {
   const requested = new URLSearchParams(window.location.search).get('atlas');
   return requested === 'skeleton' || requested === 'bones' ? 'skeleton' : requested === 'landmarks' ? 'landmarks' : 'muscles';
 }
-function Mark() { return <svg width="21" height="24" viewBox="0 0 21 24" fill="none" aria-hidden="true"><path d="m10.5 1.5 9 5.25v10.5l-9 5.25-9-5.25V6.75l9-5.25Z" stroke="currentColor" strokeWidth="1.2"/><path d="m1.5 6.75 9 5.25 9-5.25M10.5 12v10.5" stroke="currentColor" strokeWidth="1.2"/></svg>; }
 
 export default function App() {
   const auth = useAuth();
   const progress = useStudyProgress(auth.user?.id ?? null, auth.ready);
-  if (!auth.ready || !progress.ready) return <div className="account-loading" role="status"><Mark/><span>anatomeme</span><p>{auth.ready ? 'Loading your progress…' : 'Restoring your sign-in…'}</p></div>;
+  if (!auth.ready || !progress.ready) return <div className="account-loading" role="status"><BrandMark size={44}/><span>anatomeme</span><p>{auth.ready ? 'Loading your progress…' : 'Restoring your sign-in…'}</p></div>;
   // A different account gets a fresh quiz as well as a separate progress store.
   return <QuizStudio key={auth.user?.id ?? 'guest'} auth={auth} progress={progress}/>;
 }

@@ -1,4 +1,5 @@
 import { Info, RotateCcw, SlidersHorizontal, UserRound } from 'lucide-react';
+import BrandMark from './BrandMark';
 import type { ModelCollection } from '../modelQuiz';
 import type { WorkspaceMode } from '../studyNavigation';
 
@@ -21,7 +22,7 @@ const collections = [{ id: 'muscles', label: 'Muscles' }, { id: 'skeleton', labe
 export default function StudioHeader(props: Props) {
   return <header className="studio-header">
     <div className="studio-identity">
-      <a className="studio-brand" href="/" aria-label="Anatomeme practice home"><svg width="21" height="24" viewBox="0 0 21 24" fill="none" aria-hidden="true"><path d="m10.5 1.5 9 5.25v10.5l-9 5.25-9-5.25V6.75l9-5.25Z" stroke="currentColor" strokeWidth="1.2"/><path d="m1.5 6.75 9 5.25 9-5.25M10.5 12v10.5" stroke="currentColor" strokeWidth="1.2"/></svg><span>anatomeme</span></a>
+      <a className="studio-brand" href="/" aria-label="Anatomeme practice home"><BrandMark/><span>anatomeme</span></a>
       <nav className="workspace-switch" aria-label="Study or quiz mode">{(['study', 'quiz'] as const).map(mode => <button key={mode} className={props.mode === mode ? 'active' : ''} aria-pressed={props.mode === mode} onClick={() => props.onModeChange(mode)}>{mode === 'study' ? 'Study' : 'Quiz'}</button>)}</nav>
     </div>
     <nav className="collection-switch" aria-label="Choose anatomy collection">{collections.map(item => <button key={item.id} className={props.collection === item.id ? 'active' : ''} aria-pressed={props.collection === item.id} onClick={() => { if (props.collection !== item.id) props.onCollectionChange(item.id); }}>{item.label}</button>)}</nav>

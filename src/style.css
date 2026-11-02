@@ -82,3 +82,7 @@
 @media(max-width:1100px){.studio-identity{gap:12px}.workspace-switch>button{padding:6px 8px}.studio-header .study-settings-button>span{display:none}}
 @media(max-width:800px){.studio-identity{gap:9px}.workspace-switch>button{font-size:9px;padding:5px 7px}.studio-header .studio-brand>span{font-size:17px}.studio-header .header-actions{gap:8px}.studio-header .new-set-button{width:25px}.studio-header .new-set-button>span{display:none}}
 @media(max-width:620px){.studio-identity{gap:9px}.workspace-switch>button{font-size:10px;padding:6px 8px}.studio-header .studio-brand>span{display:none}.studio-header .header-actions{gap:9px}.is-general-study .stage-heading{top:76px}.is-general-study .model-space{top:65px}.is-general-study .specimen-stage{min-height:410px;height:59dvh}.study-browser{height:calc(100dvh - 20px)}.study-browser-filters{padding:0 19px 13px;gap:8px}.study-browser-filters>select{font-size:10px;max-width:40%}.study-browser-count{padding:0 19px 12px}.study-browser-list{padding:0 19px 15px}.browse-study-button{font-size:12px;margin-bottom:23px}}
+
+/* Approved skull mark: keep intrinsic dimensions in loading views. */
+.studio-brand>.brand-mark{display:block;flex:none;width:28px;height:28px}
+@media(max-width:600px){.studio-brand>.brand-mark{width:24px;height:24px}}
