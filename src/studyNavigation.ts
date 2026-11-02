@@ -1,7 +1,7 @@
 import { modelPromptPools, quizRegions, type ModelCollection, type ModelPrompt } from './modelQuiz';
 import { selectedPromptIds, type QuizSelections } from './quizSelection';
 
-export type WorkspaceMode = 'study' | 'quiz';
+export type WorkspaceMode = 'study' | 'quiz' | 'memes';
 
 /** Study includes selected targets even when a quiz pass has already covered them. */
 export function studyTargetsFor(collection: ModelCollection, selections: QuizSelections): ModelPrompt[] {
@@ -25,7 +25,8 @@ export function findStudyTargets(targets: readonly ModelPrompt[], query: string,
 export function workspaceUrl(href: string, mode: WorkspaceMode, collection: ModelCollection): URL {
   const url = new URL(href);
   url.searchParams.set('atlas', collection);
-  if (mode === 'study') url.searchParams.set('mode', 'study');
+  if (mode !== 'quiz') url.searchParams.set('mode', mode);
   else url.searchParams.delete('mode');
+  if (mode !== 'memes') { url.searchParams.delete('meme'); url.searchParams.delete('activity'); }
   return url;
 }

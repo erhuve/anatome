@@ -22,11 +22,12 @@ type Props = {
   initialTargetId?: string;
   onTargetChange?: (id: string) => void;
   paused?: boolean;
+  fromMeme?: boolean;
 };
 const collectionLabel = { muscles: 'Muscles', skeleton: 'Bones', landmarks: 'Landmarks' };
 
 /** A temporary study session leaves the interrupted quiz and its pass intact. */
-export default function StudyFlow({ targets, answerMode, onAnswer, onClose, header, general = false, initialTargetId, onTargetChange, paused = false }: Props) {
+export default function StudyFlow({ targets, answerMode, onAnswer, onClose, header, general = false, initialTargetId, onTargetChange, paused = false, fromMeme = false }: Props) {
   const [index, setIndex] = useState(() => Math.max(0, targets.findIndex(prompt => prompt.id === initialTargetId)));
   const [browserOpen, setBrowserOpen] = useState(false);
   const [phase, setPhase] = useState<'study' | 'recall' | 'complete'>('study');
@@ -98,8 +99,8 @@ export default function StudyFlow({ targets, answerMode, onAnswer, onClose, head
 
   return <div className={'quiz-app study-flow' + (general ? ' is-general-study' : '')}>
     {header ?? <header className="study-header">
-      <button className="study-back" onClick={onClose}><ArrowLeft size={15}/>Back to practice</button>
-      <span><BookOpen size={15}/>Worth another look</span>
+      <button className="study-back" onClick={onClose}><ArrowLeft size={15}/>{fromMeme ? 'Back to meme' : 'Back to practice'}</button>
+      <span><BookOpen size={15}/>{fromMeme ? 'From meme to model' : 'Worth another look'}</span>
       <small>{index + 1} / {targets.length}</small>
     </header>}
     <main className="studio-main">
@@ -123,7 +124,7 @@ export default function StudyFlow({ targets, answerMode, onAnswer, onClose, head
           <h1 ref={heading} tabIndex={-1}>A closer look.</h1>
           <p className="question-instruction">{targets.length === 1 ? 'You’ve reached the end of this structure’s study.' : `You’ve reached the end of these ${targets.length} structures.`} Come back whenever you need another look.</p>
           {tested.length > 0 && <p className="study-result-summary">{tested.filter(item => item.correct).length} of {tested.length} self-checks correct.</p>}
-          <button className="continue-button" onClick={onClose}>{general ? 'Switch to quiz' : 'Back to practice'}<ArrowRight size={16}/></button>
+          <button className="continue-button" onClick={onClose}>{general ? 'Switch to quiz' : fromMeme ? 'Back to meme' : 'Back to practice'}<ArrowRight size={16}/></button>
           <button className="subtle-button" onClick={() => { setResults({}); showTarget(0); lock.current = false; }}>Study again<RotateCcw size={13}/></button>
         </> : phase === 'study' ? <>
           <div className="question-kicker"><BookOpen size={14}/>STUDY THE STRUCTURE</div>

@@ -35,7 +35,13 @@ The app uses system fonts and serves its anatomy assets locally. Educational sou
 
 ## The app
 
-The main experience is a full-screen 3D studio. Switch between **Study** and **Quiz** in the header.
+The main experience is a full-screen 3D studio. Switch between **Study**, **Quiz**, and **Memes** in the header.
+
+- **Memes** contains 40 locally served memes and comics, each linked to an original mini-lesson, memory hook, OpenStax reference, and three distinct multiple-choice questions (120 total). Correct, incorrect, and revealed answers receive explanations. Results offer a full retry or a retry of missed questions.
+- Muscle and bone material appears first. **Muscles & bones** filters the 20 core anatomy lessons; search covers meme titles and study facts. **What’s covered?** shows the topic breakdown: 7 muscles, 13 bones/landmarks/orientation, 7 nerves, 6 blood/circulation, 5 cells/metabolism, and 2 organ lessons. The counts describe linked study topics; generic student-life jokes are explicitly paired with a related lesson.
+- All 20 core anatomy lessons have **Study & identify in 3D** links to real, matching atlas targets, including muscle heads, scapular landmarks, carpals, and laterality. The existing study view provides name hiding and an identification self-check; closing it returns to the meme.
+- Meme answers use the existing guest/account progress store and review schedule, with a separate **Meme quizzes** section in My progress. They never advance a 3D model pass. Browsing, reading, filtering, and opening an image do not record answers. **Review due** filters memes with questions ready for review. Quiz (3 questions) describes the length of each meme’s quiz, not a difficulty level.
+- Meme images are local WebP files with smaller gallery thumbnails and an enlarged view. Existing credits are preserved; original image and source URLs are documented in `public/memes/SOURCES.md`. Found memes may be reposts and may simplify or exaggerate anatomy; the original linked study wording states the intended facts and corrects relevant simplifications.
 
 - **Study** keeps structure names and study notes visible. Choose Muscles, Bones, or Landmarks; use **Browse structures** to search by name, side or region, or move through the collection with Previous and Next. You can also click an available structure in the body model to study it. **Hide name & test myself** opens an optional typed or multiple-choice self-check.
 - Study settings selects material for both modes. Studying includes already-covered targets, so a completed quiz pass never blocks exploration. Browsing and reading do not record answers or pass coverage; submitted or revealed self-checks update answer history without advancing a pass.
@@ -61,6 +67,8 @@ The main experience is a full-screen 3D studio. Switch between **Study** and **Q
 Study settings → Curriculum coverage opens a searchable 283-entry lab reference catalog, all model-part names, and the 14-area two-semester course map. The original 217 practical entries and their descriptions are retained, with 66 additional instructor-selected entries. The catalog distinguishes exact model links, reviewed landmark locators, photographs and reference-only material. The 40-question reference bank, five microscopy examples and source notes remain supporting project content; the primary quiz is 3D identification.
 
 Deep links: `/?atlas=muscles`, `/?atlas=skeleton`, `/?atlas=landmarks`. `/?atlas=bones` also selects the skeleton. Add `&mode=study` to open any collection directly in Study mode, for example `/?atlas=skeleton&mode=study`.
+
+Meme deep links: `/?mode=memes` for the library, `/?mode=memes&meme=34` for the scapula lesson, and `/?mode=memes&meme=34&activity=quiz` for its quiz. Switching to Study or Quiz clears meme-specific URL parameters and restores the existing model workspace.
 
 ## Scope and content review
 

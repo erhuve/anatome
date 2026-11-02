@@ -11,6 +11,8 @@ import StudySettings from './components/StudySettings';
 import StudyFlow from './components/StudyFlow';
 import StudioHeader from './components/StudioHeader';
 import BrandMark from './components/BrandMark';
+import MemeLibrary from './components/MemeLibrary';
+import { memeUrl } from './memes';
 import { studyTargetsFor, workspaceUrl, type WorkspaceMode } from './studyNavigation';
 import { getModelPass, modelScopeKey, remainingModelCount } from './modelPass';
 import { readQuizSelections, selectedPromptIds, writeQuizSelections, type QuizSelections } from './quizSelection';
@@ -41,7 +43,7 @@ export function QuizStudio({ auth, progress }: { auth: ReturnType<typeof useAuth
   const studyRef = useRef(study);
   studyRef.current = study;
   const [collection, setCollection] = useState<ModelCollection>(initialCollection);
-  const [workspaceMode, setWorkspaceMode] = useState<WorkspaceMode>(() => new URLSearchParams(window.location.search).get('mode') === 'study' ? 'study' : 'quiz');
+  const [workspaceMode, setWorkspaceMode] = useState<WorkspaceMode>(() => { const mode = new URLSearchParams(window.location.search).get('mode'); return mode === 'study' || mode === 'memes' ? mode : 'quiz'; });
   const [studyCollection, setStudyCollection] = useState<ModelCollection>(initialCollection);
   const [studyCursors, setStudyCursors] = useState<Partial<Record<ModelCollection, string>>>({});
   const [selections, setSelections] = useState<QuizSelections>(() => readQuizSelections(auth.user?.id ?? null));
@@ -70,6 +72,7 @@ export function QuizStudio({ auth, progress }: { auth: ReturnType<typeof useAuth
   const [accountOpen, setAccountOpen] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [studyTargets, setStudyTargets] = useState<ModelPrompt[] | null>(null);
+  const [memeNavigation, setMemeNavigation] = useState(0);
   const [selectionSaved, setSelectionSaved] = useState(true);
   const saved = progress.saved;
   useEffect(() => { if (auth.error) { setAbout(false); setSettingsOpen(false); setAccountOpen(true); } }, [auth.error]);
@@ -191,9 +194,9 @@ export function QuizStudio({ auth, progress }: { auth: ReturnType<typeof useAuth
   });
 
   const overlays = <>
-    {settingsOpen && <StudySettings collection={activeCollection} selections={selections} mode={workspaceMode} onApply={applySelection} onClose={() => setSettingsOpen(false)}/>}
+    {settingsOpen && <StudySettings collection={activeCollection} selections={selections} mode={workspaceMode === 'study' ? 'study' : 'quiz'} onApply={applySelection} onClose={() => setSettingsOpen(false)}/>}
     {!selectionSaved && <div className="selection-save-note" role="status">This selection is active for this tab. Browser storage is unavailable.</div>}
-    {accountOpen && <ProgressPanel auth={auth} progress={progress} onClose={() => setAccountOpen(false)} onStudy={studyStructures}/>}
+    {accountOpen && <ProgressPanel auth={auth} progress={progress} onClose={() => setAccountOpen(false)} onStudy={studyStructures} onMeme={id => { setAccountOpen(false); setWorkspaceMode('memes'); setMemeNavigation(value => value + 1); window.history.replaceState({}, '', memeUrl(window.location.href, id, 'quiz')); }}/>}
     {about && <div className="about-overlay" onClick={() => setAbout(false)}><div className="about-dialog" ref={aboutPanel} role="dialog" aria-modal="true" aria-labelledby="about-title" onClick={event => event.stopPropagation()}><button className="icon-control about-close" aria-label="Close specimen information" onClick={() => setAbout(false)}><X size={18}/></button><div className="question-kicker">ANATOMEME / PRACTICE</div><h2 id="about-title">The anatomy comes first.</h2><p>Identify real anatomical models, inspect their surfaces and neighbors, then check your answer. Each set has up to 10 questions. Continue through every selected target without repeats, then explicitly start a new pass. A short last set finishes the pass. Missed review is an intentional repeat and does not advance coverage. Study settings lets you select regions or individual structures; each selection keeps its own pass.</p><h3>Move around the model</h3><p>Drag to rotate and scroll to zoom. Click the model or Tab to it, then use arrow keys to pan up, down, left, and right. Shift + arrows rotates; + and − zoom. Right-drag or Shift-drag also pans. On a touchscreen, one finger rotates; two fingers pan and pinch to zoom. Reset the camera or choose an anatomical view to recenter. Focus frames the target and its neighbors. Context shows the assembly; Isolate shows only the target. Use Surroundings to fade nearby anatomy while the blue target stays solid. The eye button switches between your chosen opacity and full surface anatomy. At 0%, only the target remains visible; at 100%, surface anatomy can cover a deep target. Your opacity choice carries across questions and collections, and adjusting it keeps your current camera view.</p><h3>Sources & scope</h3><p>Muscles: Z-Anatomy, Gauthier Kervyn and contributors, CC BY-SA 4.0. The source assembly is converted without decimation or anatomical reshaping. Bones: BodyParts3D, © The Database Center for Life Science, CC BY 4.0. Blue highlights and landmark locators are study annotations. Every available source component is eligible; the atlas does not yet provide a visual quiz for every college A&P topic. Open Curriculum coverage in study settings for the inventory and remaining gaps.</p><div className="about-links"><a href="https://github.com/LluisV/Z-Anatomy" target="_blank" rel="noreferrer">Z-Anatomy source atlas<ArrowRight size={13}/></a><a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">Muscle model license<ArrowRight size={13}/></a><a href="https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html" target="_blank" rel="noreferrer">BodyParts3D provenance & license<ArrowRight size={13}/></a><a href={displayQuestion.source} target="_blank" rel="noreferrer">Anatomy reference<ArrowRight size={13}/></a><a href="/privacy.html" target="_blank" rel="noreferrer">Privacy policy<ArrowRight size={13}/></a><a href="/terms.html" target="_blank" rel="noreferrer">Terms of use<ArrowRight size={13}/></a></div><p className="about-storage">Guest progress stays in this browser. Sign in to save answers and selection passes to your account across devices. Quiz selection preferences are saved on this device for each account. Answered and revealed questions count as covered; skipped load failures do not. Existing notes and study data are retained.</p></div></div>}
   </>;
 
@@ -205,7 +208,9 @@ export function QuizStudio({ auth, progress }: { auth: ReturnType<typeof useAuth
     nextLabel={emptySelection ? 'Choose targets' : passComplete ? 'New pass' : 'Next set'}
     nextTitle={emptySelection ? 'Choose targets' : passComplete ? 'Start a new pass' : 'Start the next set'}/>;
 
-  if (studyTargets) return <StudyFlow targets={studyTargets} answerMode={answerMode} onAnswer={(prompt, isCorrect) => progress.recordAnswer(prompt.id, prompt.collection, isCorrect, false)} onClose={() => { setStudyTargets(null); setReset(value => value + 1); }}/>;
+  if (studyTargets) return <StudyFlow targets={studyTargets} fromMeme={workspaceMode === 'memes'} answerMode={answerMode} onAnswer={(prompt, isCorrect) => progress.recordAnswer(prompt.id, prompt.collection, isCorrect, false)} onClose={() => { setStudyTargets(null); setReset(value => value + 1); }}/>;
+
+  if (workspaceMode === 'memes') return <div className="quiz-app meme-app">{header}{!saved && <p className="meme-save-note" role="status">{progress.error ?? 'Your answers are available in this tab. Open My progress to check their save status.'}</p>}<MemeLibrary key={memeNavigation} study={study} paused={accountOpen || about} onAnswer={(id, correct) => progress.recordAnswer(id, 'memes', correct, false)} onStudyModels={studyStructures}/>{overlays}</div>;
 
   if (workspaceMode === 'study') return <>
     {generalTargets.length ? <StudyFlow key={`${studyCollection}-${modelScopeKey(studyCollection, selections[studyCollection])}`} targets={generalTargets} answerMode={answerMode}

@@ -5,6 +5,8 @@ import { getModelPass } from '../modelPass';
 import { recentMissedTargets } from '../reviewTargets';
 import type { useAuth } from '../useAuth';
 import type { useStudyProgress } from '../useStudyProgress';
+import { memes, memeProgress } from '../memes';
+import { memeQuestionIds } from '../memeLessons';
 
 const collections: { id: ModelCollection; label: string }[] = [
   { id: 'muscles', label: 'Muscles' }, { id: 'skeleton', label: 'Bones' }, { id: 'landmarks', label: 'Landmarks' },
@@ -12,11 +14,12 @@ const collections: { id: ModelCollection; label: string }[] = [
 const prompts = Object.values(modelPromptPools).flat();
 const liveIds = new Set(prompts.map(prompt => prompt.id));
 
-export default function ProgressPanel({ auth, progress, onClose, onStudy }: {
+export default function ProgressPanel({ auth, progress, onClose, onStudy, onMeme }: {
   auth: ReturnType<typeof useAuth>;
   progress: ReturnType<typeof useStudyProgress>;
   onClose: () => void;
   onStudy: (targets: ModelPrompt[]) => void;
+  onMeme?: (id?: string) => void;
 }) {
   const panel = useRef<HTMLDivElement>(null);
   const close = useRef(onClose);
@@ -44,6 +47,9 @@ export default function ProgressPanel({ auth, progress, onClose, onStudy }: {
   const accuracy = attempts.length ? Math.round(correct / attempts.length * 100) : null;
   const isEmbedded = window.self !== window.top;
   const missed = recentMissedTargets(attempts);
+  const memeAttempts = progress.study.attempts.filter(attempt => memeQuestionIds.has(attempt.questionId));
+  const practicedMemes = memes.map(meme => ({ meme, stats: memeProgress(meme, memeAttempts, progress.study.review) })).filter(item => item.stats.tried > 0).sort((a, b) => b.stats.due - a.stats.due || (a.stats.correct / a.stats.total) - (b.stats.correct / b.stats.total));
+  const memeDue = practicedMemes.reduce((total, item) => total + item.stats.due, 0);
   const status = !auth.user
     ? progress.saved ? 'Guest practice · saved on this device' : 'Guest practice · saved in this tab only'
     : progress.status === 'synced' ? 'All progress synced'
@@ -95,6 +101,7 @@ export default function ProgressPanel({ auth, progress, onClose, onStudy }: {
         <div className="recent-misses-heading"><h3 id="recent-misses-title">Worth another look</h3><button onClick={() => onStudy(missed.map(item => item.prompt))}><BookOpen size={13}/>Study all</button></div>
         {missed.map(({ prompt, at }) => <button className="review-target" key={prompt.id} onClick={() => onStudy([prompt])} aria-label={`Study ${prompt.answer}`}><span>{prompt.answer}</span><small>{new Date(at).toLocaleDateString(undefined, { month: 'short', day: 'numeric' })}</small><ArrowRight size={14}/></button>)}
       </section>}
+      <section className="meme-account-progress" aria-labelledby="meme-progress-title"><h3 id="meme-progress-title">Meme quizzes</h3><p>{memeAttempts.length ? `${memeAttempts.length} answers · ${Math.round(memeAttempts.filter(attempt => attempt.correct).length / memeAttempts.length * 100)}% accuracy · ${memeDue} reviews due` : 'Short topic quizzes linked to every meme.'}</p>{practicedMemes.slice(0, 5).map(({ meme, stats }) => <button className="review-target" key={meme.id} onClick={() => onMeme?.(meme.id)} disabled={!onMeme}><span>{meme.lesson.title}<small>{stats.correct}/{stats.total} correct on latest tries{stats.due ? ` · ${stats.due} due` : ''}</small></span><ArrowRight size={13}/></button>)}{onMeme && <button className="subtle-button" onClick={() => onMeme()}>Browse meme study & quizzes<ArrowRight size={13}/></button>}</section>
       <p className="progress-footnote">Custom selections keep separate passes, shown in the quiz footer. Coverage records practice, including revealed answers. Accuracy reflects your recorded answers; it is not a mastery score.</p>
       {auth.user && <div className="account-signout">
         {progress.pending > 0 && <p>{progress.saved ? 'Pending changes stay on this device until you sign in again.' : 'Wait for your progress to sync before signing out.'}</p>}

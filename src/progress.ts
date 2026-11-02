@@ -1,6 +1,9 @@
 import { modelPromptPools, type ModelCollection } from './modelQuiz';
 import { coverModelPrompt, getModelPass, restartModelPass, normalizeModelPasses, isModelPassScope, type ModelPasses } from './modelPass';
 import { emptyState, readState, recordAttempt, writeState, type Attempt, type SavedNote, type StudyState } from './study';
+import { memeQuestionIds } from './memeLessons';
+
+export type ProgressCollection = ModelCollection | 'memes';
 
 const collections: ModelCollection[] = ['muscles', 'skeleton', 'landmarks'];
 const promptCollections = new Map(collections.flatMap(collection => modelPromptPools[collection].map(prompt => [prompt.id, collection] as const)));
@@ -11,6 +14,7 @@ const compareIds = (a: string, b: string) => a < b ? -1 : a > b ? 1 : 0;
 const validRound = (value: unknown): value is number => typeof value === 'number' && Number.isSafeInteger(value) && value > 0;
 const isCollection = (value: unknown): value is ModelCollection => collections.includes(value as ModelCollection);
 const categoryFor = (questionId: string, fallback: string) => {
+  if (memeQuestionIds.has(questionId)) return 'memes';
   const collection = promptCollections.get(questionId);
   return collection === 'skeleton' ? 'bones' : collection ?? fallback;
 };
@@ -60,8 +64,10 @@ export function parseProgressEvent(value: unknown): ProgressEvent | null {
   if (!isRecord(value) || typeof value.id !== 'string' || !/^[a-zA-Z0-9_-]{1,160}$/.test(value.id) || !validTime(value.occurred_at) || !isRecord(value.payload)) return null;
   const payload = value.payload;
   if (value.kind === 'attempt') {
-    if (!safeQuestionId(payload.questionId) || !isCollection(payload.collection) || typeof payload.correct !== 'boolean' || !validTime(payload.at) || !(payload.round === null || validRound(payload.round))) return null;
-    if (payload.scope !== undefined && !isModelPassScope(payload.scope, payload.collection)) return null;
+    if (!safeQuestionId(payload.questionId) || typeof payload.correct !== 'boolean' || !validTime(payload.at) || !(payload.round === null || validRound(payload.round))) return null;
+    if (payload.collection === 'memes') {
+      if (!memeQuestionIds.has(payload.questionId) || payload.round !== null || payload.scope !== undefined) return null;
+    } else if (!isCollection(payload.collection) || payload.scope !== undefined && !isModelPassScope(payload.scope, payload.collection)) return null;
     return { id: value.id, kind: 'attempt', occurred_at: value.occurred_at, payload: { questionId: payload.questionId, collection: payload.collection, correct: payload.correct, at: payload.at, round: payload.round, ...(payload.scope !== undefined && payload.scope !== payload.collection ? { scope: payload.scope } : {}) } };
   }
   if (value.kind === 'restart' && isCollection(payload.collection) && validRound(payload.round)) {
@@ -280,14 +286,17 @@ export class ProgressStore {
     // tab. Refresh its canonical payload once; ordinary answers only upload.
     void this.sync(event.kind === 'import', event.kind === 'import');
   }
-  recordAnswer = (questionId: string, collection: ModelCollection, correct: boolean, coverPass: boolean, scope?: string) => {
-    if (!this.snapshot.ready || this.stopped || scope !== undefined && !isModelPassScope(scope, collection)) return;
+  recordAnswer = (questionId: string, collection: ProgressCollection, correct: boolean, coverPass: boolean, scope?: string) => {
+    if (!this.snapshot.ready || this.stopped) return;
+    if (collection === 'memes') {
+      if (!memeQuestionIds.has(questionId) || coverPass || scope !== undefined) return;
+    } else if (scope !== undefined && !isModelPassScope(scope, collection)) return;
     const now = Date.now();
     if (this.userId) {
-      this.append({ id: this.id(), kind: 'attempt', occurred_at: now, payload: { questionId, collection, correct, at: now, round: coverPass ? getModelPass(this.snapshot.study.modelPasses, collection, scope).round : null, ...(scope !== undefined && scope !== collection ? { scope } : {}) } });
+      this.append({ id: this.id(), kind: 'attempt', occurred_at: now, payload: { questionId, collection, correct, at: now, round: coverPass && collection !== 'memes' ? getModelPass(this.snapshot.study.modelPasses, collection, scope).round : null, ...(scope !== undefined && scope !== collection ? { scope } : {}) } });
     } else {
       const next = recordAttempt(this.snapshot.study, questionId, collection === 'skeleton' ? 'bones' : collection, correct, now);
-      if (coverPass) next.modelPasses = coverModelPrompt(this.snapshot.study.modelPasses, collection, questionId, scope);
+      if (coverPass && collection !== 'memes') next.modelPasses = coverModelPrompt(this.snapshot.study.modelPasses, collection, questionId, scope);
       const saved = this.guestWrite(next);
       this.emit({ study: next, saved, error: saved ? null : 'Browser storage is unavailable. Your progress is only in this tab.' });
     }
