@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Anatomeme · discovery queue</title>
+<style>
+:root{font:16px/1.55 system-ui;color:#edf4fa;background:#11151c}*{box-sizing:border-box}body{max-width:1400px;padding:36px 24px;margin:auto}h1{font-size:42px;letter-spacing:-2px;margin:4px 0}h2{font-size:20px}p{color:#aebcca}.eyebrow{color:#89d7f5;font-size:12px;letter-spacing:2px}button,input,select,textarea{font:inherit;border:1px solid #415167;border-radius:8px;background:#202936;color:inherit;padding:10px}button{cursor:pointer}button:hover{border-color:#89d7f5}textarea,input{width:100%}label{display:block;font-size:13px;color:#c5d1dd;margin:10px 0 4px}.tools{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0}.tools input{flex:1;min-width:180px}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:22px}article{background:#19212b;border:1px solid #303d4e;border-radius:14px;padding:18px}article img{width:100%;height:310px;object-fit:contain;background:#0d1117;border-radius:8px}.tags{font-size:12px;color:#89d7f5}.flags{color:#f1b599;font-size:13px}a{color:#89d7f5}details{border-top:1px solid #374255;margin-top:16px;padding-top:12px}summary{cursor:pointer}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.keep{background:#254a40}.reject{background:#4b3036}.notice{padding:15px;background:#202d3d;border-radius:10px}.error{color:#ffb1ad}.status{font-size:13px}.empty{padding:40px;border:1px dashed #56677e;border-radius:12px}
+</style>
+<div class="eyebrow">ANATOMEME / CANDIDATE DISCOVERY</div><h1>A fresh batch to look through.</h1>
+<p>Ranked by anatomy relevance, image size and source information. The score does not judge humor or verify anatomy.</p>
+<p class="notice">Keep promising candidates for lesson authoring. Review the full image, source, credit and reuse notes. Publication happens through the app’s existing content workflow.</p>
+<div class="tools"><input id="search" aria-label="Search candidates" placeholder="Search titles, captions, OCR or anatomy terms"><select id="status" aria-label="Candidate status"><option value="pending">To review</option><option value="kept">Kept for lessons</option><option value="rejected">Rejected</option><option value="duplicate">Exact duplicates</option><option value="all">All candidates</option></select><select id="topic" aria-label="Study topic"><option value="all">All topics</option></select></div>
+<p id="count" aria-live="polite"></p><div id="grid" class="grid"></div>
+<script type="application/json" id="data">__CANDIDATE_DATA__</script>
+<script>
+const candidates=JSON.parse(document.querySelector('#data').textContent),grid=document.querySelector('#grid');
+const el=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n};
+function safe(url){try{const u=new URL(url);return ['https:','http:'].includes(u.protocol)?u.href:'#'}catch{return '#'}}
+for(const topic of [...new Set(candidates.flatMap(c=>c.topics||[]))].sort()){const o=el('option',topic);o.value=topic;document.querySelector('#topic').append(o)}
+function render(){
+ grid.replaceChildren();const query=document.querySelector('#search').value.toLowerCase().trim().split(/\s+/).filter(Boolean),status=document.querySelector('#status').value,topic=document.querySelector('#topic').value;
+ const rows=candidates.filter(c=>(status==='all'||c.status===status)&&(topic==='all'||(c.topics||[]).includes(topic))&&query.every(w=>[c.title,c.caption,c.ocr,...(c.topics||[])].join(' ').toLowerCase().includes(w)));
+ document.querySelector('#count').textContent=`${rows.length} shown · ${candidates.filter(c=>c.status==='pending').length} waiting · ${candidates.filter(c=>c.status==='kept').length} kept`;
+ if(!rows.length)grid.append(el('div','No candidates in this view. Try another filter or run the collector.','empty'));
+ for(const c of rows){const card=el('article');if(c.thumbnail){const a=el('a');a.href=c.preview;a.target='_blank';const img=el('img');img.src=c.thumbnail;img.alt=c.title||'Meme candidate';img.loading='lazy';a.append(img);card.append(a)}
+ card.append(el('div',`${c.status.toUpperCase()} · relevance ${c.rank}/100 · ${c.width||'?'} × ${c.height||'?'}`,'tags'),el('h2',c.title||'Untitled candidate'),el('p',(c.topics||[]).join(' · ')));
+ const link=el('a','Open source ↗');link.href=safe(c.source_url);link.target='_blank';link.rel='noopener noreferrer';card.append(link,el('p',c.creator||'Creator unconfirmed','status'));
+ const hits=Object.values(c.matches||{}).flat();if(hits.length)card.append(el('p','Matched: '+hits.join(', '),'status'));
+ for(const flag of c.flags||[])card.append(el('p',flag,'flags'));
+ const dup=[...(c.exact_duplicates||[]),...(c.possible_duplicates||[])];if(dup.length)card.append(el('p','Compare with: '+dup.join(', '),'flags'));
+ if(c.caption)card.append(el('p',c.caption.slice(0,350),'status'));
+ const details=el('details'),summary=el('summary','Review & keep for a lesson');details.append(summary);const fields={};
+ for(const [key,title,value] of [['reviewer','Reviewer',c.review?.reviewer||''],['hook','Specific learning hook',c.review?.learning_hook||''],['credit','Creator / credit',c.review?.credit||c.creator||''],['rights','Reuse notes / license',c.review?.rights||c.rights||''],['note','Review notes',c.review?.note||'']]){const label=el('label',title),input=el(key==='note'||key==='rights'?'textarea':'input');input.value=value;label.append(input);fields[key]=input;details.append(label)}
+ const actions=el('div',undefined,'actions'),message=el('p','','status');for(const [label,decision,cls] of [['Keep for lesson','kept','keep'],['Reject','rejected','reject'],['Reset','pending','']]){const button=el('button',label,cls);button.onclick=async()=>{if(!/^https?:$/.test(location.protocol)){message.textContent='Run the local review server to save decisions.';return}try{const payload={id:c.id,decision,...Object.fromEntries(Object.entries(fields).map(([k,v])=>[k,v.value]))};const r=await fetch('/decision',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});const result=await r.json();if(!r.ok)throw Error(result.error||'Save failed');c.status=decision;c.review={reviewer:payload.reviewer,learning_hook:payload.hook,credit:payload.credit,rights:payload.rights,note:payload.note};render()}catch(e){message.textContent=e.message;message.className='error'}};if(c.status==='duplicate'&&decision==='kept')button.disabled=true;actions.append(button)}details.append(actions,message);card.append(details);grid.append(card)}
+}
+for(const id of ['search','status','topic'])document.querySelector('#'+id).addEventListener(id==='search'?'input':'change',render);render();
+</script></html>

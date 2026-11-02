@@ -35,6 +35,8 @@ The app uses system fonts and serves its anatomy assets locally. Educational sou
 
 ## The app
 
+Automatic candidate collection and the local review queue are documented in [Meme discovery](docs/meme-discovery.md). The collector seeds duplicate detection from the published library and keeps discovery separate from lesson authoring and publication.
+
 The main experience is a full-screen 3D studio. Switch between **Study**, **Quiz**, and **Memes** in the header.
 
 - **Memes** contains 55 locally served memes and comics, each linked to an original mini-lesson, memory hook, OpenStax reference, and three distinct multiple-choice questions (165 total). Correct, incorrect, and revealed answers receive explanations. Results offer a full retry or a retry of missed questions.

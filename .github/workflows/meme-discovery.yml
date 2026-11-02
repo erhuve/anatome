@@ -1,0 +1,59 @@
+name: Meme candidate discovery
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/meme-discovery.yml'
+      - 'tools/meme_harvest/**'
+      - 'scripts/export-meme-catalog.ts'
+  workflow_dispatch:
+  schedule:
+    - cron: '20 11 * * *'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: meme-candidate-discovery
+  cancel-in-progress: false
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: npm ci
+      - run: python -m pip install -r tools/meme_harvest/requirements.txt
+      - run: python -m unittest tools.meme_harvest.test_harvest
+      - uses: actions/cache/restore@v4
+        with:
+          path: .meme-harvest
+          key: meme-queue-v1-${{ github.run_id }}
+          restore-keys: meme-queue-v1-
+      - name: Collect candidates
+        run: python -m tools.meme_harvest collect --max-images 20 --max-requests 80
+      - uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: .meme-harvest
+          key: meme-queue-v1-${{ github.run_id }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: meme-review-queue
+          path: |
+            .meme-harvest/review.html
+            .meme-harvest/media
+            .meme-harvest/last-run.json
+            .meme-harvest/queue.sqlite
+          retention-days: 7
+          include-hidden-files: true

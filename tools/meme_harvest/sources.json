@@ -1,0 +1,44 @@
+{
+  "user_agent": "AnatomemeCollector/0.1 (+https://anato.meme; candidate discovery)",
+  "request_limit": 80,
+  "image_limit": 20,
+  "delay_seconds": 2,
+  "sources": [
+    {
+      "id": "imgflip-anatomy", "kind": "page", "enabled": true,
+      "url": "https://imgflip.com/tag/anatomy", "creator": "",
+      "max_pages": 3, "max_images": 8,
+      "original_creator": false,
+      "rights": "User-created memes and reposts; inspect the linked individual post for creator credit and reuse."
+    },
+    {
+      "id": "picklezombie", "kind": "feed", "enabled": true,
+      "url": "https://www.picklezombie.com/feed/",
+      "creator": "PickleZombie", "original_creator": true,
+      "rights": "Unverified; retain original credit and review reuse before publication."
+    },
+    {
+      "id": "nashville-pt", "kind": "feed", "enabled": true,
+      "url": "https://www.nashvillephysicaltherapy.com/blog-feed.xml",
+      "creator": "Nashville Physical Therapy", "original_creator": true,
+      "rights": "Unverified; educational posts can contain third-party memes."
+    },
+    {
+      "id": "amoeba-sisters", "kind": "page", "enabled": true,
+      "url": "https://www.amoebasisters.com/gifs.html",
+      "creator": "Amoeba Sisters", "original_creator": true,
+      "rights": "Check https://www.amoebasisters.com/our-content.html; preserve attribution."
+    },
+    {
+      "id": "reddit-medicalschool", "kind": "reddit", "enabled": false,
+      "subreddit": "medicalschool", "queries": ["anatomy meme", "muscle meme", "bone meme"],
+      "rights": "API access and image reuse are separate; retain post and creator attribution.",
+      "access_notes": "Requires approved Reddit access, REDDIT_APPROVED=1, REDDIT_ACCESS_TOKEN and REDDIT_USER_AGENT. No HTML/JSON scraping fallback."
+    },
+    {
+      "id": "web-search", "kind": "brave", "enabled": false,
+      "queries": ["anatomy muscle bone memes students", "anatomy physiology memes cranial nerves", "site:reddit.com/r/medicalschool anatomy meme"],
+      "access_notes": "Optional BRAVE_SEARCH_API_KEY. Search results become links; Reddit pages are never scraped."
+    }
+  ]
+}
