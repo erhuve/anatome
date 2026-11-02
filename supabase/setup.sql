@@ -1,4 +1,4 @@
--- Anatome account progress. Run this entire file in the Supabase SQL Editor.
+-- Anatomeme account progress. Run this entire file in the Supabase SQL Editor.
 -- Safe to re-run: existing history is retained.
 begin;
 

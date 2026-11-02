@@ -6,7 +6,7 @@ root=pathlib.Path(__file__).resolve().parents[1];research=root.parent/'research-
 skeleton=[x for x in meta if 3152<=int(re.search(r'FJ(\d+)',x['file'])[1])<=3395]
 muscles=json.loads((research/'muscle-picks.json').read_text())
 def pack(system,items):
- raw=bytearray();g={'asset':{'version':'2.0','generator':'Anatome indexed BodyParts3D packer'},'scene':0,'scenes':[{'nodes':[]}],'nodes':[],'meshes':[],'accessors':[],'bufferViews':[],'materials':[]};parts=[]
+ raw=bytearray();g={'asset':{'version':'2.0','generator':'Anatomeme indexed BodyParts3D packer'},'scene':0,'scenes':[{'nodes':[]}],'nodes':[],'meshes':[],'accessors':[],'bufferViews':[],'materials':[]};parts=[]
  colors={'bone':[.74,.67,.54,1],'cartilage':[.65,.76,.78,1],'disc':[.62,.71,.75,1],'muscle':[.58,.25,.21,1]}
  for kind,color in colors.items():g['materials'].append({'name':kind,'pbrMetallicRoughness':{'baseColorFactor':color,'metallicFactor':0,'roughnessFactor':.8}})
  def accessor(data,component,count,typ,target,minimum=None,maximum=None):

@@ -1,6 +1,6 @@
 # Account and progress setup
 
-Anatome uses Supabase Auth for Google sign-in and an append-only Postgres event
+Anatomeme uses Supabase Auth for Google sign-in and an append-only Postgres event
 table for private study history. The 3D models remain static website assets.
 Guest practice remains available without an account. An explicit import brings
 this browser's existing guest history into the signed-in account; signing in

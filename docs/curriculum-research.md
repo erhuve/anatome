@@ -1,4 +1,4 @@
-# Anatome curriculum and learning research
+# Anatomeme curriculum and learning research
 
 Researched 30 October 2026. This is a content plan and original factual notes, not a complete course or an anatomist's validation of any 3D mesh.
 

@@ -53,7 +53,7 @@ export default function ProgressPanel({ auth, progress, onClose, onStudy }: {
   return <div className="about-overlay progress-overlay" onClick={onClose}>
     <div className="about-dialog progress-dialog" ref={panel} role="dialog" aria-modal="true" aria-labelledby="progress-title" onClick={event => event.stopPropagation()}>
       <button className="icon-control about-close" aria-label="Close progress" onClick={onClose}><X size={18}/></button>
-      <div className="question-kicker">ANATOME / YOUR PRACTICE</div>
+      <div className="question-kicker">ANATOMEME / YOUR PRACTICE</div>
       <h2 id="progress-title">{auth.user ? 'A little further, every day.' : 'Keep the progress.'}</h2>
       {auth.user ? <p className="account-identity">{auth.user.email ?? 'Your account'}</p> : <>
         <p>Sign in with Google to save your answers and collection passes, then pick them up on another device.</p>

@@ -1,4 +1,4 @@
-# Anatome
+# Anatomeme
 
 A model-first anatomy study and quiz app. Built with React, TypeScript, Vite, and Three.js.
 

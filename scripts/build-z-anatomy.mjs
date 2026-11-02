@@ -22,7 +22,7 @@ const human = name => {
 };
 await MeshoptEncoder.ready;
 const chunks=[];let binLength=0,fallbackLength=0;
-const g={asset:{version:'2.0',generator:'Anatome pinned Z-Anatomy FBX converter'},scene:0,scenes:[{nodes:[]}],nodes:[],meshes:[],accessors:[],bufferViews:[],materials:[{name:'Muscle',pbrMetallicRoughness:{baseColorFactor:[.58,.25,.21,1],metallicFactor:0,roughnessFactor:.8}}],extensionsUsed:['EXT_meshopt_compression'],extensionsRequired:['EXT_meshopt_compression']};
+const g={asset:{version:'2.0',generator:'Anatomeme pinned Z-Anatomy FBX converter'},scene:0,scenes:[{nodes:[]}],nodes:[],meshes:[],accessors:[],bufferViews:[],materials:[{name:'Muscle',pbrMetallicRoughness:{baseColorFactor:[.58,.25,.21,1],metallicFactor:0,roughnessFactor:.8}}],extensionsUsed:['EXT_meshopt_compression'],extensionsRequired:['EXT_meshopt_compression']};
 function stream(array, stride, type, count, mode, min, max) {
  const bytes=new Uint8Array(array.buffer,array.byteOffset,array.byteLength);const encoded=MeshoptEncoder.encodeGltfBuffer(bytes,count,stride,mode);
  const pad=(-binLength)&3;if(pad){chunks.push(Buffer.alloc(pad));binLength+=pad;}

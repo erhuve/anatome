@@ -97,7 +97,7 @@ begin
     raise exception 'Anonymous visitors must not be able to insert study events';
   exception when insufficient_privilege then null;
   end;
-  raise notice 'All Anatome ownership, retry, and append-only permission checks passed.';
+  raise notice 'All Anatomeme ownership, retry, and append-only permission checks passed.';
 end $$;
 
 reset role;
