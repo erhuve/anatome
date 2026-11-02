@@ -11,7 +11,7 @@ npm ci
 npm run dev
 ```
 
-For account features, copy `.env.example` to `.env.local` and follow [account setup](docs/auth-setup.md).
+Copy `.env.example` to `.env.local`. For account features, follow [account setup](docs/auth-setup.md); for analytics, follow [PostHog setup](docs/analytics.md).
 
 Open the Local URL printed by Vite (normally http://127.0.0.1:5173/).
 
@@ -29,7 +29,7 @@ npm run preview
 
 `npm run build` creates the production app in `dist/`. Serve that directory from your own web server or any static host. Use `npm run preview` to check the production build locally; it is a development preview server.
 
-The app currently expects to be served at the root of a domain. Include the entire `dist/` directory, especially `models/` and `histology/`. Set `VITE_SUPABASE_URL` and `VITE_SUPABASE_PUBLISHABLE_KEY` before building to enable account features. No platform-specific build tools are needed. Serve it over HTTP or HTTPS rather than opening `index.html` directly from disk.
+The app currently expects to be served at the root of a domain. Include the entire `dist/` directory, especially `models/` and `histology/`. Set `VITE_SUPABASE_URL` and `VITE_SUPABASE_PUBLISHABLE_KEY` before building to enable account features. Set `VITE_POSTHOG_PROJECT_TOKEN` and `VITE_POSTHOG_HOST` before building to enable PostHog analytics. No platform-specific build tools are needed. Serve it over HTTP or HTTPS rather than opening `index.html` directly from disk.
 
 The app uses system fonts and serves its anatomy assets locally. Educational source links open their original publishers. Guest history remains local to each browser and origin. Signed-in answers save to Supabase with an account-scoped local outbox for offline changes. Incoming progress from other devices refreshes when the app gains focus, reconnects, or you press Refresh in My progress.
 

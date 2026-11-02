@@ -10,6 +10,7 @@ import { DEFAULT_CONTEXT_OPACITY } from '../anatomyRendering';
 import { shuffle } from '../study';
 import { studyTargetLabel } from '../studyNavigation';
 import StudyBrowser from './StudyBrowser';
+import { trackEvent } from '../analytics';
 
 type Result = { selected: string | null; correct: boolean; typoAccepted: boolean };
 type Props = {
@@ -54,6 +55,14 @@ export default function StudyFlow({ targets, answerMode, onAnswer, onClose, head
   const onViewChange = useCallback((direction: string) => setFreeView(direction === 'free'), []);
   const contextIds = useMemo(() => getPromptContextIds(prompt), [prompt]);
   const hasOpacity = !prompt.bone && framing !== 'isolate';
+  const trackedTarget = useRef('');
+
+  useEffect(() => {
+    const key = `${prompt.collection}:${prompt.id}`;
+    if (paused || phase === 'complete' || trackedTarget.current === key) return;
+    trackedTarget.current = key;
+    trackEvent('study_target_viewed', { collection: prompt.collection, question_id: prompt.id, source: fromMeme ? 'meme' : general ? 'study' : 'review' });
+  }, [prompt, paused, phase, fromMeme, general]);
 
   useEffect(() => { heading.current?.focus({ preventScroll: true }); }, [index, phase]);
   useEffect(() => {
@@ -91,6 +100,7 @@ export default function StudyFlow({ targets, answerMode, onAnswer, onClose, head
       : { correct: selected === prompt.answer, typoAccepted: false };
     setResults(previous => ({ ...previous, [prompt.id]: { selected, ...matched } }));
     onAnswer(prompt, matched.correct);
+    trackEvent('quiz_answered', { collection: prompt.collection, question_id: prompt.id, correct: matched.correct, revealed: selected === null, answer_mode: mode, activity: 'self_check' });
   }
   function advance() {
     if (index + 1 < targets.length) showTarget(index + 1);

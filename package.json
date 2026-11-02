@@ -11,8 +11,10 @@
     "brand:build": "node scripts/build-brand-assets.mjs"
   },
   "dependencies": {
+    "@posthog/react": "^1.11.3",
     "@supabase/supabase-js": "^2.118.0",
     "lucide-react": "^0.468.0",
+    "posthog-js": "^1.444.3",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "three": "^0.180.0"

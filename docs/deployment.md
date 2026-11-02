@@ -9,7 +9,7 @@ Primary URL: https://anato.meme
 - Repository root: `/` (the repository contains the app directly at its root).
 - Build command: `npm run build`.
 - Build output: `dist`.
-- Build-time configuration: `VITE_SUPABASE_URL` and `VITE_SUPABASE_PUBLISHABLE_KEY`.
+- Build-time configuration: `VITE_SUPABASE_URL`, `VITE_SUPABASE_PUBLISHABLE_KEY`, `VITE_POSTHOG_PROJECT_TOKEN`, and `VITE_POSTHOG_HOST`. See [analytics setup](analytics.md) for the PostHog project and verification steps. PostHog variables must be added to Cloudflare Pages before rebuilding; local `.env.local` is not uploaded by Git.
 - Pages hostname: https://anatome.pages.dev.
 - Dashboard: https://dash.cloudflare.com/ffd5ae72e2f3a3655317086208a55d0d/pages/view/anatome.
 

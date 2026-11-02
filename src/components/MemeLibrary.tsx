@@ -4,6 +4,7 @@ import { findMemes, isCoreAnatomy, memeProgress, memes, memeTopicCounts, memeUrl
 import { memeModelTargets, type MemeQuestion } from '../memeLessons';
 import { shuffle, type StudyState } from '../study';
 import type { ModelPrompt } from '../modelQuiz';
+import { trackEvent, trackPageview } from '../analytics';
 
 type Props = { study: StudyState; paused: boolean; onAnswer: (id: string, correct: boolean) => void; onStudyModels: (targets: ModelPrompt[]) => void };
 
@@ -21,6 +22,10 @@ export default function MemeLibrary({ study, paused, onAnswer, onStudyModels }: 
   const visible = useMemo(() => findMemes(query, filter).filter(meme => !dueOnly || memeProgress(meme, study.attempts, study.review).due > 0), [query, filter, dueOnly, study]);
   const dueMemes = memes.filter(meme => memeProgress(meme, study.attempts, study.review).due > 0).length;
   const models = useMemo(() => selected ? memeModelTargets(selected.lesson) : [], [selected]);
+
+  useEffect(() => {
+    trackPageview({ mode: 'memes', ...(selected ? { meme_id: selected.id, activity: route.activity } : {}) });
+  }, [selected, route.activity]);
 
   useEffect(() => {
     const restore = () => setRoute(readMemeRoute(window.location.search));
@@ -95,6 +100,12 @@ function MemeQuiz({ meme, paused, onAnswer, onStudy }: { meme: Meme; paused: boo
   const result = answers.find(answer => answer.id === current.id);
   const correct = answers.filter(answer => answer.correct).length;
   const missed = questions.filter(question => answers.some(answer => answer.id === question.id && !answer.correct));
+  const trackedQuestions = useRef<MemeQuestion[] | null>(null);
+  useEffect(() => {
+    if (trackedQuestions.current === questions) return;
+    trackedQuestions.current = questions;
+    trackEvent('quiz_set_started', { collection: 'memes', question_count: questions.length, session_mode: questions.length < meme.lesson.questions.length ? 'review' : 'pass' });
+  }, [questions, meme]);
   useEffect(() => { if (!paused && result) next.current?.focus({ preventScroll: true }); }, [result, paused]);
   useEffect(() => { if (index > 0 || complete) title.current?.focus({ preventScroll: true }); }, [index, complete]);
   function answer(selected: string | null) {
@@ -103,10 +114,14 @@ function MemeQuiz({ meme, paused, onAnswer, onStudy }: { meme: Meme; paused: boo
     const isCorrect = selected === current.answer;
     setAnswers(values => [...values, { id: current.id, selected, correct: isCorrect }]);
     onAnswer(current.id, isCorrect);
+    trackEvent('quiz_answered', { collection: 'memes', question_id: current.id, correct: isCorrect, revealed: selected === null, answer_mode: 'choice', activity: 'quiz' });
   }
   function advance() {
-    if (!result || paused) return;
-    if (index + 1 === questions.length) setComplete(true);
+    if (complete || !result || paused) return;
+    if (index + 1 === questions.length) {
+      trackEvent('quiz_set_completed', { collection: 'memes', question_count: questions.length, correct_count: correct, answered_count: answers.length, skipped_count: 0, session_mode: questions.length < meme.lesson.questions.length ? 'review' : 'pass' });
+      setComplete(true);
+    }
     else { setIndex(value => value + 1); lock.current = false; }
   }
   function retry(pool: MemeQuestion[]) {

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import type { User } from '@supabase/supabase-js';
 import { googleSignInEnabled, supabase } from './supabase';
+import { syncAnalyticsIdentity, trackEvent } from './analytics';
 
 export function useAuth() {
   const [user, setUser] = useState<User | null>(null);
@@ -10,7 +11,7 @@ export function useAuth() {
 
   useEffect(() => {
     const client = supabase;
-    if (!client) return;
+    if (!client) { syncAnalyticsIdentity(null); return; }
     let active = true;
     let authChanges = 0;
     // Keep this callback synchronous: awaiting another auth call here can
@@ -18,6 +19,7 @@ export function useAuth() {
     const { data: { subscription } } = client.auth.onAuthStateChange((_event, session) => {
       if (!active) return;
       authChanges += 1;
+      syncAnalyticsIdentity(session?.user.id ?? null);
       setUser(session?.user ?? null);
       setReady(true);
       setWorking(false);
@@ -35,6 +37,7 @@ export function useAuth() {
     void client.auth.getSession().then(({ data, error: sessionError }) => {
       if (!active || authChanges > 0) return;
       if (sessionError) setError('Could not restore your sign-in. Please try signing in again.');
+      syncAnalyticsIdentity(data.session?.user.id ?? null);
       setUser(data.session?.user ?? null);
       setReady(true);
     }).catch(() => {
@@ -67,6 +70,7 @@ export function useAuth() {
         setWorking(false);
         return;
       }
+      trackEvent('sign_in_started', { provider: 'google' });
       const { error } = await supabase.auth.signInWithOAuth({
         provider: 'google', options: { redirectTo: redirect.toString() },
       });

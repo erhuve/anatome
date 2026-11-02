@@ -21,6 +21,7 @@ import type { View } from './content';
 import { readAnswerMode, writeAnswerMode, type AnswerMode } from './answerMode';
 import { matchTypedAnswer } from './answerMatching';
 import { DEFAULT_CONTEXT_OPACITY } from './anatomyRendering';
+import { trackEvent, trackPageview } from './analytics';
 
 type Response = { id: string; selected: string | null; correct: boolean | null; typoAccepted?: boolean };
 type ModelStatus = 'loading' | 'ready' | 'error';
@@ -106,6 +107,17 @@ export function QuizStudio({ auth, progress }: { auth: ReturnType<typeof useAuth
   const displayQuestion = workspaceMode === 'study' ? generalTargets.find(prompt => prompt.id === studyCursors[studyCollection]) ?? generalTargets[0] ?? question : question;
   const onReady = useCallback((status: ModelStatus) => setModelStatus(status), []);
   const onViewChange = useCallback((direction: string) => setFreeView(direction === 'free'), []);
+  const trackedQueue = useRef<ModelPrompt[] | null>(null);
+
+  useEffect(() => {
+    // MemeLibrary owns its pageviews, including direct links to lessons/quizzes.
+    if (workspaceMode !== 'memes' && !studyTargets) trackPageview({ mode: workspaceMode, collection: activeCollection });
+  }, [workspaceMode, activeCollection, studyTargets]);
+  useEffect(() => {
+    if (workspaceMode !== 'quiz' || complete || trackedQueue.current === queue) return;
+    trackedQueue.current = queue;
+    trackEvent('quiz_set_started', { collection, question_count: queue.length, session_mode: sessionMode });
+  }, [workspaceMode, complete, queue, collection, sessionMode]);
 
   useEffect(() => { if (response && !complete && workspaceMode === 'quiz' && !studyTargets) nextButton.current?.focus({ preventScroll: true }); }, [response, complete, workspaceMode, studyTargets]);
   useEffect(() => {
@@ -144,6 +156,7 @@ export function QuizStudio({ auth, progress }: { auth: ReturnType<typeof useAuth
     openSet(createModelSession(collection, 10, Math.random, [], allowedIds), collection, 'pass');
   }
   function applySelection(nextCollection: ModelCollection, preferences: QuizSelections) {
+    trackEvent('study_selection_saved', { collection: nextCollection, target_count: selectedPromptIds(nextCollection, preferences).length, custom_selection: Array.isArray(preferences[nextCollection]) });
     setSelections(preferences); setSelectionSaved(writeQuizSelections(auth.user?.id ?? null, preferences));
     setSettingsOpen(false); startSet(nextCollection, undefined, preferences);
     if (workspaceMode === 'study') setStudyCollection(nextCollection);
@@ -174,11 +187,15 @@ export function QuizStudio({ auth, progress }: { auth: ReturnType<typeof useAuth
       : { correct: option === question.answer, typoAccepted: false };
     setResponses(previous => [...previous, { id: question.id, selected: option, ...result }]);
     progress.recordAnswer(question.id, collection, result.correct, sessionMode === 'pass', scope);
+    trackEvent('quiz_answered', { collection, question_id: question.id, correct: result.correct, revealed: option === null, answer_mode: answerMode, activity: 'quiz', session_mode: sessionMode });
   }
   function advance(skip = false) {
-    if (!response && !skip) return;
+    if (complete || (!response && !skip)) return;
     if (skip && !response) setResponses(previous => [...previous, { id: question.id, selected: null, correct: null }]);
-    if (index + 1 === queue.length) setComplete(true);
+    if (index + 1 === queue.length) {
+      trackEvent('quiz_set_completed', { collection, question_count: queue.length, correct_count: correct, answered_count: answered, skipped_count: skipped + (skip && !response ? 1 : 0), session_mode: sessionMode });
+      setComplete(true);
+    }
     else { const next = queue[index + 1]; setIndex(value => value + 1); setTypedAnswer(''); setView(next.view); setFreeView(false); setFraming(initialFraming(next)); setReset(value => value + 1); answerLock.current = false; }
   }
   useEffect(() => {
