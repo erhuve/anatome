@@ -7,6 +7,7 @@ import type { useAuth } from '../useAuth';
 import type { useStudyProgress } from '../useStudyProgress';
 import { memes, memeProgress } from '../memes';
 import { memeQuestionIds } from '../memeLessons';
+import QuestionHistory from './QuestionHistory';
 
 const collections: { id: ModelCollection; label: string }[] = [
   { id: 'muscles', label: 'Muscles' }, { id: 'skeleton', label: 'Bones' }, { id: 'landmarks', label: 'Landmarks' },
@@ -32,7 +33,7 @@ export default function ProgressPanel({ auth, progress, onClose, onStudy, onMeme
     function keyboard(event: KeyboardEvent) {
       if (event.key === 'Escape') { event.stopPropagation(); close.current(); }
       if (event.key !== 'Tab') return;
-      const targets = Array.from(panel.current?.querySelectorAll<HTMLElement>('button:not(:disabled),a[href]') ?? []);
+      const targets = Array.from(panel.current?.querySelectorAll<HTMLElement>('button:not(:disabled),a[href],input:not(:disabled),select:not(:disabled)') ?? []);
       if (!targets.length) return;
       if (event.shiftKey && document.activeElement === targets[0]) { event.preventDefault(); targets.at(-1)?.focus(); }
       if (!event.shiftKey && document.activeElement === targets.at(-1)) { event.preventDefault(); targets[0]?.focus(); }
@@ -85,6 +86,11 @@ export default function ProgressPanel({ auth, progress, onClose, onStudy, onMeme
         <div><strong>{accuracy === null ? '—' : `${accuracy}%`}</strong><span>Accuracy</span></div>
         <div><strong>{due}</strong><span>Reviews due</span></div>
       </div>
+      <button className="history-open" onClick={() => {
+        const heading = panel.current?.querySelector<HTMLElement>('#question-history-title');
+        heading?.focus({ preventScroll: true });
+        heading?.scrollIntoView({ block: 'start' });
+      }}>View full question history<ArrowRight size={14}/></button>
       <h3 className="progress-section-title">All-material passes</h3>
       <div className="collection-progress-list">{collections.map(collection => {
         const ids = new Set(modelPromptPools[collection.id].map(prompt => prompt.id));
@@ -102,6 +108,7 @@ export default function ProgressPanel({ auth, progress, onClose, onStudy, onMeme
         {missed.map(({ prompt, at }) => <button className="review-target" key={prompt.id} onClick={() => onStudy([prompt])} aria-label={`Study ${prompt.answer}`}><span>{prompt.answer}</span><small>{new Date(at).toLocaleDateString(undefined, { month: 'short', day: 'numeric' })}</small><ArrowRight size={14}/></button>)}
       </section>}
       <section className="meme-account-progress" aria-labelledby="meme-progress-title"><h3 id="meme-progress-title">Meme quizzes</h3><p>{memeAttempts.length ? `${memeAttempts.length} answers · ${Math.round(memeAttempts.filter(attempt => attempt.correct).length / memeAttempts.length * 100)}% accuracy · ${memeDue} reviews due` : 'Short topic quizzes linked to every meme.'}</p>{practicedMemes.slice(0, 5).map(({ meme, stats }) => <button className="review-target" key={meme.id} onClick={() => onMeme?.(meme.id)} disabled={!onMeme}><span>{meme.lesson.title}<small>{stats.correct}/{stats.total} correct on latest tries{stats.due ? ` · ${stats.due} due` : ''}</small></span><ArrowRight size={13}/></button>)}{onMeme && <button className="subtle-button" onClick={() => onMeme()}>Browse meme study & quizzes<ArrowRight size={13}/></button>}</section>
+      <QuestionHistory attempts={progress.study.attempts} onStudy={onStudy} onMeme={onMeme}/>
       <p className="progress-footnote">Custom selections keep separate passes, shown in the quiz footer. Coverage records practice, including revealed answers. Accuracy reflects your recorded answers; it is not a mastery score.</p>
       {auth.user && <div className="account-signout">
         {progress.pending > 0 && <p>{progress.saved ? 'Pending changes stay on this device until you sign in again.' : 'Wait for your progress to sync before signing out.'}</p>}

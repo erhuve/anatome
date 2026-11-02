@@ -4,6 +4,7 @@ import App from './App';
 import { PostHogProvider } from '@posthog/react';
 import { initializeAnalytics } from './analytics';
 import './style.css';
+import './components/QuestionHistory.css';
 import './memes.css';
 import './identity.css';
 import './mobile.css';
