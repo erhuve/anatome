@@ -33,6 +33,7 @@ export type MemeActivity = 'study' | 'quiz';
 export function memeUrl(href: string, id?: string, activity: MemeActivity = 'study'): URL {
   const url = new URL(href);
   url.searchParams.set('mode', 'memes');
+  url.searchParams.delete('progress');
   if (id) { url.searchParams.set('meme', id); url.searchParams.set('activity', activity); }
   else { url.searchParams.delete('meme'); url.searchParams.delete('activity'); }
   return url;

@@ -6,7 +6,8 @@ import { createModelSession, getPromptContextIds, modelPromptPools, type ModelCo
 import { shuffle } from './study';
 import { useAuth } from './useAuth';
 import { useStudyProgress } from './useStudyProgress';
-import ProgressPanel from './components/ProgressPanel';
+import ProgressPages from './components/ProgressPages';
+import { progressUrl, readProgressPage, type ProgressPage } from './progressNavigation';
 import StudySettings from './components/StudySettings';
 import StudyFlow from './components/StudyFlow';
 import StudioHeader from './components/StudioHeader';
@@ -73,13 +74,16 @@ export function QuizStudio({ auth, progress }: { auth: ReturnType<typeof useAuth
   const [reset, setReset] = useState(0);
   const [retry, setRetry] = useState(0);
   const [about, setAbout] = useState(false);
-  const [accountOpen, setAccountOpen] = useState(false);
+  const [progressPage, setProgressPage] = useState<ProgressPage | null>(() => readProgressPage(window.location.search));
+  const practiceVisited = useRef(!progressPage);
+  if (!progressPage) practiceVisited.current = true;
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [studyTargets, setStudyTargets] = useState<ModelPrompt[] | null>(null);
+  const progressStudyTrigger = useRef<HTMLElement | null>(null);
   const [memeNavigation, setMemeNavigation] = useState(0);
   const [selectionSaved, setSelectionSaved] = useState(true);
   const saved = progress.saved;
-  useEffect(() => { if (auth.error) { setAbout(false); setSettingsOpen(false); setAccountOpen(true); } }, [auth.error]);
+  useEffect(() => { if (auth.error) navigateProgress('account'); }, [auth.error]);
   const answerLock = useRef(false);
   const nextButton = useRef<HTMLButtonElement>(null);
   const answerInput = useRef<HTMLInputElement>(null);
@@ -114,18 +118,18 @@ export function QuizStudio({ auth, progress }: { auth: ReturnType<typeof useAuth
 
   useEffect(() => {
     // MemeLibrary owns its pageviews, including direct links to lessons/quizzes.
-    if (workspaceMode !== 'memes' && !studyTargets) trackPageview({ mode: workspaceMode, collection: activeCollection });
-  }, [workspaceMode, activeCollection, studyTargets]);
+    if (!progressPage && workspaceMode !== 'memes' && !studyTargets) trackPageview({ mode: workspaceMode, collection: activeCollection });
+  }, [workspaceMode, activeCollection, studyTargets, progressPage]);
   useEffect(() => {
-    if (workspaceMode !== 'quiz' || complete || trackedQueue.current === queue) return;
+    if (progressPage || workspaceMode !== 'quiz' || complete || trackedQueue.current === queue) return;
     trackedQueue.current = queue;
     trackEvent('quiz_set_started', { collection, question_count: queue.length, session_mode: sessionMode });
-  }, [workspaceMode, complete, queue, collection, sessionMode]);
+  }, [workspaceMode, complete, queue, collection, sessionMode, progressPage]);
 
-  useEffect(() => { if (response && !complete && workspaceMode === 'quiz' && !studyTargets) nextButton.current?.focus({ preventScroll: true }); }, [response, complete, workspaceMode, studyTargets]);
+  useEffect(() => { if (response && !complete && workspaceMode === 'quiz' && !studyTargets && !progressPage) nextButton.current?.focus({ preventScroll: true }); }, [response, complete, workspaceMode, studyTargets, progressPage]);
   useEffect(() => {
-    if (workspaceMode === 'quiz' && answerMode === 'typed' && ready && !response && !complete && !about && !accountOpen && !settingsOpen && !studyTargets) focusAnswerOnDesktop(answerInput.current);
-  }, [answerMode, question.id, ready, response, complete, about, accountOpen, settingsOpen, studyTargets, workspaceMode]);
+    if (workspaceMode === 'quiz' && answerMode === 'typed' && ready && !response && !complete && !about && !progressPage && !settingsOpen && !studyTargets) focusAnswerOnDesktop(answerInput.current);
+  }, [answerMode, question.id, ready, response, complete, about, progressPage, settingsOpen, studyTargets, workspaceMode]);
   useEffect(() => {
     if (!about) return;
     const previous = document.activeElement as HTMLElement | null;
@@ -164,9 +168,37 @@ export function QuizStudio({ auth, progress }: { auth: ReturnType<typeof useAuth
     setSettingsOpen(false); startSet(nextCollection, undefined, preferences);
     if (workspaceMode === 'study') setStudyCollection(nextCollection);
   }
+  function navigateProgress(page: ProgressPage) {
+    setAbout(false); setSettingsOpen(false); setProgressPage(page);
+    if (readProgressPage(window.location.search) !== page) window.history.pushState({}, '', progressUrl(window.location.href, page));
+  }
+  function returnToPractice() {
+    setProgressPage(null);
+    window.history.pushState({}, '', progressUrl(window.location.href, null));
+    setReset(value => value + 1);
+  }
+  function openMeme(id?: string) {
+    const url = memeUrl(progressUrl(window.location.href, null).href, id, 'quiz');
+    window.history.pushState({}, '', url);
+    setProgressPage(null); setWorkspaceMode('memes'); setMemeNavigation(value => value + 1);
+  }
+  useEffect(() => {
+    function navigate() {
+      setProgressPage(readProgressPage(window.location.search));
+      setAbout(false); setSettingsOpen(false); setStudyTargets(null);
+      const mode = new URLSearchParams(window.location.search).get('mode');
+      setWorkspaceMode(mode === 'study' || mode === 'memes' ? mode : 'quiz');
+      if (mode === 'study') setStudyCollection(initialCollection());
+      if (mode === 'memes') setMemeNavigation(value => value + 1);
+      if (mode !== 'study' && mode !== 'memes' && initialCollection() !== collection) startSet(initialCollection());
+    }
+    window.addEventListener('popstate', navigate);
+    return () => window.removeEventListener('popstate', navigate);
+  }, [collection, selections]);
   function changeWorkspace(next: WorkspaceMode) {
+    if (progressPage) returnToPractice();
     if (next === workspaceMode) return;
-    setWorkspaceMode(next); setAccountOpen(false); setSettingsOpen(false); setAbout(false);
+    setWorkspaceMode(next); setProgressPage(null); setSettingsOpen(false); setAbout(false);
     if (next === 'study' && studyCollection === collection && !studyCursors[studyCollection]) setStudyCursors(value => ({ ...value, [studyCollection]: question.id }));
     window.history.replaceState({}, '', workspaceUrl(window.location.href, next, next === 'study' ? studyCollection : collection));
   }
@@ -180,10 +212,18 @@ export function QuizStudio({ auth, progress }: { auth: ReturnType<typeof useAuth
   }
   function studyStructures(targets: ModelPrompt[]) {
     if (!targets.length) return;
-    setAccountOpen(false); setAbout(false); setSettingsOpen(false); setStudyTargets(targets);
+    if (progressPage) progressStudyTrigger.current = document.activeElement as HTMLElement;
+    setAbout(false); setSettingsOpen(false); setStudyTargets(targets);
+  }
+  function closeStudy() {
+    setStudyTargets(null); setReset(value => value + 1);
+    if (progressPage) requestAnimationFrame(() => {
+      const trigger = progressStudyTrigger.current;
+      (trigger?.isConnected ? trigger : document.getElementById('progress-page-title'))?.focus({ preventScroll: true });
+    });
   }
   function answer(option: string | null) {
-    if (workspaceMode !== 'quiz' || answerLock.current || complete || !ready || about || accountOpen || settingsOpen || studyTargets) return;
+    if (workspaceMode !== 'quiz' || answerLock.current || complete || !ready || about || progressPage || settingsOpen || studyTargets) return;
     answerLock.current = true;
     answerInput.current?.blur();
     const result = option !== null && answerMode === 'typed'
@@ -206,7 +246,7 @@ export function QuizStudio({ auth, progress }: { auth: ReturnType<typeof useAuth
     function keyboard(event: KeyboardEvent) {
       if (event.key === 'Escape' && about) { setAbout(false); return; }
       const target = event.target as HTMLElement | null;
-      if (workspaceMode !== 'quiz' || studyTargets || about || accountOpen || settingsOpen || target?.matches('input,textarea,select') || event.metaKey || event.ctrlKey || event.altKey) return;
+      if (workspaceMode !== 'quiz' || studyTargets || about || progressPage || settingsOpen || target?.matches('input,textarea,select') || event.metaKey || event.ctrlKey || event.altKey) return;
       if (answerMode === 'choice' && !complete && !response && /^[1-4]$/.test(event.key)) { const option = question.options[Number(event.key) - 1]; if (option) { event.preventDefault(); answer(option); } }
       if (event.key === 'Enter' && response && !complete) { const focusedButton = target?.closest('button') as HTMLButtonElement | null; if (!focusedButton || focusedButton.disabled) { event.preventDefault(); advance(); } }
     }
@@ -217,33 +257,38 @@ export function QuizStudio({ auth, progress }: { auth: ReturnType<typeof useAuth
   const overlays = <>
     {settingsOpen && <StudySettings collection={activeCollection} selections={selections} mode={workspaceMode === 'study' ? 'study' : 'quiz'} onApply={applySelection} onClose={() => setSettingsOpen(false)}/>}
     {!selectionSaved && <div className="selection-save-note" role="status">This selection is active for this tab. Browser storage is unavailable.</div>}
-    {accountOpen && <ProgressPanel auth={auth} progress={progress} onClose={() => setAccountOpen(false)} onStudy={studyStructures} onMeme={id => { setAccountOpen(false); setWorkspaceMode('memes'); setMemeNavigation(value => value + 1); window.history.replaceState({}, '', memeUrl(window.location.href, id, 'quiz')); }}/>}
+
     {about && <div className="about-overlay" onClick={() => setAbout(false)}><div className="about-dialog" ref={aboutPanel} role="dialog" aria-modal="true" aria-labelledby="about-title" onClick={event => event.stopPropagation()}><button className="icon-control about-close" aria-label="Close specimen information" onClick={() => setAbout(false)}><X size={18}/></button><div className="question-kicker">ANATOMEME / PRACTICE</div><h2 id="about-title">The anatomy comes first.</h2><p>Identify real anatomical models, inspect their surfaces and neighbors, then check your answer. Each set has up to 10 questions. Continue through every selected target without repeats, then explicitly start a new pass. A short last set finishes the pass. Missed review is an intentional repeat and does not advance coverage. Study settings lets you select regions or individual structures; each selection keeps its own pass.</p><h3>Move around the model</h3><p>Drag to rotate and scroll to zoom. Click the model or Tab to it, then use arrow keys to pan up, down, left, and right. Shift + arrows rotates; + and − zoom. Right-drag or Shift-drag also pans. On a touchscreen, one finger rotates; two fingers pan and pinch to zoom. Reset the camera or choose an anatomical view to recenter. Focus frames the target and its neighbors. Context shows the assembly; Isolate shows only the target. Use Surroundings to fade nearby anatomy while the blue target stays solid. The eye button switches between your chosen opacity and full surface anatomy. At 0%, only the target remains visible; at 100%, surface anatomy can cover a deep target. Your opacity choice carries across questions and collections, and adjusting it keeps your current camera view.</p><h3>Sources & scope</h3><p>Muscles: Z-Anatomy, Gauthier Kervyn and contributors, CC BY-SA 4.0. The source assembly is converted without decimation or anatomical reshaping. Bones: BodyParts3D, © The Database Center for Life Science, CC BY 4.0. Blue highlights and landmark locators are study annotations. Every available source component is eligible; the atlas does not yet provide a visual quiz for every college A&P topic. Open Curriculum coverage in study settings for the inventory and remaining gaps.</p><div className="about-links"><a href="https://github.com/LluisV/Z-Anatomy" target="_blank" rel="noreferrer">Z-Anatomy source atlas<ArrowRight size={13}/></a><a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">Muscle model license<ArrowRight size={13}/></a><a href="https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html" target="_blank" rel="noreferrer">BodyParts3D provenance & license<ArrowRight size={13}/></a><a href={displayQuestion.source} target="_blank" rel="noreferrer">Anatomy reference<ArrowRight size={13}/></a><a href="/privacy.html" target="_blank" rel="noreferrer">Privacy policy<ArrowRight size={13}/></a><a href="/terms.html" target="_blank" rel="noreferrer">Terms of use<ArrowRight size={13}/></a></div><p className="about-storage">Guest progress stays in this browser. Sign in to save answers and selection passes to your account across devices. Quiz selection preferences are saved on this device for each account. Answered and revealed questions count as covered; skipped load failures do not. Existing notes and study data are retained.</p></div></div>}
   </>;
 
   const header = <StudioHeader mode={workspaceMode} onModeChange={changeWorkspace} collection={activeCollection} onCollectionChange={changeCollection}
-    onSettings={() => { setAccountOpen(false); setAbout(false); setSettingsOpen(true); }}
-    onProgress={() => { setAbout(false); setSettingsOpen(false); setAccountOpen(true); }}
+    onSettings={() => { setProgressPage(null); setAbout(false); setSettingsOpen(true); }}
+    onProgress={navigateProgress} progressPage={progressPage}
     onAbout={() => setAbout(true)} signedIn={!!auth.user} syncStatus={progress.status}
     onNext={() => emptySelection ? setSettingsOpen(true) : passComplete ? startNextPass() : startSet()}
     nextLabel={emptySelection ? 'Choose targets' : passComplete ? 'New pass' : 'Next set'}
     nextTitle={emptySelection ? 'Choose targets' : passComplete ? 'Start a new pass' : 'Start the next set'}/>;
 
-  if (studyTargets) return <StudyFlow targets={studyTargets} fromMeme={workspaceMode === 'memes'} answerMode={answerMode} onAnswer={(prompt, isCorrect) => progress.recordAnswer(prompt.id, prompt.collection, isCorrect, false)} onClose={() => { setStudyTargets(null); setReset(value => value + 1); }}/>;
+  const progressWorkspace = progressPage ? <div className="quiz-app progress-app" style={studyTargets ? { display: 'none' } : undefined}>
+    {header}<ProgressPages page={progressPage} auth={auth} progress={progress} onNavigate={navigateProgress} onBack={returnToPractice} onStudy={studyStructures} onMeme={openMeme}/>{overlays}
+  </div> : null;
+  const practiceHeader = progressPage ? null : header;
+  const practiceOverlays = progressPage ? null : overlays;
+  const reviewWorkspace = studyTargets ? <StudyFlow targets={studyTargets} fromMeme={!progressPage && workspaceMode === 'memes'} backLabel={progressPage ? `Back to ${progressPage === 'history' ? 'history' : progressPage === 'review' ? 'review' : 'progress'}` : undefined} answerMode={answerMode} onAnswer={(prompt, isCorrect) => progress.recordAnswer(prompt.id, prompt.collection, isCorrect, false)} onClose={closeStudy}/> : null;
 
-  if (workspaceMode === 'memes') return <div className="quiz-app meme-app">{header}{!saved && <p className="meme-save-note" role="status">{progress.error ?? 'Your answers are available in this tab. Open My progress to check their save status.'}</p>}<MemeLibrary key={memeNavigation} study={study} paused={accountOpen || about} onAnswer={(id, correct) => progress.recordAnswer(id, 'memes', correct, false)} onStudyModels={studyStructures}/>{overlays}</div>;
+  const memeWorkspace = <div className="quiz-app meme-app">{practiceHeader}{!saved && <p className="meme-save-note" role="status">{progress.error ?? 'Your answers are available in this tab. Open My progress to check their save status.'}</p>}<MemeLibrary key={memeNavigation} study={study} paused={!!progressPage || !!studyTargets || about} onAnswer={(id, correct) => progress.recordAnswer(id, 'memes', correct, false)} onStudyModels={studyStructures}/>{practiceOverlays}</div>;
 
-  if (workspaceMode === 'study') return <>
+  const studyWorkspace = <>
     {generalTargets.length ? <StudyFlow key={`${studyCollection}-${modelScopeKey(studyCollection, selections[studyCollection])}`} targets={generalTargets} answerMode={answerMode}
-      header={header} general initialTargetId={studyCursors[studyCollection]} paused={accountOpen || settingsOpen || about}
+      header={practiceHeader} general initialTargetId={studyCursors[studyCollection]} paused={!!progressPage || !!studyTargets || settingsOpen || about}
       onTargetChange={id => setStudyCursors(value => ({ ...value, [studyCollection]: id }))}
       onAnswer={(prompt, isCorrect) => progress.recordAnswer(prompt.id, prompt.collection, isCorrect, false)} onClose={() => changeWorkspace('quiz')}/>
-      : <div className="quiz-app">{header}<main className="study-empty"><BookOpen size={30}/><h1>Choose something to study.</h1><p>This selection has no available structures. Choose a region or individual structures to explore.</p><button className="continue-button" onClick={() => setSettingsOpen(true)}>Choose study material<ArrowRight size={16}/></button></main></div>}
-    {overlays}
+      : <div className="quiz-app">{practiceHeader}<main className="study-empty"><BookOpen size={30}/><h1>Choose something to study.</h1><p>This selection has no available structures. Choose a region or individual structures to explore.</p><button className="continue-button" onClick={() => setSettingsOpen(true)}>Choose study material<ArrowRight size={16}/></button></main></div>}
+    {practiceOverlays}
   </>;
 
-  return <div className={'quiz-app practice-screen' + (complete ? ' is-complete' : '')}>
-    {header}
+  const quizWorkspace = <div className={'quiz-app practice-screen' + (complete ? ' is-complete' : '')}>
+    {practiceHeader}
 
     <main className="studio-main">
       <section className={'specimen-stage' + (showContextOpacity ? ' has-context-opacity' : '')} aria-label="Interactive 3D quiz specimen">
@@ -299,6 +344,16 @@ export function QuizStudio({ auth, progress }: { auth: ReturnType<typeof useAuth
 
     <footer className="studio-footer"><button className="specimen-credit" onClick={() => setAbout(true)}>{collection === 'muscles' ? 'Z-Anatomy' : 'BodyParts3D'} <span>·</span> {asset.license}</button><div className="session-progress"><span>{correct} correct <i/> {answered} answered</span><div className="progress-marks" aria-label={`${responses.length} of ${queue.length} completed`}>{queue.map((item, itemIndex) => { const result = responses.find(answer => answer.id === item.id); return <span key={item.id} className={result ? result.correct === true ? 'correct' : result.correct === false ? 'missed' : 'skipped' : !complete && itemIndex === index ? 'current' : ''}/>; })}</div></div><span className="pass-progress" aria-label={`Pass ${pass.round}: ${coveredCount} of ${poolSize} targets covered`}>{customSelection ? 'Selection pass' : 'Pass'} {pass.round}<span>{coveredCount} / {poolSize} covered</span></span></footer>
 
-    {overlays}
+    {practiceOverlays}
   </div>;
+
+  // Keep an already-open workspace mounted so an unfinished self-check or meme
+  // quiz survives a visit to progress. Direct progress links mount no specimen.
+  return <>
+    {practiceVisited.current && <div style={progressPage || studyTargets ? { display: 'none' } : undefined}>
+      {workspaceMode === 'memes' ? memeWorkspace : workspaceMode === 'study' ? studyWorkspace : quizWorkspace}
+    </div>}
+    {progressWorkspace}
+    {reviewWorkspace}
+  </>;
 }

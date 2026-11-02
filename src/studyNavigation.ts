@@ -24,6 +24,7 @@ export function findStudyTargets(targets: readonly ModelPrompt[], query: string,
 
 export function workspaceUrl(href: string, mode: WorkspaceMode, collection: ModelCollection): URL {
   const url = new URL(href);
+  url.searchParams.delete('progress');
   url.searchParams.set('atlas', collection);
   if (mode !== 'quiz') url.searchParams.set('mode', mode);
   else url.searchParams.delete('mode');
