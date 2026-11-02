@@ -36,7 +36,7 @@ def main():
     decide = sub.add_parser('decide', help='Save a candidate review')
     decide.add_argument('id')
     decide.add_argument('decision', choices=['kept', 'rejected', 'pending'])
-    for name in ('reviewer', 'hook', 'credit', 'rights', 'note', 'humor'):
+    for name in ('reviewer', 'hook', 'credit', 'rights', 'note', 'humor', 'evidence', 'recall'):
         decide.add_argument('--' + name, default='')
     export = sub.add_parser('export', help='Export kept candidates for lesson authoring; does not edit the app')
     export.add_argument('--output', type=Path)
@@ -89,14 +89,15 @@ def main():
             else:
                 print(store.state / 'review.html')
         elif args.command == 'decide':
-            store.decide(args.id, args.decision, args.reviewer, args.hook, args.credit, args.rights, args.note, args.humor)
+            store.decide(args.id, args.decision, args.reviewer, args.hook, args.credit, args.rights, args.note, args.humor, args.evidence, args.recall)
             write_review(store)
             print('Saved review for ' + args.id)
         elif args.command == 'export':
             output = args.output or store.state / 'kept-candidates.json'
             rows = store.rows('kept')
-            if any(not row.get('review', {}).get('humor', '').strip() for row in rows):
-                raise ValueError('Re-review kept candidates and describe their actual joke before exporting')
+            if any(not all(row.get('review', {}).get(key, '').strip()
+                           for key in ('humor', 'learning_evidence', 'recall')) for row in rows):
+                raise ValueError('Re-review kept candidates: describe the joke, visible learning evidence and an image-supported recall question with its answer before exporting')
             payload = {'schema_version': 1, 'purpose': 'Candidates for lesson authoring; not publication-ready content',
                 'exported_at': time.time(), 'candidates': rows}
             output.parent.mkdir(parents=True, exist_ok=True)

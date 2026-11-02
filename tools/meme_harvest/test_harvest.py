@@ -80,7 +80,7 @@ class HarvestTests(unittest.TestCase):
             store = Store(Path(temporary))
             document = dict(source_url='https://a.test/post', image_url='https://a.test/image.png', title='biceps')
             cid = store.insert(document, sha='digest', fingerprint='0123456789abcdef')
-            store.decide(cid, 'kept', 'Reviewer', 'Elbow extension', 'Creator', 'Review reuse terms', '', 'A joke about the biceps')
+            store.decide(cid, 'kept', 'Reviewer', 'Elbow extension', 'Creator', 'Review reuse terms', '', 'A joke about the biceps', 'Triceps extends the elbow', 'Which muscle extends the elbow? Triceps')
             store.insert(document)
             self.assertEqual(len(store.rows()), 1)
             self.assertEqual(store.rows()[0]['status'], 'kept')
@@ -144,8 +144,33 @@ class HarvestTests(unittest.TestCase):
             cid = store.insert(dict(source_url='https://artist.test/post', image_url='https://artist.test/chart.png', title='Labeled bone diagram'))
             with self.assertRaisesRegex(ValueError, 'joke/punchline'):
                 store.decide(cid, 'kept', 'Reviewer', 'Bone names', 'Artist', 'Reuse notes', '')
-            store.decide(cid, 'kept', 'Reviewer', 'Bone names', 'Artist', 'Reuse notes', '', 'A skeleton deliberately misnames its own bones')
+            store.decide(cid, 'kept', 'Reviewer', 'Bone names', 'Artist', 'Reuse notes', '', 'A skeleton deliberately misnames its own bones', 'The tibia is labeled on the medial leg', 'Which leg bone is medial? Tibia')
             self.assertEqual(store.rows('kept')[0]['review']['humor'], 'A skeleton deliberately misnames its own bones')
+            store.db.close()
+
+    def test_joke_and_attached_lesson_are_not_enough_without_visible_learning_evidence(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            store = Store(Path(temporary))
+            cid = store.insert(dict(source_url='https://artist.test/stress', image_url='https://artist.test/stress.png'))
+            args = (cid, 'kept', 'Reviewer', 'Memorize muscles', 'Artist', 'Check reuse', '', 'Exam stress')
+            for evidence, recall in [('', ''), ('A named muscle', ''), ('', 'Which muscle? Biceps')]:
+                with self.assertRaisesRegex(ValueError, 'visible learning evidence'):
+                    store.decide(*args, evidence, recall)
+            self.assertEqual(store.rows()[0]['status'], 'pending')
+            store.decide(*args, 'The labeled trapezius on the upper back', 'Which muscle is highlighted? Trapezius')
+            review = store.rows('kept')[0]['review']
+            self.assertIn('trapezius', review['learning_evidence'])
+            self.assertIn('Trapezius', review['recall'])
+            store.db.close()
+
+    def test_reviewed_image_rejections_survive_restored_caches(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            path = Path(temporary)
+            store = Store(path)
+            store.insert(dict(source_url='https://a.test/post', image_url='https://i.imgflip.com/stress.jpg?utm_source=feed'))
+            store.db.close()
+            store = Store(path, [{'image_urls': ['https://i.imgflip.com/stress.jpg'], 'reason': 'No educational recall cue'}])
+            self.assertEqual(store.rows()[0]['status'], 'rejected')
             store.db.close()
 
     def test_discovery_downloads_once_and_reposts_do_not_reset_reviews(self):
@@ -164,7 +189,7 @@ class HarvestTests(unittest.TestCase):
             collector = Collector(store, client)
             collector.ingest(candidate, source)
             kept = store.rows()[0]
-            store.decide(kept['id'], 'kept', 'R', 'Learn biceps', 'Artist', 'Check reuse', '', 'An elbow-flexion joke')
+            store.decide(kept['id'], 'kept', 'R', 'Learn biceps', 'Artist', 'Check reuse', '', 'An elbow-flexion joke', 'Biceps flexes the elbow', 'Which muscle flexes the elbow? Biceps')
             collector.ingest(candidate, source)
             collector.ingest(dict(candidate, source_url='https://repost.test/post', image_url='https://repost.test/repost.png'), source)
             self.assertEqual(collector.report['downloaded'], 2)

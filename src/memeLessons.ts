@@ -1,4 +1,5 @@
 import { modelPromptPools, type ModelCollection, type ModelPrompt } from './modelQuiz';
+import { studyMemeIds } from './memeCuration';
 
 export const memeTopics = ['Muscles', 'Bones & landmarks', 'Nerves', 'Blood & circulation', 'Organs', 'Cells & metabolism'] as const;
 export type MemeTopic = typeof memeTopics[number];
@@ -19,7 +20,7 @@ const bones = (...answers: string[]): ModelLink => ({ collection: 'skeleton', an
 const landmarks = (...ids: string[]): ModelLink => ({ collection: 'landmarks', ids: ids.map(id => `model-landmark-${id}`) });
 
 /** Original study wording and questions, linked to the indicated textbook sections. */
-export const memeLessons: MemeLesson[] = [
+export const memeLessonCatalog: MemeLesson[] = [
   lesson('01', 'Muscles', 'Calcium opens the binding sites', 'The relationship drama is a memory cue for skeletal muscle contraction.', [
     'Calcium binds troponin; this shifts tropomyosin away from myosin-binding sites on actin.',
     'Myosin binds actin and pulls during the cross-bridge cycle. ATP binding lets myosin detach.',
@@ -508,9 +509,12 @@ export const memeLessons: MemeLesson[] = [
   ], [bones('Hyoid bone'), muscles('Thyrohyoid')]),
 ];
 
+export const memeLessons = memeLessonCatalog.filter(lesson => studyMemeIds.has(lesson.id));
+
 export function memeModelTargets(lesson: MemeLesson): ModelPrompt[] {
   const targets = lesson.models.flatMap(link => modelPromptPools[link.collection].filter(prompt =>
     link.groups?.includes(prompt.group ?? '') || link.answers?.includes(prompt.answer) || link.ids?.includes(prompt.id)));
   return [...new Map(targets.map(prompt => [prompt.id, prompt])).values()];
 }
-export const memeQuestionIds = new Set(memeLessons.flatMap(lesson => lesson.questions.map(q => q.id)));
+// Accept historical attempts for retired memes without putting them back in the library.
+export const memeQuestionIds = new Set(memeLessonCatalog.flatMap(lesson => lesson.questions.map(q => q.id)));

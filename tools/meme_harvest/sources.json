@@ -6,47 +6,95 @@
   "exclusions": [
     {
       "source_id": "amoeba-sisters",
-      "domains": ["amoebasisters.com"],
-      "creator_names": ["Amoeba Sisters", "AmoebaSisters"],
+      "domains": [
+        "amoebasisters.com"
+      ],
+      "creator_names": [
+        "Amoeba Sisters",
+        "AmoebaSisters"
+      ],
       "reason": "Excluded by editorial preference: instructional diagrams and animations do not qualify as memes."
+    },
+    {
+      "image_urls": [
+        "https://i.imgflip.com/aiwxig.jpg",
+        "https://i.imgflip.com/7m99o1.jpg",
+        "https://i.imgflip.com/8dk32k.jpg",
+        "https://i.imgflip.com/2ux08t.jpg",
+        "https://i.imgflip.com/6rtilf.jpg",
+        "https://i.imgflip.com/2i7xom.jpg",
+        "https://i.imgflip.com/78vdku.png",
+        "https://i.imgflip.com/5cin43.jpg",
+        "https://i.imgflip.com/4l54t1.jpg",
+        "https://i.imgflip.com/5pgc1w.jpg",
+        "https://i.imgflip.com/5q1y21.jpg",
+        "https://i.imgflip.com/a6njkt.jpg"
+      ],
+      "reason": "Reviewed image lacks a useful, specific anatomy recall cue: generic humor, exam stress, unsupported naming question or misleading labels. An attached lesson cannot supply missing educational value."
     }
   ],
   "sources": [
     {
-      "id": "imgflip-anatomy", "kind": "page", "enabled": true,
-      "url": "https://imgflip.com/tag/anatomy", "creator": "",
-      "max_pages": 3, "max_images": 8,
+      "id": "imgflip-anatomy",
+      "kind": "page",
+      "enabled": true,
+      "url": "https://imgflip.com/tag/anatomy",
+      "creator": "",
+      "max_pages": 3,
+      "max_images": 8,
       "original_creator": false,
       "rights": "User-created memes and reposts; inspect the linked individual post for creator credit and reuse."
     },
     {
-      "id": "picklezombie", "kind": "feed", "enabled": true,
+      "id": "picklezombie",
+      "kind": "feed",
+      "enabled": true,
       "url": "https://www.picklezombie.com/feed/",
-      "creator": "PickleZombie", "original_creator": true,
+      "creator": "PickleZombie",
+      "original_creator": true,
       "rights": "Unverified; retain original credit and review reuse before publication."
     },
     {
-      "id": "nashville-pt", "kind": "feed", "enabled": true,
+      "id": "nashville-pt",
+      "kind": "feed",
+      "enabled": true,
       "url": "https://www.nashvillephysicaltherapy.com/blog-feed.xml",
-      "creator": "Nashville Physical Therapy", "original_creator": true,
+      "creator": "Nashville Physical Therapy",
+      "original_creator": true,
       "rights": "Unverified; educational posts can contain third-party memes."
     },
     {
-      "id": "amoeba-sisters", "kind": "page", "enabled": false,
+      "id": "amoeba-sisters",
+      "kind": "page",
+      "enabled": false,
       "url": "https://www.amoebasisters.com/gifs.html",
-      "creator": "Amoeba Sisters", "original_creator": true,
+      "creator": "Amoeba Sisters",
+      "original_creator": true,
       "rights": "Excluded from the meme collection.",
       "access_notes": "Editorially excluded: instructional cartoons and animations are not meme candidates."
     },
     {
-      "id": "reddit-medicalschool", "kind": "reddit", "enabled": false,
-      "subreddit": "medicalschool", "queries": ["anatomy meme", "muscle meme", "bone meme"],
+      "id": "reddit-medicalschool",
+      "kind": "reddit",
+      "enabled": false,
+      "subreddit": "medicalschool",
+      "queries": [
+        "anatomy meme",
+        "muscle meme",
+        "bone meme"
+      ],
       "rights": "API access and image reuse are separate; retain post and creator attribution.",
       "access_notes": "Requires approved Reddit access, REDDIT_APPROVED=1, REDDIT_ACCESS_TOKEN and REDDIT_USER_AGENT. No HTML/JSON scraping fallback."
     },
     {
-      "id": "web-search", "kind": "brave", "enabled": false,
-      "queries": ["anatomy muscle bone memes students", "anatomy physiology memes cranial nerves", "site:reddit.com/r/medicalschool anatomy meme"],
+      "id": "web-search",
+      "kind": "brave",
+      "enabled": false,
+      "queries": [
+        "anatomy muscle bone memes students",
+        "anatomy physiology memes cranial nerves",
+        "site:reddit.com/r/medicalschool anatomy meme"
+      ],
       "access_notes": "Optional BRAVE_SEARCH_API_KEY. Search results become links; Reddit pages are never scraped."
     }
   ]

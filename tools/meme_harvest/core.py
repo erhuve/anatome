@@ -201,7 +201,9 @@ def exclusion_reason(document, exclusions):
             for url in urls for domain in rule.get('domains', []))
         creator_match = any(re.sub(r'[^a-z0-9]', '', name.lower()) in normalized_credit
                             for name in rule.get('creator_names', []))
-        if source_match or domain_match or creator_match:
+        image_match = bool(document.get('image_url')) and any(
+            media_key(document['image_url']) == media_key(url) for url in rule.get('image_urls', []))
+        if source_match or domain_match or creator_match or image_match:
             return rule['reason']
     return None
 
@@ -285,7 +287,7 @@ class Store:
         self.db.commit()
         return cid
 
-    def decide(self, cid, decision, reviewer, hook, credit, rights, note, humor=''):
+    def decide(self, cid, decision, reviewer, hook, credit, rights, note, humor='', evidence='', recall=''):
         if decision not in ('kept', 'rejected', 'pending'):
             raise ValueError('Invalid review decision')
         row = self.db.execute('SELECT document,status FROM candidates WHERE id=?', (cid,)).fetchone()
@@ -295,11 +297,14 @@ class Store:
             raise ValueError('An exact duplicate cannot be kept')
         doc = json.loads(row[0])
         if decision != 'rejected' and (doc.get('excluded_reason') or exclusion_reason(doc, self.exclusions)):
-            raise ValueError('This source is editorially excluded from meme discovery')
+            raise ValueError('This candidate is editorially excluded from meme discovery')
         if decision == 'kept' and not all(str(x).strip() for x in (reviewer, hook, credit, rights, humor)):
             raise ValueError('Keeping requires an actual joke/punchline, reviewer, learning hook, credit and reuse notes')
+        if decision == 'kept' and not all(str(x).strip() for x in (evidence, recall)):
+            raise ValueError('Keeping requires visible learning evidence and an image-supported recall question with its answer; an attached lesson alone is insufficient')
         doc['review'] = {'reviewer': reviewer, 'learning_hook': hook, 'credit': credit,
-                         'rights': rights, 'note': note, 'humor': humor, 'at': time.time()}
+                         'rights': rights, 'note': note, 'humor': humor,
+                         'learning_evidence': evidence, 'recall': recall, 'at': time.time()}
         self.db.execute('UPDATE candidates SET status=?,document=?,updated_at=? WHERE id=?',
                         (decision, json.dumps(doc), time.time(), cid))
         self.db.commit()

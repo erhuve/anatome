@@ -1,13 +1,14 @@
 import { memeImages } from './memeImages';
+import { memeLearningEvidence, studyMemeIds } from './memeCuration';
 import { memeLessons, memeTopics, type MemeLesson, type MemeTopic } from './memeLessons';
 import type { Attempt, StudyState } from './study';
 
 export type Meme = typeof memeImages[number] & { lesson: MemeLesson };
 const lessons = new Map(memeLessons.map(lesson => [lesson.id, lesson]));
-export const memes: Meme[] = memeImages.map(image => {
+export const memes: Meme[] = memeImages.filter(image => studyMemeIds.has(image.id)).map(image => {
   const lesson = lessons.get(image.id);
   if (!lesson) throw new Error(`Missing study material for meme ${image.id}`);
-  return { ...image, lesson };
+  return { ...image, lesson: { ...lesson, connection: memeLearningEvidence[image.id] } };
 });
 export const isCoreAnatomy = (meme: Meme) => meme.lesson.topic === 'Muscles' || meme.lesson.topic === 'Bones & landmarks';
 // Keep muscle/bone study first, with the most recently added memes first within each group.

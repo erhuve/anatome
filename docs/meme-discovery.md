@@ -29,7 +29,7 @@ npm ci
 .venv-memes/bin/python -m tools.meme_harvest review --serve
 ```
 
-Open **http://127.0.0.1:5194/**. Search by topic or caption, inspect the full image and original source, then keep or reject a candidate. Keeping requires a description of the actual joke or punchline, a reviewer, a specific learning hook, creator credit and reuse notes. Anatomy relevance alone does not qualify an image: plain diagrams, labeled charts, lecture slides and instructional animations are excluded. These notes record what still needs checking; keeping is not publication approval or a finding that reuse rights are cleared.
+Open **http://127.0.0.1:5194/**. Search by topic or caption, inspect the full image and original source, then keep or reject a candidate. Keeping requires a description of the actual joke or punchline, a reviewer, a specific learning hook, visible learning evidence, an image-supported recall question with its answer, creator credit and reuse notes. Anatomy relevance alone does not qualify an image: plain diagrams, labeled charts, lecture slides and instructional animations are excluded. These notes record what still needs checking; keeping is not publication approval or a finding that reuse rights are cleared.
 
 The state lives in `.meme-harvest/`, which Git ignores. It includes the SQLite queue, local WebP previews, conditional-request cache, the latest run report and a static `review.html`. The static page works offline for browsing; saving decisions needs the local server. The server binds only to loopback and accepts same-origin JSON decision requests.
 
@@ -80,7 +80,7 @@ The Brave connector uses the [official Web Search API](https://api-dashboard.sea
 
 The score uses **specific anatomy terms**, image dimensions and whether a source identifies itself as the original creator. Muscle/bone terms receive extra weight. The matches and flags are displayed alongside the score. It does not verify anatomy, licensing, humor, or whether a cartoon is truly a meme. There is no automatic “funny enough” threshold.
 
-Exact file hashes and known image URLs are suppressed as duplicates. Pinterest size variants and Reddit image-preview URLs normalize to stable media keys. Perceptual difference hashes identify **possible** reposts: those remain reviewable because two captions on the same meme template can be different jokes. The registry is seeded from the actual shipped app catalogue, currently 54 images. New app images enter it on the next run. Repeated collection preserves keep/reject decisions.
+Exact file hashes and known image URLs are suppressed as duplicates. Pinterest size variants and Reddit image-preview URLs normalize to stable media keys. Perceptual difference hashes identify **possible** reposts: those remain reviewable because two captions on the same meme template can be different jokes. The registry is seeded from the actual shipped app catalogue, currently 54 reviewed images (20 active and 34 retired for weak educational value). Retired images stay in duplicate detection to prevent their return. New app images enter it on the next run. Repeated collection preserves keep/reject decisions.
 
 Networking checks robots rules for ordinary pages and images, checks redirect destinations, rejects nonpublic network targets and non-web URL schemes, enforces per-host delays, request/image/response-size limits, validates decoded images, caches with ETag/Last-Modified, and defers hosts after 429/503 using Retry-After. Unavailable robots rules defer a source, while 404/410 robots files allow access. Authentication headers stay on their original host and authenticated responses are not cached.
 
@@ -97,3 +97,11 @@ Tests:
 npm test
 npm run build
 ```
+
+## Educational value is required in the image
+
+Review both requirements: an actual joke and a concrete, correct recall cue. Quote the visible text or describe the visual relationship, then write one question **with its answer** that the image helps a student recall. An unrelated study card does not count. `decide` accepts these as `--evidence` and `--recall`; server and export enforce both fields, including when old queues are restored. These fields require human judgment; they are not an automated assessment of educational quality.
+
+Prefer muscle/bone identification, location, action, attachments and innervation, followed by mechanisms and meaningful comparisons. A highlighted trapezius with “It’s a trap,” the carpal-name mnemonic, and osteoblast builders versus osteoclast demolition pass. “Anatomy is hard,” a generic nervous-system pun, and a list of difficult exam topics fail. Naming a muscle without showing or explaining any useful distinction also fails. Misleading images fail even if the linked notes could correct them.
+
+The [visual audit](meme-education-audit.md) documents all 54 app records: 20 retained, 34 retired. Twelve existing queued images were also rejected; their exact image URLs are persisted in the editorial rules so cached scheduled queues receive those decisions. Source-wide exclusions continue to apply separately.
