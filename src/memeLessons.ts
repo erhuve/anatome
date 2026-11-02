@@ -443,6 +443,78 @@ export const memeLessons: MemeLesson[] = [
     question('Which bone directly articulates with the posterior patella?', 'Femur', ['Tibia', 'Fibula', 'Talus'], 'The patellar articular surface contacts the distal femur.'),
     question('The patellar ligament attaches distally to which landmark?', 'Tibial tuberosity', ['Head of fibula', 'Greater trochanter', 'Medial malleolus'], 'The ligament runs from the patellar apex to the anterior tibial tuberosity.')
   ], [bones('Right patella', 'Left patella', 'Right femur', 'Right tibia')]),
+  lesson('48', 'Muscles', 'Name the movement before the muscle', 'Soup and low-fives make supination memorable; the comic also contrasts three pairs of movement terms.', [
+    'Forearm supination turns the palm anteriorly in anatomical position; with the elbow bent it turns the palm upward. Pronation reverses this rotation.',
+    'Abduction moves a limb away from the midline; adduction brings it toward the midline.',
+    'Elbow flexion decreases the angle between arm and forearm; extension increases it. The comic’s 90° and 180° are examples, not universal definitions.'
+  ], 'Supinate for soup; ADduct to ADD the limb back.', '9-5-types-of-body-movements', [
+    question('Turning a bent-elbow palm upward to hold soup is which movement?', 'Supination', ['Pronation', 'Adduction', 'Elbow extension'], 'Supination rotates the forearm so the palm faces up when the elbow is bent.'),
+    question('Raising an arm sideways away from the body is called what?', 'Abduction', ['Adduction', 'Pronation', 'Supination'], 'Abduction moves the arm away from the body’s midline.'),
+    question('Bending the elbow to bring the hand toward the shoulder is which movement?', 'Flexion', ['Extension', 'Abduction', 'Circumduction only'], 'Elbow flexion reduces the angle between arm and forearm; no single angle defines all flexion.')
+  ], [muscles('Supinator', 'Pronator teres', 'Biceps brachii', 'Triceps brachii')]),
+  lesson('49', 'Bones & landmarks', 'Tendons, ligaments, and joint surfaces', 'The arguing body parts are different structures that must work together to transmit a muscle’s pull.', [
+    'A tendon usually transmits muscle force to bone; a ligament connects bone to bone and helps stabilize a joint.',
+    'Tendons and many ligaments are dense regular connective tissue, with aligned collagen fibers resisting tension.',
+    'Articular cartilage covers bone ends at synovial joints. It is not a tendon or ligament; it provides a smooth, low-friction surface.'
+  ], 'Tendon: muscle → bone. Ligament: bone → bone. Cartilage: joint surface.', '4-3-connective-tissue-supports-and-protects', [
+    question('Which structure usually transmits skeletal muscle force to bone?', 'Tendon', ['Articular cartilage', 'Synovial fluid', 'Ligament only'], 'Tendons carry the force developed by a muscle to its attachment.'),
+    question('Which description best fits a ligament?', 'Connects bone to bone', ['Connects an axon to a neuron', 'Covers the free surface of skin', 'Produces muscle cross-bridges'], 'Ligaments link bones and help constrain joint movement.'),
+    question('What covers the articulating bone ends in a typical synovial joint?', 'Hyaline articular cartilage', ['Dense regular tendon', 'Skeletal muscle fibers', 'Keratinized epidermis'], 'Articular cartilage cushions and provides a smooth surface over the ends of the bones.')
+  ], [bones('Right humerus', 'Right radius', 'Right ulna')]),
+  lesson('50', 'Bones & landmarks', 'Bone remodeling is a balance', 'Osteoblasto means osteoblast; osteoclasto means osteoclast. The demolition joke exaggerates a real imbalance in bone turnover.', [
+    'Bone remodeling couples osteoclast resorption with osteoblast formation; both are normal processes.',
+    'If resorption persistently exceeds formation, bone mass can fall. Osteoporosis is not simply “having osteoclasts.”',
+    'Bone matrix combines collagen, which helps resist tension, with mineral crystals that provide hardness and resistance to compression.'
+  ], 'Healthy remodeling = coordinated demolition and rebuilding.', '6-6-exercise-nutrition-hormones-and-bone-tissue', [
+    question('What does sustained resorption greater than formation tend to cause?', 'Loss of bone mass', ['Unlimited bone growth', 'Conversion of all bone to muscle', 'Increased cartilage at every surface'], 'If more matrix is removed than replaced over time, the balance produces bone loss.'),
+    question('Are osteoclasts present during normal healthy remodeling?', 'Yes; resorption is part of normal renewal', ['No; they only appear in osteoporosis', 'No; they are red blood cells', 'Only in articular cartilage'], 'Healthy bone turnover includes both resorption and formation.'),
+    question('Which bone-matrix component especially helps resist tensile forces?', 'Collagen', ['Hemoglobin', 'Bile salts', 'Actin cross-bridges'], 'Collagen contributes tensile strength; mineral crystals contribute hardness and compressive strength.')
+  ], [bones('Right femur', 'Right humerus')]),
+  lesson('51', 'Organs', 'Renal vessels are not ureters', 'The Titanic pose echoes the branching vessels at the kidneys; trace where each tube actually leads.', [
+    'Renal arteries branch from the abdominal aorta and carry blood to the kidneys.',
+    'Renal veins return blood to the inferior vena cava. Artery and vein names describe direction relative to the heart.',
+    'Urine leaves each renal pelvis through a ureter on its way to the bladder; ureters are not blood vessels.'
+  ], 'Artery arrives with blood; vein returns blood; ureter carries urine.', '25-3-gross-anatomy-of-the-kidney', [
+    question('The renal arteries arise directly from which vessel?', 'Abdominal aorta', ['Inferior vena cava', 'Pulmonary trunk', 'Superior vena cava'], 'The abdominal aorta gives off right and left renal arteries.'),
+    question('Renal veins normally drain into which large vessel?', 'Inferior vena cava', ['Abdominal aorta', 'Pulmonary artery', 'Portal vein'], 'Renal venous blood returns to the inferior vena cava and then the right atrium.'),
+    question('Which tube carries urine from a kidney toward the bladder?', 'Ureter', ['Renal vein', 'Renal artery', 'Urethra'], 'Each ureter runs from a renal pelvis to the bladder; the urethra carries urine out of the bladder.')
+  ]),
+  lesson('52', 'Cells & metabolism', 'From powerhouse to proton gradient', 'Fancy Pooh replaces a slogan with the process that produces much of a cell’s ATP.', [
+    'The electron transport chain and ATP synthase are located in the inner mitochondrial membrane.',
+    'Electron transport builds a proton gradient. Protons returning to the matrix through ATP synthase drive ATP formation.',
+    'Oxygen is the final electron acceptor, forming water. Glycolysis also makes some ATP outside the mitochondria, in the cytosol.'
+  ], 'Electrons build the gradient; protons turn the ATP-making machinery.', '24-2-carbohydrate-metabolism', [
+    question('Where are mitochondrial electron transport complexes and ATP synthase located?', 'Inner mitochondrial membrane', ['Nuclear envelope', 'Golgi membrane', 'Outer surface of the plasma membrane'], 'The inner membrane houses the machinery for oxidative phosphorylation.'),
+    question('During ATP synthesis, protons flow through ATP synthase toward which compartment?', 'Mitochondrial matrix', ['Nucleus', 'Golgi lumen', 'Extracellular space'], 'Protons move down their gradient from the intermembrane space back into the matrix.'),
+    question('What is the final electron acceptor in aerobic mitochondrial respiration?', 'Oxygen', ['Carbon dioxide', 'ATP', 'Lactate'], 'Oxygen accepts electrons at the end of the chain and combines with protons to form water.')
+  ]),
+  lesson('53', 'Muscles', 'Hypertrophy is bigger fibers', 'Brain overrules Muscle for the joke. Pain is not required for fitness gains, so use the comic to review adaptation rather than as workout advice.', [
+    'Skeletal muscle hypertrophy means enlargement of existing muscle fibers as they gain structural proteins and myofibrils.',
+    'Endurance adaptation can increase mitochondria, myoglobin, and capillary supply, supporting aerobic ATP production.',
+    'Atrophy is a reduction in muscle mass. It is different from the short-term feeling of fatigue after a contraction.'
+  ], 'Hypertrophy: fibers grow. Atrophy: muscle mass shrinks.', '10-6-exercise-and-muscle-performance', [
+    question('What best describes ordinary skeletal muscle hypertrophy?', 'Existing fibers enlarge', ['Every fiber turns into a new bone', 'Muscle fibers lose all myofibrils', 'A tendon becomes contractile muscle'], 'Hypertrophy increases fiber size through an increase in structural and contractile components.'),
+    question('Which adaptation supports sustained aerobic muscle work?', 'More mitochondria and capillary supply', ['Loss of all myoglobin', 'Removal of all mitochondria', 'Replacing muscle with articular cartilage'], 'Mitochondria support aerobic ATP production, while capillaries improve delivery and exchange.'),
+    question('A decrease in muscle mass is called what?', 'Atrophy', ['Hypertrophy', 'Ossification', 'Depolarization'], 'Atrophy describes reduced muscle mass, rather than a brief episode of fatigue.')
+  ], [muscles('Biceps brachii', 'Triceps brachii')]),
+  lesson('54', 'Muscles', 'Biceps: attachments and blood supply', 'Instead of answering Gru’s impossible demand, build one complete muscle profile from named landmarks.', [
+    'Biceps brachii has two scapular origins: the long head at the supraglenoid tubercle and the short head at the coracoid process.',
+    'It inserts on the radial tuberosity and via the bicipital aponeurosis into forearm fascia; it flexes the elbow and supinates the forearm.',
+    'Its arterial supply comes from the brachial artery, and its motor supply is the musculocutaneous nerve.'
+  ], 'Two heads on the scapula; distal tendon to the radius.', '11-5-muscles-of-the-pectoral-girdle-and-upper-limbs', [
+    question('Which landmark gives origin to the short head of biceps brachii?', 'Coracoid process', ['Olecranon', 'Greater trochanter', 'Medial malleolus'], 'The short head starts at the scapular coracoid; the long head starts at the supraglenoid tubercle.'),
+    question('The distal biceps tendon attaches to which bony landmark?', 'Radial tuberosity', ['Ulnar styloid', 'Deltoid tuberosity', 'Lateral epicondyle of the femur'], 'The radial tuberosity receives the distal biceps tendon, linking contraction to forearm movement.'),
+    question('Which artery supplies biceps brachii?', 'Brachial artery', ['Anterior tibial artery', 'Internal carotid artery', 'Pulmonary artery'], 'The brachial artery supplies the anterior arm, including biceps brachii.')
+  ], [muscles('Biceps brachii'), bones('Right scapula', 'Right radius'), landmarks('coracoid')]),
+  lesson('55', 'Bones & landmarks', 'Landmarks around the larynx', 'The “quick adventure” gets complicated fast; anchor the region with a few distinct structures first.', [
+    'The thyroid cartilage forms the large anterior shield of the larynx; its laryngeal prominence is the Adam’s apple.',
+    'The cricoid cartilage forms a complete ring inferior to the thyroid cartilage. The epiglottis is a leaf-shaped piece of elastic cartilage.',
+    'The hyoid is a separate bone superior to the larynx. Unlike most bones, it does not directly articulate with another bone.'
+  ], 'Hyoid above; thyroid shield; cricoid ring below.', '22-1-organs-and-structures-of-the-respiratory-system', [
+    question('Which laryngeal cartilage forms the Adam’s apple?', 'Thyroid cartilage', ['Cricoid cartilage', 'Epiglottis', 'Nasal septal cartilage'], 'The laryngeal prominence is the anterior projection of the thyroid cartilage.'),
+    question('Which laryngeal cartilage forms a complete ring below the thyroid cartilage?', 'Cricoid cartilage', ['Epiglottis', 'Arytenoid cartilage', 'Corniculate cartilage'], 'The cricoid is the ring-shaped cartilage inferior to the thyroid cartilage.'),
+    question('Which nearby structure is a bone rather than a cartilage?', 'Hyoid', ['Epiglottis', 'Thyroid cartilage', 'Cricoid cartilage'], 'The hyoid is a separate bone above the larynx, suspended by muscles and ligaments.')
+  ], [bones('Hyoid bone'), muscles('Thyrohyoid')]),
 ];
 
 export function memeModelTargets(lesson: MemeLesson): ModelPrompt[] {

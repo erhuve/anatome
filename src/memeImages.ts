@@ -516,5 +516,93 @@ export const memeImages = [
     "height": 854,
     "source": "https://physicaltherapyweb.com/news/interesting-anatomy-etymology-patella/",
     "originalImage": "https://physicaltherapyweb.com/wp-content/uploads/2018/12/etymology-physioweb-patella-little-plate-1024x854.jpg"
+  },
+  {
+    "id": "48",
+    "title": "Soup, low-fives, and movement terminology",
+    "category": "Muscles",
+    "image": "/memes/48.webp",
+    "thumbnail": "/memes/48-thumb.webp",
+    "width": 700,
+    "height": 1456,
+    "source": "https://brainbreakcomic.com/muscles-movement-mnemonics/",
+    "originalImage": "https://brainbreakcomic.com/wp-content/uploads/2020/03/POST-musclemovement1.png"
+  },
+  {
+    "id": "49",
+    "title": "Muscles are ready. Tendons and joints disagree.",
+    "category": "Bones",
+    "image": "/memes/49.webp",
+    "thumbnail": "/memes/49-thumb.webp",
+    "width": 640,
+    "height": 640,
+    "source": "https://www.goodformny.com/blog/muscles-tendons-and-ligaments-oh-my",
+    "originalImage": "https://images.squarespace-cdn.com/content/v1/626845c6e1074323cfed6276/e4067223-7238-4ea0-a793-c7a2d5fafee4/muscle%2Bjoke.jpg"
+  },
+  {
+    "id": "50",
+    "title": "Bone remodeling: builders vs. demolition crew",
+    "category": "Bones",
+    "image": "/memes/50.webp",
+    "thumbnail": "/memes/50-thumb.webp",
+    "width": 1058,
+    "height": 1002,
+    "source": "https://es.memedroid.com/memes/tag/huesos",
+    "originalImage": "https://images7.memedroid.com/images/UPLOADED330/684a1070b4a53.jpeg"
+  },
+  {
+    "id": "51",
+    "title": "Kidneys recreate the Titanic pose",
+    "category": "Organs",
+    "image": "/memes/51.webp",
+    "thumbnail": "/memes/51-thumb.webp",
+    "width": 600,
+    "height": 680,
+    "source": "https://www.pinterest.com/pin/838373286861359731/",
+    "originalImage": "https://i.pinimg.com/736x/1b/84/b1/1b84b122d1e29aa054397e85bf6ac7d6.jpg"
+  },
+  {
+    "id": "52",
+    "title": "Powerhouse, but make it college-level",
+    "category": "Cells",
+    "image": "/memes/52.webp",
+    "thumbnail": "/memes/52-thumb.webp",
+    "width": 687,
+    "height": 500,
+    "source": "https://imgflip.com/i/3vja8z",
+    "originalImage": "https://i.imgflip.com/3vja8z.jpg"
+  },
+  {
+    "id": "53",
+    "title": "Brain and skeletal muscle disagree about exercise",
+    "category": "Muscles",
+    "image": "/memes/53.webp",
+    "thumbnail": "/memes/53-thumb.webp",
+    "width": 1200,
+    "height": 1949,
+    "source": "https://www.pinterest.com/pin/528328600023668318/",
+    "originalImage": "https://i.pinimg.com/originals/72/73/5c/72735c95cc6f592f4b0dfe45e59428c1.png"
+  },
+  {
+    "id": "54",
+    "title": "Oh, you study anatomy? Name every blood supply.",
+    "category": "Muscles",
+    "image": "/memes/54.webp",
+    "thumbnail": "/memes/54-thumb.webp",
+    "width": 663,
+    "height": 767,
+    "source": "https://www.reddit.com/r/medicalschool/comments/eo2anu/annoying_anatomy_teachers_during_viva_meme/",
+    "originalImage": "https://i.redd.it/vshxbrf7uia41.jpg"
+  },
+  {
+    "id": "55",
+    "title": "Respiratory anatomy: a quick twenty-minute adventure",
+    "category": "Bones",
+    "image": "/memes/55.webp",
+    "thumbnail": "/memes/55-thumb.webp",
+    "width": 540,
+    "height": 573,
+    "source": "https://www.reddit.com/r/medicalschool/comments/g7wpfc/meme_never_trust_anatomy_class/",
+    "originalImage": "https://i.redd.it/wpd2h8oxtzu41.jpg"
   }
 ];

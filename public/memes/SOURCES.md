@@ -113,3 +113,35 @@ These are found memes and comics; source links may be reposts. Third-party image
 - 47: Patella: your little knee plate — https://physicaltherapyweb.com/news/interesting-anatomy-etymology-patella/
   Original image: https://physicaltherapyweb.com/wp-content/uploads/2018/12/etymology-physioweb-patella-little-plate-1024x854.jpg
   Credit: Physical Therapy Web / PhysioWeb; visual anatomy pun
+
+- 48: Soup, low-fives, and movement terminology — https://brainbreakcomic.com/muscles-movement-mnemonics/
+  Original image: https://brainbreakcomic.com/wp-content/uploads/2020/03/POST-musclemovement1.png
+  Credit: Cam / Brain BREAK!, CC BY-NC 4.0; logo retained. FAQ: https://brainbreakcomic.com/faq/
+
+- 49: Muscles are ready. Tendons and joints disagree. — https://www.goodformny.com/blog/muscles-tendons-and-ligaments-oh-my
+  Original image: https://images.squarespace-cdn.com/content/v1/626845c6e1074323cfed6276/e4067223-7238-4ea0-a793-c7a2d5fafee4/muscle%2Bjoke.jpg
+  Credit: Found on GoodForm Studios; original LTG watermark retained; creator identity unconfirmed
+
+- 50: Bone remodeling: builders vs. demolition crew — https://es.memedroid.com/memes/tag/huesos
+  Original image: https://images7.memedroid.com/images/UPLOADED330/684a1070b4a53.jpeg
+  Credit: Spanish-language repost; original creator unconfirmed; English study notes explain the labels
+
+- 51: Kidneys recreate the Titanic pose — https://www.pinterest.com/pin/838373286861359731/
+  Original image: https://i.pinimg.com/736x/1b/84/b1/1b84b122d1e29aa054397e85bf6ac7d6.jpg
+  Credit: Pinterest repost referencing MEDizzy post 1169024; original creator unconfirmed
+
+- 52: Powerhouse, but make it college-level — https://imgflip.com/i/3vja8z
+  Original image: https://i.imgflip.com/3vja8z.jpg
+  Credit: Anonymous Imgflip post; original image credit retained
+
+- 53: Brain and skeletal muscle disagree about exercise — https://www.pinterest.com/pin/528328600023668318/
+  Original image: https://i.pinimg.com/originals/72/73/5c/72735c95cc6f592f4b0dfe45e59428c1.png
+  Credit: Nick Seluk / The Awkward Yeti, 2017; signature and copyright retained. Study correction: pain is not required for gains; ACSM: https://www.acsm.org/docs/default-source/files-for-resource-library/delayed-onset-muscle-soreness-%28doms%29.pdf
+
+- 54: Oh, you study anatomy? Name every blood supply. — https://www.reddit.com/r/medicalschool/comments/eo2anu/annoying_anatomy_teachers_during_viva_meme/
+  Original image: https://i.redd.it/vshxbrf7uia41.jpg
+  Credit: u/yashukey0501 on r/medicalschool. Additional lesson reference: https://teachmeanatomy.info/encyclopaedia/b/biceps-brachii/
+
+- 55: Respiratory anatomy: a quick twenty-minute adventure — https://www.reddit.com/r/medicalschool/comments/g7wpfc/meme_never_trust_anatomy_class/
+  Original image: https://i.redd.it/wpd2h8oxtzu41.jpg
+  Credit: u/thebigbosshimself on r/medicalschool

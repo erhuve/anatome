@@ -12,10 +12,10 @@ import { workspaceUrl } from './studyNavigation';
 import MemeLibrary from './components/MemeLibrary';
 
 test('every meme has shipped images, a lesson, provenance, and three distinct answerable questions', () => {
-  assert.equal(memes.length, 47);
+  assert.equal(memes.length, 55);
   assert.equal(memeLessons.length, memes.length);
   assert.equal(new Set(memes.map(meme => meme.id)).size, memes.length);
-  assert.equal(memeQuestionIds.size, 141);
+  assert.equal(memeQuestionIds.size, 165);
   for (const meme of memes) {
     assert.ok(meme.width > 0 && meme.height > 0);
     for (const image of [meme.image, meme.thumbnail]) {
@@ -42,10 +42,10 @@ test('every meme has shipped images, a lesson, provenance, and three distinct an
 
 test('muscles and bones come first and every 3D link resolves all of its requested targets', () => {
   const core = memes.filter(isCoreAnatomy);
-  assert.equal(core.length, 23);
+  assert.equal(core.length, 29);
   assert.ok(orderedMemes.slice(0, core.length).every(isCoreAnatomy));
   assert.ok(orderedMemes.slice(core.length).every(meme => !isCoreAnatomy(meme)));
-  assert.equal(memeTopicCounts.reduce((n, topic) => n + topic.count, 0), 47);
+  assert.equal(memeTopicCounts.reduce((n, topic) => n + topic.count, 0), 55);
   for (const meme of memes.filter(meme => isCoreAnatomy(meme) || meme.lesson.models.length > 0)) {
     const targets = memeModelTargets(meme.lesson);
     assert.ok(targets.length > 0, meme.id);
@@ -60,9 +60,9 @@ test('muscles and bones come first and every 3D link resolves all of its request
 });
 
 test('topic filters and search combine; searches include study facts and empty results', () => {
-  assert.equal(findMemes('', 'All').length, 47);
-  assert.equal(findMemes('', 'Muscles & bones').length, 23);
-  assert.equal(findMemes('', 'Bones & landmarks').length, 14);
+  assert.equal(findMemes('', 'All').length, 55);
+  assert.equal(findMemes('', 'Muscles & bones').length, 29);
+  assert.equal(findMemes('', 'Bones & landmarks').length, 17);
   assert.equal(findMemes('scapula', 'Nerves').length, 0);
   assert.ok(findMemes('trapezius', 'Muscles').some(meme => meme.id === '33'));
   assert.ok(findMemes('  thumb carpals ', 'Bones & landmarks').some(meme => meme.id === '36'));
