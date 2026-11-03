@@ -1,0 +1,39 @@
+.anatomy-mnemonic {
+  border-top: 1px solid var(--border);
+  margin-top: 12px;
+  color: var(--muted);
+}
+.anatomy-mnemonic > summary {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  min-height: 36px;
+  padding: 8px 0;
+  list-style: none;
+  cursor: pointer;
+  line-height: 1.5;
+}
+.anatomy-mnemonic > summary::-webkit-details-marker { display: none; }
+.anatomy-mnemonic-label { flex-shrink: 0; font-size: 11px; }
+.anatomy-mnemonic-cue {
+  flex: 1;
+  min-width: 0;
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+.anatomy-mnemonic > summary > svg { flex-shrink: 0; align-self: center; color: var(--blue); }
+.anatomy-mnemonic[open] > summary > svg { transform: rotate(180deg); }
+.anatomy-mnemonic .anatomy-mnemonic-body { padding-bottom: 7px; font-size: 12px; line-height: 1.6; }
+.anatomy-mnemonic .anatomy-mnemonic-title { display: block; color: var(--text); font-size: 12px; font-weight: 500; margin: 2px 0 6px; }
+.anatomy-mnemonic .anatomy-mnemonic-body > ul { margin: 0; padding-left: 17px; list-style: disc; }
+.anatomy-mnemonic .anatomy-mnemonic-body li + li { margin-top: 4px; }
+.anatomy-mnemonic .anatomy-mnemonic-context { margin: 8px 0 0; font-size: 12px; line-height: 1.6; color: var(--muted); }
+.anatomy-mnemonic .anatomy-mnemonic-source { display: inline-flex; align-items: center; gap: 5px; max-width: 100%; margin-top: 8px; padding: 5px 0; color: var(--blue); font-size: 11px; text-decoration: none; }
+.anatomy-mnemonic .anatomy-mnemonic-source:hover { text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 760px), (max-height: 500px) and (max-width: 1000px) {
+  .anatomy-mnemonic { margin-top: 8px; }
+  .anatomy-mnemonic > summary { gap: 6px; min-height: 34px; padding: 6px 0; }
+  .anatomy-mnemonic-cue { font-size: 12px; }
+}

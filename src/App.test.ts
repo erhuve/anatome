@@ -75,6 +75,19 @@ test('a saved multiple-choice preference still renders choices', () => {
   assert.doesNotMatch(markup, /id="typed-answer"/);
 });
 
+test('study shows applicable mnemonics while unanswered quiz modes expose no cue or expansion', () => {
+  for (const [collection, name] of [['muscles', 'Right supraspinatus'], ['skeleton', 'Right scaphoid']] as const) {
+    const target = modelPromptPools[collection].find(prompt => prompt.answer === name)!;
+    const selection = { [collection]: [target.id] };
+    const study = renderSavedPass(collection, [], 1, selection, 'typed', 'study');
+    assert.match(study, /class="anatomy-mnemonic"/);
+    for (const answerMode of ['typed', 'choice'] as const) {
+      const quiz = renderSavedPass(collection, [], 1, selection, answerMode);
+      assert.doesNotMatch(quiz, /class="anatomy-mnemonic"|Some Lovers Try Positions|>SITS<|Texas Tech anatomy tables|StatPearls: Rotator Cuff/);
+    }
+  }
+});
+
 test('a custom selection renders its own shorter pass and settings control', () => {
   const ids = modelPromptPools.muscles.slice(0, 3).map(prompt => prompt.id);
   const markup = renderSavedPass('muscles', [ids[0]], 2, {muscles:ids});

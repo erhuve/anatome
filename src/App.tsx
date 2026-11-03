@@ -25,6 +25,7 @@ import { DEFAULT_CONTEXT_OPACITY } from './anatomyRendering';
 import { trackEvent, trackPageview } from './analytics';
 import { bindPracticeViewport, focusAnswerOnDesktop } from './visualViewport';
 import ModelControls from './components/ModelControls';
+import AnatomyMnemonic from './components/AnatomyMnemonic';
 
 type Response = { id: string; selected: string | null; correct: boolean | null; typoAccepted?: boolean };
 type ModelStatus = 'loading' | 'ready' | 'error';
@@ -246,7 +247,7 @@ export function QuizStudio({ auth, progress }: { auth: ReturnType<typeof useAuth
     function keyboard(event: KeyboardEvent) {
       if (event.key === 'Escape' && about) { setAbout(false); return; }
       const target = event.target as HTMLElement | null;
-      if (workspaceMode !== 'quiz' || studyTargets || about || progressPage || settingsOpen || target?.matches('input,textarea,select') || event.metaKey || event.ctrlKey || event.altKey) return;
+      if (workspaceMode !== 'quiz' || studyTargets || about || progressPage || settingsOpen || target?.closest('input,textarea,select,summary,a[href]') || event.metaKey || event.ctrlKey || event.altKey) return;
       if (answerMode === 'choice' && !complete && !response && /^[1-4]$/.test(event.key)) { const option = question.options[Number(event.key) - 1]; if (option) { event.preventDefault(); answer(option); } }
       if (event.key === 'Enter' && response && !complete) { const focusedButton = target?.closest('button') as HTMLButtonElement | null; if (!focusedButton || focusedButton.disabled) { event.preventDefault(); advance(); } }
     }
@@ -359,7 +360,7 @@ export function QuizStudio({ auth, progress }: { auth: ReturnType<typeof useAuth
             {response && <p id="typed-answer-help">{response.selected === null ? 'Answer revealed.' : 'Answer submitted.'}</p>}
             {!response && <button className="continue-button check-answer-button" type="submit" disabled={!ready || !typedAnswer.trim()}><span>Check answer</span><span className="continue-key">↵</span><ArrowRight size={16}/></button>}
           </form>}
-          {response ? <div className={'question-feedback' + (response.correct ? ' correct' : ' revisit')} role="status"><div className="feedback-heading">{response.correct ? <><Check size={15}/><span>Correct.</span></> : <><RotateCcw size={14}/><span>{question.answer}</span></>}</div>{answerMode === 'typed' && response.correct && <p className="typed-answer-name">{question.answer}</p>}{response.typoAccepted && <p className="typo-accepted">Small spelling difference accepted.</p>}{question.explanation && <p>{question.explanation}</p>}</div> : !ready && <div className="question-pause" role="status">{modelStatus === 'error' ? 'The model could not be loaded.' : 'Loading model…'}</div>}
+          {response ? <div className={'question-feedback' + (response.correct ? ' correct' : ' revisit')} role="status"><div className="feedback-heading">{response.correct ? <><Check size={15}/><span>Correct.</span></> : <><RotateCcw size={14}/><span>{question.answer}</span></>}</div>{answerMode === 'typed' && response.correct && <p className="typed-answer-name">{question.answer}</p>}{response.typoAccepted && <p className="typo-accepted">Small spelling difference accepted.</p>}{question.explanation && <p>{question.explanation}</p>}<AnatomyMnemonic prompt={question}/></div> : !ready && <div className="question-pause" role="status">{modelStatus === 'error' ? 'The model could not be loaded.' : 'Loading model…'}</div>}
           {response ? <button className="continue-button" ref={nextButton} onClick={() => advance()}><span>{index + 1 === queue.length ? 'Finish set' : 'Next structure'}</span><span className="continue-key">↵</span><ArrowRight size={16}/></button> : modelStatus === 'error' ? <div className="error-actions"><button className="continue-button" onClick={() => { setModelStatus('loading'); setRetry(value => value + 1); }}>Retry model<RotateCcw size={15}/></button><button className="subtle-button" onClick={() => advance(true)}>Skip this structure<SkipForward size={14}/></button></div> : <button className="reveal-button" disabled={!ready} onClick={() => answer(null)}>Show answer<ArrowRight size={13}/></button>}
           {sessionMode === 'review' && <div className="panel-footnote">Review does not advance your pass.</div>}
           {!response && answerMode === 'choice' && <div className="panel-footnote">Press 1–4 to answer.</div>}
