@@ -65,21 +65,21 @@ export default function LeaderboardPage({ auth, progress, board, onRefresh, onSa
     }
   }
 
-  return <div className="progress-page-scroll leaderboard-scroll" tabIndex={0} role="region" aria-label="Global leaderboard">
+  return <div className="progress-page-scroll leaderboard-scroll" tabIndex={0} role="region" aria-label="Leaderboard">
     <div className="leaderboard-page">
       <div className="leaderboard-intro">
         <span className="leaderboard-emblem" aria-hidden="true"><Trophy size={26} strokeWidth={1.6}/></span>
-        <div><span className="leaderboard-eyebrow"><Globe2 size={12}/>Global · All time</span><h2>Every new structure counts.</h2><p>Build your anatomy knowledge. See how you stack up.</p></div>
+        <div><span className="leaderboard-eyebrow"><Globe2 size={12}/>All time</span><h2>Every new structure counts.</h2><p>Build your anatomy knowledge. See how you stack up.</p></div>
       </div>
 
       {board.error && <div className="leaderboard-notice is-error" role="alert"><p>{board.error}</p><button onClick={onRefresh} disabled={busy}><RefreshCw size={14}/>Try again</button></div>}
-      {unavailable && !board.error && <div className="leaderboard-notice" role="status"><p>The global leaderboard isn’t available yet. You can keep practicing while it gets ready.</p><button onClick={onRefresh} disabled={board.working}><RefreshCw size={14}/>Try again</button></div>}
+      {unavailable && !board.error && <div className="leaderboard-notice" role="status"><p>The leaderboard isn’t available yet. You can keep practicing while it gets ready.</p><button onClick={onRefresh} disabled={board.working}><RefreshCw size={14}/>Try again</button></div>}
 
       <div className="leaderboard-layout">
         <section className="leaderboard-ranking" aria-labelledby="leaderboard-ranking-title" aria-busy={loading}>
-          <div className="leaderboard-ranking-heading"><div><h3 id="leaderboard-ranking-title">Global top 50</h3><p>{snapshot ? `${snapshot.participants.toLocaleString()} ${snapshot.participants === 1 ? 'learner' : 'learners'} competing` : 'One shared board. A little friendly competition.'}</p></div><button className="leaderboard-refresh" onClick={onRefresh} disabled={busy || unavailable} aria-label="Refresh leaderboard" title="Refresh leaderboard"><RefreshCw size={16}/></button></div>
+          <div className="leaderboard-ranking-heading"><div><h3 id="leaderboard-ranking-title">Top 50</h3><p>{snapshot ? `${snapshot.participants.toLocaleString()} ${snapshot.participants === 1 ? 'learner' : 'learners'} competing` : 'One shared board. A little friendly competition.'}</p></div><button className="leaderboard-refresh" onClick={onRefresh} disabled={busy || unavailable} aria-label="Refresh leaderboard" title="Refresh leaderboard"><RefreshCw size={16}/></button></div>
           {snapshot && snapshot.entries.length > 0 ? <>
-            <table className="leaderboard-table"><caption className="leaderboard-sr-only">Global leaderboard ranked by unique 3D quiz targets answered correctly</caption><thead><tr><th scope="col">Rank</th><th scope="col">Learner</th><th scope="col">Points</th></tr></thead><tbody>{snapshot.entries.map(entry => <tr key={entry.nickname} className={entry.is_you ? 'is-you' : undefined}><td><span className={'leaderboard-rank' + (entry.rank <= 3 ? ' is-podium' : '')}>{entry.rank === 1 && <Trophy size={13} aria-hidden="true"/>}<span>#{entry.rank.toLocaleString()}</span></span></td><th scope="row"><span className="leaderboard-nickname">{entry.nickname}{entry.is_you && <small>You</small>}</span></th><td>{entry.score.toLocaleString()}</td></tr>)}</tbody></table>
+            <table className="leaderboard-table"><caption className="leaderboard-sr-only">Leaderboard ranked by unique 3D quiz targets answered correctly</caption><thead><tr><th scope="col">Rank</th><th scope="col">Learner</th><th scope="col">Points</th></tr></thead><tbody>{snapshot.entries.map(entry => <tr key={entry.nickname} className={entry.is_you ? 'is-you' : undefined}><td><span className={'leaderboard-rank' + (entry.rank <= 3 ? ' is-podium' : '')}>{entry.rank === 1 && <Trophy size={13} aria-hidden="true"/>}<span>#{entry.rank.toLocaleString()}</span></span></td><th scope="row"><span className="leaderboard-nickname">{entry.nickname}{entry.is_you && <small>You</small>}</span></th><td>{entry.score.toLocaleString()}</td></tr>)}</tbody></table>
             <div className="leaderboard-table-note">Equal points share a rank. Your own rank appears even outside the top 50.</div>
           </> : <div className="leaderboard-empty" role="status">{loading ? <><RefreshCw size={25}/><h4>Loading the leaderboard…</h4><p>Getting the latest scores.</p></> : unavailable || board.status === 'error' ? <><Globe2 size={29}/><h4>The board is taking a break.</h4><p>Scores will appear here when the leaderboard is available.</p></> : <><Users size={30}/><h4>The first spot is open.</h4><p>No one has joined yet. Bring your anatomy knowledge and start the board.</p></>}</div>}
           {snapshot && board.updatedAt && <p className="leaderboard-updated">Updated {new Date(board.updatedAt).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' })} · Refresh for the latest scores</p>}
@@ -93,7 +93,7 @@ export default function LeaderboardPage({ auth, progress, board, onRefresh, onSa
               <label htmlFor="leaderboard-nickname">Public nickname</label>
               <input id="leaderboard-nickname" name="nickname" value={nickname} onChange={event => { setNickname(event.target.value); setFormError(null); setSavedMessage(null); }} minLength={3} maxLength={24} pattern="[A-Za-z0-9 _\-]{3,24}" autoComplete="off" spellCheck={false} placeholder="e.g. FunnyBone" required disabled={busy} aria-describedby="leaderboard-nickname-help" aria-invalid={formError ? true : undefined}/>
               <small id="leaderboard-nickname-help">3–24 letters, numbers, spaces, _ or -. Include a letter or number.</small>
-              {!listed && <label className="leaderboard-consent"><input type="checkbox" checked={consent} onChange={event => setConsent(event.target.checked)} disabled={busy} required/><span>Publish my nickname, score and rank on the global leaderboard.</span></label>}
+              {!listed && <label className="leaderboard-consent"><input type="checkbox" checked={consent} onChange={event => setConsent(event.target.checked)} disabled={busy} required/><span>Publish my nickname, score and rank on the leaderboard.</span></label>}
               <button className="leaderboard-primary" type="submit" disabled={busy || (!listed && !consent) || (listed && nickname.trim() === board.profile?.nickname)}>{board.working ? 'Saving…' : listed ? 'Save nickname' : 'Join leaderboard'}{!listed && <ArrowRight size={15}/>}</button>
               {listed && <button className="leaderboard-leave" type="button" disabled={busy} onClick={() => void leave()}>Leave leaderboard</button>}
             </form>}

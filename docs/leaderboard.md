@@ -1,6 +1,6 @@
-# Optional global leaderboard
+# Optional leaderboard
 
-The global leaderboard reuses the existing Supabase project and Google sign-in.
+The leaderboard reuses the existing Supabase project and Google sign-in.
 It needs no extra provider, paid feature, scheduled job, Edge Function, realtime
 subscription, or continuously polling browser. The app loads the board when it
 opens and on explicit Refresh. This is designed for

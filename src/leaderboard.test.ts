@@ -251,7 +251,7 @@ test('the public board uses a semantic ranking table with shared ranks and a pri
   state.profile = null;
   state.snapshot = { ...board(), self: null, participants: 2, entries: [{ ...row, is_you: false }, { ...row, nickname: 'Scapula Squad', is_you: false }] };
   const html = renderPage(state);
-  assert.match(html, /Global top 50/);
+  assert.match(html, /Top 50/);
   assert.match(html, /<table/);
   assert.match(html, /scope="col">Rank/);
   assert.equal((html.match(/#1</g) ?? []).length, 2);

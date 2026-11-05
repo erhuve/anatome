@@ -44,7 +44,7 @@ export function parseLeaderboard(value: unknown): LeaderboardSnapshot {
 
 function errorMessage(error: unknown, saving = false): { unavailable: boolean; message: string } {
   const code = isRecord(error) ? error.code : undefined;
-  if (code === 'PGRST202' || code === '42883' || code === '42P01') return { unavailable: true, message: 'The global leaderboard is not available yet. Your practice progress is still saved separately.' };
+  if (code === 'PGRST202' || code === '42883' || code === '42P01') return { unavailable: true, message: 'The leaderboard is not available yet. Your practice progress is still saved separately.' };
   if (code === '23505') return { unavailable: false, message: 'That nickname is taken. Try another one.' };
   if (code === '22023' || code === '23514') return { unavailable: false, message: 'Choose a nickname with 3–24 letters, numbers, spaces, underscores or hyphens.' };
   return { unavailable: false, message: saving

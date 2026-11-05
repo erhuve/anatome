@@ -13,7 +13,7 @@ npm run dev
 
 Copy `.env.example` to `.env.local`. For account features, follow [account setup](docs/auth-setup.md); for analytics, follow [PostHog setup](docs/analytics.md).
 
-The optional **Global leaderboard** reuses the same Supabase Free project. Run
+The optional **Leaderboard** reuses the same Supabase Free project. Run
 the separate [leaderboard migration and permission checks](docs/leaderboard.md)
 to enable its database API; account setup alone does not enable it. No additional
 provider or paid feature is required.
@@ -81,8 +81,8 @@ Meme deep links: `/?mode=memes` for the library, `/?mode=memes&meme=34` for the 
 
 Progress deep links: `/?progress=overview`, `/?progress=history`, `/?progress=review`, `/?progress=memes`, and `/?progress=account`. Collection and workspace parameters remain in the URL while viewing progress, so returning to practice keeps that context.
 
-**Global leaderboard** is available in My progress and at `/?progress=leaderboard`.
-Visitors can view the global top 50. Signed-in learners explicitly join with a
+**Leaderboard** is available in My progress and at `/?progress=leaderboard`.
+Visitors can view the top 50. Signed-in learners explicitly join with a
 chosen public nickname and can rename or leave at any time. Each different
 official 3D target correctly answered in a signed-in quiz earns one all-time
 point, up to 720. Repeats cannot add points; reveals, study self-checks, missed
