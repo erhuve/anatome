@@ -10,6 +10,7 @@ import type { QuizSelections } from './quizSelection';
 import type { useAuth } from './useAuth';
 import type { useStudyProgress } from './useStudyProgress';
 import type { AnswerMode } from './answerMode';
+import { studySections, nextStudySection } from './studySections';
 
 function renderSavedPass(collection: ModelCollection, coveredIds: string[], round = 1, selections: QuizSelections = {}, mode: AnswerMode | null = null, workspace = 'quiz') {
   const previousWindow = Object.getOwnPropertyDescriptor(globalThis, 'window');
@@ -91,7 +92,7 @@ test('study shows applicable mnemonics while unanswered quiz modes expose no cue
 test('a custom selection renders its own shorter pass and settings control', () => {
   const ids = modelPromptPools.muscles.slice(0, 3).map(prompt => prompt.id);
   const markup = renderSavedPass('muscles', [ids[0]], 2, {muscles:ids});
-  assert.match(markup, /Study settings/);
+  assert.match(markup, /Browse sections/);
   assert.match(markup, /3 selected targets/);
   assert.match(markup, /Selection pass 2/);
   assert.match(markup, /Pass 2: 1 of 3 targets covered/);
@@ -119,7 +120,7 @@ test('refreshing an exhausted landmark pass safely retains a specimen and the sa
   const markup = renderSavedPass('landmarks', all, 3);
   assert.match(markup, /PASS COMPLETE/);
   assert.match(markup, /Start pass 4/);
-  assert.match(markup, /BONE LANDMARKS/);
+  assert.match(markup, /Change section: All landmarks/);
   assert.ok(markup.includes(`Pass 3: ${all.length} of ${all.length} targets covered`));
   assert.doesNotMatch(markup, /class="answer-options"/);
 });
@@ -150,4 +151,27 @@ test('empty general study selection offers a picker without rendering an invalid
   assert.match(markup, /Choose something to study/);
   assert.match(markup, /Choose study material/);
   assert.doesNotMatch(markup, /STUDY THE STRUCTURE|Interactive 3D study specimen/);
+});
+
+test('a completed textbook section retains its title and offers the following section without resetting the pass', () => {
+  const section = studySections.find(item => item.id === 'scapula-details')!;
+  const next = nextStudySection(section)!;
+  const markup = renderSavedPass(section.collection, section.promptIds, 2, { [section.collection]: section.promptIds });
+  assert.ok(markup.includes(`Change section: ${section.title.replace(/&/g, '&amp;')}`));
+  assert.match(markup, /PASS COMPLETE/);
+  assert.ok(markup.includes(next.title));
+  assert.match(markup, /Next section/);
+  assert.match(markup, /Start pass 3/);
+  assert.ok(markup.includes(`All ${section.promptIds.length} covered.`));
+});
+
+test('quiz and study expose the chosen section above the model without renderer jargon', () => {
+  const section = studySections.find(item => item.id === 'carpals')!;
+  for (const mode of ['quiz', 'study']) {
+    const markup = renderSavedPass(section.collection, [], 1, { [section.collection]: section.promptIds }, 'typed', mode);
+    const modelStage = markup.split('<aside class="question-panel')[0];
+    assert.ok(modelStage.includes(`Change section: ${section.title}`));
+    assert.match(modelStage, /aria-haspopup="dialog"/);
+    assert.doesNotMatch(modelStage, /MUSCULAR SYSTEM|SKELETAL SYSTEM|Translucent context|Highlighted structure/);
+  }
 });

@@ -1,0 +1,32 @@
+.studio-header{display:flex;justify-content:space-between}
+.studio-header .browse-sections-button{display:flex;align-items:center;gap:7px;padding:9px 12px;min-height:36px;border:1px solid #3b4653;border-radius:6px;color:#bfd7ed;font-size:11px;background:#20262d;white-space:nowrap}
+.studio-header .browse-sections-button:hover{color:#e5f2ff;background:#2b3948;border-color:#7493b0}
+.specimen-stage:has(.section-heading){display:flex;flex-direction:column}
+.section-heading.stage-heading{position:relative;top:auto;left:auto;margin:18px 0 0 22px;max-width:calc(100% - 135px);pointer-events:auto;gap:0;flex:none;align-self:flex-start}
+.section-heading-button{display:flex;align-items:center;gap:20px;min-height:63px;padding:9px 13px;text-align:left;border:1px solid transparent;border-radius:8px;background:#171819e8;color:#dce5ef}
+.section-heading-button>span{display:flex;flex-direction:column;min-width:0;gap:5px}
+.section-heading-button small{font-size:9px;letter-spacing:1.2px;line-height:1.3;text-transform:uppercase;color:#90a4b8}
+.section-heading-button strong{font-size:21px;line-height:1.3;font-weight:500;letter-spacing:-.5px}
+.section-heading-button>svg{color:#98bddc}
+.section-heading-button:hover{border-color:#465a70;background:#232c36}
+.specimen-stage:has(.section-heading) .model-space{position:relative;inset:auto;flex:1 1 0;min-height:0;width:100%;margin:8px 0 75px}
+.section-picker-dialog{width:1080px;height:min(860px,calc(100dvh - 52px))}
+.section-picker-dialog .settings-heading{padding:24px 28px 20px;border-bottom:1px solid #353d47}
+.section-picker-dialog .settings-heading p{font-size:12px;margin-top:5px;color:#8f9dad}
+.settings-back{display:flex;align-items:center;gap:5px;font-size:11px;color:#a8bed6;margin-bottom:13px;padding:0}
+.settings-back:hover{color:#e5f1ff}
+@media(max-width:1000px){.section-heading.stage-heading{margin-left:14px}.section-heading-button{gap:12px}.section-heading-button strong{font-size:18px}.studio-header .browse-sections-button{font-size:10px;padding:8px}}
+@media(max-width:760px),(max-height:500px) and (max-width:1000px){
+  .practice-screen .studio-header{height:56px;min-height:56px;padding:0 12px}
+  .studio-header .browse-sections-button{width:34px;min-height:34px;padding:0;justify-content:center;border:0;background:transparent}
+  .studio-header .browse-sections-button>span{display:none}
+  .practice-screen .section-heading.stage-heading{top:auto;left:auto;margin:5px 8px 0;max-width:calc(100% - 16px)}
+  .practice-screen .section-heading-button{min-height:56px;padding:8px 10px;gap:14px;max-width:100%}
+  .practice-screen .section-heading-button strong{font-size:17px}
+  .practice-screen .section-heading-button small{font-size:8px;letter-spacing:.9px}
+  .practice-screen .specimen-stage:has(.section-heading) .model-space{inset:auto;margin:5px 0 42px}
+  [data-practice-keyboard=true] .practice-screen .specimen-stage:has(.section-heading) .model-space{inset:auto;margin:8px 0}
+  .section-picker-dialog{height:calc(100dvh - 20px)}
+  .section-picker-dialog .settings-heading{padding:20px 19px 16px}
+  .section-picker-dialog .settings-heading h2{font-size:23px}
+}

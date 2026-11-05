@@ -10,5 +10,7 @@ import './identity.css';
 import './mobile.css';
 import './components/ProgressPages.css';
 import './components/AnatomyMnemonic.css';
+import './components/StudySections.css';
+import './components/SectionHeading.css';
 const analytics = initializeAnalytics();
 createRoot(document.getElementById('root')!).render(<React.StrictMode>{analytics ? <PostHogProvider client={analytics}><App /></PostHogProvider> : <App />}</React.StrictMode>);

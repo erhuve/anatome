@@ -28,11 +28,12 @@ type Props = {
   paused?: boolean;
   fromMeme?: boolean;
   backLabel?: string;
+  sectionHeading?: ReactNode;
 };
 const collectionLabel = { muscles: 'Muscles', skeleton: 'Bones', landmarks: 'Landmarks' };
 
 /** A temporary study session leaves the interrupted quiz and its pass intact. */
-export default function StudyFlow({ targets, answerMode, onAnswer, onClose, header, general = false, initialTargetId, onTargetChange, paused = false, fromMeme = false, backLabel }: Props) {
+export default function StudyFlow({ targets, answerMode, onAnswer, onClose, header, general = false, initialTargetId, onTargetChange, paused = false, fromMeme = false, backLabel, sectionHeading }: Props) {
   const [index, setIndex] = useState(() => Math.max(0, targets.findIndex(prompt => prompt.id === initialTargetId)));
   const [browserOpen, setBrowserOpen] = useState(false);
   const [phase, setPhase] = useState<'study' | 'recall' | 'complete'>('study');
@@ -60,6 +61,7 @@ export default function StudyFlow({ targets, answerMode, onAnswer, onClose, head
   const contextIds = useMemo(() => getPromptContextIds(prompt), [prompt]);
   const hasOpacity = !prompt.bone && framing !== 'isolate';
   const trackedTarget = useRef('');
+  const wasPaused = useRef(paused);
 
   useEffect(() => {
     const key = `${prompt.collection}:${prompt.id}`;
@@ -70,6 +72,9 @@ export default function StudyFlow({ targets, answerMode, onAnswer, onClose, head
 
   useEffect(() => { heading.current?.focus({ preventScroll: true }); }, [index, phase]);
   useEffect(() => {
+    const resumed = wasPaused.current && !paused;
+    wasPaused.current = paused;
+    if (resumed) return;
     if (paused || browserOpen) return;
     if (phase === 'recall' && !result && status === 'ready' && mode === 'typed') focusAnswerOnDesktop(input.current);
     if (phase === 'recall' && result) next.current?.focus({ preventScroll: true });
@@ -78,7 +83,7 @@ export default function StudyFlow({ targets, answerMode, onAnswer, onClose, head
     function keyboard(event: KeyboardEvent) {
       if (paused || browserOpen || event.defaultPrevented) return;
       if (event.key === 'Escape') { event.preventDefault(); onClose(); return; }
-      if (event.defaultPrevented || event.metaKey || event.ctrlKey || event.altKey || (event.target as HTMLElement)?.matches('input,textarea,select,a')) return;
+      if (event.defaultPrevented || event.metaKey || event.ctrlKey || event.altKey || (event.target as HTMLElement)?.closest('input,textarea,select,a,.section-heading-button,.browse-sections-button')) return;
       if (phase === 'recall' && mode === 'choice' && /^[1-4]$/.test(event.key)) {
         const option = options[Number(event.key) - 1];
         if (option) { event.preventDefault(); answer(option); }
@@ -120,7 +125,7 @@ export default function StudyFlow({ targets, answerMode, onAnswer, onClose, head
     </header>}
     <main className="studio-main">
       <section className={'specimen-stage' + (hasOpacity ? ' has-context-opacity' : '')} aria-label="Interactive 3D study specimen">
-        <div className="stage-heading"><span className="collection-label">{collectionLabel[prompt.collection].toUpperCase()}</span><span className="stage-divider"/><span className="stage-label">{prompt.bone ?? (framing === 'isolate' ? 'Isolated structure' : 'Highlighted structure')}</span></div>
+        {sectionHeading ?? <div className="stage-heading"><span className="collection-label">{fromMeme ? 'From meme to model' : 'Review structures'}</span></div>}
         <div className="model-space">
           {prompt.bone ? <BoneViewer key={`study-${prompt.bone}-${retry}`} bone={prompt.bone} view={view} labels={false} activeLandmark={prompt.landmark} resetToken={reset} theme="dark" onReady={onReady} onViewChange={onViewChange}/> : <SystemViewer key={`study-${prompt.collection}-${retry}`} system={prompt.collection === 'muscles' ? 'muscles' : 'skeleton'} view={view} selectedId={prompt.partId} isolate={framing === 'isolate'} focusSelected={framing === 'focus'} focusContextIds={contextIds} ghostOthers={true} contextOpacity={opacity} resetToken={reset} theme="dark" onReady={onReady} onViewChange={onViewChange} onSelect={general && phase === 'study' ? id => showTarget(targets.findIndex(target => target.partId === id)) : undefined}/>}
         </div>
