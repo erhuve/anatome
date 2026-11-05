@@ -1,0 +1,5063 @@
+{
+  "width": 192,
+  "height": 128,
+  "targets": [
+    {
+      "id": "model-muscles-FJ1419",
+      "collection": "muscles",
+      "answer": "Right gluteus medius",
+      "partId": "FJ1419",
+      "view": "lateral"
+    },
+    {
+      "id": "model-muscles-ZA_M_188008333",
+      "collection": "muscles",
+      "answer": "Left tensor fasciae latae",
+      "partId": "ZA_M_188008333",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-FJ1419M",
+      "collection": "muscles",
+      "answer": "Left gluteus medius",
+      "partId": "FJ1419M",
+      "view": "medial"
+    },
+    {
+      "id": "model-muscles-FJ1418M",
+      "collection": "muscles",
+      "answer": "Left gluteus maximus",
+      "partId": "FJ1418M",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_481864979",
+      "collection": "muscles",
+      "answer": "Left gluteus minimus",
+      "partId": "ZA_M_481864979",
+      "view": "medial"
+    },
+    {
+      "id": "model-muscles-ZA_M_625532537",
+      "collection": "muscles",
+      "answer": "Right tensor fasciae latae",
+      "partId": "ZA_M_625532537",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-FJ1418",
+      "collection": "muscles",
+      "answer": "Right gluteus maximus",
+      "partId": "FJ1418",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_965185828",
+      "collection": "muscles",
+      "answer": "Right gluteus minimus",
+      "partId": "ZA_M_965185828",
+      "view": "lateral"
+    },
+    {
+      "id": "model-muscles-ZA_M_65307038",
+      "collection": "muscles",
+      "answer": "Right fibularis tertius",
+      "partId": "ZA_M_65307038",
+      "view": "lateral"
+    },
+    {
+      "id": "model-muscles-ZA_M_71171280",
+      "collection": "muscles",
+      "answer": "Right extensor digitorum longus",
+      "partId": "ZA_M_71171280",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_120752132",
+      "collection": "muscles",
+      "answer": "Right extensor hallucis longus",
+      "partId": "ZA_M_120752132",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-FJ1439M",
+      "collection": "muscles",
+      "answer": "Left tibialis anterior",
+      "partId": "FJ1439M",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-FJ1439",
+      "collection": "muscles",
+      "answer": "Right tibialis anterior",
+      "partId": "FJ1439",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_542055860",
+      "collection": "muscles",
+      "answer": "Left extensor digitorum longus",
+      "partId": "ZA_M_542055860",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_590627815",
+      "collection": "muscles",
+      "answer": "Left extensor hallucis longus",
+      "partId": "ZA_M_590627815",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_891301055",
+      "collection": "muscles",
+      "answer": "Left fibularis tertius",
+      "partId": "ZA_M_891301055",
+      "view": "medial"
+    },
+    {
+      "id": "model-muscles-ZA_M_7783512",
+      "collection": "muscles",
+      "answer": "Left flexor digitorum brevis",
+      "partId": "ZA_M_7783512",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_31511368",
+      "collection": "muscles",
+      "answer": "Right plantar interossei muscles",
+      "partId": "ZA_M_31511368",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_273036888",
+      "collection": "muscles",
+      "answer": "Left medial head of flexor hallucis brevis",
+      "partId": "ZA_M_273036888",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_402550054",
+      "collection": "muscles",
+      "answer": "Right medial head of flexor hallucis brevis",
+      "partId": "ZA_M_402550054",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_600174712",
+      "collection": "muscles",
+      "answer": "Right lateral head of flexor hallucis brevis",
+      "partId": "ZA_M_600174712",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_767779129",
+      "collection": "muscles",
+      "answer": "Left lateral head of flexor hallucis brevis",
+      "partId": "ZA_M_767779129",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_38458573",
+      "collection": "muscles",
+      "answer": "Left flexor digiti minimi of foot",
+      "partId": "ZA_M_38458573",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_88110804",
+      "collection": "muscles",
+      "answer": "Right flexor digiti minimi of foot",
+      "partId": "ZA_M_88110804",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_90310087",
+      "collection": "muscles",
+      "answer": "Right abductor digiti minimi of foot",
+      "partId": "ZA_M_90310087",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_120138617",
+      "collection": "muscles",
+      "answer": "Right abductor hallucis",
+      "partId": "ZA_M_120138617",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_126486897",
+      "collection": "muscles",
+      "answer": "Left extensor hallucis brevis",
+      "partId": "ZA_M_126486897",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_166334464",
+      "collection": "muscles",
+      "answer": "Left abductor digiti minimi of foot",
+      "partId": "ZA_M_166334464",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_190317272",
+      "collection": "muscles",
+      "answer": "Left dorsal interossei muscles of foot",
+      "partId": "ZA_M_190317272",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_323490698",
+      "collection": "muscles",
+      "answer": "Right flexor digitorum brevis",
+      "partId": "ZA_M_323490698",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_310107551",
+      "collection": "muscles",
+      "answer": "Left transverse head of adductor hallucis",
+      "partId": "ZA_M_310107551",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_427011351",
+      "collection": "muscles",
+      "answer": "Left oblique head of adductor hallucis",
+      "partId": "ZA_M_427011351",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_529220062",
+      "collection": "muscles",
+      "answer": "Right transverse head of adductor hallucis",
+      "partId": "ZA_M_529220062",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_889267559",
+      "collection": "muscles",
+      "answer": "Right oblique head of adductor hallucis",
+      "partId": "ZA_M_889267559",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_352636945",
+      "collection": "muscles",
+      "answer": "Right dorsal interossei muscles of foot",
+      "partId": "ZA_M_352636945",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_438715331",
+      "collection": "muscles",
+      "answer": "Left quadratus plantae",
+      "partId": "ZA_M_438715331",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_468794132",
+      "collection": "muscles",
+      "answer": "Right opponens digiti minimi of foot",
+      "partId": "ZA_M_468794132",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_537307938",
+      "collection": "muscles",
+      "answer": "Left lumbrical muscles of foot",
+      "partId": "ZA_M_537307938",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_617788595",
+      "collection": "muscles",
+      "answer": "Left abductor hallucis",
+      "partId": "ZA_M_617788595",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_624724133",
+      "collection": "muscles",
+      "answer": "Right extensor hallucis brevis",
+      "partId": "ZA_M_624724133",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_660006931",
+      "collection": "muscles",
+      "answer": "Right extensor digitorum brevis",
+      "partId": "ZA_M_660006931",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_710749971",
+      "collection": "muscles",
+      "answer": "Left opponens digiti minimi of foot",
+      "partId": "ZA_M_710749971",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_732116709",
+      "collection": "muscles",
+      "answer": "Left plantar interossei muscles",
+      "partId": "ZA_M_732116709",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_825861524",
+      "collection": "muscles",
+      "answer": "Right lumbrical muscles of foot",
+      "partId": "ZA_M_825861524",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_899759535",
+      "collection": "muscles",
+      "answer": "Left extensor digitorum brevis",
+      "partId": "ZA_M_899759535",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_975515398",
+      "collection": "muscles",
+      "answer": "Right quadratus plantae",
+      "partId": "ZA_M_975515398",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_46522600",
+      "collection": "muscles",
+      "answer": "Right adductor brevis",
+      "partId": "ZA_M_46522600",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_77443959",
+      "collection": "muscles",
+      "answer": "Left adductor longus",
+      "partId": "ZA_M_77443959",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_137107048",
+      "collection": "muscles",
+      "answer": "Left adductor brevis",
+      "partId": "ZA_M_137107048",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_220313230",
+      "collection": "muscles",
+      "answer": "Left gracilis",
+      "partId": "ZA_M_220313230",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_330216915",
+      "collection": "muscles",
+      "answer": "Left pectineus",
+      "partId": "ZA_M_330216915",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_375268405",
+      "collection": "muscles",
+      "answer": "Left adductor magnus",
+      "partId": "ZA_M_375268405",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_374639111",
+      "collection": "muscles",
+      "answer": "Left adductor minimus",
+      "partId": "ZA_M_374639111",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_530208388",
+      "collection": "muscles",
+      "answer": "Right obturator externus",
+      "partId": "ZA_M_530208388",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_574285216",
+      "collection": "muscles",
+      "answer": "Left obturator externus",
+      "partId": "ZA_M_574285216",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_610284590",
+      "collection": "muscles",
+      "answer": "Right gracilis",
+      "partId": "ZA_M_610284590",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_942819798",
+      "collection": "muscles",
+      "answer": "Right adductor longus",
+      "partId": "ZA_M_942819798",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_944732284",
+      "collection": "muscles",
+      "answer": "Right pectineus",
+      "partId": "ZA_M_944732284",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_986487575",
+      "collection": "muscles",
+      "answer": "Right adductor magnus",
+      "partId": "ZA_M_986487575",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_281840938",
+      "collection": "muscles",
+      "answer": "Right adductor minimus",
+      "partId": "ZA_M_281840938",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_58135279",
+      "collection": "muscles",
+      "answer": "Left fibularis longus",
+      "partId": "ZA_M_58135279",
+      "view": "medial"
+    },
+    {
+      "id": "model-muscles-ZA_M_144360526",
+      "collection": "muscles",
+      "answer": "Right fibularis brevis",
+      "partId": "ZA_M_144360526",
+      "view": "lateral"
+    },
+    {
+      "id": "model-muscles-ZA_M_235597193",
+      "collection": "muscles",
+      "answer": "Right fibularis longus",
+      "partId": "ZA_M_235597193",
+      "view": "lateral"
+    },
+    {
+      "id": "model-muscles-ZA_M_383217244",
+      "collection": "muscles",
+      "answer": "Left fibularis brevis",
+      "partId": "ZA_M_383217244",
+      "view": "medial"
+    },
+    {
+      "id": "model-muscles-FJ1444M",
+      "collection": "muscles",
+      "answer": "Short head of left biceps femoris",
+      "partId": "FJ1444M",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-FJ1436",
+      "collection": "muscles",
+      "answer": "Right semitendinosus",
+      "partId": "FJ1436",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-FJ1444",
+      "collection": "muscles",
+      "answer": "Short head of right biceps femoris",
+      "partId": "FJ1444",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-FJ1435",
+      "collection": "muscles",
+      "answer": "Right semimembranosus",
+      "partId": "FJ1435",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-FJ1395M",
+      "collection": "muscles",
+      "answer": "Long head of left biceps femoris",
+      "partId": "FJ1395M",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-FJ1436M",
+      "collection": "muscles",
+      "answer": "Left semitendinosus",
+      "partId": "FJ1436M",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-FJ1435M",
+      "collection": "muscles",
+      "answer": "Left semimembranosus",
+      "partId": "FJ1435M",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-FJ1395",
+      "collection": "muscles",
+      "answer": "Long head of right biceps femoris",
+      "partId": "FJ1395",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-FJ1394M",
+      "collection": "muscles",
+      "answer": "Lateral head of left gastrocnemius",
+      "partId": "FJ1394M",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-FJ1437M",
+      "collection": "muscles",
+      "answer": "Left soleus",
+      "partId": "FJ1437M",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_506382866",
+      "collection": "muscles",
+      "answer": "Left plantaris",
+      "partId": "ZA_M_506382866",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-FJ1394",
+      "collection": "muscles",
+      "answer": "Lateral head of right gastrocnemius",
+      "partId": "FJ1394",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-FJ1397M",
+      "collection": "muscles",
+      "answer": "Medial head of left gastrocnemius",
+      "partId": "FJ1397M",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-FJ1397",
+      "collection": "muscles",
+      "answer": "Medial head of right gastrocnemius",
+      "partId": "FJ1397",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-FJ1437",
+      "collection": "muscles",
+      "answer": "Right soleus",
+      "partId": "FJ1437",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_988126069",
+      "collection": "muscles",
+      "answer": "Right plantaris",
+      "partId": "ZA_M_988126069",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_115201106",
+      "collection": "muscles",
+      "answer": "Right popliteus",
+      "partId": "ZA_M_115201106",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_313839623",
+      "collection": "muscles",
+      "answer": "Left popliteus",
+      "partId": "ZA_M_313839623",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_498927038",
+      "collection": "muscles",
+      "answer": "Right tibialis posterior",
+      "partId": "ZA_M_498927038",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_622768040",
+      "collection": "muscles",
+      "answer": "Right flexor digitorum longus",
+      "partId": "ZA_M_622768040",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_632232163",
+      "collection": "muscles",
+      "answer": "Right flexor hallucis longus",
+      "partId": "ZA_M_632232163",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_817962400",
+      "collection": "muscles",
+      "answer": "Left flexor hallucis longus",
+      "partId": "ZA_M_817962400",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_917182063",
+      "collection": "muscles",
+      "answer": "Left flexor digitorum longus",
+      "partId": "ZA_M_917182063",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_920250022",
+      "collection": "muscles",
+      "answer": "Left tibialis posterior",
+      "partId": "ZA_M_920250022",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_176848128",
+      "collection": "muscles",
+      "answer": "Right superior gemellus",
+      "partId": "ZA_M_176848128",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_315870314",
+      "collection": "muscles",
+      "answer": "Right inferior gemellus",
+      "partId": "ZA_M_315870314",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_373437200",
+      "collection": "muscles",
+      "answer": "Left obturator internus",
+      "partId": "ZA_M_373437200",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_416362594",
+      "collection": "muscles",
+      "answer": "Left quadratus femoris",
+      "partId": "ZA_M_416362594",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_464622025",
+      "collection": "muscles",
+      "answer": "Left inferior gemellus",
+      "partId": "ZA_M_464622025",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_513223513",
+      "collection": "muscles",
+      "answer": "Right obturator internus",
+      "partId": "ZA_M_513223513",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_665958576",
+      "collection": "muscles",
+      "answer": "Left superior gemellus",
+      "partId": "ZA_M_665958576",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_726753845",
+      "collection": "muscles",
+      "answer": "Left piriformis",
+      "partId": "ZA_M_726753845",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_867718655",
+      "collection": "muscles",
+      "answer": "Right piriformis",
+      "partId": "ZA_M_867718655",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_919705750",
+      "collection": "muscles",
+      "answer": "Right quadratus femoris",
+      "partId": "ZA_M_919705750",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-FJ1443M",
+      "collection": "muscles",
+      "answer": "Left vastus medialis",
+      "partId": "FJ1443M",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-FJ1442",
+      "collection": "muscles",
+      "answer": "Right vastus lateralis",
+      "partId": "FJ1442",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-FJ1443",
+      "collection": "muscles",
+      "answer": "Right vastus medialis",
+      "partId": "FJ1443",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-FJ1434",
+      "collection": "muscles",
+      "answer": "Right sartorius",
+      "partId": "FJ1434",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-FJ1433",
+      "collection": "muscles",
+      "answer": "Right rectus femoris",
+      "partId": "FJ1433",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_803032127",
+      "collection": "muscles",
+      "answer": "Left vastus intermedius",
+      "partId": "ZA_M_803032127",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-FJ1434M",
+      "collection": "muscles",
+      "answer": "Left sartorius",
+      "partId": "FJ1434M",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_916015942",
+      "collection": "muscles",
+      "answer": "Right vastus intermedius",
+      "partId": "ZA_M_916015942",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-FJ1433M",
+      "collection": "muscles",
+      "answer": "Left rectus femoris",
+      "partId": "FJ1433M",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-FJ1442M",
+      "collection": "muscles",
+      "answer": "Left vastus lateralis",
+      "partId": "FJ1442M",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_127513549",
+      "collection": "muscles",
+      "answer": "Right psoas major",
+      "partId": "ZA_M_127513549",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_243722661",
+      "collection": "muscles",
+      "answer": "Left psoas major",
+      "partId": "ZA_M_243722661",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_486248492",
+      "collection": "muscles",
+      "answer": "Left iliacus",
+      "partId": "ZA_M_486248492",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_888473793",
+      "collection": "muscles",
+      "answer": "Right iliacus",
+      "partId": "ZA_M_888473793",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_271800663",
+      "collection": "muscles",
+      "answer": "Right hyoglossus",
+      "partId": "ZA_M_271800663",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_455359935",
+      "collection": "muscles",
+      "answer": "Left genioglossus",
+      "partId": "ZA_M_455359935",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_702231470",
+      "collection": "muscles",
+      "answer": "Right genioglossus",
+      "partId": "ZA_M_702231470",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_800802465",
+      "collection": "muscles",
+      "answer": "Left hyoglossus",
+      "partId": "ZA_M_800802465",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_793318402",
+      "collection": "muscles",
+      "answer": "Right palatopharyngeus",
+      "partId": "ZA_M_793318402",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_995862335",
+      "collection": "muscles",
+      "answer": "Left palatopharyngeus",
+      "partId": "ZA_M_995862335",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_131002877",
+      "collection": "muscles",
+      "answer": "Left frontalis",
+      "partId": "ZA_M_131002877",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_181104823",
+      "collection": "muscles",
+      "answer": "Left occipitalis",
+      "partId": "ZA_M_181104823",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_203921301",
+      "collection": "muscles",
+      "answer": "Right temporoparietalis",
+      "partId": "ZA_M_203921301",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_509132682",
+      "collection": "muscles",
+      "answer": "Right occipitalis",
+      "partId": "ZA_M_509132682",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_517073369",
+      "collection": "muscles",
+      "answer": "Right frontalis",
+      "partId": "ZA_M_517073369",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_837312177",
+      "collection": "muscles",
+      "answer": "Left temporoparietalis",
+      "partId": "ZA_M_837312177",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_23602413",
+      "collection": "muscles",
+      "answer": "Right corrugator supercilii",
+      "partId": "ZA_M_23602413",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_46005575",
+      "collection": "muscles",
+      "answer": "Right orbital part of orbicularis oculi",
+      "partId": "ZA_M_46005575",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_63420266",
+      "collection": "muscles",
+      "answer": "Left procerus",
+      "partId": "ZA_M_63420266",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_114442261",
+      "collection": "muscles",
+      "answer": "Right palpebral part of orbicularis oculi",
+      "partId": "ZA_M_114442261",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_121742891",
+      "collection": "muscles",
+      "answer": "Right zygomaticus major",
+      "partId": "ZA_M_121742891",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_200305276",
+      "collection": "muscles",
+      "answer": "Left palpebral part of orbicularis oculi",
+      "partId": "ZA_M_200305276",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_247885239",
+      "collection": "muscles",
+      "answer": "Left nasalis",
+      "partId": "ZA_M_247885239",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_290510213",
+      "collection": "muscles",
+      "answer": "Left zygomaticus major",
+      "partId": "ZA_M_290510213",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_381066825",
+      "collection": "muscles",
+      "answer": "Right zygomaticus minor",
+      "partId": "ZA_M_381066825",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_412064368",
+      "collection": "muscles",
+      "answer": "Right levator labii superioris",
+      "partId": "ZA_M_412064368",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_415043050",
+      "collection": "muscles",
+      "answer": "Left depressor anguli oris",
+      "partId": "ZA_M_415043050",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_434537092",
+      "collection": "muscles",
+      "answer": "Left depressor septi nasi",
+      "partId": "ZA_M_434537092",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_434972166",
+      "collection": "muscles",
+      "answer": "Right orbicularis oris",
+      "partId": "ZA_M_434972166",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_489981318",
+      "collection": "muscles",
+      "answer": "Right buccinator",
+      "partId": "ZA_M_489981318",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_495262934",
+      "collection": "muscles",
+      "answer": "Left risorius",
+      "partId": "ZA_M_495262934",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_510329294",
+      "collection": "muscles",
+      "answer": "Left zygomaticus minor",
+      "partId": "ZA_M_510329294",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_646475330",
+      "collection": "muscles",
+      "answer": "Right levator nasolabialis",
+      "partId": "ZA_M_646475330",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_662526822",
+      "collection": "muscles",
+      "answer": "Right mentalis",
+      "partId": "ZA_M_662526822",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_667750948",
+      "collection": "muscles",
+      "answer": "Left orbital part of orbicularis oculi",
+      "partId": "ZA_M_667750948",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_726335290",
+      "collection": "muscles",
+      "answer": "Left corrugator supercilii",
+      "partId": "ZA_M_726335290",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_763323912",
+      "collection": "muscles",
+      "answer": "Right depressor anguli oris",
+      "partId": "ZA_M_763323912",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_783619419",
+      "collection": "muscles",
+      "answer": "Left depressor labii inferioris",
+      "partId": "ZA_M_783619419",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_796791312",
+      "collection": "muscles",
+      "answer": "Left orbicularis oris",
+      "partId": "ZA_M_796791312",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_814845954",
+      "collection": "muscles",
+      "answer": "Right depressor septi nasi",
+      "partId": "ZA_M_814845954",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_826115562",
+      "collection": "muscles",
+      "answer": "Left mentalis",
+      "partId": "ZA_M_826115562",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_833854523",
+      "collection": "muscles",
+      "answer": "Left levator anguli oris",
+      "partId": "ZA_M_833854523",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_843119347",
+      "collection": "muscles",
+      "answer": "Left levator nasolabialis",
+      "partId": "ZA_M_843119347",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_890613983",
+      "collection": "muscles",
+      "answer": "Left levator labii superioris",
+      "partId": "ZA_M_890613983",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_897633611",
+      "collection": "muscles",
+      "answer": "Right nasalis",
+      "partId": "ZA_M_897633611",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_907127900",
+      "collection": "muscles",
+      "answer": "Right procerus",
+      "partId": "ZA_M_907127900",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_926940655",
+      "collection": "muscles",
+      "answer": "Right levator anguli oris",
+      "partId": "ZA_M_926940655",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_957288105",
+      "collection": "muscles",
+      "answer": "Left buccinator",
+      "partId": "ZA_M_957288105",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_977642170",
+      "collection": "muscles",
+      "answer": "Right depressor labii inferioris",
+      "partId": "ZA_M_977642170",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_998988858",
+      "collection": "muscles",
+      "answer": "Right risorius",
+      "partId": "ZA_M_998988858",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_162944253",
+      "collection": "muscles",
+      "answer": "Left temporalis",
+      "partId": "ZA_M_162944253",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_268652398",
+      "collection": "muscles",
+      "answer": "Left superficial part of masseter",
+      "partId": "ZA_M_268652398",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_312701766",
+      "collection": "muscles",
+      "answer": "Right inferior head of lateral pterygoid",
+      "partId": "ZA_M_312701766",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_331223255",
+      "collection": "muscles",
+      "answer": "Right deep part of masseter",
+      "partId": "ZA_M_331223255",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_336574972",
+      "collection": "muscles",
+      "answer": "Right superior head of lateral pterygoid",
+      "partId": "ZA_M_336574972",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_533962729",
+      "collection": "muscles",
+      "answer": "Left deep part of masseter",
+      "partId": "ZA_M_533962729",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_695240571",
+      "collection": "muscles",
+      "answer": "Right superficial part of masseter",
+      "partId": "ZA_M_695240571",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_825659527",
+      "collection": "muscles",
+      "answer": "Left superior head of lateral pterygoid",
+      "partId": "ZA_M_825659527",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_826208578",
+      "collection": "muscles",
+      "answer": "Left medial pterygoid",
+      "partId": "ZA_M_826208578",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_871676841",
+      "collection": "muscles",
+      "answer": "Right medial pterygoid",
+      "partId": "ZA_M_871676841",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_907972935",
+      "collection": "muscles",
+      "answer": "Left inferior head of lateral pterygoid",
+      "partId": "ZA_M_907972935",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_952924065",
+      "collection": "muscles",
+      "answer": "Right temporalis",
+      "partId": "ZA_M_952924065",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_101726543",
+      "collection": "muscles",
+      "answer": "Right inferior rectus",
+      "partId": "ZA_M_101726543",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_159234429",
+      "collection": "muscles",
+      "answer": "Right levator palpebrae superioris",
+      "partId": "ZA_M_159234429",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_229987069",
+      "collection": "muscles",
+      "answer": "Right medial rectus",
+      "partId": "ZA_M_229987069",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_314842125",
+      "collection": "muscles",
+      "answer": "Left inferior rectus",
+      "partId": "ZA_M_314842125",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_333826502",
+      "collection": "muscles",
+      "answer": "Left superior rectus",
+      "partId": "ZA_M_333826502",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_409257848",
+      "collection": "muscles",
+      "answer": "Left superior oblique",
+      "partId": "ZA_M_409257848",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_501299842",
+      "collection": "muscles",
+      "answer": "Left medial rectus",
+      "partId": "ZA_M_501299842",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_686772276",
+      "collection": "muscles",
+      "answer": "Left inferior oblique",
+      "partId": "ZA_M_686772276",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_804120105",
+      "collection": "muscles",
+      "answer": "Right inferior oblique",
+      "partId": "ZA_M_804120105",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_892995493",
+      "collection": "muscles",
+      "answer": "Left levator palpebrae superioris",
+      "partId": "ZA_M_892995493",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_895512714",
+      "collection": "muscles",
+      "answer": "Right superior oblique",
+      "partId": "ZA_M_895512714",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_916854433",
+      "collection": "muscles",
+      "answer": "Right lateral rectus",
+      "partId": "ZA_M_916854433",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_976579572",
+      "collection": "muscles",
+      "answer": "Right superior rectus",
+      "partId": "ZA_M_976579572",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_988656211",
+      "collection": "muscles",
+      "answer": "Left lateral rectus",
+      "partId": "ZA_M_988656211",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_61250749",
+      "collection": "muscles",
+      "answer": "Right external anal sphincter",
+      "partId": "ZA_M_61250749",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_132298958",
+      "collection": "muscles",
+      "answer": "Left external anal sphincter",
+      "partId": "ZA_M_132298958",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_78079918",
+      "collection": "muscles",
+      "answer": "Right pubo-analis",
+      "partId": "ZA_M_78079918",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_159798982",
+      "collection": "muscles",
+      "answer": "Left pubococcygeus",
+      "partId": "ZA_M_159798982",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_419785171",
+      "collection": "muscles",
+      "answer": "Left iliococcygeus",
+      "partId": "ZA_M_419785171",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_441806771",
+      "collection": "muscles",
+      "answer": "Left pubo-analis",
+      "partId": "ZA_M_441806771",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_537355208",
+      "collection": "muscles",
+      "answer": "Right pubococcygeus",
+      "partId": "ZA_M_537355208",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_968157083",
+      "collection": "muscles",
+      "answer": "Right iliococcygeus",
+      "partId": "ZA_M_968157083",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_493960696",
+      "collection": "muscles",
+      "answer": "Left coccygeus",
+      "partId": "ZA_M_493960696",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_542697171",
+      "collection": "muscles",
+      "answer": "Right coccygeus",
+      "partId": "ZA_M_542697171",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_76407795",
+      "collection": "muscles",
+      "answer": "Left rectus posterior major capitis",
+      "partId": "ZA_M_76407795",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_118649426",
+      "collection": "muscles",
+      "answer": "Right obliquus superior capitis",
+      "partId": "ZA_M_118649426",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_231983401",
+      "collection": "muscles",
+      "answer": "Left rectus posterior minor capitis",
+      "partId": "ZA_M_231983401",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_406437571",
+      "collection": "muscles",
+      "answer": "Left obliquus inferior capitis",
+      "partId": "ZA_M_406437571",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_440627230",
+      "collection": "muscles",
+      "answer": "Right rectus posterior major capitis",
+      "partId": "ZA_M_440627230",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_743982480",
+      "collection": "muscles",
+      "answer": "Right rectus posterior minor capitis",
+      "partId": "ZA_M_743982480",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_888886461",
+      "collection": "muscles",
+      "answer": "Right obliquus inferior capitis",
+      "partId": "ZA_M_888886461",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_897381750",
+      "collection": "muscles",
+      "answer": "Left obliquus superior capitis",
+      "partId": "ZA_M_897381750",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_98304661",
+      "collection": "muscles",
+      "answer": "Right iliocostalis thoracis",
+      "partId": "ZA_M_98304661",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_102426281",
+      "collection": "muscles",
+      "answer": "Right iliocostalis lumborum",
+      "partId": "ZA_M_102426281",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_112480232",
+      "collection": "muscles",
+      "answer": "Left iliocostalis thoracis",
+      "partId": "ZA_M_112480232",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_150283196",
+      "collection": "muscles",
+      "answer": "Right iliocostalis colli",
+      "partId": "ZA_M_150283196",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_725269361",
+      "collection": "muscles",
+      "answer": "Left iliocostalis lumborum",
+      "partId": "ZA_M_725269361",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_795494428",
+      "collection": "muscles",
+      "answer": "Iliocostalis colli",
+      "partId": "ZA_M_795494428",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_121672055",
+      "collection": "muscles",
+      "answer": "Right spinalis capitis",
+      "partId": "ZA_M_121672055",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_431527464",
+      "collection": "muscles",
+      "answer": "Left spinalis thoracis",
+      "partId": "ZA_M_431527464",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_486600975",
+      "collection": "muscles",
+      "answer": "Right spinalis thoracis",
+      "partId": "ZA_M_486600975",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_610823922",
+      "collection": "muscles",
+      "answer": "Left spinalis colli",
+      "partId": "ZA_M_610823922",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_766363035",
+      "collection": "muscles",
+      "answer": "Right spinalis colli",
+      "partId": "ZA_M_766363035",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_785419479",
+      "collection": "muscles",
+      "answer": "Left spinalis capitis",
+      "partId": "ZA_M_785419479",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_203448079",
+      "collection": "muscles",
+      "answer": "Right longissimus colli",
+      "partId": "ZA_M_203448079",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_217550395",
+      "collection": "muscles",
+      "answer": "Right longissimus capitis",
+      "partId": "ZA_M_217550395",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_346152219",
+      "collection": "muscles",
+      "answer": "Left longissimus capitis",
+      "partId": "ZA_M_346152219",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_425011185",
+      "collection": "muscles",
+      "answer": "Right longissimus thoracis",
+      "partId": "ZA_M_425011185",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_484990941",
+      "collection": "muscles",
+      "answer": "Left longissimus colli",
+      "partId": "ZA_M_484990941",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_771811734",
+      "collection": "muscles",
+      "answer": "Left longissimus thoracis",
+      "partId": "ZA_M_771811734",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_328187069",
+      "collection": "muscles",
+      "answer": "Right rotatores",
+      "partId": "ZA_M_328187069",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_970255943",
+      "collection": "muscles",
+      "answer": "Left rotatores",
+      "partId": "ZA_M_970255943",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_48389147",
+      "collection": "muscles",
+      "answer": "Right semispinalis colli",
+      "partId": "ZA_M_48389147",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_75706987",
+      "collection": "muscles",
+      "answer": "Right semispinalis thoracis",
+      "partId": "ZA_M_75706987",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_405844393",
+      "collection": "muscles",
+      "answer": "Left semispinalis thoracis",
+      "partId": "ZA_M_405844393",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_970731401",
+      "collection": "muscles",
+      "answer": "Left semispinalis colli",
+      "partId": "ZA_M_970731401",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_583719552",
+      "collection": "muscles",
+      "answer": "Right multifidus thoracis",
+      "partId": "ZA_M_583719552",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_664161976",
+      "collection": "muscles",
+      "answer": "Right multifidus lumborum",
+      "partId": "ZA_M_664161976",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_734299209",
+      "collection": "muscles",
+      "answer": "Left multifidus colli",
+      "partId": "ZA_M_734299209",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_889284943",
+      "collection": "muscles",
+      "answer": "Left multifidus lumborum",
+      "partId": "ZA_M_889284943",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_926117341",
+      "collection": "muscles",
+      "answer": "Left multifidus thoracis",
+      "partId": "ZA_M_926117341",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_968572887",
+      "collection": "muscles",
+      "answer": "Right multifidus colli",
+      "partId": "ZA_M_968572887",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_9668625",
+      "collection": "muscles",
+      "answer": "Right interspinales colli muscles",
+      "partId": "ZA_M_9668625",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_174931802",
+      "collection": "muscles",
+      "answer": "Right interspinales thoracis muscles",
+      "partId": "ZA_M_174931802",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_187317367",
+      "collection": "muscles",
+      "answer": "Left interspinales thoracis muscles",
+      "partId": "ZA_M_187317367",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_407595427",
+      "collection": "muscles",
+      "answer": "Right interspinales lumborum muscles",
+      "partId": "ZA_M_407595427",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_650722884",
+      "collection": "muscles",
+      "answer": "Left interspinales lumborum muscles",
+      "partId": "ZA_M_650722884",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_832789205",
+      "collection": "muscles",
+      "answer": "Left interspinales colli muscles",
+      "partId": "ZA_M_832789205",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_179377326",
+      "collection": "muscles",
+      "answer": "Right splenius capitis",
+      "partId": "ZA_M_179377326",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_282715512",
+      "collection": "muscles",
+      "answer": "Right splenius colli",
+      "partId": "ZA_M_282715512",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_358453148",
+      "collection": "muscles",
+      "answer": "Left splenius colli",
+      "partId": "ZA_M_358453148",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_541710082",
+      "collection": "muscles",
+      "answer": "Left splenius capitis",
+      "partId": "ZA_M_541710082",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_52138261",
+      "collection": "muscles",
+      "answer": "Left ventral parts of lateral intertransversarii lumborum muscles",
+      "partId": "ZA_M_52138261",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_142313545",
+      "collection": "muscles",
+      "answer": "Right levator scapulae",
+      "partId": "ZA_M_142313545",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_172472462",
+      "collection": "muscles",
+      "answer": "Right latissimus dorsi",
+      "partId": "ZA_M_172472462",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_208168812",
+      "collection": "muscles",
+      "answer": "Left levator scapulae",
+      "partId": "ZA_M_208168812",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_214076779",
+      "collection": "muscles",
+      "answer": "Right rhomboid minor",
+      "partId": "ZA_M_214076779",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_309857321",
+      "collection": "muscles",
+      "answer": "Left serratus posterior superior",
+      "partId": "ZA_M_309857321",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_457778667",
+      "collection": "muscles",
+      "answer": "Left rhomboid minor",
+      "partId": "ZA_M_457778667",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-FJ1554",
+      "collection": "muscles",
+      "answer": "Transverse part of right trapezius",
+      "partId": "FJ1554",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-FJ1520",
+      "collection": "muscles",
+      "answer": "Ascending part of right trapezius",
+      "partId": "FJ1520",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-FJ1520M",
+      "collection": "muscles",
+      "answer": "Ascending part of left trapezius",
+      "partId": "FJ1520M",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-FJ1554M",
+      "collection": "muscles",
+      "answer": "Transverse part of left trapezius",
+      "partId": "FJ1554M",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-FJ1521",
+      "collection": "muscles",
+      "answer": "Descending part of right trapezius",
+      "partId": "FJ1521",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-FJ1521M",
+      "collection": "muscles",
+      "answer": "Descending part of left trapezius",
+      "partId": "FJ1521M",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_670174335",
+      "collection": "muscles",
+      "answer": "Left serratus posterior inferior",
+      "partId": "ZA_M_670174335",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_817053160",
+      "collection": "muscles",
+      "answer": "Left latissimus dorsi",
+      "partId": "ZA_M_817053160",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_829726023",
+      "collection": "muscles",
+      "answer": "Right rhomboid major",
+      "partId": "ZA_M_829726023",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_844541953",
+      "collection": "muscles",
+      "answer": "Left dorsal parts of lateral intertransversarii lumborum muscles",
+      "partId": "ZA_M_844541953",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_943771781",
+      "collection": "muscles",
+      "answer": "Right ventral parts of lateral intertransversarii lumborum muscles",
+      "partId": "ZA_M_943771781",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_955662589",
+      "collection": "muscles",
+      "answer": "Right dorsal parts of lateral intertransversarii lumborum muscles",
+      "partId": "ZA_M_955662589",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_956838160",
+      "collection": "muscles",
+      "answer": "Right serratus posterior superior",
+      "partId": "ZA_M_956838160",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_956874926",
+      "collection": "muscles",
+      "answer": "Right serratus posterior inferior",
+      "partId": "ZA_M_956874926",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_993392113",
+      "collection": "muscles",
+      "answer": "Left rhomboid major",
+      "partId": "ZA_M_993392113",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-FJ1486",
+      "collection": "muscles",
+      "answer": "Right brachialis",
+      "partId": "FJ1486",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-FJ1486M",
+      "collection": "muscles",
+      "answer": "Left brachialis",
+      "partId": "FJ1486M",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-FJ1512",
+      "collection": "muscles",
+      "answer": "Short head of right biceps brachii",
+      "partId": "FJ1512",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-FJ1478",
+      "collection": "muscles",
+      "answer": "Long head of right biceps brachii",
+      "partId": "FJ1478",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-FJ1478M",
+      "collection": "muscles",
+      "answer": "Long head of left biceps brachii",
+      "partId": "FJ1478M",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-FJ1512M",
+      "collection": "muscles",
+      "answer": "Short head of left biceps brachii",
+      "partId": "FJ1512M",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_656982723",
+      "collection": "muscles",
+      "answer": "Left coracobrachialis",
+      "partId": "ZA_M_656982723",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_827936457",
+      "collection": "muscles",
+      "answer": "Right coracobrachialis",
+      "partId": "ZA_M_827936457",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_130797506",
+      "collection": "muscles",
+      "answer": "Left flexor digitorum profundus",
+      "partId": "ZA_M_130797506",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_189772909",
+      "collection": "muscles",
+      "answer": "Right pronator quadratus",
+      "partId": "ZA_M_189772909",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_400633043",
+      "collection": "muscles",
+      "answer": "Right flexor digitorum profundus",
+      "partId": "ZA_M_400633043",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_809095169",
+      "collection": "muscles",
+      "answer": "Right flexor pollicis longus",
+      "partId": "ZA_M_809095169",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_810748658",
+      "collection": "muscles",
+      "answer": "Left pronator quadratus",
+      "partId": "ZA_M_810748658",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_916369669",
+      "collection": "muscles",
+      "answer": "Left flexor pollicis longus",
+      "partId": "ZA_M_916369669",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_36958809",
+      "collection": "muscles",
+      "answer": "Right humeral head of flexor carpi ulnaris",
+      "partId": "ZA_M_36958809",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_118551750",
+      "collection": "muscles",
+      "answer": "Right humero-ulnar head of flexor digitorum superficialis",
+      "partId": "ZA_M_118551750",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_134916069",
+      "collection": "muscles",
+      "answer": "Left superficial head of pronator teres",
+      "partId": "ZA_M_134916069",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_277369719",
+      "collection": "muscles",
+      "answer": "Right radial head of flexor digitorum superficialis",
+      "partId": "ZA_M_277369719",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_323185919",
+      "collection": "muscles",
+      "answer": "Left deep head of pronator teres",
+      "partId": "ZA_M_323185919",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_425487108",
+      "collection": "muscles",
+      "answer": "Right palmaris longus",
+      "partId": "ZA_M_425487108",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_476759195",
+      "collection": "muscles",
+      "answer": "Left humeral head of flexor carpi ulnaris",
+      "partId": "ZA_M_476759195",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_515084879",
+      "collection": "muscles",
+      "answer": "Left flexor carpi radialis",
+      "partId": "ZA_M_515084879",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_603887740",
+      "collection": "muscles",
+      "answer": "Left palmaris longus",
+      "partId": "ZA_M_603887740",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_613075022",
+      "collection": "muscles",
+      "answer": "Right superficial head of pronator teres",
+      "partId": "ZA_M_613075022",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_645838197",
+      "collection": "muscles",
+      "answer": "Right ulnar head of flexor carpi ulnaris",
+      "partId": "ZA_M_645838197",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_672824902",
+      "collection": "muscles",
+      "answer": "Right flexor carpi radialis",
+      "partId": "ZA_M_672824902",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_702666376",
+      "collection": "muscles",
+      "answer": "Left radial head of flexor digitorum superficialis",
+      "partId": "ZA_M_702666376",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_742840493",
+      "collection": "muscles",
+      "answer": "Left ulnar head of flexor carpi ulnaris",
+      "partId": "ZA_M_742840493",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_754903007",
+      "collection": "muscles",
+      "answer": "Left humero-ulnar head of flexor digitorum superficialis",
+      "partId": "ZA_M_754903007",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_840440777",
+      "collection": "muscles",
+      "answer": "Right deep head of pronator teres",
+      "partId": "ZA_M_840440777",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_76516835",
+      "collection": "muscles",
+      "answer": "Left anconeus",
+      "partId": "ZA_M_76516835",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_186032514",
+      "collection": "muscles",
+      "answer": "Left extensor carpi radialis brevis",
+      "partId": "ZA_M_186032514",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_227128969",
+      "collection": "muscles",
+      "answer": "Left humeral head of extensor carpi ulnaris",
+      "partId": "ZA_M_227128969",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_229882640",
+      "collection": "muscles",
+      "answer": "Right anconeus",
+      "partId": "ZA_M_229882640",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_300941212",
+      "collection": "muscles",
+      "answer": "Left extensor carpi radialis longus",
+      "partId": "ZA_M_300941212",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_438057188",
+      "collection": "muscles",
+      "answer": "Left extensor digiti minimi",
+      "partId": "ZA_M_438057188",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_468756190",
+      "collection": "muscles",
+      "answer": "Right extensor digiti minimi",
+      "partId": "ZA_M_468756190",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_579432817",
+      "collection": "muscles",
+      "answer": "Right extensor carpi radialis brevis",
+      "partId": "ZA_M_579432817",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_644050133",
+      "collection": "muscles",
+      "answer": "Left ulnar head of extensor carpi ulnaris",
+      "partId": "ZA_M_644050133",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-FJ1487",
+      "collection": "muscles",
+      "answer": "Right brachioradialis",
+      "partId": "FJ1487",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_669653987",
+      "collection": "muscles",
+      "answer": "Right extensor carpi radialis longus",
+      "partId": "ZA_M_669653987",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_685970060",
+      "collection": "muscles",
+      "answer": "Right extensor digitorum",
+      "partId": "ZA_M_685970060",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_792656413",
+      "collection": "muscles",
+      "answer": "Left extensor digitorum",
+      "partId": "ZA_M_792656413",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-FJ1487M",
+      "collection": "muscles",
+      "answer": "Left brachioradialis",
+      "partId": "FJ1487M",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_936196450",
+      "collection": "muscles",
+      "answer": "Right ulnar head of extensor carpi ulnaris",
+      "partId": "ZA_M_936196450",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_991010553",
+      "collection": "muscles",
+      "answer": "Right humeral head of extensor carpi ulnaris",
+      "partId": "ZA_M_991010553",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_16666752",
+      "collection": "muscles",
+      "answer": "Right extensor pollicis longus",
+      "partId": "ZA_M_16666752",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_70537146",
+      "collection": "muscles",
+      "answer": "Left extensor indicis",
+      "partId": "ZA_M_70537146",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_95762172",
+      "collection": "muscles",
+      "answer": "Right extensor pollicis brevis",
+      "partId": "ZA_M_95762172",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_119299853",
+      "collection": "muscles",
+      "answer": "Right abductor pollicis longus",
+      "partId": "ZA_M_119299853",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_120834411",
+      "collection": "muscles",
+      "answer": "Left abductor pollicis longus",
+      "partId": "ZA_M_120834411",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_137225793",
+      "collection": "muscles",
+      "answer": "Left extensor pollicis longus",
+      "partId": "ZA_M_137225793",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_139021293",
+      "collection": "muscles",
+      "answer": "Right extensor indicis",
+      "partId": "ZA_M_139021293",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_210170064",
+      "collection": "muscles",
+      "answer": "Right supinator",
+      "partId": "ZA_M_210170064",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_615707744",
+      "collection": "muscles",
+      "answer": "Left supinator",
+      "partId": "ZA_M_615707744",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_863807001",
+      "collection": "muscles",
+      "answer": "Left extensor pollicis brevis",
+      "partId": "ZA_M_863807001",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_72952947",
+      "collection": "muscles",
+      "answer": "Right supraspinatus",
+      "partId": "ZA_M_72952947",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_351627082",
+      "collection": "muscles",
+      "answer": "Left subscapularis",
+      "partId": "ZA_M_351627082",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_431474665",
+      "collection": "muscles",
+      "answer": "Left teres minor",
+      "partId": "ZA_M_431474665",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_599750783",
+      "collection": "muscles",
+      "answer": "Right subscapularis",
+      "partId": "ZA_M_599750783",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_720352562",
+      "collection": "muscles",
+      "answer": "Left infraspinatus",
+      "partId": "ZA_M_720352562",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_805853519",
+      "collection": "muscles",
+      "answer": "Right infraspinatus",
+      "partId": "ZA_M_805853519",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_822740360",
+      "collection": "muscles",
+      "answer": "Right teres minor",
+      "partId": "ZA_M_822740360",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_898835004",
+      "collection": "muscles",
+      "answer": "Left supraspinatus",
+      "partId": "ZA_M_898835004",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-FJ1468",
+      "collection": "muscles",
+      "answer": "Clavicular part of right deltoid",
+      "partId": "FJ1468",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-FJ1513M",
+      "collection": "muscles",
+      "answer": "Spinal part of left deltoid",
+      "partId": "FJ1513M",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-FJ1513",
+      "collection": "muscles",
+      "answer": "Spinal part of right deltoid",
+      "partId": "FJ1513",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-FJ1468M",
+      "collection": "muscles",
+      "answer": "Clavicular part of left deltoid",
+      "partId": "FJ1468M",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-FJ1467",
+      "collection": "muscles",
+      "answer": "Acromial part of right deltoid",
+      "partId": "FJ1467",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-FJ1467M",
+      "collection": "muscles",
+      "answer": "Acromial part of left deltoid",
+      "partId": "FJ1467M",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_533892148",
+      "collection": "muscles",
+      "answer": "Left teres major",
+      "partId": "ZA_M_533892148",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_795125640",
+      "collection": "muscles",
+      "answer": "Right teres major",
+      "partId": "ZA_M_795125640",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_15704527",
+      "collection": "muscles",
+      "answer": "Left palmar interossei muscles",
+      "partId": "ZA_M_15704527",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_91031082",
+      "collection": "muscles",
+      "answer": "Left abductor digiti minimi of hand",
+      "partId": "ZA_M_91031082",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_125717541",
+      "collection": "muscles",
+      "answer": "Left superficial head of flexor pollicis brevis",
+      "partId": "ZA_M_125717541",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_129597450",
+      "collection": "muscles",
+      "answer": "Left flexor digiti minimi of hand",
+      "partId": "ZA_M_129597450",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_208213720",
+      "collection": "muscles",
+      "answer": "Right opponens pollicis",
+      "partId": "ZA_M_208213720",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_284427571",
+      "collection": "muscles",
+      "answer": "Right lumbrical muscles of hand",
+      "partId": "ZA_M_284427571",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_397599056",
+      "collection": "muscles",
+      "answer": "Right deep head of flexor pollicis brevis",
+      "partId": "ZA_M_397599056",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_419899685",
+      "collection": "muscles",
+      "answer": "Left oblique head of adductor pollicis",
+      "partId": "ZA_M_419899685",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_451969346",
+      "collection": "muscles",
+      "answer": "Right palmar interossei muscles",
+      "partId": "ZA_M_451969346",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_453234666",
+      "collection": "muscles",
+      "answer": "Left lumbrical muscles of hand",
+      "partId": "ZA_M_453234666",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_462248653",
+      "collection": "muscles",
+      "answer": "Right transverse head of adductor pollicis",
+      "partId": "ZA_M_462248653",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_487845754",
+      "collection": "muscles",
+      "answer": "Left opponens digiti minimi of hand",
+      "partId": "ZA_M_487845754",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_532775298",
+      "collection": "muscles",
+      "answer": "Right abductor pollicis brevis",
+      "partId": "ZA_M_532775298",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_582478551",
+      "collection": "muscles",
+      "answer": "Right oblique head of adductor pollicis",
+      "partId": "ZA_M_582478551",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_642589773",
+      "collection": "muscles",
+      "answer": "Right opponens digiti minimi of hand",
+      "partId": "ZA_M_642589773",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_688306580",
+      "collection": "muscles",
+      "answer": "Right flexor digiti minimi of hand",
+      "partId": "ZA_M_688306580",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_711121981",
+      "collection": "muscles",
+      "answer": "Left opponens pollicis",
+      "partId": "ZA_M_711121981",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_742200193",
+      "collection": "muscles",
+      "answer": "Left deep head of flexor pollicis brevis",
+      "partId": "ZA_M_742200193",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_770918531",
+      "collection": "muscles",
+      "answer": "Right dorsal interossei muscles of hand",
+      "partId": "ZA_M_770918531",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_777465043",
+      "collection": "muscles",
+      "answer": "Right superficial head of flexor pollicis brevis",
+      "partId": "ZA_M_777465043",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_815324855",
+      "collection": "muscles",
+      "answer": "Left abductor pollicis brevis",
+      "partId": "ZA_M_815324855",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_883584095",
+      "collection": "muscles",
+      "answer": "Right abductor digiti minimi of hand",
+      "partId": "ZA_M_883584095",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_886734839",
+      "collection": "muscles",
+      "answer": "Left transverse head of adductor pollicis",
+      "partId": "ZA_M_886734839",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_923257450",
+      "collection": "muscles",
+      "answer": "Left dorsal interossei muscles of hand",
+      "partId": "ZA_M_923257450",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-FJ1480M",
+      "collection": "muscles",
+      "answer": "Medial head of left triceps brachii",
+      "partId": "FJ1480M",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-FJ1477M",
+      "collection": "muscles",
+      "answer": "Lateral head of left triceps brachii",
+      "partId": "FJ1477M",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-FJ1479",
+      "collection": "muscles",
+      "answer": "Long head of right triceps brachii",
+      "partId": "FJ1479",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-FJ1477",
+      "collection": "muscles",
+      "answer": "Lateral head of right triceps brachii",
+      "partId": "FJ1477",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-FJ1479M",
+      "collection": "muscles",
+      "answer": "Long head of left triceps brachii",
+      "partId": "FJ1479M",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-FJ1480",
+      "collection": "muscles",
+      "answer": "Medial head of right triceps brachii",
+      "partId": "FJ1480",
+      "view": "posterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_128216661",
+      "collection": "muscles",
+      "answer": "Diaphragm",
+      "partId": "ZA_M_128216661",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_31868790",
+      "collection": "muscles",
+      "answer": "Right subclavius",
+      "partId": "ZA_M_31868790",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_157599547",
+      "collection": "muscles",
+      "answer": "Left pectoralis minor",
+      "partId": "ZA_M_157599547",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_191083487",
+      "collection": "muscles",
+      "answer": "Left external intercostal muscles",
+      "partId": "ZA_M_191083487",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-FJ1459M",
+      "collection": "muscles",
+      "answer": "Left serratus anterior",
+      "partId": "FJ1459M",
+      "view": "medial"
+    },
+    {
+      "id": "model-muscles-FJ1447",
+      "collection": "muscles",
+      "answer": "Clavicular part of right pectoralis major",
+      "partId": "FJ1447",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-FJ1464",
+      "collection": "muscles",
+      "answer": "Sternocostal part of right pectoralis major",
+      "partId": "FJ1464",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-FJ1446M",
+      "collection": "muscles",
+      "answer": "Abdominal part of left pectoralis major",
+      "partId": "FJ1446M",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-FJ1447M",
+      "collection": "muscles",
+      "answer": "Clavicular part of left pectoralis major",
+      "partId": "FJ1447M",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-FJ1464M",
+      "collection": "muscles",
+      "answer": "Sternocostal part of left pectoralis major",
+      "partId": "FJ1464M",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-FJ1446",
+      "collection": "muscles",
+      "answer": "Abdominal part of right pectoralis major",
+      "partId": "FJ1446",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_414598510",
+      "collection": "muscles",
+      "answer": "Right pectoralis minor",
+      "partId": "ZA_M_414598510",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_424990890",
+      "collection": "muscles",
+      "answer": "Left innermost intercostal muscles",
+      "partId": "ZA_M_424990890",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_494987468",
+      "collection": "muscles",
+      "answer": "Right external intercostal muscles",
+      "partId": "ZA_M_494987468",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_507270473",
+      "collection": "muscles",
+      "answer": "Left subclavius",
+      "partId": "ZA_M_507270473",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_147174551",
+      "collection": "muscles",
+      "answer": "Left levatores breves costarum",
+      "partId": "ZA_M_147174551",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_297608455",
+      "collection": "muscles",
+      "answer": "Right levatores longi costarum",
+      "partId": "ZA_M_297608455",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_920370703",
+      "collection": "muscles",
+      "answer": "Left levatores longi costarum",
+      "partId": "ZA_M_920370703",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_973471263",
+      "collection": "muscles",
+      "answer": "Right levatores breves costarum",
+      "partId": "ZA_M_973471263",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_589508516",
+      "collection": "muscles",
+      "answer": "Right internal intercostal muscles",
+      "partId": "ZA_M_589508516",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_608923463",
+      "collection": "muscles",
+      "answer": "Right innermost intercostal muscles",
+      "partId": "ZA_M_608923463",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_745105214",
+      "collection": "muscles",
+      "answer": "Left transversus thoracis",
+      "partId": "ZA_M_745105214",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_785902951",
+      "collection": "muscles",
+      "answer": "Left internal intercostal muscles",
+      "partId": "ZA_M_785902951",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_922224497",
+      "collection": "muscles",
+      "answer": "Right transversus thoracis",
+      "partId": "ZA_M_922224497",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-FJ1459",
+      "collection": "muscles",
+      "answer": "Right serratus anterior",
+      "partId": "FJ1459",
+      "view": "lateral"
+    },
+    {
+      "id": "model-muscles-ZA_M_26345914",
+      "collection": "muscles",
+      "answer": "Right rectus lateralis capitis",
+      "partId": "ZA_M_26345914",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_48745774",
+      "collection": "muscles",
+      "answer": "Left scalenus anterior",
+      "partId": "ZA_M_48745774",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-FJ1573",
+      "collection": "muscles",
+      "answer": "Left sternocleidomastoid",
+      "partId": "FJ1573",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_89108974",
+      "collection": "muscles",
+      "answer": "Left platysma",
+      "partId": "ZA_M_89108974",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_101539905",
+      "collection": "muscles",
+      "answer": "Left longus colli",
+      "partId": "ZA_M_101539905",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_232430016",
+      "collection": "muscles",
+      "answer": "Left inferior pharyngeal constrictor",
+      "partId": "ZA_M_232430016",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_320834542",
+      "collection": "muscles",
+      "answer": "Left middle pharyngeal constrictor",
+      "partId": "ZA_M_320834542",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_477994584",
+      "collection": "muscles",
+      "answer": "Left stylopharyngeus",
+      "partId": "ZA_M_477994584",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_569178355",
+      "collection": "muscles",
+      "answer": "Right stylopharyngeus",
+      "partId": "ZA_M_569178355",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_658450072",
+      "collection": "muscles",
+      "answer": "Left superior pharyngeal constrictor",
+      "partId": "ZA_M_658450072",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_680606748",
+      "collection": "muscles",
+      "answer": "Right superior pharyngeal constrictor",
+      "partId": "ZA_M_680606748",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_847892344",
+      "collection": "muscles",
+      "answer": "Right middle pharyngeal constrictor",
+      "partId": "ZA_M_847892344",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_996516042",
+      "collection": "muscles",
+      "answer": "Right inferior pharyngeal constrictor",
+      "partId": "ZA_M_996516042",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_129052965",
+      "collection": "muscles",
+      "answer": "Left rectus lateralis capitis",
+      "partId": "ZA_M_129052965",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_152801301",
+      "collection": "muscles",
+      "answer": "Right scalenus posterior",
+      "partId": "ZA_M_152801301",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_166631246",
+      "collection": "muscles",
+      "answer": "Right rectus anterior capitis",
+      "partId": "ZA_M_166631246",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_311961097",
+      "collection": "muscles",
+      "answer": "Left rectus anterior capitis",
+      "partId": "ZA_M_311961097",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_345413374",
+      "collection": "muscles",
+      "answer": "Left scalenus posterior",
+      "partId": "ZA_M_345413374",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_90507634",
+      "collection": "muscles",
+      "answer": "Right stylohyoid",
+      "partId": "ZA_M_90507634",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_212506950",
+      "collection": "muscles",
+      "answer": "Left mylohyoid",
+      "partId": "ZA_M_212506950",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_288640873",
+      "collection": "muscles",
+      "answer": "Left anterior belly of digastric",
+      "partId": "ZA_M_288640873",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_500941360",
+      "collection": "muscles",
+      "answer": "Right posterior belly of digastric",
+      "partId": "ZA_M_500941360",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_501770121",
+      "collection": "muscles",
+      "answer": "Left posterior belly of digastric",
+      "partId": "ZA_M_501770121",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_661472586",
+      "collection": "muscles",
+      "answer": "Right anterior belly of digastric",
+      "partId": "ZA_M_661472586",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_599583974",
+      "collection": "muscles",
+      "answer": "Left stylohyoid",
+      "partId": "ZA_M_599583974",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_615077557",
+      "collection": "muscles",
+      "answer": "Right geniohyoid",
+      "partId": "ZA_M_615077557",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_754361266",
+      "collection": "muscles",
+      "answer": "Left geniohyoid",
+      "partId": "ZA_M_754361266",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_927154232",
+      "collection": "muscles",
+      "answer": "Right mylohyoid",
+      "partId": "ZA_M_927154232",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_542597791",
+      "collection": "muscles",
+      "answer": "Right longus colli",
+      "partId": "ZA_M_542597791",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_602040565",
+      "collection": "muscles",
+      "answer": "Left longus capitis",
+      "partId": "ZA_M_602040565",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_18300540",
+      "collection": "muscles",
+      "answer": "Left sternohyoid",
+      "partId": "ZA_M_18300540",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_374613853",
+      "collection": "muscles",
+      "answer": "Left sternothyroid",
+      "partId": "ZA_M_374613853",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_477327636",
+      "collection": "muscles",
+      "answer": "Right thyrohyoid",
+      "partId": "ZA_M_477327636",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_491676480",
+      "collection": "muscles",
+      "answer": "Left thyrohyoid",
+      "partId": "ZA_M_491676480",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_560701376",
+      "collection": "muscles",
+      "answer": "Right sternohyoid",
+      "partId": "ZA_M_560701376",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_583706826",
+      "collection": "muscles",
+      "answer": "Right sternothyroid",
+      "partId": "ZA_M_583706826",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_718857339",
+      "collection": "muscles",
+      "answer": "Left omohyoid",
+      "partId": "ZA_M_718857339",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_990931243",
+      "collection": "muscles",
+      "answer": "Right omohyoid",
+      "partId": "ZA_M_990931243",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_807974891",
+      "collection": "muscles",
+      "answer": "Left scalenus medius",
+      "partId": "ZA_M_807974891",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_838496642",
+      "collection": "muscles",
+      "answer": "Right platysma",
+      "partId": "ZA_M_838496642",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_851877161",
+      "collection": "muscles",
+      "answer": "Right longus capitis",
+      "partId": "ZA_M_851877161",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_855884842",
+      "collection": "muscles",
+      "answer": "Right scalenus medius",
+      "partId": "ZA_M_855884842",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_874226674",
+      "collection": "muscles",
+      "answer": "Right scalenus anterior",
+      "partId": "ZA_M_874226674",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-FJ1595",
+      "collection": "muscles",
+      "answer": "Right sternocleidomastoid",
+      "partId": "FJ1595",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_4486047",
+      "collection": "muscles",
+      "answer": "Right external part of thyro-arytenoid",
+      "partId": "ZA_M_4486047",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_58725807",
+      "collection": "muscles",
+      "answer": "Right lateral crico-arytenoid",
+      "partId": "ZA_M_58725807",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_75023327",
+      "collection": "muscles",
+      "answer": "Left oblique part of cricothyroid",
+      "partId": "ZA_M_75023327",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_178185298",
+      "collection": "muscles",
+      "answer": "Right thyro-epiglottic part of thyro-arytenoid",
+      "partId": "ZA_M_178185298",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_405896380",
+      "collection": "muscles",
+      "answer": "Left ary-epiglottic part of oblique arytenoid",
+      "partId": "ZA_M_405896380",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_408763255",
+      "collection": "muscles",
+      "answer": "Right oblique part of cricothyroid",
+      "partId": "ZA_M_408763255",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_418890029",
+      "collection": "muscles",
+      "answer": "Right ary-epiglottic part of oblique arytenoid",
+      "partId": "ZA_M_418890029",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_434060816",
+      "collection": "muscles",
+      "answer": "Left thyro-epiglottic part of thyro-arytenoid",
+      "partId": "ZA_M_434060816",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_447525674",
+      "collection": "muscles",
+      "answer": "Left straight part of cricothyroid",
+      "partId": "ZA_M_447525674",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_735262507",
+      "collection": "muscles",
+      "answer": "Left posterior crico-arytenoid",
+      "partId": "ZA_M_735262507",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_764481694",
+      "collection": "muscles",
+      "answer": "Right straight part of cricothyroid",
+      "partId": "ZA_M_764481694",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_768368623",
+      "collection": "muscles",
+      "answer": "Left lateral crico-arytenoid",
+      "partId": "ZA_M_768368623",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_839870420",
+      "collection": "muscles",
+      "answer": "Right posterior crico-arytenoid",
+      "partId": "ZA_M_839870420",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_930319730",
+      "collection": "muscles",
+      "answer": "Left external part of thyro-arytenoid",
+      "partId": "ZA_M_930319730",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_998132198",
+      "collection": "muscles",
+      "answer": "Transverse arytenoid",
+      "partId": "ZA_M_998132198",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-FJ1452M",
+      "collection": "muscles",
+      "answer": "Left external oblique",
+      "partId": "FJ1452M",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_179023909",
+      "collection": "muscles",
+      "answer": "Right pyramidalis",
+      "partId": "ZA_M_179023909",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_235254145",
+      "collection": "muscles",
+      "answer": "Left quadratus lumborum",
+      "partId": "ZA_M_235254145",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_272619451",
+      "collection": "muscles",
+      "answer": "Right internal abdominal oblique",
+      "partId": "ZA_M_272619451",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_304211659",
+      "collection": "muscles",
+      "answer": "Left pyramidalis",
+      "partId": "ZA_M_304211659",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_421310032",
+      "collection": "muscles",
+      "answer": "Right quadratus lumborum",
+      "partId": "ZA_M_421310032",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_473516794",
+      "collection": "muscles",
+      "answer": "Left rectus abdominis",
+      "partId": "ZA_M_473516794",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_642806399",
+      "collection": "muscles",
+      "answer": "Left internal abdominal oblique",
+      "partId": "ZA_M_642806399",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_795120383",
+      "collection": "muscles",
+      "answer": "Right transversus abdominis",
+      "partId": "ZA_M_795120383",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_811540614",
+      "collection": "muscles",
+      "answer": "Right rectus abdominis",
+      "partId": "ZA_M_811540614",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-ZA_M_881393607",
+      "collection": "muscles",
+      "answer": "Left transversus abdominis",
+      "partId": "ZA_M_881393607",
+      "view": "anterior"
+    },
+    {
+      "id": "model-muscles-FJ1452",
+      "collection": "muscles",
+      "answer": "Right external oblique",
+      "partId": "FJ1452",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3152",
+      "collection": "skeleton",
+      "answer": "Right hip bone",
+      "partId": "FJ3152",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3153",
+      "collection": "skeleton",
+      "answer": "Xiphoid process",
+      "partId": "FJ3153",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3154",
+      "collection": "skeleton",
+      "answer": "Tenth thoracic vertebra",
+      "partId": "FJ3154",
+      "view": "posterior"
+    },
+    {
+      "id": "model-skeleton-FJ3155",
+      "collection": "skeleton",
+      "answer": "Eleventh thoracic vertebra",
+      "partId": "FJ3155",
+      "view": "posterior"
+    },
+    {
+      "id": "model-skeleton-FJ3156",
+      "collection": "skeleton",
+      "answer": "Twelfth thoracic vertebra",
+      "partId": "FJ3156",
+      "view": "posterior"
+    },
+    {
+      "id": "model-skeleton-FJ3157",
+      "collection": "skeleton",
+      "answer": "First lumbar vertebra",
+      "partId": "FJ3157",
+      "view": "posterior"
+    },
+    {
+      "id": "model-skeleton-FJ3158",
+      "collection": "skeleton",
+      "answer": "First thoracic vertebra",
+      "partId": "FJ3158",
+      "view": "posterior"
+    },
+    {
+      "id": "model-skeleton-FJ3159",
+      "collection": "skeleton",
+      "answer": "Second lumbar vertebra",
+      "partId": "FJ3159",
+      "view": "posterior"
+    },
+    {
+      "id": "model-skeleton-FJ3160",
+      "collection": "skeleton",
+      "answer": "Second thoracic vertebra",
+      "partId": "FJ3160",
+      "view": "posterior"
+    },
+    {
+      "id": "model-skeleton-FJ3161",
+      "collection": "skeleton",
+      "answer": "Third cervical vertebra",
+      "partId": "FJ3161",
+      "view": "posterior"
+    },
+    {
+      "id": "model-skeleton-FJ3162",
+      "collection": "skeleton",
+      "answer": "Third lumbar vertebra",
+      "partId": "FJ3162",
+      "view": "posterior"
+    },
+    {
+      "id": "model-skeleton-FJ3163",
+      "collection": "skeleton",
+      "answer": "Third thoracic vertebra",
+      "partId": "FJ3163",
+      "view": "posterior"
+    },
+    {
+      "id": "model-skeleton-FJ3164",
+      "collection": "skeleton",
+      "answer": "Fourth cervical vertebra",
+      "partId": "FJ3164",
+      "view": "posterior"
+    },
+    {
+      "id": "model-skeleton-FJ3165",
+      "collection": "skeleton",
+      "answer": "Fourth lumbar vertebra",
+      "partId": "FJ3165",
+      "view": "posterior"
+    },
+    {
+      "id": "model-skeleton-FJ3166",
+      "collection": "skeleton",
+      "answer": "Fourth thoracic vertebra",
+      "partId": "FJ3166",
+      "view": "posterior"
+    },
+    {
+      "id": "model-skeleton-FJ3167",
+      "collection": "skeleton",
+      "answer": "Fifth cervical vertebra",
+      "partId": "FJ3167",
+      "view": "posterior"
+    },
+    {
+      "id": "model-skeleton-FJ3168",
+      "collection": "skeleton",
+      "answer": "Fifth lumbar vertebra",
+      "partId": "FJ3168",
+      "view": "posterior"
+    },
+    {
+      "id": "model-skeleton-FJ3169",
+      "collection": "skeleton",
+      "answer": "Fifth thoracic vertebra",
+      "partId": "FJ3169",
+      "view": "posterior"
+    },
+    {
+      "id": "model-skeleton-FJ3170",
+      "collection": "skeleton",
+      "answer": "Sixth cervical vertebra",
+      "partId": "FJ3170",
+      "view": "posterior"
+    },
+    {
+      "id": "model-skeleton-FJ3171",
+      "collection": "skeleton",
+      "answer": "Sixth thoracic vertebra",
+      "partId": "FJ3171",
+      "view": "posterior"
+    },
+    {
+      "id": "model-skeleton-FJ3172",
+      "collection": "skeleton",
+      "answer": "Seventh cervical vertebra",
+      "partId": "FJ3172",
+      "view": "posterior"
+    },
+    {
+      "id": "model-skeleton-FJ3173",
+      "collection": "skeleton",
+      "answer": "Seventh thoracic vertebra",
+      "partId": "FJ3173",
+      "view": "posterior"
+    },
+    {
+      "id": "model-skeleton-FJ3174",
+      "collection": "skeleton",
+      "answer": "Eighth thoracic vertebra",
+      "partId": "FJ3174",
+      "view": "posterior"
+    },
+    {
+      "id": "model-skeleton-FJ3175",
+      "collection": "skeleton",
+      "answer": "Ninth thoracic vertebra",
+      "partId": "FJ3175",
+      "view": "posterior"
+    },
+    {
+      "id": "model-skeleton-FJ3176",
+      "collection": "skeleton",
+      "answer": "Atlas",
+      "partId": "FJ3176",
+      "view": "posterior"
+    },
+    {
+      "id": "model-skeleton-FJ3177",
+      "collection": "skeleton",
+      "answer": "Axis",
+      "partId": "FJ3177",
+      "view": "posterior"
+    },
+    {
+      "id": "model-skeleton-FJ3178",
+      "collection": "skeleton",
+      "answer": "Body of sternum",
+      "partId": "FJ3178",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3179",
+      "collection": "skeleton",
+      "answer": "Distal phalanx of left second toe",
+      "partId": "FJ3179",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3180",
+      "collection": "skeleton",
+      "answer": "Distal phalanx of left third toe",
+      "partId": "FJ3180",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3181",
+      "collection": "skeleton",
+      "answer": "Distal phalanx of left fourth toe",
+      "partId": "FJ3181",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3182",
+      "collection": "skeleton",
+      "answer": "Distal phalanx of left big toe",
+      "partId": "FJ3182",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3183",
+      "collection": "skeleton",
+      "answer": "Distal phalanx of left index finger",
+      "partId": "FJ3183",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3184",
+      "collection": "skeleton",
+      "answer": "Distal phalanx of left little finger",
+      "partId": "FJ3184",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3185",
+      "collection": "skeleton",
+      "answer": "Distal phalanx of left little toe",
+      "partId": "FJ3185",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3186",
+      "collection": "skeleton",
+      "answer": "Distal phalanx of left middle finger",
+      "partId": "FJ3186",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3187",
+      "collection": "skeleton",
+      "answer": "Distal phalanx of left ring finger",
+      "partId": "FJ3187",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3188",
+      "collection": "skeleton",
+      "answer": "Distal phalanx of left thumb",
+      "partId": "FJ3188",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3189",
+      "collection": "skeleton",
+      "answer": "Distal phalanx of right second toe",
+      "partId": "FJ3189",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3190",
+      "collection": "skeleton",
+      "answer": "Distal phalanx of right third toe",
+      "partId": "FJ3190",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3191",
+      "collection": "skeleton",
+      "answer": "Distal phalanx of right fourth toe",
+      "partId": "FJ3191",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3192",
+      "collection": "skeleton",
+      "answer": "Distal phalanx of right big toe",
+      "partId": "FJ3192",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3193",
+      "collection": "skeleton",
+      "answer": "Distal phalanx of right index finger",
+      "partId": "FJ3193",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3194",
+      "collection": "skeleton",
+      "answer": "Distal phalanx of right little finger",
+      "partId": "FJ3194",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3195",
+      "collection": "skeleton",
+      "answer": "Distal phalanx of right little toe",
+      "partId": "FJ3195",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3196",
+      "collection": "skeleton",
+      "answer": "Distal phalanx of right middle finger",
+      "partId": "FJ3196",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3197",
+      "collection": "skeleton",
+      "answer": "Distal phalanx of right ring finger",
+      "partId": "FJ3197",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3198",
+      "collection": "skeleton",
+      "answer": "Distal phalanx of right thumb",
+      "partId": "FJ3198",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3199",
+      "collection": "skeleton",
+      "answer": "Ethmoid",
+      "partId": "FJ3199",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3200",
+      "collection": "skeleton",
+      "answer": "Frontal bone",
+      "partId": "FJ3200",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3201",
+      "collection": "skeleton",
+      "answer": "Hyoid bone",
+      "partId": "FJ3201",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3202",
+      "collection": "skeleton",
+      "answer": "Intervertebral disk of axis",
+      "partId": "FJ3202",
+      "view": "posterior"
+    },
+    {
+      "id": "model-skeleton-FJ3203",
+      "collection": "skeleton",
+      "answer": "Intervertebral disk of fourth thoracic vertebra",
+      "partId": "FJ3203",
+      "view": "posterior"
+    },
+    {
+      "id": "model-skeleton-FJ3204",
+      "collection": "skeleton",
+      "answer": "Intervertebral disk of fifth thoracic vertebra",
+      "partId": "FJ3204",
+      "view": "posterior"
+    },
+    {
+      "id": "model-skeleton-FJ3205",
+      "collection": "skeleton",
+      "answer": "Intervertebral disk of sixth thoracic vertebra",
+      "partId": "FJ3205",
+      "view": "posterior"
+    },
+    {
+      "id": "model-skeleton-FJ3206",
+      "collection": "skeleton",
+      "answer": "Intervertebral disk of seventh thoracic vertebra",
+      "partId": "FJ3206",
+      "view": "posterior"
+    },
+    {
+      "id": "model-skeleton-FJ3207",
+      "collection": "skeleton",
+      "answer": "Intervertebral disk of eighth thoracic vertebra",
+      "partId": "FJ3207",
+      "view": "posterior"
+    },
+    {
+      "id": "model-skeleton-FJ3208",
+      "collection": "skeleton",
+      "answer": "Intervertebral disk of ninth thoracic vertebra",
+      "partId": "FJ3208",
+      "view": "posterior"
+    },
+    {
+      "id": "model-skeleton-FJ3209",
+      "collection": "skeleton",
+      "answer": "Intervertebral disk of tenth thoracic vertebra",
+      "partId": "FJ3209",
+      "view": "posterior"
+    },
+    {
+      "id": "model-skeleton-FJ3210",
+      "collection": "skeleton",
+      "answer": "Intervertebral disk of eleventh thoracic vertebra",
+      "partId": "FJ3210",
+      "view": "posterior"
+    },
+    {
+      "id": "model-skeleton-FJ3211",
+      "collection": "skeleton",
+      "answer": "Intervertebral disk",
+      "partId": "FJ3211",
+      "view": "posterior"
+    },
+    {
+      "id": "model-skeleton-FJ3212",
+      "collection": "skeleton",
+      "answer": "Intervertebral disk of first lumbar vertebra",
+      "partId": "FJ3212",
+      "view": "posterior"
+    },
+    {
+      "id": "model-skeleton-FJ3213",
+      "collection": "skeleton",
+      "answer": "Intervertebral disk of third cervical vertebra",
+      "partId": "FJ3213",
+      "view": "posterior"
+    },
+    {
+      "id": "model-skeleton-FJ3214",
+      "collection": "skeleton",
+      "answer": "Intervertebral disk of second lumbar vertebra",
+      "partId": "FJ3214",
+      "view": "posterior"
+    },
+    {
+      "id": "model-skeleton-FJ3215",
+      "collection": "skeleton",
+      "answer": "Intervertebral disk of third lumbar vertebra",
+      "partId": "FJ3215",
+      "view": "posterior"
+    },
+    {
+      "id": "model-skeleton-FJ3216",
+      "collection": "skeleton",
+      "answer": "Intervertebral disk of fourth lumbar vertebra",
+      "partId": "FJ3216",
+      "view": "posterior"
+    },
+    {
+      "id": "model-skeleton-FJ3217",
+      "collection": "skeleton",
+      "answer": "Intervertebral disk of fifth lumbar vertebra",
+      "partId": "FJ3217",
+      "view": "posterior"
+    },
+    {
+      "id": "model-skeleton-FJ3218",
+      "collection": "skeleton",
+      "answer": "Intervertebral disk of fourth cervical vertebra",
+      "partId": "FJ3218",
+      "view": "posterior"
+    },
+    {
+      "id": "model-skeleton-FJ3219",
+      "collection": "skeleton",
+      "answer": "Intervertebral disk of fifth cervical vertebra",
+      "partId": "FJ3219",
+      "view": "posterior"
+    },
+    {
+      "id": "model-skeleton-FJ3220",
+      "collection": "skeleton",
+      "answer": "Intervertebral disk of sixth cervical vertebra",
+      "partId": "FJ3220",
+      "view": "posterior"
+    },
+    {
+      "id": "model-skeleton-FJ3221",
+      "collection": "skeleton",
+      "answer": "Intervertebral disk of seventh cervical vertebra",
+      "partId": "FJ3221",
+      "view": "posterior"
+    },
+    {
+      "id": "model-skeleton-FJ3222",
+      "collection": "skeleton",
+      "answer": "Intervertebral disk of first thoracic vertebra",
+      "partId": "FJ3222",
+      "view": "posterior"
+    },
+    {
+      "id": "model-skeleton-FJ3223",
+      "collection": "skeleton",
+      "answer": "Intervertebral disk of second thoracic vertebra",
+      "partId": "FJ3223",
+      "view": "posterior"
+    },
+    {
+      "id": "model-skeleton-FJ3224",
+      "collection": "skeleton",
+      "answer": "Intervertebral disk of third thoracic vertebra",
+      "partId": "FJ3224",
+      "view": "posterior"
+    },
+    {
+      "id": "model-skeleton-FJ3225",
+      "collection": "skeleton",
+      "answer": "Left tenth rib",
+      "partId": "FJ3225",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3226",
+      "collection": "skeleton",
+      "answer": "Left eleventh rib",
+      "partId": "FJ3226",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3227",
+      "collection": "skeleton",
+      "answer": "Left twelfth rib",
+      "partId": "FJ3227",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3228",
+      "collection": "skeleton",
+      "answer": "Left first rib",
+      "partId": "FJ3228",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3229",
+      "collection": "skeleton",
+      "answer": "Left second rib",
+      "partId": "FJ3229",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3230",
+      "collection": "skeleton",
+      "answer": "Left third rib",
+      "partId": "FJ3230",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3231",
+      "collection": "skeleton",
+      "answer": "Left fourth rib",
+      "partId": "FJ3231",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3232",
+      "collection": "skeleton",
+      "answer": "Left fifth rib",
+      "partId": "FJ3232",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3233",
+      "collection": "skeleton",
+      "answer": "Left sixth rib",
+      "partId": "FJ3233",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3234",
+      "collection": "skeleton",
+      "answer": "Left seventh rib",
+      "partId": "FJ3234",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3235",
+      "collection": "skeleton",
+      "answer": "Left eighth rib",
+      "partId": "FJ3235",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3236",
+      "collection": "skeleton",
+      "answer": "Left ninth rib",
+      "partId": "FJ3236",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3237",
+      "collection": "skeleton",
+      "answer": "Left clavicle",
+      "partId": "FJ3237",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3239",
+      "collection": "skeleton",
+      "answer": "Left first costal cartilage",
+      "partId": "FJ3239",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3240",
+      "collection": "skeleton",
+      "answer": "Left first metacarpal bone",
+      "partId": "FJ3240",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3241",
+      "collection": "skeleton",
+      "answer": "Left first metatarsal bone",
+      "partId": "FJ3241",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3242",
+      "collection": "skeleton",
+      "answer": "Left second costal cartilage",
+      "partId": "FJ3242",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3243",
+      "collection": "skeleton",
+      "answer": "Left second metacarpal bone",
+      "partId": "FJ3243",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3244",
+      "collection": "skeleton",
+      "answer": "Left second metatarsal bone",
+      "partId": "FJ3244",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3245",
+      "collection": "skeleton",
+      "answer": "Left third costal cartilage",
+      "partId": "FJ3245",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3246",
+      "collection": "skeleton",
+      "answer": "Left third metacarpal bone",
+      "partId": "FJ3246",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3247",
+      "collection": "skeleton",
+      "answer": "Left third metatarsal bone",
+      "partId": "FJ3247",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3248",
+      "collection": "skeleton",
+      "answer": "Left fourth costal cartilage",
+      "partId": "FJ3248",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3249",
+      "collection": "skeleton",
+      "answer": "Left fourth metacarpal bone",
+      "partId": "FJ3249",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3250",
+      "collection": "skeleton",
+      "answer": "Left fourth metatarsal bone",
+      "partId": "FJ3250",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3251",
+      "collection": "skeleton",
+      "answer": "Left fifth costal cartilage",
+      "partId": "FJ3251",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3252",
+      "collection": "skeleton",
+      "answer": "Left fifth metacarpal bone",
+      "partId": "FJ3252",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3253",
+      "collection": "skeleton",
+      "answer": "Left fifth metatarsal bone",
+      "partId": "FJ3253",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3254",
+      "collection": "skeleton",
+      "answer": "Left sixth costal cartilage",
+      "partId": "FJ3254",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3255",
+      "collection": "skeleton",
+      "answer": "Left seventh costal cartilage",
+      "partId": "FJ3255",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3256",
+      "collection": "skeleton",
+      "answer": "Left calcaneus",
+      "partId": "FJ3256",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3257",
+      "collection": "skeleton",
+      "answer": "Left capitate",
+      "partId": "FJ3257",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3258",
+      "collection": "skeleton",
+      "answer": "Left cuboid bone",
+      "partId": "FJ3258",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3259",
+      "collection": "skeleton",
+      "answer": "Left femur",
+      "partId": "FJ3259",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3260",
+      "collection": "skeleton",
+      "answer": "Left fibula",
+      "partId": "FJ3260",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3261",
+      "collection": "skeleton",
+      "answer": "Left hamate",
+      "partId": "FJ3261",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3262",
+      "collection": "skeleton",
+      "answer": "Left humerus",
+      "partId": "FJ3262",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3263",
+      "collection": "skeleton",
+      "answer": "Left inferior nasal concha",
+      "partId": "FJ3263",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3264",
+      "collection": "skeleton",
+      "answer": "Left intermediate cuneiform bone",
+      "partId": "FJ3264",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3265",
+      "collection": "skeleton",
+      "answer": "Left lacrimal bone",
+      "partId": "FJ3265",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3267",
+      "collection": "skeleton",
+      "answer": "Left lateral cuneiform bone",
+      "partId": "FJ3267",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3268",
+      "collection": "skeleton",
+      "answer": "Left lunate",
+      "partId": "FJ3268",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3269",
+      "collection": "skeleton",
+      "answer": "Left maxilla",
+      "partId": "FJ3269",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3271",
+      "collection": "skeleton",
+      "answer": "Left medial cuneiform bone",
+      "partId": "FJ3271",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3272",
+      "collection": "skeleton",
+      "answer": "Left nasal bone",
+      "partId": "FJ3272",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3273",
+      "collection": "skeleton",
+      "answer": "Left palatine bone",
+      "partId": "FJ3273",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3274",
+      "collection": "skeleton",
+      "answer": "Left parietal bone",
+      "partId": "FJ3274",
+      "view": "medial"
+    },
+    {
+      "id": "model-skeleton-FJ3275",
+      "collection": "skeleton",
+      "answer": "Left patella",
+      "partId": "FJ3275",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3276",
+      "collection": "skeleton",
+      "answer": "Left pisiform",
+      "partId": "FJ3276",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3277",
+      "collection": "skeleton",
+      "answer": "Left radius",
+      "partId": "FJ3277",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3278",
+      "collection": "skeleton",
+      "answer": "Left scaphoid",
+      "partId": "FJ3278",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3279",
+      "collection": "skeleton",
+      "answer": "Left scapula",
+      "partId": "FJ3279",
+      "view": "posterior"
+    },
+    {
+      "id": "model-skeleton-FJ3280",
+      "collection": "skeleton",
+      "answer": "Left talus",
+      "partId": "FJ3280",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3281",
+      "collection": "skeleton",
+      "answer": "Left temporal bone",
+      "partId": "FJ3281",
+      "view": "medial"
+    },
+    {
+      "id": "model-skeleton-FJ3282",
+      "collection": "skeleton",
+      "answer": "Left tibia",
+      "partId": "FJ3282",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3283",
+      "collection": "skeleton",
+      "answer": "Left trapezium",
+      "partId": "FJ3283",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3284",
+      "collection": "skeleton",
+      "answer": "Left trapezoid",
+      "partId": "FJ3284",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3285",
+      "collection": "skeleton",
+      "answer": "Left triquetral",
+      "partId": "FJ3285",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3286",
+      "collection": "skeleton",
+      "answer": "Left ulna",
+      "partId": "FJ3286",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3287",
+      "collection": "skeleton",
+      "answer": "Left zygomatic bone",
+      "partId": "FJ3287",
+      "view": "medial"
+    },
+    {
+      "id": "model-skeleton-FJ3288",
+      "collection": "skeleton",
+      "answer": "Left hip bone",
+      "partId": "FJ3288",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3289",
+      "collection": "skeleton",
+      "answer": "Mandible",
+      "partId": "FJ3289",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3290",
+      "collection": "skeleton",
+      "answer": "Manubrium",
+      "partId": "FJ3290",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3291",
+      "collection": "skeleton",
+      "answer": "Middle phalanx of left ring finger",
+      "partId": "FJ3291",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3292",
+      "collection": "skeleton",
+      "answer": "Middle phalanx of right ring finger",
+      "partId": "FJ3292",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3293",
+      "collection": "skeleton",
+      "answer": "Middle phalanx of left second toe",
+      "partId": "FJ3293",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3294",
+      "collection": "skeleton",
+      "answer": "Middle phalanx of left third toe",
+      "partId": "FJ3294",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3295",
+      "collection": "skeleton",
+      "answer": "Middle phalanx of left fourth toe",
+      "partId": "FJ3295",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3296",
+      "collection": "skeleton",
+      "answer": "Middle phalanx of left index finger",
+      "partId": "FJ3296",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3297",
+      "collection": "skeleton",
+      "answer": "Middle phalanx of left little finger",
+      "partId": "FJ3297",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3298",
+      "collection": "skeleton",
+      "answer": "Middle phalanx of left little toe",
+      "partId": "FJ3298",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3299",
+      "collection": "skeleton",
+      "answer": "Middle phalanx of left middle finger",
+      "partId": "FJ3299",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3300",
+      "collection": "skeleton",
+      "answer": "Middle phalanx of right second toe",
+      "partId": "FJ3300",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3301",
+      "collection": "skeleton",
+      "answer": "Middle phalanx of right third toe",
+      "partId": "FJ3301",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3302",
+      "collection": "skeleton",
+      "answer": "Middle phalanx of right fourth toe",
+      "partId": "FJ3302",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3303",
+      "collection": "skeleton",
+      "answer": "Middle phalanx of right index finger",
+      "partId": "FJ3303",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3304",
+      "collection": "skeleton",
+      "answer": "Middle phalanx of right little finger",
+      "partId": "FJ3304",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3305",
+      "collection": "skeleton",
+      "answer": "Middle phalanx of right little toe",
+      "partId": "FJ3305",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3306",
+      "collection": "skeleton",
+      "answer": "Middle phalanx of right middle finger",
+      "partId": "FJ3306",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3307",
+      "collection": "skeleton",
+      "answer": "Navicular bone of left foot",
+      "partId": "FJ3307",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3308",
+      "collection": "skeleton",
+      "answer": "Navicular bone of right foot",
+      "partId": "FJ3308",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3309",
+      "collection": "skeleton",
+      "answer": "Occipital bone",
+      "partId": "FJ3309",
+      "view": "posterior"
+    },
+    {
+      "id": "model-skeleton-FJ3310",
+      "collection": "skeleton",
+      "answer": "Proximal phalanx of right big toe",
+      "partId": "FJ3310",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3311",
+      "collection": "skeleton",
+      "answer": "Proximal phalanx of left third toe",
+      "partId": "FJ3311",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3312",
+      "collection": "skeleton",
+      "answer": "Proximal phalanx of left fourth toe",
+      "partId": "FJ3312",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3313",
+      "collection": "skeleton",
+      "answer": "Proximal phalanx of left index finger",
+      "partId": "FJ3313",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3314",
+      "collection": "skeleton",
+      "answer": "Proximal phalanx of left little finger",
+      "partId": "FJ3314",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3315",
+      "collection": "skeleton",
+      "answer": "Proximal phalanx of left little toe",
+      "partId": "FJ3315",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3316",
+      "collection": "skeleton",
+      "answer": "Proximal phalanx of left middle finger",
+      "partId": "FJ3316",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3317",
+      "collection": "skeleton",
+      "answer": "Proximal phalanx of left ring finger",
+      "partId": "FJ3317",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3318",
+      "collection": "skeleton",
+      "answer": "Proximal phalanx of left thumb",
+      "partId": "FJ3318",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3319",
+      "collection": "skeleton",
+      "answer": "Proximal phalanx of right second toe",
+      "partId": "FJ3319",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3320",
+      "collection": "skeleton",
+      "answer": "Proximal phalanx of right third toe",
+      "partId": "FJ3320",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3321",
+      "collection": "skeleton",
+      "answer": "Proximal phalanx of right fourth toe",
+      "partId": "FJ3321",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3322",
+      "collection": "skeleton",
+      "answer": "Proximal phalanx of right index finger",
+      "partId": "FJ3322",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3323",
+      "collection": "skeleton",
+      "answer": "Proximal phalanx of right little finger",
+      "partId": "FJ3323",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3324",
+      "collection": "skeleton",
+      "answer": "Proximal phalanx of right little toe",
+      "partId": "FJ3324",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3325",
+      "collection": "skeleton",
+      "answer": "Proximal phalanx of right middle finger",
+      "partId": "FJ3325",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3326",
+      "collection": "skeleton",
+      "answer": "Proximal phalanx of right ring finger",
+      "partId": "FJ3326",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3327",
+      "collection": "skeleton",
+      "answer": "Proximal phalanx of right thumb",
+      "partId": "FJ3327",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3328",
+      "collection": "skeleton",
+      "answer": "Proximal phalanx of left second toe",
+      "partId": "FJ3328",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3329",
+      "collection": "skeleton",
+      "answer": "Proximal phalanx of left big toe",
+      "partId": "FJ3329",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3330",
+      "collection": "skeleton",
+      "answer": "Right tenth rib",
+      "partId": "FJ3330",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3331",
+      "collection": "skeleton",
+      "answer": "Right eleventh rib",
+      "partId": "FJ3331",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3332",
+      "collection": "skeleton",
+      "answer": "Right twelfth rib",
+      "partId": "FJ3332",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3333",
+      "collection": "skeleton",
+      "answer": "Right first costal cartilage",
+      "partId": "FJ3333",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3334",
+      "collection": "skeleton",
+      "answer": "Right first rib",
+      "partId": "FJ3334",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3335",
+      "collection": "skeleton",
+      "answer": "Right second costal cartilage",
+      "partId": "FJ3335",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3336",
+      "collection": "skeleton",
+      "answer": "Right second rib",
+      "partId": "FJ3336",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3337",
+      "collection": "skeleton",
+      "answer": "Right third costal cartilage",
+      "partId": "FJ3337",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3338",
+      "collection": "skeleton",
+      "answer": "Right third rib",
+      "partId": "FJ3338",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3339",
+      "collection": "skeleton",
+      "answer": "Right fourth costal cartilage",
+      "partId": "FJ3339",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3340",
+      "collection": "skeleton",
+      "answer": "Right fourth rib",
+      "partId": "FJ3340",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3341",
+      "collection": "skeleton",
+      "answer": "Right fifth costal cartilage",
+      "partId": "FJ3341",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3342",
+      "collection": "skeleton",
+      "answer": "Right fifth rib",
+      "partId": "FJ3342",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3343",
+      "collection": "skeleton",
+      "answer": "Right sixth costal cartilage",
+      "partId": "FJ3343",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3344",
+      "collection": "skeleton",
+      "answer": "Right sixth rib",
+      "partId": "FJ3344",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3345",
+      "collection": "skeleton",
+      "answer": "Right seventh costal cartilage",
+      "partId": "FJ3345",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3346",
+      "collection": "skeleton",
+      "answer": "Right seventh rib",
+      "partId": "FJ3346",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3347",
+      "collection": "skeleton",
+      "answer": "Right eighth rib",
+      "partId": "FJ3347",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3348",
+      "collection": "skeleton",
+      "answer": "Right ninth rib",
+      "partId": "FJ3348",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3349",
+      "collection": "skeleton",
+      "answer": "Right radius",
+      "partId": "FJ3349",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3350",
+      "collection": "skeleton",
+      "answer": "Right first metacarpal bone",
+      "partId": "FJ3350",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3351",
+      "collection": "skeleton",
+      "answer": "Right first metatarsal bone",
+      "partId": "FJ3351",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3352",
+      "collection": "skeleton",
+      "answer": "Right second metacarpal bone",
+      "partId": "FJ3352",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3353",
+      "collection": "skeleton",
+      "answer": "Right second metatarsal bone",
+      "partId": "FJ3353",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3354",
+      "collection": "skeleton",
+      "answer": "Right third metacarpal bone",
+      "partId": "FJ3354",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3355",
+      "collection": "skeleton",
+      "answer": "Right third metatarsal bone",
+      "partId": "FJ3355",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3356",
+      "collection": "skeleton",
+      "answer": "Right fourth metacarpal bone",
+      "partId": "FJ3356",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3357",
+      "collection": "skeleton",
+      "answer": "Right fourth metatarsal bone",
+      "partId": "FJ3357",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3358",
+      "collection": "skeleton",
+      "answer": "Right fifth metacarpal bone",
+      "partId": "FJ3358",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3359",
+      "collection": "skeleton",
+      "answer": "Right fifth metatarsal bone",
+      "partId": "FJ3359",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3360",
+      "collection": "skeleton",
+      "answer": "Right calcaneus",
+      "partId": "FJ3360",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3361",
+      "collection": "skeleton",
+      "answer": "Right capitate",
+      "partId": "FJ3361",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3362",
+      "collection": "skeleton",
+      "answer": "Right clavicle",
+      "partId": "FJ3362",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3364",
+      "collection": "skeleton",
+      "answer": "Right cuboid bone",
+      "partId": "FJ3364",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3365",
+      "collection": "skeleton",
+      "answer": "Right femur",
+      "partId": "FJ3365",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3366",
+      "collection": "skeleton",
+      "answer": "Right fibula",
+      "partId": "FJ3366",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3367",
+      "collection": "skeleton",
+      "answer": "Right hamate",
+      "partId": "FJ3367",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3368",
+      "collection": "skeleton",
+      "answer": "Right humerus",
+      "partId": "FJ3368",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3369",
+      "collection": "skeleton",
+      "answer": "Right inferior nasal concha",
+      "partId": "FJ3369",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3370",
+      "collection": "skeleton",
+      "answer": "Right intermediate cuneiform bone",
+      "partId": "FJ3370",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3371",
+      "collection": "skeleton",
+      "answer": "Right lacrimal bone",
+      "partId": "FJ3371",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3373",
+      "collection": "skeleton",
+      "answer": "Right lateral cuneiform bone",
+      "partId": "FJ3373",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3374",
+      "collection": "skeleton",
+      "answer": "Right lunate",
+      "partId": "FJ3374",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3375",
+      "collection": "skeleton",
+      "answer": "Right maxilla",
+      "partId": "FJ3375",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3377",
+      "collection": "skeleton",
+      "answer": "Right medial cuneiform bone",
+      "partId": "FJ3377",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3378",
+      "collection": "skeleton",
+      "answer": "Right nasal bone",
+      "partId": "FJ3378",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3379",
+      "collection": "skeleton",
+      "answer": "Right palatine bone",
+      "partId": "FJ3379",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3380",
+      "collection": "skeleton",
+      "answer": "Right parietal bone",
+      "partId": "FJ3380",
+      "view": "lateral"
+    },
+    {
+      "id": "model-skeleton-FJ3381",
+      "collection": "skeleton",
+      "answer": "Right patella",
+      "partId": "FJ3381",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3382",
+      "collection": "skeleton",
+      "answer": "Right pisiform",
+      "partId": "FJ3382",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3383",
+      "collection": "skeleton",
+      "answer": "Right scaphoid",
+      "partId": "FJ3383",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3384",
+      "collection": "skeleton",
+      "answer": "Right scapula",
+      "partId": "FJ3384",
+      "view": "posterior"
+    },
+    {
+      "id": "model-skeleton-FJ3385",
+      "collection": "skeleton",
+      "answer": "Right talus",
+      "partId": "FJ3385",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3386",
+      "collection": "skeleton",
+      "answer": "Right temporal bone",
+      "partId": "FJ3386",
+      "view": "lateral"
+    },
+    {
+      "id": "model-skeleton-FJ3387",
+      "collection": "skeleton",
+      "answer": "Right tibia",
+      "partId": "FJ3387",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3388",
+      "collection": "skeleton",
+      "answer": "Right trapezium",
+      "partId": "FJ3388",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3389",
+      "collection": "skeleton",
+      "answer": "Right trapezoid",
+      "partId": "FJ3389",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3390",
+      "collection": "skeleton",
+      "answer": "Right triquetral",
+      "partId": "FJ3390",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3391",
+      "collection": "skeleton",
+      "answer": "Right ulna",
+      "partId": "FJ3391",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3392",
+      "collection": "skeleton",
+      "answer": "Right zygomatic bone",
+      "partId": "FJ3392",
+      "view": "lateral"
+    },
+    {
+      "id": "model-skeleton-FJ3393",
+      "collection": "skeleton",
+      "answer": "Sacrum",
+      "partId": "FJ3393",
+      "view": "posterior"
+    },
+    {
+      "id": "model-skeleton-FJ3394",
+      "collection": "skeleton",
+      "answer": "Sphenoid bone",
+      "partId": "FJ3394",
+      "view": "anterior"
+    },
+    {
+      "id": "model-skeleton-FJ3395",
+      "collection": "skeleton",
+      "answer": "Vomer",
+      "partId": "FJ3395",
+      "view": "anterior"
+    },
+    {
+      "id": "model-landmark-femur-head",
+      "collection": "landmarks",
+      "answer": "Head of femur",
+      "bone": "femur",
+      "landmark": "femur-head",
+      "view": "anterior"
+    },
+    {
+      "id": "model-landmark-femur-neck",
+      "collection": "landmarks",
+      "answer": "Neck of femur",
+      "bone": "femur",
+      "landmark": "femur-neck",
+      "view": "anterior"
+    },
+    {
+      "id": "model-landmark-greater-trochanter",
+      "collection": "landmarks",
+      "answer": "Greater trochanter",
+      "bone": "femur",
+      "landmark": "greater-trochanter",
+      "view": "anterior"
+    },
+    {
+      "id": "model-landmark-lesser-trochanter",
+      "collection": "landmarks",
+      "answer": "Lesser trochanter",
+      "bone": "femur",
+      "landmark": "lesser-trochanter",
+      "view": "posterior"
+    },
+    {
+      "id": "model-landmark-medial-condyle",
+      "collection": "landmarks",
+      "answer": "Medial condyle",
+      "bone": "femur",
+      "landmark": "medial-condyle",
+      "view": "anterior"
+    },
+    {
+      "id": "model-landmark-lateral-condyle",
+      "collection": "landmarks",
+      "answer": "Lateral condyle",
+      "bone": "femur",
+      "landmark": "lateral-condyle",
+      "view": "anterior"
+    },
+    {
+      "id": "model-landmark-humerus-head",
+      "collection": "landmarks",
+      "answer": "Head of humerus",
+      "bone": "humerus",
+      "landmark": "humerus-head",
+      "view": "anterior"
+    },
+    {
+      "id": "model-landmark-greater-tubercle",
+      "collection": "landmarks",
+      "answer": "Greater tubercle",
+      "bone": "humerus",
+      "landmark": "greater-tubercle",
+      "view": "anterior"
+    },
+    {
+      "id": "model-landmark-lesser-tubercle",
+      "collection": "landmarks",
+      "answer": "Lesser tubercle",
+      "bone": "humerus",
+      "landmark": "lesser-tubercle",
+      "view": "anterior"
+    },
+    {
+      "id": "model-landmark-deltoid-tuberosity",
+      "collection": "landmarks",
+      "answer": "Deltoid tuberosity",
+      "bone": "humerus",
+      "landmark": "deltoid-tuberosity",
+      "view": "lateral"
+    },
+    {
+      "id": "model-landmark-trochlea",
+      "collection": "landmarks",
+      "answer": "Trochlea",
+      "bone": "humerus",
+      "landmark": "trochlea",
+      "view": "anterior"
+    },
+    {
+      "id": "model-landmark-capitulum",
+      "collection": "landmarks",
+      "answer": "Capitulum",
+      "bone": "humerus",
+      "landmark": "capitulum",
+      "view": "anterior"
+    },
+    {
+      "id": "model-landmark-olecranon-fossa",
+      "collection": "landmarks",
+      "answer": "Olecranon fossa",
+      "bone": "humerus",
+      "landmark": "olecranon-fossa",
+      "view": "posterior"
+    },
+    {
+      "id": "model-landmark-scapula-spine",
+      "collection": "landmarks",
+      "answer": "Spine of scapula",
+      "bone": "scapula",
+      "landmark": "scapula-spine",
+      "view": "posterior"
+    },
+    {
+      "id": "model-landmark-glenoid",
+      "collection": "landmarks",
+      "answer": "Glenoid cavity",
+      "bone": "scapula",
+      "landmark": "glenoid",
+      "view": "lateral"
+    },
+    {
+      "id": "model-landmark-acromion",
+      "collection": "landmarks",
+      "answer": "Acromion",
+      "bone": "scapula",
+      "landmark": "acromion",
+      "view": "anterior"
+    },
+    {
+      "id": "model-landmark-coracoid",
+      "collection": "landmarks",
+      "answer": "Coracoid process",
+      "bone": "scapula",
+      "landmark": "coracoid",
+      "view": "lateral"
+    },
+    {
+      "id": "model-side-femur",
+      "collection": "landmarks",
+      "answer": "Right",
+      "bone": "femur",
+      "view": "anterior"
+    },
+    {
+      "id": "model-side-humerus",
+      "collection": "landmarks",
+      "answer": "Right",
+      "bone": "humerus",
+      "view": "posterior"
+    },
+    {
+      "id": "model-side-scapula",
+      "collection": "landmarks",
+      "answer": "Right",
+      "bone": "scapula",
+      "view": "posterior"
+    }
+  ]
+}

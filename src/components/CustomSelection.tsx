@@ -103,7 +103,7 @@ export default function CustomSelection({ collection, selections, onCollectionCh
           <div className="custom-target-rows" aria-label="Custom study targets">{prompts.map(prompt => {
             const section = sectionByPrompt.get(prompt.id)!;
             return <label className={selected.has(prompt.id) ? 'is-selected' : ''} key={prompt.id}>
-              {!detail && <img src={`/sections/${section.id}.webp`} width="64" height="40" alt="" loading="lazy"/>}
+              <img src={`/targets/${prompt.id}.webp`} width="192" height="128" alt="" loading="lazy" decoding="async"/>
               <span>{studyTargetLabel(prompt)}{!detail && <small>{section.title}</small>}</span>
               <input type="checkbox" checked={selected.has(prompt.id)} aria-label={`Include ${studyTargetLabel(prompt)}`} onChange={() => toggle(prompt.id)}/>
             </label>;
@@ -117,7 +117,7 @@ export default function CustomSelection({ collection, selections, onCollectionCh
               <span className="custom-section-image"><img src={`/sections/${section.id}.webp`} width="480" height="300" alt="" loading="lazy"/><span className="custom-section-check"><GroupCheckbox checked={all} partial={count > 0 && !all} label={`Include section: ${section.title}`} onChange={() => update(section.promptIds, all ? 'remove' : 'add')}/></span></span>
               <span className="custom-section-card-body"><small>{unitBySection.get(section.id)}</small><strong>{section.title}</strong><span className="custom-section-count">{count ? <Check size={11}/> : null}{count} / {section.promptIds.length} selected</span></span>
             </label>
-            <button className="custom-section-edit" data-edit-section={section.id} aria-label={`Edit targets: ${section.title}`} onClick={() => showDetail(section.id)}><SlidersHorizontal size={12}/>Edit targets<ArrowRight size={13}/></button>
+            <button type="button" className="custom-section-edit" data-edit-section={section.id} aria-label={`Edit targets: ${section.title}`} onClick={() => showDetail(section.id)}><SlidersHorizontal size={16} aria-hidden="true"/><span>Edit targets</span><ArrowRight size={16} aria-hidden="true"/></button>
           </article>;
         })}</div>}
       </div>
