@@ -117,7 +117,7 @@ export default function CustomSelection({ collection, selections, onCollectionCh
               <span className="custom-section-image"><img src={`/sections/${section.id}.webp`} width="480" height="300" alt="" loading="lazy"/><span className="custom-section-check"><GroupCheckbox checked={all} partial={count > 0 && !all} label={`Include section: ${section.title}`} onChange={() => update(section.promptIds, all ? 'remove' : 'add')}/></span></span>
               <span className="custom-section-card-body"><small>{unitBySection.get(section.id)}</small><strong>{section.title}</strong><span className="custom-section-count">{count ? <Check size={11}/> : null}{count} / {section.promptIds.length} selected</span></span>
             </label>
-            <button type="button" className="custom-section-edit" data-edit-section={section.id} aria-label={`Edit targets: ${section.title}`} onClick={() => showDetail(section.id)}><SlidersHorizontal size={16} aria-hidden="true"/><span>Edit targets</span><ArrowRight size={16} aria-hidden="true"/></button>
+            <button type="button" className="custom-section-edit" data-edit-section={section.id} aria-label={`Customize quiz: ${section.title}`} onClick={() => showDetail(section.id)}><SlidersHorizontal size={16} aria-hidden="true"/><span>Customize quiz</span><ArrowRight size={16} aria-hidden="true"/></button>
           </article>;
         })}</div>}
       </div>
