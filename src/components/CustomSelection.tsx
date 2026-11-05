@@ -97,7 +97,7 @@ export default function CustomSelection({ collection, selections, onCollectionCh
         {detail ? <>
           <button className="custom-detail-back" ref={detailHeading} onClick={backToSections}><ArrowLeft size={14}/>All {currentName.toLowerCase()} sections</button>
           <div className="custom-detail-heading"><img src={`/sections/${detail.id}.webp`} width="144" height="90" alt=""/><div><h3>{detail.title}</h3><p>{detail.description}</p><span>{detail.promptIds.filter(id => selected.has(id)).length} of {detail.promptIds.length} selected</span></div></div>
-        </> : <div className="custom-builder-heading"><div><h3>{selectedOnly ? 'Your selected targets' : words.length ? 'Matching targets' : `${currentName} sections`}</h3><p>{showingTargets ? `${prompts.length} ${prompts.length === 1 ? 'target' : 'targets'}` : 'Select whole sections, or edit their individual targets.'}</p></div></div>}
+        </> : <div className={'custom-builder-heading' + (!showingTargets ? ' is-sections' : '')}><div><h3>{selectedOnly ? 'Your selected targets' : words.length ? 'Matching targets' : `${currentName} sections`}</h3><p>{showingTargets ? `${prompts.length} ${prompts.length === 1 ? 'target' : 'targets'}` : 'Select whole sections, or edit their individual targets.'}</p></div></div>}
         {showingTargets ? <>
           <div className="custom-target-bulk"><span>{detail ? `${prompts.length} shown` : 'Edit the targets shown below'}</span><div><button disabled={!ids.length} onClick={() => update(ids, 'add')}>Add shown</button><button disabled={!ids.length} onClick={() => update(ids, 'remove')}>Remove shown</button></div></div>
           <div className="custom-target-rows" aria-label="Custom study targets">{prompts.map(prompt => {
