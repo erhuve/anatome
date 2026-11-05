@@ -15,5 +15,6 @@ import './components/SectionHeading.css';
 import './components/CustomSelection.css';
 import './components/CoverageSummary.css';
 import './components/StudySettings.css';
+import './components/LeaderboardPage.css';
 const analytics = initializeAnalytics();
 createRoot(document.getElementById('root')!).render(<React.StrictMode>{analytics ? <PostHogProvider client={analytics}><App /></PostHogProvider> : <App />}</React.StrictMode>);

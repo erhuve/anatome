@@ -13,6 +13,11 @@ npm run dev
 
 Copy `.env.example` to `.env.local`. For account features, follow [account setup](docs/auth-setup.md); for analytics, follow [PostHog setup](docs/analytics.md).
 
+The optional **Global leaderboard** reuses the same Supabase Free project. Run
+the separate [leaderboard migration and permission checks](docs/leaderboard.md)
+to enable its database API; account setup alone does not enable it. No additional
+provider or paid feature is required.
+
 Open the Local URL printed by Vite (normally http://127.0.0.1:5173/).
 
 ```sh
@@ -75,6 +80,19 @@ Deep links: `/?atlas=muscles`, `/?atlas=skeleton`, `/?atlas=landmarks`. `/?atlas
 Meme deep links: `/?mode=memes` for the library, `/?mode=memes&meme=34` for the scapula lesson, and `/?mode=memes&meme=34&activity=quiz` for its quiz. Switching to Study or Quiz clears meme-specific URL parameters and restores the existing model workspace.
 
 Progress deep links: `/?progress=overview`, `/?progress=history`, `/?progress=review`, `/?progress=memes`, and `/?progress=account`. Collection and workspace parameters remain in the URL while viewing progress, so returning to practice keeps that context.
+
+**Global leaderboard** is available in My progress and at `/?progress=leaderboard`.
+Visitors can view the global top 50. Signed-in learners explicitly join with a
+chosen public nickname and can rename or leave at any time. Each different
+official 3D target correctly answered in a signed-in quiz earns one all-time
+point, up to 720. Repeats cannot add points; reveals, study self-checks, missed
+review, memes, and imported guest history do not count. Previous eligible
+signed-in quizzes count. Equal scores share rank, and participants can see
+their own rank outside the top 50. The board exposes no Google identities,
+account IDs or private answer history. Scores come from database awards, with
+one award per account and official target; the existing answer API remains an
+honor system rather than a verified competition. The page loads on open and
+explicit Refresh, with no background polling. See [leaderboard setup](docs/leaderboard.md).
 
 ## Scope and content review
 

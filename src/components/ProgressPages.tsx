@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { ArrowLeft, ArrowRight, BookOpen, Cloud, History, LayoutDashboard, Smile, UserRound } from 'lucide-react';
+import { ArrowLeft, ArrowRight, BookOpen, Cloud, History, LayoutDashboard, Smile, Trophy, UserRound } from 'lucide-react';
 import { modelPromptPools, type ModelPrompt } from '../modelQuiz';
 import { getModelPass } from '../modelPass';
 import { recentMissedTargets } from '../reviewTargets';
@@ -8,14 +8,17 @@ import type { useAuth } from '../useAuth';
 import type { useStudyProgress } from '../useStudyProgress';
 import QuestionHistory from './QuestionHistory';
 import ProgressAccount from './ProgressAccount';
+import LeaderboardPage from './LeaderboardPage';
+import { useLeaderboard } from '../useLeaderboard';
 import { liveModelIds, MemeProgressPage, progressCollectionLabels, ReviewPage } from './ProgressLists';
 
-const icons = { overview: LayoutDashboard, history: History, review: BookOpen, memes: Smile, account: UserRound };
+const icons = { overview: LayoutDashboard, history: History, review: BookOpen, memes: Smile, leaderboard: Trophy, account: UserRound };
 const descriptions = {
   overview: '',
   history: '',
   review: 'Missed or revealed structures. Due now includes all scheduled reviews, including previously correct answers.',
   memes: 'Results use your latest try for each question.',
+  leaderboard: 'A little friendly competition. One new target, one point.',
   account: '',
 };
 
@@ -48,10 +51,16 @@ export default function ProgressPages({ page, auth, progress, onNavigate, onBack
         {page === 'history' && <QuestionHistory attempts={progress.study.attempts} onStudy={onStudy} onMeme={onMeme}/>}
         {page === 'review' && <ReviewPage study={progress.study} onStudy={onStudy}/>}
         {page === 'memes' && <MemeProgressPage study={progress.study} onMeme={onMeme}/>}
+        {page === 'leaderboard' && <ConnectedLeaderboard auth={auth} progress={progress} onAccount={() => onNavigate('account')}/>}
         {page === 'account' && <ProgressAccount auth={auth} progress={progress}/>}
       </div>
     </section>
   </main>;
+}
+
+function ConnectedLeaderboard({ auth, progress, onAccount }: Pick<Props, 'auth' | 'progress'> & { onAccount: () => void }) {
+  const leaderboard = useLeaderboard(auth.user?.id ?? null, auth.ready);
+  return <LeaderboardPage key={auth.user?.id ?? 'guest'} auth={auth} progress={progress} board={leaderboard.state} onRefresh={leaderboard.refresh} onSaveProfile={leaderboard.saveProfile} onAccount={onAccount}/>;
 }
 
 function Overview({ progress, onNavigate, onStudy }: Pick<Props, 'progress' | 'onNavigate' | 'onStudy'>) {
@@ -73,6 +82,6 @@ function Overview({ progress, onNavigate, onStudy }: Pick<Props, 'progress' | 'o
       return <div className="collection-progress-row" key={collection}><div><strong>{progressCollectionLabels[collection]}</strong><span>{history.length ? `${Math.round(history.filter(item => item.correct).length / history.length * 100)}% accuracy` : 'No answers yet'}</span></div><div className="collection-meter" role="progressbar" aria-label={`${progressCollectionLabels[collection]} pass coverage`} aria-valuenow={pass.coveredIds.length} aria-valuemin={0} aria-valuemax={ids.size}><i style={{ width: `${pass.coveredIds.length / ids.size * 100}%` }}/></div><small>Pass {pass.round}<span>{pass.coveredIds.length} / {ids.size} covered</span></small></div>;
     })}</div><small className="progress-caption">Answered and revealed structures count toward coverage. Coverage is not a mastery score.</small></section>
     <div className="progress-overview-columns"><section className="progress-card"><div className="progress-card-heading"><h2>Worth another look</h2><span>{allMissed} structures</span></div><p>{due} model reviews due now.</p>{missed.length ? missed.map(({ prompt }) => <button className="progress-preview-row" key={prompt.id} onClick={() => onStudy([prompt])}><span>{prompt.answer}</span><ArrowRight size={14}/></button>) : <p>Your missed and revealed structures will appear here.</p>}<button className="progress-text-button" onClick={() => onNavigate('review')}>View all structures<ArrowRight size={14}/></button></section>
-    <section className="progress-card progress-history-card"><button className="progress-destination" onClick={() => onNavigate('history')}><History size={20}/><span>Question history</span><ArrowRight size={14}/></button><button className="progress-destination" onClick={() => onNavigate('memes')}><Smile size={20}/><span>Meme quizzes</span><ArrowRight size={14}/></button></section></div>
+    <section className="progress-card progress-history-card"><button className="progress-destination" onClick={() => onNavigate('history')}><History size={20}/><span>Question history</span><ArrowRight size={14}/></button><button className="progress-destination" onClick={() => onNavigate('memes')}><Smile size={20}/><span>Meme quizzes</span><ArrowRight size={14}/></button><button className="progress-destination" onClick={() => onNavigate('leaderboard')}><Trophy size={20}/><span>Global leaderboard</span><ArrowRight size={14}/></button></section></div>
   </div></div>;
 }

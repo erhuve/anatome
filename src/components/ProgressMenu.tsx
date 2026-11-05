@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
-import { BookOpen, ChevronDown, History, LayoutDashboard, Smile, UserRound } from 'lucide-react';
+import { BookOpen, ChevronDown, History, LayoutDashboard, Smile, Trophy, UserRound } from 'lucide-react';
 import { progressPages, progressUrl, type ProgressPage } from '../progressNavigation';
 
-const icons = { overview: LayoutDashboard, history: History, review: BookOpen, memes: Smile, account: UserRound };
+const icons = { overview: LayoutDashboard, history: History, review: BookOpen, memes: Smile, leaderboard: Trophy, account: UserRound };
 
 export default function ProgressMenu({ signedIn, syncStatus, currentPage, onNavigate }: {
   signedIn: boolean; syncStatus: string; currentPage?: ProgressPage | null; onNavigate: (page: ProgressPage) => void;

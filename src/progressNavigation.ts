@@ -3,6 +3,7 @@ export const progressPages = [
   { id: 'history', label: 'Question history', description: 'Every recorded attempt, across all material.' },
   { id: 'review', label: 'Worth another look', description: '3D structures to revisit after a missed answer.' },
   { id: 'memes', label: 'Meme quizzes', description: 'Lesson progress and questions due for review.' },
+  { id: 'leaderboard', label: 'Global leaderboard', description: 'Compare your 3D quiz score with other learners.' },
   { id: 'account', label: 'Account & sync', description: 'Sign-in, device history, and save status.' },
 ] as const;
 export type ProgressPage = typeof progressPages[number]['id'];
